@@ -1,0 +1,357 @@
+{
+  "chunk_index": 172,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Applicant",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "InternationalPatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE"
+          }
+        ]
+      },
+      {
+        "label": "Invention",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "BusinessOperator",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentRight",
+        "properties": [
+          {
+            "name": "registration_number",
+            "type": "STRING"
+          },
+          {
+            "name": "registration_date",
+            "type": "DATE"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED"
+      },
+      {
+        "label": "HAS_INVENTION"
+      },
+      {
+        "label": "PRACTICES"
+      },
+      {
+        "label": "ISSUES_WARNING"
+      },
+      {
+        "label": "CLAIM_COMPENSATION"
+      },
+      {
+        "label": "GRANTED_FROM"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Applicant",
+        "relationship": "FILED",
+        "target": "InternationalPatentApplication"
+      },
+      {
+        "source": "InternationalPatentApplication",
+        "relationship": "HAS_INVENTION",
+        "target": "Invention"
+      },
+      {
+        "source": "BusinessOperator",
+        "relationship": "PRACTICES",
+        "target": "Invention"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "ISSUES_WARNING",
+        "target": "BusinessOperator"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "CLAIM_COMPENSATION",
+        "target": "BusinessOperator"
+      },
+      {
+        "source": "PatentRight",
+        "relationship": "GRANTED_FROM",
+        "target": "InternationalPatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "InternationalPatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentRight",
+        "property_names": [
+          "registration_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "InternationalPatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentRight",
+        "property_names": [
+          "registration_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Invention",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Applicant",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "InternationalPatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Invention",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "BusinessOperator",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentRight",
+        "description": "",
+        "properties": [
+          {
+            "name": "registration_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "registration_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_INVENTION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PRACTICES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ISSUES_WARNING",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "CLAIM_COMPENSATION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GRANTED_FROM",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Applicant",
+        "relationship": "FILED",
+        "target": "InternationalPatentApplication"
+      },
+      {
+        "source": "InternationalPatentApplication",
+        "relationship": "HAS_INVENTION",
+        "target": "Invention"
+      },
+      {
+        "source": "BusinessOperator",
+        "relationship": "PRACTICES",
+        "target": "Invention"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "ISSUES_WARNING",
+        "target": "BusinessOperator"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "CLAIM_COMPENSATION",
+        "target": "BusinessOperator"
+      },
+      {
+        "source": "PatentRight",
+        "relationship": "GRANTED_FROM",
+        "target": "InternationalPatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "InternationalPatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "registration_number",
+        "property_names": [
+          "registration_number"
+        ],
+        "node_type": "PatentRight",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "InternationalPatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "registration_number",
+        "property_names": [
+          "registration_number"
+        ],
+        "node_type": "PatentRight",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Invention",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

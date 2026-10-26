@@ -1,0 +1,174 @@
+{
+  "seed": 42,
+  "rule": {
+    "chapter": "청크 본문의 장 제목(제N장)으로 묶음. 제목이 없으면 바로 앞 청크의 장. 한 청크에 제목이 여럿이면 마지막 제목",
+    "test": "역량질문마다 대표 조문 첫 번째가 있는 청크 + 역량질문과 관계없는 청크 2건",
+    "sample": "시험용을 뺀 청크에서 장마다 1건 + 무작위 추가, 모두 20건"
+  },
+  "competency_questions": 9,
+  "samples": [
+    {
+      "chunk_index": 6,
+      "chapter": "제1장 총칙"
+    },
+    {
+      "chunk_index": 7,
+      "chapter": "제1장 총칙"
+    },
+    {
+      "chunk_index": 10,
+      "chapter": "제1장 총칙"
+    },
+    {
+      "chunk_index": 20,
+      "chapter": "제2장 특허요건 및 특허출원"
+    },
+    {
+      "chunk_index": 28,
+      "chapter": "제2장 특허요건 및 특허출원"
+    },
+    {
+      "chunk_index": 48,
+      "chapter": "제3장 심사"
+    },
+    {
+      "chunk_index": 62,
+      "chapter": "제4장 특허료 및 특허등록 등"
+    },
+    {
+      "chunk_index": 64,
+      "chapter": "제4장 특허료 및 특허등록 등"
+    },
+    {
+      "chunk_index": 67,
+      "chapter": "제4장 특허료 및 특허등록 등"
+    },
+    {
+      "chunk_index": 79,
+      "chapter": "제5장 특허권"
+    },
+    {
+      "chunk_index": 102,
+      "chapter": "제6장 특허권자의 보호"
+    },
+    {
+      "chunk_index": 110,
+      "chapter": "제6장의2 특허취소신청"
+    },
+    {
+      "chunk_index": 140,
+      "chapter": "제7장 심판"
+    },
+    {
+      "chunk_index": 145,
+      "chapter": "제7장 심판"
+    },
+    {
+      "chunk_index": 147,
+      "chapter": "제8장 재심"
+    },
+    {
+      "chunk_index": 150,
+      "chapter": "제9장 소송"
+    },
+    {
+      "chunk_index": 172,
+      "chapter": "제10장 「특허협력조약」에 따른 국제출원"
+    },
+    {
+      "chunk_index": 173,
+      "chapter": "제10장 「특허협력조약」에 따른 국제출원"
+    },
+    {
+      "chunk_index": 184,
+      "chapter": "제11장 보칙"
+    },
+    {
+      "chunk_index": 187,
+      "chapter": "제12장 벌칙"
+    }
+  ],
+  "test": [
+    {
+      "chunk_index": 15,
+      "chapter": "제1장 총칙",
+      "kind": "역량질문 무관",
+      "reason": [
+        "제28조의3·4 전자문서에 의한 절차 수행과 이용신고(역량질문과 무관한 서류 제출 방식)"
+      ]
+    },
+    {
+      "chunk_index": 17,
+      "chapter": "제2장 특허요건 및 특허출원",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ01(제29조)"
+      ]
+    },
+    {
+      "chunk_index": 21,
+      "chapter": "제2장 특허요건 및 특허출원",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ02(제32조)"
+      ]
+    },
+    {
+      "chunk_index": 51,
+      "chapter": "제3장 심사",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ03(제59조)",
+        "CQ05(제59조)"
+      ]
+    },
+    {
+      "chunk_index": 73,
+      "chapter": "제5장 특허권",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ06(제88조)"
+      ]
+    },
+    {
+      "chunk_index": 82,
+      "chapter": "제5장 특허권",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ08(제96조)"
+      ]
+    },
+    {
+      "chunk_index": 100,
+      "chapter": "제6장 특허권자의 보호",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ09(제126조)"
+      ]
+    },
+    {
+      "chunk_index": 116,
+      "chapter": "제7장 심판",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ04(제132조의17)"
+      ]
+    },
+    {
+      "chunk_index": 180,
+      "chapter": "제11장 보칙",
+      "kind": "역량질문 무관",
+      "reason": [
+        "제218조 ~ 제222조 서류 송달·공시송달·특허공보(역량질문과 무관한 보칙)"
+      ]
+    },
+    {
+      "chunk_index": 186,
+      "chapter": "제12장 벌칙",
+      "kind": "역량질문 관련",
+      "reason": [
+        "CQ07(제225조)"
+      ]
+    }
+  ]
+}

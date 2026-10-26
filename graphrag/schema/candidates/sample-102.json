@@ -1,0 +1,201 @@
+{
+  "chunk_index": 102,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Patent",
+        "properties": []
+      },
+      {
+        "label": "Invention",
+        "properties": []
+      },
+      {
+        "label": "Product",
+        "properties": []
+      },
+      {
+        "label": "Method",
+        "properties": []
+      },
+      {
+        "label": "PatentRight",
+        "properties": []
+      },
+      {
+        "label": "ExclusiveLicense",
+        "properties": []
+      },
+      {
+        "label": "BusinessEntity",
+        "properties": []
+      },
+      {
+        "label": "InfringingAct",
+        "properties": [
+          {
+            "name": "action",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_INVENTION"
+      },
+      {
+        "label": "IS_PRODUCT_INVENTION"
+      },
+      {
+        "label": "IS_METHOD_INVENTION"
+      },
+      {
+        "label": "HAS_RIGHT"
+      },
+      {
+        "label": "HAS_EXCLUSIVE_LICENSE"
+      },
+      {
+        "label": "PERFORMS_ACT"
+      },
+      {
+        "label": "ACT_USES_PRODUCT"
+      },
+      {
+        "label": "ACT_TARGETS_RIGHT"
+      },
+      {
+        "label": "ACT_TARGETS_LICENSE"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Patent",
+        "relationship": "HAS_INVENTION",
+        "target": "Invention"
+      },
+      {
+        "source": "Invention",
+        "relationship": "IS_PRODUCT_INVENTION",
+        "target": "Product"
+      },
+      {
+        "source": "Invention",
+        "relationship": "IS_METHOD_INVENTION",
+        "target": "Method"
+      },
+      {
+        "source": "Patent",
+        "relationship": "HAS_RIGHT",
+        "target": "PatentRight"
+      },
+      {
+        "source": "Patent",
+        "relationship": "HAS_EXCLUSIVE_LICENSE",
+        "target": "ExclusiveLicense"
+      },
+      {
+        "source": "BusinessEntity",
+        "relationship": "PERFORMS_ACT",
+        "target": "InfringingAct"
+      },
+      {
+        "source": "InfringingAct",
+        "relationship": "ACT_USES_PRODUCT",
+        "target": "Product"
+      },
+      {
+        "source": "InfringingAct",
+        "relationship": "ACT_TARGETS_RIGHT",
+        "target": "PatentRight"
+      },
+      {
+        "source": "InfringingAct",
+        "relationship": "ACT_TARGETS_LICENSE",
+        "target": "ExclusiveLicense"
+      }
+    ],
+    "constraints": []
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "InfringingAct",
+        "description": "",
+        "properties": [
+          {
+            "name": "action",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_INVENTION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "IS_PRODUCT_INVENTION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "IS_METHOD_INVENTION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_RIGHT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_EXCLUSIVE_LICENSE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PERFORMS_ACT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ACT_USES_PRODUCT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ACT_TARGETS_RIGHT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ACT_TARGETS_LICENSE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [],
+    "constraints": [],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": true
+  }
+}

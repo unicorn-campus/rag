@@ -1,0 +1,336 @@
+{
+  "chunk_index": 145,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "PatentTrialBoard",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Cost",
+        "properties": []
+      },
+      {
+        "label": "Decision",
+        "properties": []
+      },
+      {
+        "label": "Judgment",
+        "properties": []
+      },
+      {
+        "label": "Party",
+        "properties": [
+          {
+            "name": "role",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentAttorney",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "CivilProcedureLaw",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "CivilProcedureCostLaw",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "DETERMINED_BY_JUDGMENT"
+      },
+      {
+        "label": "DETERMINED_BY_DECISION"
+      },
+      {
+        "label": "PAID_BY"
+      },
+      {
+        "label": "PAID_TO"
+      },
+      {
+        "label": "MADE_BY"
+      },
+      {
+        "label": "FEE_TREATED_AS_COST"
+      },
+      {
+        "label": "APPLIES_LAW"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Cost",
+        "relationship": "DETERMINED_BY_JUDGMENT",
+        "target": "Judgment"
+      },
+      {
+        "source": "Cost",
+        "relationship": "DETERMINED_BY_DECISION",
+        "target": "Decision"
+      },
+      {
+        "source": "Cost",
+        "relationship": "PAID_BY",
+        "target": "Party"
+      },
+      {
+        "source": "Cost",
+        "relationship": "PAID_TO",
+        "target": "PatentTrialBoard"
+      },
+      {
+        "source": "Decision",
+        "relationship": "MADE_BY",
+        "target": "PatentTrialBoard"
+      },
+      {
+        "source": "Judgment",
+        "relationship": "MADE_BY",
+        "target": "PatentTrialBoard"
+      },
+      {
+        "source": "PatentAttorney",
+        "relationship": "FEE_TREATED_AS_COST",
+        "target": "Cost"
+      },
+      {
+        "source": "PatentTrialBoard",
+        "relationship": "APPLIES_LAW",
+        "target": "CivilProcedureLaw"
+      },
+      {
+        "source": "PatentTrialBoard",
+        "relationship": "APPLIES_LAW",
+        "target": "CivilProcedureCostLaw"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentTrialBoard",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentTrialBoard",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentAttorney",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentAttorney",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "PatentTrialBoard",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Party",
+        "description": "",
+        "properties": [
+          {
+            "name": "role",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentAttorney",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "CivilProcedureLaw",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "CivilProcedureCostLaw",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "DETERMINED_BY_JUDGMENT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DETERMINED_BY_DECISION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PAID_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PAID_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "MADE_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "FEE_TREATED_AS_COST",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "APPLIES_LAW",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentTrialBoard",
+        "relationship": "APPLIES_LAW",
+        "target": "CivilProcedureLaw"
+      },
+      {
+        "source": "PatentTrialBoard",
+        "relationship": "APPLIES_LAW",
+        "target": "CivilProcedureCostLaw"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "PatentTrialBoard",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "PatentTrialBoard",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "PatentAttorney",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "PatentAttorney",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

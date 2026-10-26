@@ -1,0 +1,326 @@
+{
+  "chunk_index": 79,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Applicant",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "address",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Agent",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "address",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Patent",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "ExtensionApplication",
+        "properties": [
+          {
+            "name": "extension_period",
+            "type": "DURATION"
+          }
+        ]
+      },
+      {
+        "label": "Reason",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentOffice",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED"
+      },
+      {
+        "label": "REPRESENTS"
+      },
+      {
+        "label": "APPLIES_TO"
+      },
+      {
+        "label": "HAS_REASON"
+      },
+      {
+        "label": "SUBMITTED_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Applicant",
+        "relationship": "FILED",
+        "target": "ExtensionApplication"
+      },
+      {
+        "source": "Agent",
+        "relationship": "REPRESENTS",
+        "target": "Applicant"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "APPLIES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "HAS_REASON",
+        "target": "Reason"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "PatentOffice"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "ExtensionApplication",
+        "property_names": [
+          "extension_period"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Applicant",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "address",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Agent",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "address",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Patent",
+        "description": "",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "ExtensionApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "extension_period",
+            "type": "DURATION",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Reason",
+        "description": "",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentOffice",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "REPRESENTS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "APPLIES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_REASON",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SUBMITTED_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Applicant",
+        "relationship": "FILED",
+        "target": "ExtensionApplication"
+      },
+      {
+        "source": "Agent",
+        "relationship": "REPRESENTS",
+        "target": "Applicant"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "APPLIES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "HAS_REASON",
+        "target": "Reason"
+      },
+      {
+        "source": "ExtensionApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "PatentOffice"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "extension_period",
+        "property_names": [
+          "extension_period"
+        ],
+        "node_type": "ExtensionApplication",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

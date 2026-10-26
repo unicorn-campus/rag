@@ -1,0 +1,403 @@
+{
+  "chunk_index": 64,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Person",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "identifier",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Patent",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING"
+          },
+          {
+            "name": "status",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE"
+          }
+        ]
+      },
+      {
+        "label": "LegalArticle",
+        "properties": [
+          {
+            "name": "article_id",
+            "type": "STRING"
+          },
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY"
+      },
+      {
+        "label": "RELATES_TO"
+      },
+      {
+        "label": "GOVERNED_BY"
+      },
+      {
+        "label": "PAY_FEE"
+      },
+      {
+        "label": "HOLDER_OF"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "RELATES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "Patent",
+        "relationship": "GOVERNED_BY",
+        "target": "LegalArticle"
+      },
+      {
+        "source": "Person",
+        "relationship": "PAY_FEE",
+        "target": "Patent"
+      },
+      {
+        "source": "Person",
+        "relationship": "HOLDER_OF",
+        "target": "Patent"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "LegalArticle",
+        "property_names": [
+          "article_id"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "LegalArticle",
+        "property_names": [
+          "article_id"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Person",
+        "property_names": [
+          "identifier"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Person",
+        "property_names": [
+          "identifier"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "",
+        "property_names": [
+          "amount"
+        ],
+        "relationship_type": "PAY_FEE"
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "",
+        "property_names": [
+          "payment_date"
+        ],
+        "relationship_type": "PAY_FEE"
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Person",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "identifier",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Patent",
+        "description": "",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "status",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "LegalArticle",
+        "description": "",
+        "properties": [
+          {
+            "name": "article_id",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RELATES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GOVERNED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PAY_FEE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HOLDER_OF",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "RELATES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "Patent",
+        "relationship": "GOVERNED_BY",
+        "target": "LegalArticle"
+      },
+      {
+        "source": "Person",
+        "relationship": "PAY_FEE",
+        "target": "Patent"
+      },
+      {
+        "source": "Person",
+        "relationship": "HOLDER_OF",
+        "target": "Patent"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "article_id",
+        "property_names": [
+          "article_id"
+        ],
+        "node_type": "LegalArticle",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "article_id",
+        "property_names": [
+          "article_id"
+        ],
+        "node_type": "LegalArticle",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "identifier",
+        "property_names": [
+          "identifier"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "identifier",
+        "property_names": [
+          "identifier"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

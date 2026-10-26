@@ -1,0 +1,18 @@
+# --- LangChain core / pipeline components ---
+langchain-core>=1.0            # Document, Embeddings, VectorStore base classes
+langchain-text-splitters>=1.0  # RecursiveCharacterTextSplitter for chunking
+langchain-community>=0.4       # PyPDFLoader (document loader)
+
+# --- Embedding model ---
+langchain-cohere>=0.6          # CohereEmbeddings (embed-v4.0)
+
+# --- Vector database ---
+langchain-chroma>=1.0          # LangChain wrapper for ChromaDB
+chromadb>=1.0                  # Local persistent vector store
+
+# --- Utilities ---
+pypdf>=6.0                     # PDF text extraction backend for PyPDFLoader
+python-dotenv>=1.0             # Load COHERE_API_KEY from .env
+
+# --- Testing ---
+pytest>=8.0                    # Unit and integration tests

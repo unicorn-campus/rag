@@ -1,0 +1,446 @@
+{
+  "chunk_index": 10,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Party",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Official",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Judge",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "ReinstatementRequest",
+        "properties": [
+          {
+            "name": "date",
+            "type": "DATE"
+          },
+          {
+            "name": "status",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Decision",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Period",
+        "properties": [
+          {
+            "name": "start_date",
+            "type": "DATE"
+          },
+          {
+            "name": "end_date",
+            "type": "DATE"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS"
+      },
+      {
+        "label": "RECEIVES"
+      },
+      {
+        "label": "NOTIFIES"
+      },
+      {
+        "label": "DECIDES"
+      },
+      {
+        "label": "SETS"
+      },
+      {
+        "label": "APPLIES_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Party",
+        "relationship": "SUBMITS",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "RECEIVES",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Judge",
+        "relationship": "RECEIVES",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "NOTIFIES",
+        "target": "Party"
+      },
+      {
+        "source": "Judge",
+        "relationship": "NOTIFIES",
+        "target": "Party"
+      },
+      {
+        "source": "Official",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Judge",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "APPLIES_TO",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "SETS",
+        "target": "Period"
+      },
+      {
+        "source": "Judge",
+        "relationship": "SETS",
+        "target": "Period"
+      },
+      {
+        "source": "Period",
+        "relationship": "APPLIES_TO",
+        "target": "ReinstatementRequest"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Party",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Party",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Official",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Official",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Judge",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Judge",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Party",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Official",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Judge",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "ReinstatementRequest",
+        "description": "",
+        "properties": [
+          {
+            "name": "date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "status",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decision",
+        "description": "",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Period",
+        "description": "",
+        "properties": [
+          {
+            "name": "start_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "end_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RECEIVES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "NOTIFIES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DECIDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SETS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "APPLIES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Party",
+        "relationship": "SUBMITS",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "RECEIVES",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Judge",
+        "relationship": "RECEIVES",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "NOTIFIES",
+        "target": "Party"
+      },
+      {
+        "source": "Judge",
+        "relationship": "NOTIFIES",
+        "target": "Party"
+      },
+      {
+        "source": "Official",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Judge",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "APPLIES_TO",
+        "target": "ReinstatementRequest"
+      },
+      {
+        "source": "Official",
+        "relationship": "SETS",
+        "target": "Period"
+      },
+      {
+        "source": "Judge",
+        "relationship": "SETS",
+        "target": "Period"
+      },
+      {
+        "source": "Period",
+        "relationship": "APPLIES_TO",
+        "target": "ReinstatementRequest"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Party",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Party",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Official",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Official",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Judge",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Judge",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

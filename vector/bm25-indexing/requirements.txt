@@ -1,0 +1,13 @@
+# --- LangChain ---
+langchain-core>=1.0            # Document base class
+langchain-community>=0.4       # BM25Retriever (package is archived but still works)
+
+# --- BM25 / Korean tokenizer ---
+rank-bm25>=0.2.2               # BM25Okapi scoring used by BM25Retriever
+kiwipiepy>=0.21                # Kiwi Korean morphological analyzer for tokenization
+
+# --- Source corpus (read chunks from existing vector DB, no re-embedding) ---
+chromadb>=1.0                  # Read documents and metadata from the shared vectordb
+
+# --- Testing ---
+pytest>=8.0                    # Unit and integration tests

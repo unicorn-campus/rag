@@ -1,0 +1,132 @@
+{
+  "chunk_index": 147,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Patent",
+        "properties": []
+      },
+      {
+        "label": "Decision",
+        "properties": []
+      },
+      {
+        "label": "Trial",
+        "properties": []
+      },
+      {
+        "label": "Party",
+        "properties": []
+      },
+      {
+        "label": "Judge",
+        "properties": []
+      },
+      {
+        "label": "ReexaminationRequest",
+        "properties": []
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "PARTICIPATES_IN"
+      },
+      {
+        "label": "OVERSEES"
+      },
+      {
+        "label": "RESULTS_IN"
+      },
+      {
+        "label": "APPLIES_TO"
+      },
+      {
+        "label": "FILED_BY"
+      },
+      {
+        "label": "TARGETS"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Party",
+        "relationship": "PARTICIPATES_IN",
+        "target": "Trial"
+      },
+      {
+        "source": "Judge",
+        "relationship": "OVERSEES",
+        "target": "Trial"
+      },
+      {
+        "source": "Trial",
+        "relationship": "RESULTS_IN",
+        "target": "Decision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "APPLIES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "ReexaminationRequest",
+        "relationship": "FILED_BY",
+        "target": "Party"
+      },
+      {
+        "source": "ReexaminationRequest",
+        "relationship": "TARGETS",
+        "target": "Decision"
+      }
+    ],
+    "constraints": []
+  },
+  "graph_schema": {
+    "node_types": [],
+    "relationship_types": [
+      {
+        "label": "PARTICIPATES_IN",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "OVERSEES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RESULTS_IN",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "APPLIES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "FILED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "TARGETS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [],
+    "constraints": [],
+    "additional_node_types": true,
+    "additional_relationship_types": false,
+    "additional_patterns": true
+  }
+}

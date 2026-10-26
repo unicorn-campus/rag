@@ -1,0 +1,367 @@
+{
+  "chunk_index": 110,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Patent",
+        "properties": []
+      },
+      {
+        "label": "PatentRightHolder",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "LegalProvision",
+        "properties": [
+          {
+            "name": "code",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Procedure",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "CorrectionRequest",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "TimePeriod",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "OWNS"
+      },
+      {
+        "label": "UNDERGOES"
+      },
+      {
+        "label": "INCLUDES"
+      },
+      {
+        "label": "ALLOWS"
+      },
+      {
+        "label": "MADE_BY"
+      },
+      {
+        "label": "HAS"
+      },
+      {
+        "label": "REFERS_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentRightHolder",
+        "relationship": "OWNS",
+        "target": "Patent"
+      },
+      {
+        "source": "Patent",
+        "relationship": "UNDERGOES",
+        "target": "Procedure"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "INCLUDES",
+        "target": "LegalProvision"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "ALLOWS",
+        "target": "CorrectionRequest"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "MADE_BY",
+        "target": "PatentRightHolder"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "HAS",
+        "target": "TimePeriod"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "REFERS_TO",
+        "target": "LegalProvision"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "LegalProvision",
+        "property_names": [
+          "code"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "LegalProvision",
+        "property_names": [
+          "code"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Procedure",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Procedure",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "TimePeriod",
+        "property_names": [
+          "description"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "TimePeriod",
+        "property_names": [
+          "description"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "PatentRightHolder",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "LegalProvision",
+        "description": "",
+        "properties": [
+          {
+            "name": "code",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Procedure",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "CorrectionRequest",
+        "description": "",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "TimePeriod",
+        "description": "",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "OWNS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "UNDERGOES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "INCLUDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ALLOWS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "MADE_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "REFERS_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Procedure",
+        "relationship": "INCLUDES",
+        "target": "LegalProvision"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "ALLOWS",
+        "target": "CorrectionRequest"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "MADE_BY",
+        "target": "PatentRightHolder"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "HAS",
+        "target": "TimePeriod"
+      },
+      {
+        "source": "CorrectionRequest",
+        "relationship": "REFERS_TO",
+        "target": "LegalProvision"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "code",
+        "property_names": [
+          "code"
+        ],
+        "node_type": "LegalProvision",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "code",
+        "property_names": [
+          "code"
+        ],
+        "node_type": "LegalProvision",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Procedure",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Procedure",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "description",
+        "property_names": [
+          "description"
+        ],
+        "node_type": "TimePeriod",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "description",
+        "property_names": [
+          "description"
+        ],
+        "node_type": "TimePeriod",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

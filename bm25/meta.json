@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "collection": "patent_law",
+  "doc_count": 191,
+  "tokenizer": {
+    "library": "kiwipiepy",
+    "version": "0.24.0",
+    "keep_tags": [
+      "NNG",
+      "NNP",
+      "NR",
+      "SN",
+      "SL",
+      "SH",
+      "XR",
+      "VV",
+      "VA"
+    ],
+    "article_token": "제\\s*(\\d+)\\s*조(?:\\s*의\\s*(\\d+))?"
+  },
+  "bm25_params": {
+    "k1": 1.5,
+    "b": 0.75
+  },
+  "created_at": "2026-10-20T08:23:42+00:00"
+}

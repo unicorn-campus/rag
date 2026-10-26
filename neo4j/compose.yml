@@ -1,0 +1,47 @@
+# 하이브리드 AI 실습용 그래프 DB (GraphRAG 실습 공용)
+# 기동: docker compose -f neo4j/compose.yml up -d   (저장소 루트(rag 폴더)에서)
+# 비밀번호는 이 파일에 적지 않고 같은 폴더의 .env에서 읽음(.env.example 참고, .env는 git에 올리지 않음).
+# 프로젝트, 컨테이너, 볼륨 이름을 hybrid-ai 전용으로 둠. hybrid-ai-lab 저장소의 같은 compose와 데이터가 섞이지 않게 함.
+# 포트는 같으므로 두 저장소의 Neo4j를 동시에 띄우지 않음
+name: hybrid-ai-neo4j
+services:
+  neo4j:
+    image: neo4j:2026.09.0-community
+    container_name: hybrid-ai-neo4j
+    environment:
+      # .env에 NEO4J_PASSWORD가 없으면 기동을 멈춰, 기본 비밀번호로 잘못 뜨는 일을 막음
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?neo4j/.env에 NEO4J_PASSWORD를 넣을 것(.env.example 참고)}
+      # 첫 기동 때 이미지에 든 Neo4j 판과 같은 APOC, GDS(Community Edition)를 plugins 볼륨에 설치함.
+      # APOC Extended는 넣지 않음(core APOC와 함께 두면 core 프로시저가 깨지는 일이 있었음)
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
+      NEO4J_dbms_security_procedures_allowlist: "apoc.*,gds.*"
+      # GDS 그래프 투영은 힙을 쓰므로 실습 표본에 맞춰 둠. 노트북 메모리가 작으면 .env에서 줄임
+      NEO4J_server_memory_heap_initial__size: ${NEO4J_HEAP:-1G}
+      NEO4J_server_memory_heap_max__size: ${NEO4J_HEAP:-1G}
+      NEO4J_server_memory_pagecache_size: ${NEO4J_PAGECACHE:-512M}
+    ports:
+      - "${NEO4J_HTTP_PORT:-7474}:7474"   # Neo4j Browser
+      - "${NEO4J_BOLT_PORT:-7687}:7687"   # 드라이버 접속(bolt)
+    volumes:
+      # Windows 바인드 마운트는 권한 문제를 일으키므로 명명 볼륨을 씀
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+      # 설치한 플러그인을 남겨, 컨테이너를 다시 만들어도 같은 판을 씀
+      - neo4j-plugins:/plugins
+    healthcheck:
+      # 비밀번호를 compose에 두지 않으려고 컨테이너 안의 NEO4J_AUTH에서 꺼내 씀($$는 compose 치환을 막음)
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${NEO4J_AUTH#neo4j/}\" 'RETURN 1' >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  neo4j-data:
+    name: rag-neo4j-data
+  neo4j-logs:
+    name: rag-neo4j-logs
+  neo4j-plugins:
+    name: rag-neo4j-plugins

@@ -1,0 +1,368 @@
+{
+  "chunk_index": 187,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Article",
+        "properties": [
+          {
+            "name": "number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Offense",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Penalty",
+        "properties": [
+          {
+            "name": "max_imprisonment_years",
+            "type": "INTEGER"
+          },
+          {
+            "name": "max_fine_amount",
+            "type": "FLOAT"
+          }
+        ]
+      },
+      {
+        "label": "Person",
+        "properties": []
+      },
+      {
+        "label": "Organization",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Role",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "COMMITTED_BY"
+      },
+      {
+        "label": "OFFENSE_DEFINED_IN"
+      },
+      {
+        "label": "OFFENSE_HAS_PENALTY"
+      },
+      {
+        "label": "PERSON_HAS_ROLE"
+      },
+      {
+        "label": "PERSON_AFFILIATED_WITH"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Offense",
+        "relationship": "COMMITTED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "Offense",
+        "relationship": "OFFENSE_DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Offense",
+        "relationship": "OFFENSE_HAS_PENALTY",
+        "target": "Penalty"
+      },
+      {
+        "source": "Person",
+        "relationship": "PERSON_HAS_ROLE",
+        "target": "Role"
+      },
+      {
+        "source": "Person",
+        "relationship": "PERSON_AFFILIATED_WITH",
+        "target": "Organization"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Article",
+        "property_names": [
+          "number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Organization",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Role",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Offense",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Article",
+        "property_names": [
+          "number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Organization",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Role",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Offense",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Article",
+        "description": "",
+        "properties": [
+          {
+            "name": "number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Offense",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Penalty",
+        "description": "",
+        "properties": [
+          {
+            "name": "max_imprisonment_years",
+            "type": "INTEGER",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "max_fine_amount",
+            "type": "FLOAT",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Organization",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Role",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "COMMITTED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "OFFENSE_DEFINED_IN",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "OFFENSE_HAS_PENALTY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PERSON_HAS_ROLE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PERSON_AFFILIATED_WITH",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Offense",
+        "relationship": "OFFENSE_DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Offense",
+        "relationship": "OFFENSE_HAS_PENALTY",
+        "target": "Penalty"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "number",
+        "property_names": [
+          "number"
+        ],
+        "node_type": "Article",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Organization",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Role",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Offense",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "number",
+        "property_names": [
+          "number"
+        ],
+        "node_type": "Article",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Organization",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Role",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Offense",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

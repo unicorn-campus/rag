@@ -1,0 +1,529 @@
+{
+  "chunk_index": 67,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Patent",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Fee",
+        "properties": [
+          {
+            "name": "amount",
+            "type": "FLOAT"
+          },
+          {
+            "name": "fee_type",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Person",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Organization",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Law",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Decree",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Document",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY"
+      },
+      {
+        "label": "GRANTED_TO"
+      },
+      {
+        "label": "ASSOCIATED_WITH"
+      },
+      {
+        "label": "EXEMPTED_BY"
+      },
+      {
+        "label": "LEGAL_BASIS"
+      },
+      {
+        "label": "DEFINED_BY"
+      },
+      {
+        "label": "SUBMITS"
+      },
+      {
+        "label": "REQUIRED_FOR"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "Patent",
+        "relationship": "GRANTED_TO",
+        "target": "Person"
+      },
+      {
+        "source": "Fee",
+        "relationship": "ASSOCIATED_WITH",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Fee",
+        "relationship": "ASSOCIATED_WITH",
+        "target": "Patent"
+      },
+      {
+        "source": "Fee",
+        "relationship": "EXEMPTED_BY",
+        "target": "Organization"
+      },
+      {
+        "source": "Organization",
+        "relationship": "LEGAL_BASIS",
+        "target": "Decree"
+      },
+      {
+        "source": "Decree",
+        "relationship": "DEFINED_BY",
+        "target": "Law"
+      },
+      {
+        "source": "Person",
+        "relationship": "SUBMITS",
+        "target": "Document"
+      },
+      {
+        "source": "Document",
+        "relationship": "REQUIRED_FOR",
+        "target": "Fee"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Decree",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Law",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Fee",
+        "property_names": [
+          "amount"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Person",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Organization",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Patent",
+        "description": "",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Fee",
+        "description": "",
+        "properties": [
+          {
+            "name": "amount",
+            "type": "FLOAT",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "fee_type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Person",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Organization",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Law",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decree",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Document",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GRANTED_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ASSOCIATED_WITH",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "EXEMPTED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "LEGAL_BASIS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DEFINED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SUBMITS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "REQUIRED_FOR",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "Patent",
+        "relationship": "GRANTED_TO",
+        "target": "Person"
+      },
+      {
+        "source": "Fee",
+        "relationship": "ASSOCIATED_WITH",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Fee",
+        "relationship": "ASSOCIATED_WITH",
+        "target": "Patent"
+      },
+      {
+        "source": "Fee",
+        "relationship": "EXEMPTED_BY",
+        "target": "Organization"
+      },
+      {
+        "source": "Organization",
+        "relationship": "LEGAL_BASIS",
+        "target": "Decree"
+      },
+      {
+        "source": "Decree",
+        "relationship": "DEFINED_BY",
+        "target": "Law"
+      },
+      {
+        "source": "Person",
+        "relationship": "SUBMITS",
+        "target": "Document"
+      },
+      {
+        "source": "Document",
+        "relationship": "REQUIRED_FOR",
+        "target": "Fee"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Decree",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Law",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "amount",
+        "property_names": [
+          "amount"
+        ],
+        "node_type": "Fee",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Organization",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

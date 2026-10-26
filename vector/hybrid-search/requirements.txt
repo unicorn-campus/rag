@@ -1,0 +1,22 @@
+# --- LangChain core ---
+langchain-core>=1.0            # Prompt, Runnable (LCEL), Retriever, Document
+langchain-classic>=1.0         # EnsembleRetriever (weighted Reciprocal Rank Fusion)
+
+# --- LLM ---
+langchain-groq>=1.0            # ChatGroq for Groq LPU (openai/gpt-oss-120b)
+
+# --- Dense retrieval (load existing vector DB, no re-indexing) ---
+langchain-chroma>=1.0          # LangChain wrapper for ChromaDB
+chromadb>=1.0                  # Persistent client to open the shared vectordb
+langchain-cohere>=0.6          # CohereEmbeddings (embed-v4.0) for query embedding
+
+# --- Sparse retrieval (load existing BM25 index, no re-indexing) ---
+langchain-community>=0.4       # BM25Retriever (package is archived but still works)
+rank-bm25>=0.2.2               # BM25Okapi scoring used by BM25Retriever
+kiwipiepy>=0.21                # Kiwi Korean morphological analyzer for query tokenization
+
+# --- Utilities ---
+python-dotenv>=1.0             # Load COHERE_API_KEY and GROQ_API_KEY from .env
+
+# --- Testing ---
+pytest>=8.0                    # Unit and integration tests

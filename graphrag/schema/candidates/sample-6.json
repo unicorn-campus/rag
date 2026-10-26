@@ -1,0 +1,357 @@
+{
+  "chunk_index": 6,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Official",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Procedure",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Period",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "max_days",
+            "type": "INTEGER"
+          }
+        ]
+      },
+      {
+        "label": "Region",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "EXTENDS"
+      },
+      {
+        "label": "SHORTENS"
+      },
+      {
+        "label": "CHANGES_DEADLINE"
+      },
+      {
+        "label": "GOVERNED_BY"
+      },
+      {
+        "label": "APPLIES_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Official",
+        "relationship": "EXTENDS",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "SHORTENS",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "CHANGES_DEADLINE",
+        "target": "Period"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "GOVERNED_BY",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "APPLIES_TO",
+        "target": "Region"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Official",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Official",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Procedure",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Procedure",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Period",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Period",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Region",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Region",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Official",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Procedure",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Period",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "max_days",
+            "type": "INTEGER",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Region",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "EXTENDS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SHORTENS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "CHANGES_DEADLINE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GOVERNED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "APPLIES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Official",
+        "relationship": "EXTENDS",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "SHORTENS",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "CHANGES_DEADLINE",
+        "target": "Period"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "GOVERNED_BY",
+        "target": "Period"
+      },
+      {
+        "source": "Official",
+        "relationship": "APPLIES_TO",
+        "target": "Region"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Official",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Official",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Procedure",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Procedure",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Period",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Period",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Region",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Region",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

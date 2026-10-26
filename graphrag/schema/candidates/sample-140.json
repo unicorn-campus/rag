@@ -1,0 +1,347 @@
+{
+  "chunk_index": 140,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Person",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "role",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Tribunal",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Document",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Decision",
+        "properties": [
+          {
+            "name": "reason",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Evidence",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS"
+      },
+      {
+        "label": "REQUESTS"
+      },
+      {
+        "label": "DECIDES"
+      },
+      {
+        "label": "INVESTIGATES"
+      },
+      {
+        "label": "NOTIFIES"
+      },
+      {
+        "label": "ASSIGNS"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Person",
+        "relationship": "SUBMITS",
+        "target": "Document"
+      },
+      {
+        "source": "Person",
+        "relationship": "REQUESTS",
+        "target": "Evidence"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "INVESTIGATES",
+        "target": "Evidence"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "NOTIFIES",
+        "target": "Person"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "ASSIGNS",
+        "target": "Person"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "EXISTENCE",
+        "node_type": "Person",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Tribunal",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Document",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Decision",
+        "property_names": [
+          "reason"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Evidence",
+        "property_names": [
+          "type"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Person",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "role",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Tribunal",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Document",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decision",
+        "description": "",
+        "properties": [
+          {
+            "name": "reason",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Evidence",
+        "description": "",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "REQUESTS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DECIDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "INVESTIGATES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "NOTIFIES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ASSIGNS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Person",
+        "relationship": "SUBMITS",
+        "target": "Document"
+      },
+      {
+        "source": "Person",
+        "relationship": "REQUESTS",
+        "target": "Evidence"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "DECIDES",
+        "target": "Decision"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "INVESTIGATES",
+        "target": "Evidence"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "NOTIFIES",
+        "target": "Person"
+      },
+      {
+        "source": "Tribunal",
+        "relationship": "ASSIGNS",
+        "target": "Person"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Tribunal",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Document",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "reason",
+        "property_names": [
+          "reason"
+        ],
+        "node_type": "Decision",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "type",
+        "property_names": [
+          "type"
+        ],
+        "node_type": "Evidence",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

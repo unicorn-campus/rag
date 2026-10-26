@@ -1,0 +1,88 @@
+{
+  "chunk_index": 62,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Party",
+        "properties": []
+      },
+      {
+        "label": "Patent",
+        "properties": []
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "PAY_FEES"
+      },
+      {
+        "label": "CLAIM_REIMBURSEMENT"
+      },
+      {
+        "label": "PAY_ADDITIONAL_FEES"
+      },
+      {
+        "label": "ABANDON_APPLICATION"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Party",
+        "relationship": "PAY_FEES",
+        "target": "Patent"
+      },
+      {
+        "source": "Party",
+        "relationship": "CLAIM_REIMBURSEMENT",
+        "target": "Party"
+      },
+      {
+        "source": "Party",
+        "relationship": "PAY_ADDITIONAL_FEES",
+        "target": "Patent"
+      },
+      {
+        "source": "Party",
+        "relationship": "ABANDON_APPLICATION",
+        "target": "Patent"
+      }
+    ],
+    "constraints": []
+  },
+  "graph_schema": {
+    "node_types": [],
+    "relationship_types": [
+      {
+        "label": "PAY_FEES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "CLAIM_REIMBURSEMENT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PAY_ADDITIONAL_FEES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ABANDON_APPLICATION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [],
+    "constraints": [],
+    "additional_node_types": true,
+    "additional_relationship_types": false,
+    "additional_patterns": true
+  }
+}

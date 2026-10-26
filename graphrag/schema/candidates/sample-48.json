@@ -1,0 +1,402 @@
+{
+  "chunk_index": 48,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE"
+          },
+          {
+            "name": "priority_withdraw_deadline",
+            "type": "DATE"
+          }
+        ]
+      },
+      {
+        "label": "PriorApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE"
+          },
+          {
+            "name": "status",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Applicant",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Examiner",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "qualification",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Director",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Decision",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING"
+          },
+          {
+            "name": "date",
+            "type": "DATE"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY"
+      },
+      {
+        "label": "PRIORITY_BASED_ON"
+      },
+      {
+        "label": "EXAMINED_BY"
+      },
+      {
+        "label": "OVERSEES"
+      },
+      {
+        "label": "MAKES_DECISION"
+      },
+      {
+        "label": "WITHDRAWS_PRIORITY"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Applicant"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "PRIORITY_BASED_ON",
+        "target": "PriorApplication"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "EXAMINED_BY",
+        "target": "Examiner"
+      },
+      {
+        "source": "Director",
+        "relationship": "OVERSEES",
+        "target": "Examiner"
+      },
+      {
+        "source": "Examiner",
+        "relationship": "MAKES_DECISION",
+        "target": "Decision"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "WITHDRAWS_PRIORITY",
+        "target": "PatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PriorApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "filing_date"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "priority_withdraw_deadline",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PriorApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "filing_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "status",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Applicant",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Examiner",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "qualification",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Director",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decision",
+        "description": "",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "FILED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PRIORITY_BASED_ON",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "EXAMINED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "OVERSEES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "MAKES_DECISION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "WITHDRAWS_PRIORITY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "PatentApplication",
+        "relationship": "FILED_BY",
+        "target": "Applicant"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "PRIORITY_BASED_ON",
+        "target": "PriorApplication"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "EXAMINED_BY",
+        "target": "Examiner"
+      },
+      {
+        "source": "Director",
+        "relationship": "OVERSEES",
+        "target": "Examiner"
+      },
+      {
+        "source": "Examiner",
+        "relationship": "MAKES_DECISION",
+        "target": "Decision"
+      },
+      {
+        "source": "Applicant",
+        "relationship": "WITHDRAWS_PRIORITY",
+        "target": "PatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PriorApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "filing_date",
+        "property_names": [
+          "filing_date"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

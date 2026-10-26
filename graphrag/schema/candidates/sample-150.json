@@ -1,0 +1,275 @@
+{
+  "chunk_index": 150,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Patent",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Party",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "License",
+        "properties": [
+          {
+            "name": "license_type",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Reexamination",
+        "properties": []
+      },
+      {
+        "label": "Decision",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "RELATES_TO"
+      },
+      {
+        "label": "GRANTED_TO"
+      },
+      {
+        "label": "INITIATED_BY"
+      },
+      {
+        "label": "RESULTS_IN"
+      },
+      {
+        "label": "DECIDES"
+      },
+      {
+        "label": "PAY_COMPENSATION"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "License",
+        "relationship": "RELATES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "License",
+        "relationship": "GRANTED_TO",
+        "target": "Party"
+      },
+      {
+        "source": "Reexamination",
+        "relationship": "INITIATED_BY",
+        "target": "Party"
+      },
+      {
+        "source": "Reexamination",
+        "relationship": "RESULTS_IN",
+        "target": "Decision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "DECIDES",
+        "target": "Patent"
+      },
+      {
+        "source": "Party",
+        "relationship": "PAY_COMPENSATION",
+        "target": "Patent"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Patent",
+        "property_names": [
+          "patent_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Party",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Patent",
+        "description": "",
+        "properties": [
+          {
+            "name": "patent_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Party",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "License",
+        "description": "",
+        "properties": [
+          {
+            "name": "license_type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decision",
+        "description": "",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "RELATES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GRANTED_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "INITIATED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RESULTS_IN",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DECIDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "PAY_COMPENSATION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "License",
+        "relationship": "RELATES_TO",
+        "target": "Patent"
+      },
+      {
+        "source": "License",
+        "relationship": "GRANTED_TO",
+        "target": "Party"
+      },
+      {
+        "source": "Decision",
+        "relationship": "DECIDES",
+        "target": "Patent"
+      },
+      {
+        "source": "Party",
+        "relationship": "PAY_COMPENSATION",
+        "target": "Patent"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "patent_number",
+        "property_names": [
+          "patent_number"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Party",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

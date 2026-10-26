@@ -1,0 +1,428 @@
+{
+  "chunk_index": 20,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "RightHolder",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Invention",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          },
+          {
+            "name": "submission_date",
+            "type": "DATE"
+          },
+          {
+            "name": "fee_paid",
+            "type": "BOOLEAN"
+          },
+          {
+            "name": "fee_amount",
+            "type": "FLOAT"
+          }
+        ]
+      },
+      {
+        "label": "GovernmentAgency",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "LegalProvision",
+        "properties": [
+          {
+            "name": "reference",
+            "type": "STRING"
+          },
+          {
+            "name": "article_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Decision",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING"
+          },
+          {
+            "name": "decision_date",
+            "type": "DATE"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_RIGHT"
+      },
+      {
+        "label": "SUBMITTED_BY"
+      },
+      {
+        "label": "SUBMITTED_TO"
+      },
+      {
+        "label": "GOVERNED_BY"
+      },
+      {
+        "label": "DECIDED_BY"
+      },
+      {
+        "label": "RESULTS_FROM"
+      },
+      {
+        "label": "RELATES_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "RightHolder",
+        "relationship": "HAS_RIGHT",
+        "target": "Invention"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_BY",
+        "target": "RightHolder"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "GovernmentAgency"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "GOVERNED_BY",
+        "target": "LegalProvision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "DECIDED_BY",
+        "target": "GovernmentAgency"
+      },
+      {
+        "source": "Decision",
+        "relationship": "RESULTS_FROM",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Invention",
+        "relationship": "RELATES_TO",
+        "target": "Decision"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "RightHolder",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "submission_date"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "GovernmentAgency",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "RightHolder",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Invention",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "submission_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "fee_paid",
+            "type": "BOOLEAN",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "fee_amount",
+            "type": "FLOAT",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "GovernmentAgency",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "LegalProvision",
+        "description": "",
+        "properties": [
+          {
+            "name": "reference",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "article_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Decision",
+        "description": "",
+        "properties": [
+          {
+            "name": "decision_type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "decision_date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_RIGHT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SUBMITTED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SUBMITTED_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "GOVERNED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DECIDED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RESULTS_FROM",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RELATES_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "RightHolder",
+        "relationship": "HAS_RIGHT",
+        "target": "Invention"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_BY",
+        "target": "RightHolder"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "GovernmentAgency"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "GOVERNED_BY",
+        "target": "LegalProvision"
+      },
+      {
+        "source": "Decision",
+        "relationship": "DECIDED_BY",
+        "target": "GovernmentAgency"
+      },
+      {
+        "source": "Decision",
+        "relationship": "RESULTS_FROM",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Invention",
+        "relationship": "RELATES_TO",
+        "target": "Decision"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "RightHolder",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "submission_date",
+        "property_names": [
+          "submission_date"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "GovernmentAgency",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

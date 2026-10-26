@@ -1,0 +1,280 @@
+{
+  "chunk_index": 173,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "InternationalPatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Requirement",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING"
+          },
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Article",
+        "properties": [
+          {
+            "name": "code",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Amendment",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_REQUIREMENT"
+      },
+      {
+        "label": "DEFINED_IN"
+      },
+      {
+        "label": "ALLOWED_FOR"
+      },
+      {
+        "label": "EXEMPTED_FOR"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "InternationalPatentApplication",
+        "relationship": "HAS_REQUIREMENT",
+        "target": "Requirement"
+      },
+      {
+        "source": "Requirement",
+        "relationship": "DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Amendment",
+        "relationship": "ALLOWED_FOR",
+        "target": "InternationalPatentApplication"
+      },
+      {
+        "source": "Amendment",
+        "relationship": "DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Requirement",
+        "relationship": "EXEMPTED_FOR",
+        "target": "InternationalPatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "KEY",
+        "node_type": "Article",
+        "property_names": [
+          "code"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "KEY",
+        "node_type": "InternationalPatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Requirement",
+        "property_names": [
+          "type"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Requirement",
+        "property_names": [
+          "description"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "InternationalPatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Requirement",
+        "description": "",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Article",
+        "description": "",
+        "properties": [
+          {
+            "name": "code",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Amendment",
+        "description": "",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "HAS_REQUIREMENT",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DEFINED_IN",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "ALLOWED_FOR",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "EXEMPTED_FOR",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "InternationalPatentApplication",
+        "relationship": "HAS_REQUIREMENT",
+        "target": "Requirement"
+      },
+      {
+        "source": "Requirement",
+        "relationship": "DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Amendment",
+        "relationship": "ALLOWED_FOR",
+        "target": "InternationalPatentApplication"
+      },
+      {
+        "source": "Amendment",
+        "relationship": "DEFINED_IN",
+        "target": "Article"
+      },
+      {
+        "source": "Requirement",
+        "relationship": "EXEMPTED_FOR",
+        "target": "InternationalPatentApplication"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "KEY",
+        "property_name": "code",
+        "property_names": [
+          "code"
+        ],
+        "node_type": "Article",
+        "relationship_type": null
+      },
+      {
+        "type": "KEY",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "InternationalPatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "type",
+        "property_names": [
+          "type"
+        ],
+        "node_type": "Requirement",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "description",
+        "property_names": [
+          "description"
+        ],
+        "node_type": "Requirement",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

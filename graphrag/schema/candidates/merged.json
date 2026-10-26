@@ -1,0 +1,2970 @@
+{
+  "node_types": [
+    {
+      "label": "Patent",
+      "count": 9,
+      "samples": [
+        7,
+        62,
+        64,
+        67,
+        79,
+        102,
+        110,
+        147,
+        150
+      ],
+      "properties": {
+        "patent_number:STRING": 4,
+        "status:STRING": 1,
+        "title:STRING": 1
+      }
+    },
+    {
+      "label": "Decision",
+      "count": 7,
+      "samples": [
+        10,
+        20,
+        48,
+        140,
+        145,
+        147,
+        150
+      ],
+      "properties": {
+        "decision_type:STRING": 3,
+        "type:STRING": 1,
+        "reason:STRING": 1,
+        "decision_date:DATE": 1,
+        "date:DATE": 1
+      }
+    },
+    {
+      "label": "Party",
+      "count": 6,
+      "samples": [
+        10,
+        62,
+        145,
+        147,
+        150,
+        184
+      ],
+      "properties": {
+        "name:STRING": 3,
+        "role:STRING": 1
+      }
+    },
+    {
+      "label": "PatentApplication",
+      "count": 6,
+      "samples": [
+        7,
+        20,
+        28,
+        48,
+        64,
+        67
+      ],
+      "properties": {
+        "application_number:STRING": 5,
+        "filing_date:DATE": 2,
+        "submission_date:DATE": 1,
+        "fee_paid:BOOLEAN": 1,
+        "fee_amount:FLOAT": 1,
+        "title:STRING": 1,
+        "priority_withdraw_deadline:DATE": 1
+      }
+    },
+    {
+      "label": "Person",
+      "count": 6,
+      "samples": [
+        7,
+        28,
+        64,
+        67,
+        140,
+        187
+      ],
+      "properties": {
+        "name:STRING": 5,
+        "role:STRING": 1,
+        "address:STRING": 1,
+        "identifier:STRING": 1
+      }
+    },
+    {
+      "label": "Invention",
+      "count": 4,
+      "samples": [
+        20,
+        28,
+        102,
+        172
+      ],
+      "properties": {
+        "title:STRING": 3
+      }
+    },
+    {
+      "label": "Applicant",
+      "count": 3,
+      "samples": [
+        48,
+        79,
+        172
+      ],
+      "properties": {
+        "name:STRING": 3,
+        "address:STRING": 1
+      }
+    },
+    {
+      "label": "Organization",
+      "count": 3,
+      "samples": [
+        28,
+        67,
+        187
+      ],
+      "properties": {
+        "name:STRING": 3,
+        "location:STRING": 1
+      }
+    },
+    {
+      "label": "Procedure",
+      "count": 3,
+      "samples": [
+        6,
+        7,
+        110
+      ],
+      "properties": {
+        "name:STRING": 3
+      }
+    },
+    {
+      "label": "Article",
+      "count": 2,
+      "samples": [
+        173,
+        187
+      ],
+      "properties": {
+        "code:STRING": 1,
+        "number:STRING": 1
+      }
+    },
+    {
+      "label": "Document",
+      "count": 2,
+      "samples": [
+        67,
+        140
+      ],
+      "properties": {
+        "title:STRING": 1,
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Fee",
+      "count": 2,
+      "samples": [
+        7,
+        67
+      ],
+      "properties": {
+        "amount:FLOAT": 2,
+        "fee_type:STRING": 1
+      }
+    },
+    {
+      "label": "InternationalPatentApplication",
+      "count": 2,
+      "samples": [
+        172,
+        173
+      ],
+      "properties": {
+        "application_number:STRING": 2,
+        "filing_date:DATE": 1
+      }
+    },
+    {
+      "label": "Judge",
+      "count": 2,
+      "samples": [
+        10,
+        147
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "LegalProvision",
+      "count": 2,
+      "samples": [
+        20,
+        110
+      ],
+      "properties": {
+        "code:STRING": 1,
+        "reference:STRING": 1,
+        "article_number:STRING": 1
+      }
+    },
+    {
+      "label": "Official",
+      "count": 2,
+      "samples": [
+        6,
+        10
+      ],
+      "properties": {
+        "name:STRING": 1,
+        "title:STRING": 1
+      }
+    },
+    {
+      "label": "PatentRight",
+      "count": 2,
+      "samples": [
+        102,
+        172
+      ],
+      "properties": {
+        "registration_number:STRING": 1,
+        "registration_date:DATE": 1
+      }
+    },
+    {
+      "label": "Period",
+      "count": 2,
+      "samples": [
+        6,
+        10
+      ],
+      "properties": {
+        "start_date:DATE": 1,
+        "end_date:DATE": 1,
+        "name:STRING": 1,
+        "max_days:INTEGER": 1
+      }
+    },
+    {
+      "label": "Agent",
+      "count": 1,
+      "samples": [
+        79
+      ],
+      "properties": {
+        "name:STRING": 1,
+        "address:STRING": 1
+      }
+    },
+    {
+      "label": "Amendment",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "Appeal",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {
+        "type:STRING": 1
+      }
+    },
+    {
+      "label": "Application",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Authority",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "BusinessEntity",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "BusinessOperator",
+      "count": 1,
+      "samples": [
+        172
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "CivilProcedureCostLaw",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "CivilProcedureLaw",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Claim",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {
+        "number:INTEGER": 1,
+        "text:STRING": 1
+      }
+    },
+    {
+      "label": "ConfidentialityOrder",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CorrectionRequest",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {
+        "type:STRING": 1
+      }
+    },
+    {
+      "label": "Cost",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Court",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "DecisionDocument",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {
+        "date:DATE": 1
+      }
+    },
+    {
+      "label": "Decree",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Director",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Evidence",
+      "count": 1,
+      "samples": [
+        140
+      ],
+      "properties": {
+        "type:STRING": 1
+      }
+    },
+    {
+      "label": "Examiner",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {
+        "name:STRING": 1,
+        "qualification:STRING": 1
+      }
+    },
+    {
+      "label": "ExclusiveLicense",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ExtensionApplication",
+      "count": 1,
+      "samples": [
+        79
+      ],
+      "properties": {
+        "extension_period:DURATION": 1
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "count": 1,
+      "samples": [
+        20
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "InfringingAct",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {
+        "action:STRING": 1
+      }
+    },
+    {
+      "label": "Judgment",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Law",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "LegalArticle",
+      "count": 1,
+      "samples": [
+        64
+      ],
+      "properties": {
+        "article_id:STRING": 1,
+        "title:STRING": 1
+      }
+    },
+    {
+      "label": "License",
+      "count": 1,
+      "samples": [
+        150
+      ],
+      "properties": {
+        "license_type:STRING": 1
+      }
+    },
+    {
+      "label": "Method",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Offense",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "PatentAttorney",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "PatentOffice",
+      "count": 1,
+      "samples": [
+        79
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "PatentRightHolder",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "PatentTrialBoard",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Penalty",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {
+        "max_imprisonment_years:INTEGER": 1,
+        "max_fine_amount:FLOAT": 1
+      }
+    },
+    {
+      "label": "PriorApplication",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {
+        "application_number:STRING": 1,
+        "filing_date:DATE": 1,
+        "status:STRING": 1
+      }
+    },
+    {
+      "label": "Product",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Reason",
+      "count": 1,
+      "samples": [
+        79
+      ],
+      "properties": {
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "Reexamination",
+      "count": 1,
+      "samples": [
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ReexaminationRequest",
+      "count": 1,
+      "samples": [
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Region",
+      "count": 1,
+      "samples": [
+        6
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ],
+      "properties": {
+        "date:DATE": 1,
+        "status:STRING": 1
+      }
+    },
+    {
+      "label": "Requirement",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {
+        "type:STRING": 1,
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "RightHolder",
+      "count": 1,
+      "samples": [
+        20
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Role",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "Specification",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "TechnicalField",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    },
+    {
+      "label": "TimePeriod",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "TradeSecret",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {
+        "description:STRING": 1
+      }
+    },
+    {
+      "label": "Trial",
+      "count": 1,
+      "samples": [
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "Tribunal",
+      "count": 1,
+      "samples": [
+        140
+      ],
+      "properties": {
+        "name:STRING": 1
+      }
+    }
+  ],
+  "relationship_types": [
+    {
+      "label": "APPLIES_TO",
+      "count": 4,
+      "samples": [
+        6,
+        10,
+        79,
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DECIDES",
+      "count": 4,
+      "samples": [
+        10,
+        140,
+        150,
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "FILED_BY",
+      "count": 4,
+      "samples": [
+        48,
+        64,
+        67,
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SUBMITS",
+      "count": 4,
+      "samples": [
+        10,
+        67,
+        140,
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "GOVERNED_BY",
+      "count": 3,
+      "samples": [
+        6,
+        20,
+        64
+      ],
+      "properties": {}
+    },
+    {
+      "label": "RELATES_TO",
+      "count": 3,
+      "samples": [
+        20,
+        64,
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SUBMITTED_TO",
+      "count": 3,
+      "samples": [
+        20,
+        28,
+        79
+      ],
+      "properties": {}
+    },
+    {
+      "label": "TARGETS",
+      "count": 3,
+      "samples": [
+        7,
+        147,
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "FILED",
+      "count": 2,
+      "samples": [
+        79,
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "GRANTED_TO",
+      "count": 2,
+      "samples": [
+        67,
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_INVENTION",
+      "count": 2,
+      "samples": [
+        102,
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_RIGHT",
+      "count": 2,
+      "samples": [
+        20,
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "INCLUDES",
+      "count": 2,
+      "samples": [
+        7,
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "MADE_BY",
+      "count": 2,
+      "samples": [
+        110,
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "NOTIFIES",
+      "count": 2,
+      "samples": [
+        10,
+        140
+      ],
+      "properties": {}
+    },
+    {
+      "label": "OVERSEES",
+      "count": 2,
+      "samples": [
+        48,
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "RECEIVES",
+      "count": 2,
+      "samples": [
+        10,
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "REPRESENTS",
+      "count": 2,
+      "samples": [
+        28,
+        79
+      ],
+      "properties": {}
+    },
+    {
+      "label": "RESULTS_IN",
+      "count": 2,
+      "samples": [
+        147,
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ABANDON_APPLICATION",
+      "count": 1,
+      "samples": [
+        62
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ACT_TARGETS_LICENSE",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ACT_TARGETS_RIGHT",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ACT_USES_PRODUCT",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ALLOWED_FOR",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ALLOWS",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "APPLIES_FOR",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {}
+    },
+    {
+      "label": "APPLIES_LAW",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ASSIGNS",
+      "count": 1,
+      "samples": [
+        140
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ASSOCIATED_WITH",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {}
+    },
+    {
+      "label": "BELONGS_TO",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CHANGES_DEADLINE",
+      "count": 1,
+      "samples": [
+        6
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CLAIM_COMPENSATION",
+      "count": 1,
+      "samples": [
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CLAIM_REIMBURSEMENT",
+      "count": 1,
+      "samples": [
+        62
+      ],
+      "properties": {}
+    },
+    {
+      "label": "COMMITTED_BY",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CONTAINS_INVENTION",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {}
+    },
+    {
+      "label": "CREATES",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DECIDED_BY",
+      "count": 1,
+      "samples": [
+        20
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DEFINED_BY",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DEFINED_IN",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DELIVERS_TO",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DETERMINED_BY_DECISION",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "DETERMINED_BY_JUDGMENT",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "EXAMINED_BY",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {}
+    },
+    {
+      "label": "EXEMPTED_BY",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {}
+    },
+    {
+      "label": "EXEMPTED_FOR",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {}
+    },
+    {
+      "label": "EXTENDS",
+      "count": 1,
+      "samples": [
+        6
+      ],
+      "properties": {}
+    },
+    {
+      "label": "FEE_TREATED_AS_COST",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "GRANTED_FROM",
+      "count": 1,
+      "samples": [
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_APPEAL",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_CLAIM",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_EXCLUSIVE_LICENSE",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_FEE",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_REASON",
+      "count": 1,
+      "samples": [
+        79
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_REQUIREMENT",
+      "count": 1,
+      "samples": [
+        173
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HAS_SUCCESSOR",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {}
+    },
+    {
+      "label": "HOLDER_OF",
+      "count": 1,
+      "samples": [
+        64
+      ],
+      "properties": {}
+    },
+    {
+      "label": "INITIATED_BY",
+      "count": 1,
+      "samples": [
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "INVENTS",
+      "count": 1,
+      "samples": [
+        28
+      ],
+      "properties": {}
+    },
+    {
+      "label": "INVESTIGATES",
+      "count": 1,
+      "samples": [
+        140
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ISSUES",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {}
+    },
+    {
+      "label": "ISSUES_WARNING",
+      "count": 1,
+      "samples": [
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "IS_METHOD_INVENTION",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "IS_PRODUCT_INVENTION",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "LEGAL_BASIS",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {}
+    },
+    {
+      "label": "MAKES_DECISION",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {}
+    },
+    {
+      "label": "OFFENSE_DEFINED_IN",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {}
+    },
+    {
+      "label": "OFFENSE_HAS_PENALTY",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {}
+    },
+    {
+      "label": "OWNS",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAID_BY",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAID_TO",
+      "count": 1,
+      "samples": [
+        145
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PARTICIPATES_IN",
+      "count": 1,
+      "samples": [
+        147
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAY_ADDITIONAL_FEES",
+      "count": 1,
+      "samples": [
+        62
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAY_COMPENSATION",
+      "count": 1,
+      "samples": [
+        150
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAY_FEE",
+      "count": 1,
+      "samples": [
+        64
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PAY_FEES",
+      "count": 1,
+      "samples": [
+        62
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PERFORMS_ACT",
+      "count": 1,
+      "samples": [
+        102
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PERSON_AFFILIATED_WITH",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PERSON_HAS_ROLE",
+      "count": 1,
+      "samples": [
+        187
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PRACTICES",
+      "count": 1,
+      "samples": [
+        172
+      ],
+      "properties": {}
+    },
+    {
+      "label": "PRIORITY_BASED_ON",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {}
+    },
+    {
+      "label": "RECEIVED_BY",
+      "count": 1,
+      "samples": [
+        7
+      ],
+      "properties": {}
+    },
+    {
+      "label": "REFERS_TO",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "REQUESTS",
+      "count": 1,
+      "samples": [
+        140
+      ],
+      "properties": {}
+    },
+    {
+      "label": "REQUIRED_FOR",
+      "count": 1,
+      "samples": [
+        67
+      ],
+      "properties": {}
+    },
+    {
+      "label": "RESULTS_FROM",
+      "count": 1,
+      "samples": [
+        20
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SENDS",
+      "count": 1,
+      "samples": [
+        184
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SETS",
+      "count": 1,
+      "samples": [
+        10
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SHORTENS",
+      "count": 1,
+      "samples": [
+        6
+      ],
+      "properties": {}
+    },
+    {
+      "label": "SUBMITTED_BY",
+      "count": 1,
+      "samples": [
+        20
+      ],
+      "properties": {}
+    },
+    {
+      "label": "UNDERGOES",
+      "count": 1,
+      "samples": [
+        110
+      ],
+      "properties": {}
+    },
+    {
+      "label": "WITHDRAWS_PRIORITY",
+      "count": 1,
+      "samples": [
+        48
+      ],
+      "properties": {}
+    }
+  ],
+  "patterns": [
+    {
+      "source": "PatentApplication",
+      "relationship": "FILED_BY",
+      "target": "Person",
+      "count": 2,
+      "samples": [
+        64,
+        67
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "SUBMITS",
+      "target": "Document",
+      "count": 2,
+      "samples": [
+        67,
+        140
+      ]
+    },
+    {
+      "source": "Agent",
+      "relationship": "REPRESENTS",
+      "target": "Applicant",
+      "count": 1,
+      "samples": [
+        79
+      ]
+    },
+    {
+      "source": "Amendment",
+      "relationship": "ALLOWED_FOR",
+      "target": "InternationalPatentApplication",
+      "count": 1,
+      "samples": [
+        173
+      ]
+    },
+    {
+      "source": "Amendment",
+      "relationship": "DEFINED_IN",
+      "target": "Article",
+      "count": 1,
+      "samples": [
+        173
+      ]
+    },
+    {
+      "source": "Applicant",
+      "relationship": "CLAIM_COMPENSATION",
+      "target": "BusinessOperator",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "Applicant",
+      "relationship": "FILED",
+      "target": "InternationalPatentApplication",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "Applicant",
+      "relationship": "FILED",
+      "target": "ExtensionApplication",
+      "count": 1,
+      "samples": [
+        79
+      ]
+    },
+    {
+      "source": "Applicant",
+      "relationship": "ISSUES_WARNING",
+      "target": "BusinessOperator",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "Applicant",
+      "relationship": "WITHDRAWS_PRIORITY",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "Application",
+      "relationship": "CREATES",
+      "target": "ConfidentialityOrder",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Authority",
+      "relationship": "ISSUES",
+      "target": "Procedure",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "BusinessEntity",
+      "relationship": "PERFORMS_ACT",
+      "target": "InfringingAct",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "BusinessOperator",
+      "relationship": "PRACTICES",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "ConfidentialityOrder",
+      "relationship": "HAS_APPEAL",
+      "target": "Appeal",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "ConfidentialityOrder",
+      "relationship": "TARGETS",
+      "target": "TradeSecret",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "CorrectionRequest",
+      "relationship": "HAS",
+      "target": "TimePeriod",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "CorrectionRequest",
+      "relationship": "MADE_BY",
+      "target": "PatentRightHolder",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "CorrectionRequest",
+      "relationship": "REFERS_TO",
+      "target": "LegalProvision",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "Cost",
+      "relationship": "DETERMINED_BY_DECISION",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Cost",
+      "relationship": "DETERMINED_BY_JUDGMENT",
+      "target": "Judgment",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Cost",
+      "relationship": "PAID_BY",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Cost",
+      "relationship": "PAID_TO",
+      "target": "PatentTrialBoard",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Court",
+      "relationship": "DECIDES",
+      "target": "ConfidentialityOrder",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Court",
+      "relationship": "SENDS",
+      "target": "DecisionDocument",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "APPLIES_TO",
+      "target": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "APPLIES_TO",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "DECIDED_BY",
+      "target": "GovernmentAgency",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "DECIDES",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "MADE_BY",
+      "target": "PatentTrialBoard",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Decision",
+      "relationship": "RESULTS_FROM",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "DecisionDocument",
+      "relationship": "DELIVERS_TO",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Decree",
+      "relationship": "DEFINED_BY",
+      "target": "Law",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Director",
+      "relationship": "OVERSEES",
+      "target": "Examiner",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "Document",
+      "relationship": "REQUIRED_FOR",
+      "target": "Fee",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Examiner",
+      "relationship": "MAKES_DECISION",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "ExtensionApplication",
+      "relationship": "APPLIES_TO",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        79
+      ]
+    },
+    {
+      "source": "ExtensionApplication",
+      "relationship": "HAS_REASON",
+      "target": "Reason",
+      "count": 1,
+      "samples": [
+        79
+      ]
+    },
+    {
+      "source": "ExtensionApplication",
+      "relationship": "SUBMITTED_TO",
+      "target": "PatentOffice",
+      "count": 1,
+      "samples": [
+        79
+      ]
+    },
+    {
+      "source": "Fee",
+      "relationship": "ASSOCIATED_WITH",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Fee",
+      "relationship": "ASSOCIATED_WITH",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Fee",
+      "relationship": "EXEMPTED_BY",
+      "target": "Organization",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "InfringingAct",
+      "relationship": "ACT_TARGETS_LICENSE",
+      "target": "ExclusiveLicense",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "InfringingAct",
+      "relationship": "ACT_TARGETS_RIGHT",
+      "target": "PatentRight",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "InfringingAct",
+      "relationship": "ACT_USES_PRODUCT",
+      "target": "Product",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "InternationalPatentApplication",
+      "relationship": "HAS_INVENTION",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "InternationalPatentApplication",
+      "relationship": "HAS_REQUIREMENT",
+      "target": "Requirement",
+      "count": 1,
+      "samples": [
+        173
+      ]
+    },
+    {
+      "source": "Invention",
+      "relationship": "BELONGS_TO",
+      "target": "TechnicalField",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "Invention",
+      "relationship": "IS_METHOD_INVENTION",
+      "target": "Method",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "Invention",
+      "relationship": "IS_PRODUCT_INVENTION",
+      "target": "Product",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "Invention",
+      "relationship": "RELATES_TO",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "Judge",
+      "relationship": "DECIDES",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Judge",
+      "relationship": "NOTIFIES",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Judge",
+      "relationship": "OVERSEES",
+      "target": "Trial",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "Judge",
+      "relationship": "RECEIVES",
+      "target": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Judge",
+      "relationship": "SETS",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Judgment",
+      "relationship": "MADE_BY",
+      "target": "PatentTrialBoard",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "License",
+      "relationship": "GRANTED_TO",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "License",
+      "relationship": "RELATES_TO",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "Offense",
+      "relationship": "COMMITTED_BY",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        187
+      ]
+    },
+    {
+      "source": "Offense",
+      "relationship": "OFFENSE_DEFINED_IN",
+      "target": "Article",
+      "count": 1,
+      "samples": [
+        187
+      ]
+    },
+    {
+      "source": "Offense",
+      "relationship": "OFFENSE_HAS_PENALTY",
+      "target": "Penalty",
+      "count": 1,
+      "samples": [
+        187
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "APPLIES_TO",
+      "target": "Region",
+      "count": 1,
+      "samples": [
+        6
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "CHANGES_DEADLINE",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        6
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "DECIDES",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "EXTENDS",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        6
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "NOTIFIES",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "RECEIVES",
+      "target": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "SETS",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Official",
+      "relationship": "SHORTENS",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        6
+      ]
+    },
+    {
+      "source": "Organization",
+      "relationship": "LEGAL_BASIS",
+      "target": "Decree",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "ABANDON_APPLICATION",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        62
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "CLAIM_REIMBURSEMENT",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        62
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "PARTICIPATES_IN",
+      "target": "Trial",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "PAY_ADDITIONAL_FEES",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        62
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "PAY_COMPENSATION",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "PAY_FEES",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        62
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "RECEIVES",
+      "target": "ConfidentialityOrder",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "SUBMITS",
+      "target": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Party",
+      "relationship": "SUBMITS",
+      "target": "Application",
+      "count": 1,
+      "samples": [
+        184
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "GOVERNED_BY",
+      "target": "LegalArticle",
+      "count": 1,
+      "samples": [
+        64
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "GRANTED_TO",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        67
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "HAS_EXCLUSIVE_LICENSE",
+      "target": "ExclusiveLicense",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "HAS_INVENTION",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "HAS_RIGHT",
+      "target": "PatentRight",
+      "count": 1,
+      "samples": [
+        102
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "HAS_SUCCESSOR",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "Patent",
+      "relationship": "UNDERGOES",
+      "target": "Procedure",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "CONTAINS_INVENTION",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "EXAMINED_BY",
+      "target": "Examiner",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "FILED_BY",
+      "target": "Applicant",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "GOVERNED_BY",
+      "target": "LegalProvision",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "HAS_CLAIM",
+      "target": "Claim",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "HAS_FEE",
+      "target": "Fee",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "INCLUDES",
+      "target": "Specification",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "PRIORITY_BASED_ON",
+      "target": "PriorApplication",
+      "count": 1,
+      "samples": [
+        48
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "RELATES_TO",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        64
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "SUBMITTED_BY",
+      "target": "RightHolder",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "SUBMITTED_TO",
+      "target": "GovernmentAgency",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "PatentApplication",
+      "relationship": "SUBMITTED_TO",
+      "target": "Organization",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "PatentAttorney",
+      "relationship": "FEE_TREATED_AS_COST",
+      "target": "Cost",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "PatentRight",
+      "relationship": "GRANTED_FROM",
+      "target": "InternationalPatentApplication",
+      "count": 1,
+      "samples": [
+        172
+      ]
+    },
+    {
+      "source": "PatentRightHolder",
+      "relationship": "OWNS",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "PatentTrialBoard",
+      "relationship": "APPLIES_LAW",
+      "target": "CivilProcedureLaw",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "PatentTrialBoard",
+      "relationship": "APPLIES_LAW",
+      "target": "CivilProcedureCostLaw",
+      "count": 1,
+      "samples": [
+        145
+      ]
+    },
+    {
+      "source": "Period",
+      "relationship": "APPLIES_TO",
+      "target": "ReinstatementRequest",
+      "count": 1,
+      "samples": [
+        10
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "APPLIES_FOR",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "HOLDER_OF",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        64
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "INVENTS",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "PAY_FEE",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        64
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "PERSON_AFFILIATED_WITH",
+      "target": "Organization",
+      "count": 1,
+      "samples": [
+        187
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "PERSON_HAS_ROLE",
+      "target": "Role",
+      "count": 1,
+      "samples": [
+        187
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "REPRESENTS",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        28
+      ]
+    },
+    {
+      "source": "Person",
+      "relationship": "REQUESTS",
+      "target": "Evidence",
+      "count": 1,
+      "samples": [
+        140
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "ALLOWS",
+      "target": "CorrectionRequest",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "GOVERNED_BY",
+      "target": "Period",
+      "count": 1,
+      "samples": [
+        6
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "INCLUDES",
+      "target": "LegalProvision",
+      "count": 1,
+      "samples": [
+        110
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "RECEIVED_BY",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "TARGETS",
+      "target": "PatentApplication",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "Procedure",
+      "relationship": "TARGETS",
+      "target": "Patent",
+      "count": 1,
+      "samples": [
+        7
+      ]
+    },
+    {
+      "source": "Reexamination",
+      "relationship": "INITIATED_BY",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "Reexamination",
+      "relationship": "RESULTS_IN",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        150
+      ]
+    },
+    {
+      "source": "ReexaminationRequest",
+      "relationship": "FILED_BY",
+      "target": "Party",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "ReexaminationRequest",
+      "relationship": "TARGETS",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "Requirement",
+      "relationship": "DEFINED_IN",
+      "target": "Article",
+      "count": 1,
+      "samples": [
+        173
+      ]
+    },
+    {
+      "source": "Requirement",
+      "relationship": "EXEMPTED_FOR",
+      "target": "InternationalPatentApplication",
+      "count": 1,
+      "samples": [
+        173
+      ]
+    },
+    {
+      "source": "RightHolder",
+      "relationship": "HAS_RIGHT",
+      "target": "Invention",
+      "count": 1,
+      "samples": [
+        20
+      ]
+    },
+    {
+      "source": "Trial",
+      "relationship": "RESULTS_IN",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        147
+      ]
+    },
+    {
+      "source": "Tribunal",
+      "relationship": "ASSIGNS",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        140
+      ]
+    },
+    {
+      "source": "Tribunal",
+      "relationship": "DECIDES",
+      "target": "Decision",
+      "count": 1,
+      "samples": [
+        140
+      ]
+    },
+    {
+      "source": "Tribunal",
+      "relationship": "INVESTIGATES",
+      "target": "Evidence",
+      "count": 1,
+      "samples": [
+        140
+      ]
+    },
+    {
+      "source": "Tribunal",
+      "relationship": "NOTIFIES",
+      "target": "Person",
+      "count": 1,
+      "samples": [
+        140
+      ]
+    }
+  ],
+  "merge_candidates": {
+    "node_groups": [
+      {
+        "labels": [
+          "PatentApplication",
+          "InternationalPatentApplication"
+        ],
+        "reason": "두 타입 모두 특허 출원 절차를 나타내며 의미가 동일합니다."
+      },
+      {
+        "labels": [
+          "Application",
+          "ExtensionApplication"
+        ],
+        "reason": "Application은 일반적인 출원을 의미하고 ExtensionApplication은 출원의 연장을 의미하지만 둘 다 출원 행위와 관련됩니다."
+      },
+      {
+        "labels": [
+          "Decision",
+          "Judgment"
+        ],
+        "reason": "두 노드 모두 심판·판결 결과를 나타내는 의미가 같습니다."
+      },
+      {
+        "labels": [
+          "Article",
+          "LegalArticle"
+        ],
+        "reason": "둘 다 문서 형태의 조문·조항을 의미합니다."
+      },
+      {
+        "labels": [
+          "Fee",
+          "Cost"
+        ],
+        "reason": "두 용어는 모두 금전적 비용을 나타냅니다."
+      },
+      {
+        "labels": [
+          "PatentRight",
+          "ExclusiveLicense",
+          "License"
+        ],
+        "reason": "특허권·라이선스와 같이 권리 부여와 관련된 개념이므로 묶을 수 있습니다."
+      },
+      {
+        "labels": [
+          "RightHolder",
+          "PatentRightHolder"
+        ],
+        "reason": "권리를 보유한 주체를 나타내는 노드이므로 동일합니다."
+      },
+      {
+        "labels": [
+          "Period",
+          "TimePeriod"
+        ],
+        "reason": "시간 구간을 나타내는 의미가 같습니다."
+      },
+      {
+        "labels": [
+          "Authority",
+          "GovernmentAgency",
+          "PatentOffice"
+        ],
+        "reason": "공공기관·기관을 의미하는 노드이므로 같은 범주에 속합니다."
+      },
+      {
+        "labels": [
+          "Invention",
+          "Method"
+        ],
+        "reason": "발명과 그 구현 방법을 나타내는 개념으로 서로 밀접합니다."
+      },
+      {
+        "labels": [
+          "Offense",
+          "InfringingAct"
+        ],
+        "reason": "불법 행위라는 의미가 동일합니다."
+      },
+      {
+        "labels": [
+          "BusinessEntity",
+          "BusinessOperator"
+        ],
+        "reason": "사업 주체를 나타내는 노드이므로 같은 의미입니다."
+      },
+      {
+        "labels": [
+          "Tribunal",
+          "Court"
+        ],
+        "reason": "법원을 의미하는 노드로 동일합니다."
+      },
+      {
+        "labels": [
+          "Amendment",
+          "CorrectionRequest"
+        ],
+        "reason": "문서·출원의 수정·정정을 의미합니다."
+      },
+      {
+        "labels": [
+          "Reexamination",
+          "ReexaminationRequest"
+        ],
+        "reason": "재심사와 그 요청을 나타내는 개념이 동일합니다."
+      },
+      {
+        "labels": [
+          "Procedure",
+          "Trial"
+        ],
+        "reason": "법적 절차를 나타내는 노드이므로 같은 범주에 포함됩니다."
+      },
+      {
+        "labels": [
+          "LegalProvision",
+          "Law"
+        ],
+        "reason": "법령·조항을 의미하는 노드로 의미가 같습니다."
+      }
+    ],
+    "relationship_groups": [
+      {
+        "labels": [
+          "FILED",
+          "FILED_BY",
+          "SUBMITTED_BY",
+          "SUBMITS"
+        ],
+        "reason": "출원·제출 행위와 그 주체를 나타내는 관계이므로 묶었습니다."
+      },
+      {
+        "labels": [
+          "APPLIES_TO",
+          "APPLIES_FOR",
+          "APPLIES_LAW"
+        ],
+        "reason": "‘적용’ 의미를 가진 관계들입니다."
+      },
+      {
+        "labels": [
+          "GRANTED_TO",
+          "GRANTED_FROM"
+        ],
+        "reason": "특허·권리 부여의 방향을 나타내는 관계이므로 동일합니다."
+      },
+      {
+        "labels": [
+          "HAS",
+          "HAS_INVENTION",
+          "HAS_RIGHT",
+          "HAS_CLAIM",
+          "HAS_EXCLUSIVE_LICENSE",
+          "HAS_FEE",
+          "HAS_REASON",
+          "HAS_REQUIREMENT",
+          "HAS_SUCCESSOR"
+        ],
+        "reason": "‘가지다’ 의미의 관계들로 모두 같은 의미 범주에 속합니다."
+      },
+      {
+        "labels": [
+          "DECIDES",
+          "MAKES_DECISION",
+          "DECIDED_BY"
+        ],
+        "reason": "판단·결정 행위를 나타내는 관계입니다."
+      },
+      {
+        "labels": [
+          "RELATES_TO",
+          "ASSOCIATED_WITH",
+          "BELONGS_TO"
+        ],
+        "reason": "대상 간의 연관성을 나타내는 관계이므로 묶었습니다."
+      },
+      {
+        "labels": [
+          "RESULTS_IN",
+          "RESULTS_FROM"
+        ],
+        "reason": "‘결과’를 나타내는 관계입니다."
+      },
+      {
+        "labels": [
+          "PAY_FEE",
+          "PAY_FEES",
+          "PAY_COMPENSATION",
+          "PAY_ADDITIONAL_FEES"
+        ],
+        "reason": "‘지불’ 의미의 관계들입니다."
+      },
+      {
+        "labels": [
+          "PAID_BY",
+          "PAID_TO"
+        ],
+        "reason": "‘지불 주체·대상’ 관계를 나타냅니다."
+      },
+      {
+        "labels": [
+          "PERSON_AFFILIATED_WITH",
+          "PERSON_HAS_ROLE"
+        ],
+        "reason": "인물과 역할·소속 관계를 나타냅니다."
+      },
+      {
+        "labels": [
+          "OFFENSE_DEFINED_IN",
+          "OFFENSE_HAS_PENALTY"
+        ],
+        "reason": "범죄와 그 법적 근거·벌칙을 연결하는 관계입니다."
+      },
+      {
+        "labels": [
+          "ACT_TARGETS_LICENSE",
+          "ACT_TARGETS_RIGHT",
+          "ACT_USES_PRODUCT"
+        ],
+        "reason": "‘행위가 대상·목적을 지정’하는 관계들입니다."
+      },
+      {
+        "labels": [
+          "ALLOWED_FOR",
+          "ALLOWS"
+        ],
+        "reason": "‘허용’ 의미를 가진 관계입니다."
+      },
+      {
+        "labels": [
+          "CLAIM_COMPENSATION",
+          "CLAIM_REIMBURSEMENT"
+        ],
+        "reason": "보상 청구와 관련된 관계이므로 묶었습니다."
+      },
+      {
+        "labels": [
+          "CONTAINS_INVENTION",
+          "IS_METHOD_INVENTION",
+          "IS_PRODUCT_INVENTION"
+        ],
+        "reason": "‘발명·방법·제품과의 포함 관계’를 나타냅니다."
+      },
+      {
+        "labels": [
+          "CHANGES_DEADLINE",
+          "SHORTENS",
+          "SETS"
+        ],
+        "reason": "기한·조건을 변경·설정하는 관계입니다."
+      },
+      {
+        "labels": [
+          "RECEIVES",
+          "RECEIVED_BY"
+        ],
+        "reason": "‘수령’ 의미의 관계입니다."
+      },
+      {
+        "labels": [
+          "NOTIFIES",
+          "SENDS"
+        ],
+        "reason": "‘통보·전송’ 의미의 관계입니다."
+      }
+    ]
+  },
+  "n_samples": 20
+}

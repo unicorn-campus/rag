@@ -1,0 +1,321 @@
+{
+  "chunk_index": 28,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Person",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "address",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Organization",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "location",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Invention",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Claim",
+        "properties": [
+          {
+            "name": "number",
+            "type": "INTEGER"
+          },
+          {
+            "name": "text",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "TechnicalField",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "APPLIES_FOR"
+      },
+      {
+        "label": "REPRESENTS"
+      },
+      {
+        "label": "CONTAINS_INVENTION"
+      },
+      {
+        "label": "INVENTS"
+      },
+      {
+        "label": "HAS_CLAIM"
+      },
+      {
+        "label": "BELONGS_TO"
+      },
+      {
+        "label": "SUBMITTED_TO"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Person",
+        "relationship": "APPLIES_FOR",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Person",
+        "relationship": "REPRESENTS",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "CONTAINS_INVENTION",
+        "target": "Invention"
+      },
+      {
+        "source": "Person",
+        "relationship": "INVENTS",
+        "target": "Invention"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "HAS_CLAIM",
+        "target": "Claim"
+      },
+      {
+        "source": "Invention",
+        "relationship": "BELONGS_TO",
+        "target": "TechnicalField"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "Organization"
+      }
+    ],
+    "constraints": []
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Person",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "address",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Organization",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "location",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Invention",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Claim",
+        "description": "",
+        "properties": [
+          {
+            "name": "number",
+            "type": "INTEGER",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "text",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "TechnicalField",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "APPLIES_FOR",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "REPRESENTS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "CONTAINS_INVENTION",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "INVENTS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_CLAIM",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "BELONGS_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SUBMITTED_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Person",
+        "relationship": "APPLIES_FOR",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Person",
+        "relationship": "REPRESENTS",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "CONTAINS_INVENTION",
+        "target": "Invention"
+      },
+      {
+        "source": "Person",
+        "relationship": "INVENTS",
+        "target": "Invention"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "HAS_CLAIM",
+        "target": "Claim"
+      },
+      {
+        "source": "Invention",
+        "relationship": "BELONGS_TO",
+        "target": "TechnicalField"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "SUBMITTED_TO",
+        "target": "Organization"
+      }
+    ],
+    "constraints": [],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

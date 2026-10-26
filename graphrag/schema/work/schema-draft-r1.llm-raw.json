@@ -1,0 +1,666 @@
+{
+  "decisions": [
+    {
+      "action": "제거",
+      "candidates": [
+        "PatentApplication",
+        "InternationalPatentApplication"
+      ],
+      "result": "",
+      "reason": "특허법 조문은 개별 출원 사례가 아니라 ‘출원·심사·심판’ 등 절차 개념만 필요함"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "Judgment"
+      ],
+      "result": "Decision",
+      "reason": "판단·결정 결과를 모두 ‘Decision’ 노드 하나로 표현"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "Article",
+        "LegalArticle"
+      ],
+      "result": "",
+      "reason": "조문 번호·조항 자체는 질문에 필요 없으며, 내용은 노드·관계로 추출"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "Fee",
+        "Cost"
+      ],
+      "result": "",
+      "reason": "금액·수수료는 특허법 조문에 등장하지 않음"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "PatentRight"
+      ],
+      "result": "PatentRight",
+      "reason": "특허권 자체를 나타내는 핵심 개념"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "ExclusiveLicense",
+        "License"
+      ],
+      "result": "PatentRight",
+      "reason": "권리 부여·사용을 모두 ‘PatentRight’에 포함"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "RightHolder"
+      ],
+      "result": "RightHolder",
+      "reason": "특허권·출원·청구 등을 할 수 있는 주체"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "PatentRightHolder"
+      ],
+      "result": "RightHolder",
+      "reason": "권리 보유자를 동일 개념으로 통합"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Period"
+      ],
+      "result": "Period",
+      "reason": "조문에 나타나는 기간·기한을 표현"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "TimePeriod"
+      ],
+      "result": "Period",
+      "reason": "시간 구간을 나타내는 의미가 동일"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "Authority",
+        "GovernmentAgency",
+        "PatentOffice"
+      ],
+      "result": "",
+      "reason": "특허법 조문에 기관 명칭이 직접 답에 쓰이지 않음"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Invention"
+      ],
+      "result": "Invention",
+      "reason": "‘발명’이라는 핵심 대상"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "Method"
+      ],
+      "result": "Invention",
+      "reason": "발명의 구현 방법은 ‘Invention’에 포함"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "Offense",
+        "InfringingAct"
+      ],
+      "result": "",
+      "reason": "‘침해 행위’는 Procedure 노드로 대체"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "BusinessEntity",
+        "BusinessOperator",
+        "Tribunal",
+        "Court",
+        "LegalProvision",
+        "Law",
+        "Examiner",
+        "Judge",
+        "Official",
+        "Person",
+        "Organization",
+        "Party",
+        "Applicant",
+        "Agent",
+        "Amendment",
+        "CorrectionRequest",
+        "Reexamination",
+        "ReexaminationRequest",
+        "Procedure",
+        "Trial"
+      ],
+      "result": "",
+      "reason": "질문에 직접 필요한 개념이 아니며, 동일 의미를 더 구체적인 노드(Procedure, RightHolder 등)로 대체"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Penalty"
+      ],
+      "result": "Penalty",
+      "reason": "특허 침해 시 적용되는 형벌을 나타냄"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Exclusion"
+      ],
+      "result": "Exclusion",
+      "reason": "특허권 효력이 미치지 않는 경우를 표현"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Remedy"
+      ],
+      "result": "Remedy",
+      "reason": "침해당한 권리자가 청구할 수 있는 구제 수단"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Procedure"
+      ],
+      "result": "Procedure",
+      "reason": "출원심사 청구·심판·침해 등 법적 절차 전체를 포괄"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Decision"
+      ],
+      "result": "Decision",
+      "reason": "특허거절결정·특허부여 등 구체적 결정"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "Requirement"
+      ],
+      "result": "Requirement",
+      "reason": "특허를 받기 위한 요건·조건"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "FILED",
+        "FILED_BY",
+        "SUBMITTED_BY",
+        "SUBMITS"
+      ],
+      "result": "SUBMITTED_BY",
+      "reason": "‘제출·출원·청구’ 행위와 주체를 하나의 관계로 통합"
+    },
+    {
+      "action": "병합",
+      "candidates": [
+        "APPLIES_TO",
+        "APPLIES_FOR",
+        "APPLIES_LAW"
+      ],
+      "result": "APPLIES_TO",
+      "reason": "‘적용’ 의미를 하나의 관계로 정리"
+    },
+    {
+      "action": "유지",
+      "candidates": [
+        "GRANTED_TO"
+      ],
+      "result": "GRANTED_TO",
+      "reason": "특허권이 권리자에게 부여되는 방향"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "GRANTED_FROM"
+      ],
+      "result": "",
+      "reason": "역방향은 필요 없음"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "HAS",
+        "HAS_INVENTION",
+        "HAS_RIGHT",
+        "HAS_CLAIM",
+        "HAS_EXCLUSIVE_LICENSE",
+        "HAS_FEE",
+        "HAS_REASON",
+        "HAS_REQUIREMENT",
+        "HAS_SUCCESSOR"
+      ],
+      "result": "",
+      "reason": "구체 관계로 대체"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "DECIDES",
+        "MAKES_DECISION",
+        "DECIDED_BY"
+      ],
+      "result": "",
+      "reason": "절차·결정 관계는 별도 관계( TARGETS, IMPOSES 등)로 표현"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "RELATES_TO",
+        "ASSOCIATED_WITH",
+        "BELONGS_TO"
+      ],
+      "result": "",
+      "reason": "특허법 조문에선 구체적 의미가 필요함"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "RESULTS_IN",
+        "RESULTS_FROM"
+      ],
+      "result": "",
+      "reason": "대체 관계(IMPOSES 등)로 충분"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "PAY_FEE",
+        "PAY_FEES",
+        "PAY_COMPENSATION",
+        "PAY_ADDITIONAL_FEES"
+      ],
+      "result": "",
+      "reason": "금전적 행위는 조문에 등장하지 않음"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "PAID_BY",
+        "PAID_TO"
+      ],
+      "result": "",
+      "reason": "동일 이유"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "PERSON_AFFILIATED_WITH",
+        "PERSON_HAS_ROLE"
+      ],
+      "result": "",
+      "reason": "주체는 RightHolder 하나로 통합"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "OFFENSE_DEFINED_IN",
+        "OFFENSE_HAS_PENALTY"
+      ],
+      "result": "",
+      "reason": "침해 행위는 Procedure로 대체"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "ACT_TARGETS_LICENSE",
+        "ACT_TARGETS_RIGHT",
+        "ACT_USES_PRODUCT"
+      ],
+      "result": "",
+      "reason": "특허법 조문에선 필요 없음"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "ALLOWED_FOR",
+        "ALLOWS"
+      ],
+      "result": "",
+      "reason": "특허법 조문에선 구체적 허용 관계가 별도 필요 없음"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "CLAIM_COMPENSATION",
+        "CLAIM_REIMBURSEMENT"
+      ],
+      "result": "",
+      "reason": "보상 청구는 Remedy 노드로 대체"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "CONTAINS_INVENTION",
+        "IS_METHOD_INVENTION",
+        "IS_PRODUCT_INVENTION"
+      ],
+      "result": "",
+      "reason": "Invention 노드 하나로 통합"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "CHANGES_DEADLINE",
+        "SHORTENS",
+        "SETS"
+      ],
+      "result": "",
+      "reason": "기간 조정은 Period 노드 자체 문자열로 표현"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "RECEIVES",
+        "RECEIVED_BY"
+      ],
+      "result": "",
+      "reason": "조문에선 필요 없음"
+    },
+    {
+      "action": "제거",
+      "candidates": [
+        "NOTIFIES",
+        "SENDS"
+      ],
+      "result": "",
+      "reason": "조문에선 필요 없음"
+    }
+  ],
+  "node_types": [
+    {
+      "label": "Invention",
+      "description": "특허법이 보호하는 발명 자체. 조문에 나타나는 명사구(예: “새로운 화학물질”, “전기 회로”)를 그대로 name에 넣는다. 조사·괄호·조문 번호는 제외한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 명시된 발명 명칭(명사구)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "PatentRight",
+      "description": "특허법이 부여하는 권리(특허권). 조문에 “특허권”이라는 표현이 나오면 그 전체 명사구를 name에 사용한다(예: “특허권”, “제1특허권”).",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 나타난 특허권 명칭",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "RightHolder",
+      "description": "특허권·출원·청구 등을 할 수 있는 주체(특허권자, 출원인 등). 조문에 “특허권자”, “출원인”, “신청인” 등 명시된 명사구를 name에 넣는다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 나타난 주체 명칭",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Procedure",
+      "description": "특허법에서 규정하는 절차·행위(예: “출원심사 청구”, “특허거절결정에 대한 심판청구”). name은 조문에 그대로 쓰며, 조사·괄호·조문 번호는 제외한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 명시된 절차·행위 명칭",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Decision",
+      "description": "특허법이 내리는 구체적 결정(예: “특허거절결정”, “특허부여결정”). name은 조문에 나타난 결정 명칭을 그대로 사용한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 나타난 결정 명칭",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Requirement",
+      "description": "특허를 받기 위한 요건·조건(예: “신규성”, “진보성”, “산업상 이용 가능성”). name은 조문에 쓰인 요건 명사를 그대로 넣는다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 명시된 요건 명칭",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Period",
+      "description": "조문에 규정된 기간·기한(예: “출원일로부터 3년 이내”, “특허권은 등록일로부터 20년 동안 유지”). name은 해당 기간 표현 전체를 문자열로 저장한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 나타난 기간·기한 문자열",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Penalty",
+      "description": "특허권 침해 시 적용되는 형벌(예: “징역 5년 이하”, “벌금 5천만원 이하”). name은 조문에 명시된 형벌 문구를 그대로 저장한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 나타난 형벌 내용",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Exclusion",
+      "description": "특허권 효력이 미치지 않는 경우(예: “공공의 이익을 위한 경우”, “법령에 따라 제한되는 경우”). name은 조문에 쓰인 예외 표현을 그대로 사용한다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 명시된 효력 제한 사유",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Remedy",
+      "description": "특허권 침해 시 권리자가 청구할 수 있는 구제 수단(예: “손해배상 청구”, “침해행위 금지 청구”). name은 조문에 나타난 청구·구제 명칭을 그대로 넣는다.",
+      "properties": [
+        {
+          "name": "name",
+          "type": "STRING",
+          "description": "조문에 명시된 구제·청구 내용",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "relationship_types": [
+    {
+      "label": "GRANTED_TO",
+      "description": "특허권이 특정 주체에게 부여될 때 사용한다. ‘특허권은 ○○에게 부여한다’와 같은 문장에서 추출한다."
+    },
+    {
+      "label": "HAS_INVENTION",
+      "description": "특허권이 보호하는 발명을 연결한다. ‘특허권은 ○○(발명)을 보호한다’와 같은 표현에 적용한다."
+    },
+    {
+      "label": "REQUIRES",
+      "description": "절차가 특정 요건을 필요로 할 때 사용한다. ‘○○ 절차는 ○○ 요건을 필요로 한다’와 같은 문장에서 추출한다."
+    },
+    {
+      "label": "HAS_PERIOD",
+      "description": "절차·권리·기한 등에 기간·기한이 명시될 때 사용한다. ‘○○는 ○○까지’ 혹은 ‘○○는 ○○부터 ○○까지’와 같은 표현에 적용한다."
+    },
+    {
+      "label": "SUBMITTED_BY",
+      "description": "특정 절차·청구를 누가 할 수 있는지를 나타낸다. ‘○○는 ○○가 청구한다’ 혹은 ‘○○는 ○○에 의해 제출된다’와 같은 문장에서 사용한다."
+    },
+    {
+      "label": "TARGETS",
+      "description": "청구·심판·항소 절차가 어느 결정·결과를 대상으로 하는지를 연결한다. ‘○○는 ○○ 결정을 대상으로 한다’와 같은 문장에서 추출한다."
+    },
+    {
+      "label": "HAS_EXCLUSION",
+      "description": "특허권에 효력이 미치지 않는 경우를 연결한다. ‘특허권은 ○○에 대해서는 효력이 없다’와 같은 표현에 사용한다."
+    },
+    {
+      "label": "HAS_REMEDY",
+      "description": "권리자가 침해 시 청구할 수 있는 구제 수단을 연결한다. ‘특허권자는 ○○를 청구할 수 있다’와 같은 문장에서 추출한다."
+    },
+    {
+      "label": "IMPOSES",
+      "description": "특정 절차(주로 침해 행위)가 어떤 형벌을 부과하는지를 연결한다. ‘○○ 침해에 대해 ○○ 형벌이 부과된다’와 같은 문장에서 사용한다."
+    },
+    {
+      "label": "APPLIES_TO",
+      "description": "요건·예외가 어느 발명에 적용되는지를 연결한다. ‘○○ 요건은 ○○에 적용된다’ 혹은 ‘○○ 예외는 ○○에 적용된다’와 같은 표현에 사용한다."
+    }
+  ],
+  "patterns": [
+    {
+      "source": "PatentRight",
+      "relationship": "GRANTED_TO",
+      "target": "RightHolder"
+    },
+    {
+      "source": "PatentRight",
+      "relationship": "HAS_INVENTION",
+      "target": "Invention"
+    },
+    {
+      "source": "PatentRight",
+      "relationship": "HAS_PERIOD",
+      "target": "Period"
+    },
+    {
+      "source": "PatentRight",
+      "relationship": "HAS_EXCLUSION",
+      "target": "Exclusion"
+    },
+    {
+      "source": "Procedure",
+      "relationship": "SUBMITTED_BY",
+      "target": "RightHolder"
+    },
+    {
+      "source": "Procedure",
+      "relationship": "REQUIRES",
+      "target": "Requirement"
+    },
+    {
+      "source": "Procedure",
+      "relationship": "HAS_PERIOD",
+      "target": "Period"
+    },
+    {
+      "source": "Procedure",
+      "relationship": "TARGETS",
+      "target": "Decision"
+    },
+    {
+      "source": "Procedure",
+      "relationship": "IMPOSES",
+      "target": "Penalty"
+    },
+    {
+      "source": "RightHolder",
+      "relationship": "HAS_REMEDY",
+      "target": "Remedy"
+    },
+    {
+      "source": "Requirement",
+      "relationship": "APPLIES_TO",
+      "target": "Invention"
+    },
+    {
+      "source": "Exclusion",
+      "relationship": "APPLIES_TO",
+      "target": "Invention"
+    }
+  ],
+  "cq_paths": [
+    {
+      "cq_id": "CQ01",
+      "question": "특허를 받을 수 있는 발명의 요건은 무엇인가?",
+      "path": "Requirement -APPLIES_TO-> Invention",
+      "explanation": "요건(Requirement) 노드가 어떤 발명(Invention)에 적용되는지를 나타내는 관계(APPLIES_TO)로, 조문에 명시된 ‘신규성’, ‘진보성’ 등 요건을 추출한다."
+    },
+    {
+      "cq_id": "CQ02",
+      "question": "특허를 받을 수 없는 발명은 어떤 것인가?",
+      "path": "Exclusion -APPLIES_TO-> Invention",
+      "explanation": "특허권 효력이 제한되는 경우(Exclusion)가 어느 발명에 적용되는지를 보여준다. 조문에 ‘공공의 이익을 위한 경우’ 등 예외가 명시된다."
+    },
+    {
+      "cq_id": "CQ03",
+      "question": "특허출원심사의 청구는 누가 할 수 있는가?",
+      "path": "Procedure -SUBMITTED_BY-> RightHolder",
+      "explanation": "‘출원심사 청구’를 할 수 있는 주체(RightHolder)를 연결한다. 조문에 ‘출원인은 … 청구할 수 있다’와 같은 표현을 추출한다."
+    },
+    {
+      "cq_id": "CQ04",
+      "question": "특허거절결정에 불복하려면 누구에게 어떤 심판을 청구하는가?",
+      "path": "Procedure -SUBMITTED_BY-> RightHolder -TARGETS-> Decision",
+      "explanation": "불복 절차(Procedure)가 누구(RightHolder)가 청구하고, 대상이 되는 결정(Decision, 즉 ‘특허거절결정’)을 명시한다."
+    },
+    {
+      "cq_id": "CQ05",
+      "question": "특허출원심사의 청구는 언제까지 할 수 있는가?",
+      "path": "Procedure -HAS_PERIOD-> Period",
+      "explanation": "청구 절차에 부여된 기한(Period)을 연결한다. 조문에 ‘출원일로부터 3년 이내’와 같은 기간 표현을 추출한다."
+    },
+    {
+      "cq_id": "CQ06",
+      "question": "특허권의 존속기간은 언제부터 언제까지인가?",
+      "path": "PatentRight -HAS_PERIOD-> Period",
+      "explanation": "특허권 자체에 부여된 존속기간을 나타낸다. 조문에 ‘등록일로부터 20년’ 등 기간을 그대로 저장한다."
+    },
+    {
+      "cq_id": "CQ07",
+      "question": "특허권을 침해한 자는 어떤 형벌을 받는가?",
+      "path": "Procedure -IMPOSES-> Penalty",
+      "explanation": "침해 행위(Procedure)가 부과하는 형벌(Penalty)을 연결한다. 조문에 ‘침해자는 징역 5년 이하’와 같은 형벌 규정을 추출한다."
+    },
+    {
+      "cq_id": "CQ08",
+      "question": "특허권의 효력이 미치지 아니하는 경우는 무엇인가?",
+      "path": "PatentRight -HAS_EXCLUSION-> Exclusion",
+      "explanation": "특허권이 적용되지 않는 예외 상황을 직접 연결한다. 조문에 ‘공공의 이익을 위하여’ 등 효력 제한 사유를 추출한다."
+    },
+    {
+      "cq_id": "CQ09",
+      "question": "특허권을 침해당한 특허권자는 어떤 청구를 할 수 있는가?",
+      "path": "RightHolder -HAS_REMEDY-> Remedy",
+      "explanation": "침해당한 권리자(RightHolder)가 청구할 수 있는 구제 수단(Remedy)을 연결한다. 조문에 ‘손해배상 청구’, ‘침해행위 금지 청구’ 등을 추출한다."
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "chunk_index": 7,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "Authority",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Person",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Patent",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "PatentApplication",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Specification",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Fee",
+        "properties": [
+          {
+            "name": "amount",
+            "type": "FLOAT"
+          }
+        ]
+      },
+      {
+        "label": "Procedure",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "ISSUES"
+      },
+      {
+        "label": "TARGETS"
+      },
+      {
+        "label": "RECEIVED_BY"
+      },
+      {
+        "label": "INCLUDES"
+      },
+      {
+        "label": "HAS_FEE"
+      },
+      {
+        "label": "HAS_SUCCESSOR"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Authority",
+        "relationship": "ISSUES",
+        "target": "Procedure"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "TARGETS",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "TARGETS",
+        "target": "Patent"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "RECEIVED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "INCLUDES",
+        "target": "Specification"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "HAS_FEE",
+        "target": "Fee"
+      },
+      {
+        "source": "Patent",
+        "relationship": "HAS_SUCCESSOR",
+        "target": "Person"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Authority",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Person",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Patent",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "UNIQUENESS",
+        "node_type": "PatentApplication",
+        "property_names": [
+          "application_number"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Authority",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Person",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Procedure",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Patent",
+        "property_names": [
+          "title"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Authority",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Person",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Patent",
+        "description": "",
+        "properties": [
+          {
+            "name": "title",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "PatentApplication",
+        "description": "",
+        "properties": [
+          {
+            "name": "application_number",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Specification",
+        "description": "",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Fee",
+        "description": "",
+        "properties": [
+          {
+            "name": "amount",
+            "type": "FLOAT",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Procedure",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "ISSUES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "TARGETS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RECEIVED_BY",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "INCLUDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_FEE",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_SUCCESSOR",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Authority",
+        "relationship": "ISSUES",
+        "target": "Procedure"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "TARGETS",
+        "target": "PatentApplication"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "TARGETS",
+        "target": "Patent"
+      },
+      {
+        "source": "Procedure",
+        "relationship": "RECEIVED_BY",
+        "target": "Person"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "INCLUDES",
+        "target": "Specification"
+      },
+      {
+        "source": "PatentApplication",
+        "relationship": "HAS_FEE",
+        "target": "Fee"
+      },
+      {
+        "source": "Patent",
+        "relationship": "HAS_SUCCESSOR",
+        "target": "Person"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Authority",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      },
+      {
+        "type": "UNIQUENESS",
+        "property_name": "application_number",
+        "property_names": [
+          "application_number"
+        ],
+        "node_type": "PatentApplication",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Authority",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Person",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Procedure",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "title",
+        "property_names": [
+          "title"
+        ],
+        "node_type": "Patent",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

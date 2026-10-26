@@ -1,0 +1,370 @@
+{
+  "chunk_index": 184,
+  "model": "openai/gpt-oss-120b",
+  "attempt": 1,
+  "llm_raw": {
+    "node_types": [
+      {
+        "label": "ConfidentialityOrder",
+        "properties": []
+      },
+      {
+        "label": "Court",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Party",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "TradeSecret",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "label": "Application",
+        "properties": []
+      },
+      {
+        "label": "DecisionDocument",
+        "properties": [
+          {
+            "name": "date",
+            "type": "DATE"
+          }
+        ]
+      },
+      {
+        "label": "Appeal",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS"
+      },
+      {
+        "label": "CREATES"
+      },
+      {
+        "label": "RECEIVES"
+      },
+      {
+        "label": "TARGETS"
+      },
+      {
+        "label": "DECIDES"
+      },
+      {
+        "label": "SENDS"
+      },
+      {
+        "label": "DELIVERS_TO"
+      },
+      {
+        "label": "HAS_APPEAL"
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Party",
+        "relationship": "SUBMITS",
+        "target": "Application"
+      },
+      {
+        "source": "Application",
+        "relationship": "CREATES",
+        "target": "ConfidentialityOrder"
+      },
+      {
+        "source": "Party",
+        "relationship": "RECEIVES",
+        "target": "ConfidentialityOrder"
+      },
+      {
+        "source": "ConfidentialityOrder",
+        "relationship": "TARGETS",
+        "target": "TradeSecret"
+      },
+      {
+        "source": "Court",
+        "relationship": "DECIDES",
+        "target": "ConfidentialityOrder"
+      },
+      {
+        "source": "Court",
+        "relationship": "SENDS",
+        "target": "DecisionDocument"
+      },
+      {
+        "source": "DecisionDocument",
+        "relationship": "DELIVERS_TO",
+        "target": "Party"
+      },
+      {
+        "source": "ConfidentialityOrder",
+        "relationship": "HAS_APPEAL",
+        "target": "Appeal"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "node_type": "Party",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Party",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Court",
+        "property_names": [
+          "name"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "TradeSecret",
+        "property_names": [
+          "description"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "DecisionDocument",
+        "property_names": [
+          "date"
+        ],
+        "relationship_type": ""
+      },
+      {
+        "type": "EXISTENCE",
+        "node_type": "Appeal",
+        "property_names": [
+          "type"
+        ],
+        "relationship_type": ""
+      }
+    ]
+  },
+  "graph_schema": {
+    "node_types": [
+      {
+        "label": "Court",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Party",
+        "description": "",
+        "properties": [
+          {
+            "name": "name",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "TradeSecret",
+        "description": "",
+        "properties": [
+          {
+            "name": "description",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "DecisionDocument",
+        "description": "",
+        "properties": [
+          {
+            "name": "date",
+            "type": "DATE",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      },
+      {
+        "label": "Appeal",
+        "description": "",
+        "properties": [
+          {
+            "name": "type",
+            "type": "STRING",
+            "description": "",
+            "required": false
+          }
+        ],
+        "additional_properties": false
+      }
+    ],
+    "relationship_types": [
+      {
+        "label": "SUBMITS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "CREATES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "RECEIVES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "TARGETS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DECIDES",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "SENDS",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "DELIVERS_TO",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      },
+      {
+        "label": "HAS_APPEAL",
+        "description": "",
+        "properties": [],
+        "additional_properties": true
+      }
+    ],
+    "patterns": [
+      {
+        "source": "Court",
+        "relationship": "SENDS",
+        "target": "DecisionDocument"
+      },
+      {
+        "source": "DecisionDocument",
+        "relationship": "DELIVERS_TO",
+        "target": "Party"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "UNIQUENESS",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Party",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Party",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "name",
+        "property_names": [
+          "name"
+        ],
+        "node_type": "Court",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "description",
+        "property_names": [
+          "description"
+        ],
+        "node_type": "TradeSecret",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "date",
+        "property_names": [
+          "date"
+        ],
+        "node_type": "DecisionDocument",
+        "relationship_type": null
+      },
+      {
+        "type": "EXISTENCE",
+        "property_name": "type",
+        "property_names": [
+          "type"
+        ],
+        "node_type": "Appeal",
+        "relationship_type": null
+      }
+    ],
+    "additional_node_types": false,
+    "additional_relationship_types": false,
+    "additional_patterns": false
+  }
+}

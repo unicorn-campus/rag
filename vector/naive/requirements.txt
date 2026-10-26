@@ -1,0 +1,16 @@
+# --- LangChain core ---
+langchain-core>=1.0      # Prompt, Runnable (LCEL), Retriever, Document
+
+# --- LLM ---
+langchain-groq>=1.0      # ChatGroq for Groq LPU (openai/gpt-oss-120b)
+
+# --- Retrieval (load existing vector DB, no re-indexing) ---
+langchain-chroma>=1.0    # LangChain wrapper for ChromaDB
+chromadb>=1.0            # Persistent client to open the shared vectordb
+langchain-cohere>=0.6    # CohereEmbeddings (embed-v4.0) for query embedding
+
+# --- Utilities ---
+python-dotenv>=1.0       # Load COHERE_API_KEY and GROQ_API_KEY from .env
+
+# --- Testing ---
+pytest>=8.0              # Unit and integration tests
