@@ -1,0 +1,4 @@
+2026-10-26 22:27:14,425 INFO GraphSchema.from_file(schema.json) 성공: 노드 타입 9, 관계 타입 12, 패턴 12
+2026-10-26 22:27:14,425 INFO additional_node_types=False, additional_relationship_types=False, additional_patterns=False
+2026-10-26 22:27:14,425 INFO 노드 타입: Actor, Right, Invention, Procedure, Decision, Period, Penalty, Exclusion, Remedy
+2026-10-26 22:27:14,425 INFO 관계 타입: ELIGIBLE_FOR, NOT_ELIGIBLE_FOR, CAN_FILE, HANDLED_BY, TARGETS, HAS_DEADLINE, HAS_DURATION, NOT_EFFECTIVE_FOR, HOLDS, CAN_CLAIM, CLAIMED_AGAINST, PUNISHED_BY

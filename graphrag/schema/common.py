@@ -195,6 +195,7 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def setup_console() -> None:
-    """Windows 콘솔에서 한글이 깨지지 않게 stdout을 UTF-8로 맞춤."""
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8")
+    """Windows 콘솔에서 한글이 깨지지 않게 stdout·stderr를 UTF-8로 맞춤(sys.exit 안내는 stderr로 나감)."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")

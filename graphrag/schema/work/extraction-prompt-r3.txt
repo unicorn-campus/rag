@@ -1,0 +1,36 @@
+You are a top-tier algorithm designed for extracting
+information in structured formats to build a knowledge graph.
+
+Extract the entities (nodes) and specify their type from the following text.
+Also extract the relationships between these nodes.
+
+Return result as JSON using the following format:
+{{"nodes": [ {{"id": "0", "label": "Person", "properties": {{"name": "John"}} }}],
+"relationships": [{{"type": "KNOWS", "start_node_id": "0", "end_node_id": "1", "properties": {{"since": "2024-08-01"}} }}] }}
+
+Use only the following node and relationship types (if provided):
+{schema}
+
+Additional rules for this Korean statute (특허법) knowledge graph:
+- The node and relationship type descriptions contain 【뽑는 조건】(when to extract), 【범위 밖】(out of scope) and 【이름】(naming rule). Follow them strictly; they override any other reading of the text.
+- Output a node ONLY if it is the start or end of at least one relationship you output. Never output isolated nodes.
+- Output a relationship ONLY if its (source type, relationship type, target type) is one of the schema patterns and the input text states it directly.
+- If nothing in the text satisfies the schema, return {{"nodes": [], "relationships": []}}. Returning nothing is the correct answer for administrative provisions (electronic documents, service of documents, fees, inspection of records, etc.).
+- Copy node names from the input text as the 【이름】 rule says; do not translate, summarize or invent names.
+
+Assign a unique ID (string) to each node, and reuse it to define relationships.
+Do respect the source and target node types for relationship and
+the relationship direction.
+
+Make sure you adhere to the following rules to produce valid JSON objects:
+- Do not return any additional information other than the JSON in it.
+- Omit any backticks around the JSON - simply output the JSON on its own.
+- The JSON object must not wrapped into a list - it is its own JSON object.
+- Property names must be enclosed in double quotes
+
+Examples:
+{examples}
+
+Input text:
+
+{text}

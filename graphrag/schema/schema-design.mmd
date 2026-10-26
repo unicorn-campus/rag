@@ -1,0 +1,22 @@
+flowchart LR
+    Actor["Actor (주체)<br/>name: STRING"]
+    Right["Right (권리)<br/>name: STRING"]
+    Invention["Invention (발명 유형)<br/>name: STRING"]
+    Procedure["Procedure (절차)<br/>name: STRING"]
+    Decision["Decision (결정)<br/>name: STRING"]
+    Period["Period (기간)<br/>name: STRING"]
+    Penalty["Penalty (형벌)<br/>name: STRING"]
+    Exclusion["Exclusion (효력 제외 사유)<br/>name: STRING"]
+    Remedy["Remedy (구제 수단)<br/>name: STRING"]
+    Invention -- "ELIGIBLE_FOR (특허를 받을 수 있음)" --> Right
+    Invention -- "NOT_ELIGIBLE_FOR (특허를 받을 수 없음)" --> Right
+    Actor -- "CAN_FILE (청구할 수 있음)" --> Procedure
+    Procedure -- "HANDLED_BY (처리 기관)" --> Actor
+    Procedure -- "TARGETS (불복 대상)" --> Decision
+    Procedure -- "HAS_DEADLINE (기한)" --> Period
+    Right -- "HAS_DURATION (존속기간)" --> Period
+    Right -- "NOT_EFFECTIVE_FOR (효력이 미치지 않음)" --> Exclusion
+    Actor -- "HOLDS (권리를 가짐)" --> Right
+    Actor -- "CAN_CLAIM (청구할 수 있는 구제)" --> Remedy
+    Remedy -- "CLAIMED_AGAINST (청구 상대방)" --> Actor
+    Actor -- "PUNISHED_BY (형벌을 받음)" --> Penalty

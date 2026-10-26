@@ -1,5 +1,5 @@
 {
-  "status": "초안",
+  "status": "확정",
   "schema_round": 1,
   "match_rule": "노드: 타입과 이름이 같으면 일치. 관계: 시작(타입, 이름)·관계 타입·끝(타입, 이름)이 같으면 일치. 이름 비교 전 공백·문장부호(ㆍ·,.「」“”'\"()) 제거. aliases에 있는 이름도 같은 이름으로 봄",
   "chunks": [
@@ -320,6 +320,11 @@
           "type": "Period",
           "name": "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지",
           "aliases": []
+        },
+        {
+          "type": "Period",
+          "name": "무권리자의 특허출원일의 다음 날부터",
+          "aliases": []
         }
       ],
       "relationships": [
@@ -332,6 +337,17 @@
           "end": {
             "type": "Period",
             "name": "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지"
+          }
+        },
+        {
+          "start": {
+            "type": "Right",
+            "name": "특허권"
+          },
+          "type": "HAS_DURATION",
+          "end": {
+            "type": "Period",
+            "name": "무권리자의 특허출원일의 다음 날부터"
           }
         }
       ]
@@ -820,5 +836,13 @@
       ]
     }
   ],
-  "review": "LLM 초안(work/fill-test-expected.llm-raw.json)을 데이터 엔지니어가 원문 대조로 수정: 제29조② 추가, 한자 제거, 출원인 CAN_FILE 삭제(청구 불가 조항), 고립 노드 삭제, 뜻이 바뀌는 별칭 삭제, 제33조 권리명 수정"
+  "review": "LLM 초안(work/fill-test-expected.llm-raw.json)을 데이터 엔지니어가 원문 대조로 수정: 제29조② 추가, 한자 제거, 출원인 CAN_FILE 삭제(청구 불가 조항), 고립 노드 삭제, 뜻이 바뀌는 별칭 삭제, 제33조 권리명 수정",
+  "confirmed": "2026-10-26 사용자 확정(검토 수정본) / 2026-10-26 chunk 73 사용자 지시로 수정",
+  "revisions": [
+    {
+      "date": "2026-10-26",
+      "by": "사용자 지시",
+      "change": "chunk 73에 제88조② 존속기간 예외 기산점(Period '무권리자의 특허출원일의 다음 날부터', 특허권 -HAS_DURATION-> 그 기간) 추가. 이전 판: work/fill-test-expected.v1.json"
+    }
+  ]
 }

@@ -89,7 +89,8 @@ JSON 객체 하나만 출력:
   "node_types": [{{"label": "PascalCase", "description": "추출 기준 설명", "properties": [{{"name": "name", "type": "STRING", "description": "값 규칙", "required": true}}]}}],
   "relationship_types": [{{"label": "UPPER_SNAKE_CASE", "description": "추출 기준 설명"}}],
   "patterns": [{{"source": "노드 타입", "relationship": "관계 타입", "target": "노드 타입"}}],
-  "cq_paths": [{{"cq_id": "CQ01", "question": "질문", "path": "A -REL-> B", "explanation": "이 경로로 답이 나오는 이유"}}]
+  "cq_paths": [{{"cq_id": "CQ01", "question": "질문", "path": "A -REL-> B", "explanation": "이 경로로 답이 나오는 이유"}}],
+  "changes": "직전 회차 대비 고친 내용 요약(1회차는 '최초 초안')"
 }}
 
 <역량질문>
@@ -170,7 +171,7 @@ def to_graph_schema(draft: dict) -> GraphSchema:
 def render_md(d: dict) -> str:
     s = d["schema"]
     out = [f"# 스키마 초안 ({d['round']}회차)", "", f"- 상태: {d['status']} (확정하면 schema-draft.json의 status를 \"확정\"으로 바꿈)",
-           f"- 출처: {d.get('source', 'LLM')}", "",
+           f"- 출처: {d.get('source', 'LLM')}", f"- 고친 내용: {d.get('changes', '최초 초안')}", "",
            "## 1. 후보 처리(추가·제거·병합)", "", "| 처리 | 후보 | 스키마 이름 | 근거 |", "|---|---|---|---|"]
     out += [f"| {x['action']} | {', '.join(x['candidates'])} | {x['result']} | {x['reason']} |" for x in d["decisions"]]
     out += ["", "## 2. 노드 타입", "", "| 노드 타입 | 설명(추출 기준) | 속성 |", "|---|---|---|"]
@@ -248,6 +249,7 @@ def save(draft: dict, round_no: int, source: str) -> None:
         "source": source,
         "decisions": draft["decisions"],
         "cq_paths": draft["cq_paths"],
+        "changes": draft.get("changes", "최초 초안"),
         "schema": schema.model_dump(mode="json"),
     }
     write_json(DRAFT_FILE, data)

@@ -1,0 +1,11 @@
+# --- GraphRAG schema design ---
+neo4j-graphrag[openai]>=1.22   # SchemaFromTextExtractor, LLMEntityRelationExtractor, GraphPruning, GraphSchema, OpenAILLM
+
+# --- LLM client ---
+openai>=2.0                    # OpenAI-compatible client used to call Groq (openai/gpt-oss-120b)
+
+# --- Vector database (read chunks) ---
+chromadb>=1.0                  # Read chunks from the shared vectordb/ (collection: patent_law)
+
+# --- Utilities ---
+python-dotenv>=1.0             # Load GROQ_API_KEY from the project .env

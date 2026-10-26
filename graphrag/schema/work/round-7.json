@@ -1,0 +1,3770 @@
+{
+  "round": 7,
+  "label": "2회차 기반 + 제89조 연장 제외·제88조② 기산점 포함(기대 결과 chunk 73 수정), 기본 추출 프롬프트, 3회 반복",
+  "repeat": 3,
+  "schema_file": "work/schema-draft-r7.confirmed.json",
+  "schema_round": 7,
+  "schema_source": "work/schema-draft-r7.reviewed.json",
+  "changes": "7회차(사용자 지시): 2회차 설명을 바탕으로 ① Period·HAS_DURATION에 존속기간 기산점 특례(제88조② 유형)를 넣고, 존속기간 연장 기간·연장 한도(제89조·제92조의2 유형)는 뽑지 않도록 명시 ② 4회차에서 고친 '또는' 이름 규칙(따로 설 수 있는 이름은 나누고, 수식어를 함께 받는 표현은 나누지 않음)을 유지해 확정 기대 결과와 맞춤. 추출 프롬프트는 라이브러리 기본값",
+  "prompt_template": "라이브러리 기본값(ERExtractionTemplate)",
+  "metrics": {
+    "recall": 0.8333333333333334,
+    "hallucination_rate": 0.34314574314574314,
+    "cq_answerable": 8,
+    "cq_total": 9,
+    "expected": 84,
+    "extracted": 106.66666666666667,
+    "hit": 70.0,
+    "recall_range": [
+      0.7857142857142857,
+      0.9047619047619048
+    ],
+    "hallucination_range": [
+      0.2761904761904762,
+      0.38181818181818183
+    ]
+  },
+  "passed": false,
+  "cq": [
+    {
+      "cq_id": "CQ01",
+      "path": "Invention -ELIGIBLE_FOR-> Right ; Invention -NOT_ELIGIBLE_FOR-> Right",
+      "answerable": true,
+      "example": "산업상이용할수있는발명 → 특허 / 특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ02",
+      "path": "Invention -NOT_ELIGIBLE_FOR-> Right",
+      "answerable": true,
+      "example": "특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ03",
+      "path": "Actor -CAN_FILE-> Procedure",
+      "answerable": true,
+      "example": "누구든지 → 출원심사의청구",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ04",
+      "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ05",
+      "path": "Procedure -HAS_DEADLINE-> Period",
+      "answerable": true,
+      "example": "출원심사의청구 → 각각30일이내",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ06",
+      "path": "Right -HAS_DURATION-> Period",
+      "answerable": true,
+      "example": "특허권 → 무권리자의특허출원일의다음날부터",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ07",
+      "path": "Actor -PUNISHED_BY-> Penalty",
+      "answerable": true,
+      "example": "특허권또는전용실시권을침해한자 → 7년이하의징역",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ08",
+      "path": "Right -NOT_EFFECTIVE_FOR-> Exclusion",
+      "answerable": true,
+      "example": "특허권 → 특허출원을한때부터국내에있는물건",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ09",
+      "path": "Actor -CAN_CLAIM-> Remedy",
+      "answerable": true,
+      "example": "특허권자 → 침해의금지또는예방",
+      "runs_ok": "3/3"
+    }
+  ],
+  "pruned_not_in_schema": {
+    "nodes": {},
+    "relationships": {}
+  },
+  "chunks": [
+    {
+      "chunk_index": 15,
+      "kind": "역량질문 무관",
+      "expected": 0,
+      "extracted": 10.0,
+      "hit": 0.0,
+      "extra": 10.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [
+        "Actor:지식재산처장 (3/3)",
+        "Actor:특허심판원장 (3/3)",
+        "Actor:특허에관한절차를밟는자 (3/3)",
+        "Procedure:특허에관한절차 (2/3)",
+        "Procedure:전자문서이용신고 (2/3)",
+        "Actor:전자문서로특허에관한절차를밟으려는자 (1/3)",
+        "Procedure:전자문서이용신고절차 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:특허에관한절차 (2/3)",
+        "Procedure:특허에관한절차 -HANDLED_BY-> Actor:지식재산처장 (2/3)",
+        "Procedure:특허에관한절차 -HANDLED_BY-> Actor:특허심판원장 (2/3)",
+        "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:전자문서이용신고 (2/3)",
+        "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:지식재산처장 (2/3)",
+        "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:특허심판원장 (2/3)",
+        "Actor:전자문서로특허에관한절차를밟으려는자 -CAN_FILE-> Procedure:전자문서이용신고절차 (1/3)",
+        "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:지식재산처장 (1/3)",
+        "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:특허심판원장 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 17,
+      "kind": "역량질문 관련",
+      "expected": 11,
+      "extracted": 11.0,
+      "hit": 7.0,
+      "extra": 4.0,
+      "missed_nodes": [
+        "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 (3/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 (3/3)"
+      ],
+      "missed_rels": [
+        "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)"
+      ],
+      "extra_nodes": [
+        "Invention:특허출원한발명 (3/3)",
+        "Invention:그발명 (2/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명 (1/3)"
+      ],
+      "extra_rels": [
+        "Invention:특허출원한발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)",
+        "Invention:그발명 -NOT_ELIGIBLE_FOR-> Right:특허 (2/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명 -NOT_ELIGIBLE_FOR-> Right:특허 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 21,
+      "kind": "역량질문 관련",
+      "expected": 8,
+      "extracted": 13.333333333333334,
+      "hit": 7.0,
+      "extra": 6.333333333333333,
+      "missed_nodes": [
+        "Right:특허를받을수있는권리 (1/3)"
+      ],
+      "missed_rels": [
+        "Actor:그승계인 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:발명을한사람 -HOLDS-> Right:특허를받을수있는권리 (1/3)"
+      ],
+      "extra_nodes": [
+        "Actor:무권리자 (3/3)",
+        "Actor:정당한권리자 (3/3)",
+        "Actor:2명이상이공동으로발명한경우 (2/3)",
+        "Actor:지식재산처직원 (2/3)",
+        "Actor:특허심판원직원 (2/3)",
+        "Period:30일 (1/3)",
+        "Procedure:특허출원 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:정당한권리자 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허 (1/3)",
+        "Actor:그승계인 -HOLDS-> Right:특허 (1/3)",
+        "Actor:발명을한사람 -HOLDS-> Right:특허 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 51,
+      "kind": "역량질문 관련",
+      "expected": 11,
+      "extracted": 11.0,
+      "hit": 11.0,
+      "extra": 0.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [],
+      "extra_rels": []
+    },
+    {
+      "chunk_index": 73,
+      "kind": "역량질문 관련",
+      "expected": 5,
+      "extracted": 12.0,
+      "hit": 3.6666666666666665,
+      "extra": 8.333333333333334,
+      "missed_nodes": [
+        "Period:특허권을설정등록한날부터특허출원일후20년이되는날까지 (2/3)"
+      ],
+      "missed_rels": [
+        "Right:특허권 -HAS_DURATION-> Period:특허권을설정등록한날부터특허출원일후20년이되는날까지 (2/3)"
+      ],
+      "extra_nodes": [
+        "Period:5년의기간까지 (3/3)",
+        "Invention:특허발명 (2/3)",
+        "Period:특허출원일후20년이되는날까지 (2/3)",
+        "Period:허가등을받은날부터14년 (2/3)",
+        "Actor:정당한권리자 (2/3)",
+        "Actor:무권리자 (1/3)",
+        "Actor:허가등을받은자 (1/3)",
+        "Period:허가등을받은날부터14년을초과하여 (1/3)",
+        "Period:실시할수없었던기간 (1/3)"
+      ],
+      "extra_rels": [
+        "Right:특허권 -HAS_DURATION-> Period:5년의기간까지 (3/3)",
+        "Right:특허권 -HAS_DURATION-> Period:특허출원일후20년이되는날까지 (2/3)",
+        "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년 (2/3)",
+        "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년을초과하여 (1/3)",
+        "Actor:정당한권리자 -HOLDS-> Right:특허권 (1/3)",
+        "Right:특허권 -HAS_DURATION-> Period:실시할수없었던기간 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 82,
+      "kind": "역량질문 관련",
+      "expected": 9,
+      "extracted": 9.0,
+      "hit": 9.0,
+      "extra": 0.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [],
+      "extra_rels": []
+    },
+    {
+      "chunk_index": 100,
+      "kind": "역량질문 관련",
+      "expected": 24,
+      "extracted": 24.0,
+      "hit": 18.666666666666668,
+      "extra": 5.333333333333333,
+      "missed_nodes": [
+        "Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Remedy:침해행위에제공된설비의제거 (1/3)"
+      ],
+      "missed_rels": [
+        "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자 (2/3)",
+        "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (2/3)",
+        "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해한자 (2/3)",
+        "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (2/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거 (1/3)",
+        "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)"
+      ],
+      "extra_nodes": [
+        "Actor:지식재산처소속공무원 (2/3)",
+        "Actor:지식재산처장 (2/3)",
+        "Remedy:물건의폐기 (1/3)",
+        "Remedy:설비의제거 (1/3)",
+        "Actor:통상실시권자 (1/3)",
+        "Decision:확정된결정 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:물건의폐기 (1/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:설비의제거 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:물건의폐기 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:설비의제거 (1/3)",
+        "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)",
+        "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 116,
+      "kind": "역량질문 관련",
+      "expected": 11,
+      "extracted": 10.666666666666666,
+      "hit": 8.666666666666666,
+      "extra": 2.0,
+      "missed_nodes": [
+        "Actor:특허심판원 (2/3)",
+        "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자 (1/3)"
+      ],
+      "missed_rels": [
+        "Procedure:특허거절결정등에대한심판 -HANDLED_BY-> Actor:특허심판원 (3/3)",
+        "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)"
+      ],
+      "extra_nodes": [
+        "Actor:특허권의존속기간의연장등록거절결정을받은자 (1/3)",
+        "Actor:지식재산처장 (1/3)",
+        "Actor:특허거절결정등을받은자 (1/3)",
+        "Procedure:특허취소신청 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)",
+        "Actor:특허거절결정등을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 180,
+      "kind": "역량질문 무관",
+      "expected": 0,
+      "extracted": 0.0,
+      "hit": 0.0,
+      "extra": 0.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [],
+      "extra_rels": []
+    },
+    {
+      "chunk_index": 186,
+      "kind": "역량질문 관련",
+      "expected": 5,
+      "extracted": 5.666666666666667,
+      "hit": 5.0,
+      "extra": 0.6666666666666666,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [
+        "Right:전용실시권 (1/3)",
+        "Right:특허권 (1/3)"
+      ],
+      "extra_rels": []
+    }
+  ],
+  "runs": [
+    {
+      "metrics": {
+        "recall": 0.9047619047619048,
+        "hallucination_rate": 0.2761904761904762,
+        "cq_answerable": 8,
+        "cq_total": 9,
+        "expected": 84,
+        "extracted": 105,
+        "hit": 76
+      },
+      "passed": false,
+      "cq": [
+        {
+          "cq_id": "CQ01",
+          "path": "Invention -ELIGIBLE_FOR-> Right ; Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "산업상이용할수있는발명 → 특허 / 특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ02",
+          "path": "Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ03",
+          "path": "Actor -CAN_FILE-> Procedure",
+          "answerable": true,
+          "example": "누구든지 → 출원심사의청구"
+        },
+        {
+          "cq_id": "CQ04",
+          "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+          "answerable": false,
+          "example": ""
+        },
+        {
+          "cq_id": "CQ05",
+          "path": "Procedure -HAS_DEADLINE-> Period",
+          "answerable": true,
+          "example": "출원심사의청구 → 각각30일이내"
+        },
+        {
+          "cq_id": "CQ06",
+          "path": "Right -HAS_DURATION-> Period",
+          "answerable": true,
+          "example": "특허권 → 무권리자의특허출원일의다음날부터"
+        },
+        {
+          "cq_id": "CQ07",
+          "path": "Actor -PUNISHED_BY-> Penalty",
+          "answerable": true,
+          "example": "특허권또는전용실시권을침해한자 → 7년이하의징역"
+        },
+        {
+          "cq_id": "CQ08",
+          "path": "Right -NOT_EFFECTIVE_FOR-> Exclusion",
+          "answerable": true,
+          "example": "특허권 → 특허출원을한때부터국내에있는물건"
+        },
+        {
+          "cq_id": "CQ09",
+          "path": "Actor -CAN_CLAIM-> Remedy",
+          "answerable": true,
+          "example": "특허권자 → 침해의금지또는예방"
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_index": 15,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 12,
+          "hit": 0,
+          "extra": 12,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:전자문서로특허에관한절차를밟으려는자",
+            "Actor:지식재산처장",
+            "Actor:특허심판원장",
+            "Actor:특허에관한절차를밟는자",
+            "Procedure:전자문서이용신고절차",
+            "Procedure:특허에관한절차"
+          ],
+          "extra_rels": [
+            "Actor:전자문서로특허에관한절차를밟으려는자 -CAN_FILE-> Procedure:전자문서이용신고절차",
+            "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:특허에관한절차",
+            "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:지식재산처장",
+            "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:특허심판원장",
+            "Procedure:특허에관한절차 -HANDLED_BY-> Actor:지식재산처장",
+            "Procedure:특허에관한절차 -HANDLED_BY-> Actor:특허심판원장"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허에 관한 절차를 밟는 자"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허에 관한 절차"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원장"
+              },
+              {
+                "label": "Actor",
+                "name": "전자문서로 특허에 관한 절차를 밟으려는 자"
+              },
+              {
+                "label": "Procedure",
+                "name": "전자문서 이용신고 절차"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허에 관한 절차를 밟는 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "특허심판원장"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전자문서로 특허에 관한 절차를 밟으려는 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "전자문서 이용신고 절차"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "특허심판원장"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 17,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 9,
+          "hit": 7,
+          "extra": 2,
+          "missed_nodes": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명"
+          ],
+          "missed_rels": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "extra_nodes": [
+            "Invention:특허출원한발명"
+          ],
+          "extra_rels": [
+            "Invention:특허출원한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "산업상 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 공지되었거나 공연히 실시된 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원한 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "산업상 이용할 수 있는 발명"
+                ],
+                "type": "ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 공지되었거나 공연히 실시된 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원한 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 21,
+          "kind": "역량질문 관련",
+          "expected": 8,
+          "extracted": 12,
+          "hit": 8,
+          "extra": 4,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:무권리자",
+            "Actor:정당한권리자",
+            "Period:30일",
+            "Procedure:특허출원"
+          ],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              },
+              {
+                "label": "Actor",
+                "name": "발명을 한 사람"
+              },
+              {
+                "label": "Actor",
+                "name": "그 승계인"
+              },
+              {
+                "label": "Right",
+                "name": "특허를 받을 수 있는 권리"
+              },
+              {
+                "label": "Actor",
+                "name": "무권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허출원"
+              },
+              {
+                "label": "Period",
+                "name": "30일"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "발명을 한 사람"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "그 승계인"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 51,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 11,
+          "hit": 11,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "누구든지"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Procedure",
+                "name": "출원심사의 청구"
+              },
+              {
+                "label": "Period",
+                "name": "특허출원일부터 3년 이내"
+              },
+              {
+                "label": "Period",
+                "name": "각각 30일 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "누구든지"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "정당한 권리자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "특허출원일부터 3년 이내"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "각각 30일 이내"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 73,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 10,
+          "hit": 3,
+          "extra": 7,
+          "missed_nodes": [
+            "Period:특허권을설정등록한날부터특허출원일후20년이되는날까지"
+          ],
+          "missed_rels": [
+            "Right:특허권 -HAS_DURATION-> Period:특허권을설정등록한날부터특허출원일후20년이되는날까지"
+          ],
+          "extra_nodes": [
+            "Invention:특허발명",
+            "Period:5년의기간까지",
+            "Period:특허출원일후20년이되는날까지",
+            "Period:허가등을받은날부터14년"
+          ],
+          "extra_rels": [
+            "Right:특허권 -HAS_DURATION-> Period:5년의기간까지",
+            "Right:특허권 -HAS_DURATION-> Period:특허출원일후20년이되는날까지",
+            "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Period",
+                "name": "특허출원일 후 20년이 되는 날까지"
+              },
+              {
+                "label": "Period",
+                "name": "무권리자의 특허출원일의 다음 날부터"
+              },
+              {
+                "label": "Period",
+                "name": "5년의 기간까지"
+              },
+              {
+                "label": "Period",
+                "name": "허가등을 받은 날부터 14년"
+              },
+              {
+                "label": "Invention",
+                "name": "특허발명"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "특허출원일 후 20년이 되는 날까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "무권리자의 특허출원일의 다음 날부터"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "5년의 기간까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "허가등을 받은 날부터 14년"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 82,
+          "kind": "역량질문 관련",
+          "expected": 9,
+          "extracted": 9,
+          "hit": 9,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Exclusion",
+                "name": "연구 또는 시험을 하기 위한 특허발명의 실시"
+              },
+              {
+                "label": "Exclusion",
+                "name": "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "특허출원을 한 때부터 국내에 있는 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "조제행위와 그 조제에 의한 의약"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "연구 또는 시험을 하기 위한 특허발명의 실시"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "특허출원을 한 때부터 국내에 있는 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "조제행위와 그 조제에 의한 의약"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 100,
+          "kind": "역량질문 관련",
+          "expected": 24,
+          "extracted": 26,
+          "hit": 24,
+          "extra": 2,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:지식재산처소속공무원",
+            "Actor:지식재산처장"
+          ],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처 소속 공무원"
+              },
+              {
+                "label": "Actor",
+                "name": "특허권자"
+              },
+              {
+                "label": "Actor",
+                "name": "전용실시권자"
+              },
+              {
+                "label": "Actor",
+                "name": "침해한 자"
+              },
+              {
+                "label": "Actor",
+                "name": "침해할 우려가 있는 자"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해의 금지 또는 예방"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해행위를 조성한 물건의 폐기"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해행위에 제공된 설비의 제거"
+              },
+              {
+                "label": "Remedy",
+                "name": "그 밖에 침해의 예방에 필요한 행위"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 116,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 11,
+          "hit": 9,
+          "extra": 2,
+          "missed_nodes": [
+            "Actor:특허심판원"
+          ],
+          "missed_rels": [
+            "Procedure:특허거절결정등에대한심판 -HANDLED_BY-> Actor:특허심판원"
+          ],
+          "extra_nodes": [
+            "Actor:특허권의존속기간의연장등록거절결정을받은자"
+          ],
+          "extra_rels": [
+            "Actor:특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허거절결정을 받은 자"
+              },
+              {
+                "label": "Actor",
+                "name": "특허권의 존속기간의 연장등록거절결정을 받은 자"
+              },
+              {
+                "label": "Decision",
+                "name": "특허거절결정"
+              },
+              {
+                "label": "Decision",
+                "name": "특허권의 존속기간의 연장등록거절결정"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허거절결정 등에 대한 심판"
+              },
+              {
+                "label": "Period",
+                "name": "그 결정등본을 송달받은 날부터 3개월 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허거절결정을 받은 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권의 존속기간의 연장등록거절결정을 받은 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "그 결정등본을 송달받은 날부터 3개월 이내"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허거절결정"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허권의 존속기간의 연장등록거절결정"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 180,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 0,
+          "hit": 0,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [],
+            "relationships": []
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 186,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 5,
+          "hit": 5,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허권 또는 전용실시권을 침해한 자"
+              },
+              {
+                "label": "Penalty",
+                "name": "7년 이하의 징역"
+              },
+              {
+                "label": "Penalty",
+                "name": "1억원 이하의 벌금"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "7년 이하의 징역"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "1억원 이하의 벌금"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        }
+      ]
+    },
+    {
+      "metrics": {
+        "recall": 0.8095238095238095,
+        "hallucination_rate": 0.38181818181818183,
+        "cq_answerable": 8,
+        "cq_total": 9,
+        "expected": 84,
+        "extracted": 110,
+        "hit": 68
+      },
+      "passed": false,
+      "cq": [
+        {
+          "cq_id": "CQ01",
+          "path": "Invention -ELIGIBLE_FOR-> Right ; Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "산업상이용할수있는발명 → 특허 / 특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ02",
+          "path": "Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ03",
+          "path": "Actor -CAN_FILE-> Procedure",
+          "answerable": true,
+          "example": "누구든지 → 출원심사의청구"
+        },
+        {
+          "cq_id": "CQ04",
+          "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+          "answerable": false,
+          "example": ""
+        },
+        {
+          "cq_id": "CQ05",
+          "path": "Procedure -HAS_DEADLINE-> Period",
+          "answerable": true,
+          "example": "출원심사의청구 → 각각30일이내"
+        },
+        {
+          "cq_id": "CQ06",
+          "path": "Right -HAS_DURATION-> Period",
+          "answerable": true,
+          "example": "특허권 → 무권리자의특허출원일의다음날부터"
+        },
+        {
+          "cq_id": "CQ07",
+          "path": "Actor -PUNISHED_BY-> Penalty",
+          "answerable": true,
+          "example": "특허권또는전용실시권을침해한자 → 7년이하의징역"
+        },
+        {
+          "cq_id": "CQ08",
+          "path": "Right -NOT_EFFECTIVE_FOR-> Exclusion",
+          "answerable": true,
+          "example": "특허권 → 특허출원을한때부터국내에있는물건"
+        },
+        {
+          "cq_id": "CQ09",
+          "path": "Actor -CAN_CLAIM-> Remedy",
+          "answerable": true,
+          "example": "특허권자 → 물건의폐기"
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_index": 15,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 11,
+          "hit": 0,
+          "extra": 11,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:지식재산처장",
+            "Actor:특허심판원장",
+            "Actor:특허에관한절차를밟는자",
+            "Procedure:전자문서이용신고",
+            "Procedure:특허에관한절차"
+          ],
+          "extra_rels": [
+            "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:전자문서이용신고",
+            "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:특허에관한절차",
+            "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:지식재산처장",
+            "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:특허심판원장",
+            "Procedure:특허에관한절차 -HANDLED_BY-> Actor:지식재산처장",
+            "Procedure:특허에관한절차 -HANDLED_BY-> Actor:특허심판원장"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허에 관한 절차를 밟는 자"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원장"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허에 관한 절차"
+              },
+              {
+                "label": "Procedure",
+                "name": "전자문서 이용신고"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허에 관한 절차를 밟는 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허에 관한 절차"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "특허심판원장"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허에 관한 절차를 밟는 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "특허심판원장"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 17,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 11,
+          "hit": 7,
+          "extra": 4,
+          "missed_nodes": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명"
+          ],
+          "missed_rels": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "extra_nodes": [
+            "Invention:그발명",
+            "Invention:특허출원한발명"
+          ],
+          "extra_rels": [
+            "Invention:그발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:특허출원한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "산업상 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 공지되었거나 공연히 실시된 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "그 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원한 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "산업상 이용할 수 있는 발명"
+                ],
+                "type": "ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 공지되었거나 공연히 실시된 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "그 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원한 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 21,
+          "kind": "역량질문 관련",
+          "expected": 8,
+          "extracted": 15,
+          "hit": 8,
+          "extra": 7,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:2명이상이공동으로발명한경우",
+            "Actor:무권리자",
+            "Actor:정당한권리자",
+            "Actor:지식재산처직원",
+            "Actor:특허심판원직원"
+          ],
+          "extra_rels": [
+            "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허를받을수있는권리",
+            "Actor:정당한권리자 -HOLDS-> Right:특허를받을수있는권리"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              },
+              {
+                "label": "Actor",
+                "name": "발명을 한 사람"
+              },
+              {
+                "label": "Actor",
+                "name": "그 승계인"
+              },
+              {
+                "label": "Right",
+                "name": "특허를 받을 수 있는 권리"
+              },
+              {
+                "label": "Actor",
+                "name": "2명 이상이 공동으로 발명한 경우"
+              },
+              {
+                "label": "Actor",
+                "name": "무권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처 직원"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원 직원"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "발명을 한 사람"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "그 승계인"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "2명 이상이 공동으로 발명한 경우"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "정당한 권리자"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허를 받을 수 있는 권리"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 51,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 11,
+          "hit": 11,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "누구든지"
+              },
+              {
+                "label": "Procedure",
+                "name": "출원심사의 청구"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Period",
+                "name": "특허출원일부터 3년 이내"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Period",
+                "name": "각각 30일 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "누구든지"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "특허출원일부터 3년 이내"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "정당한 권리자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "각각 30일 이내"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 73,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 13,
+          "hit": 5,
+          "extra": 8,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:무권리자",
+            "Actor:정당한권리자",
+            "Actor:허가등을받은자",
+            "Invention:특허발명",
+            "Period:5년의기간까지",
+            "Period:허가등을받은날부터14년을초과하여"
+          ],
+          "extra_rels": [
+            "Right:특허권 -HAS_DURATION-> Period:5년의기간까지",
+            "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년을초과하여"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Period",
+                "name": "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지"
+              },
+              {
+                "label": "Period",
+                "name": "무권리자의 특허출원일의 다음 날부터"
+              },
+              {
+                "label": "Invention",
+                "name": "특허발명"
+              },
+              {
+                "label": "Period",
+                "name": "5년의 기간까지"
+              },
+              {
+                "label": "Period",
+                "name": "허가등을 받은 날부터 14년을 초과하여"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "무권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "허가등을 받은 자"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "무권리자의 특허출원일의 다음 날부터"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "5년의 기간까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "허가등을 받은 날부터 14년을 초과하여"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 82,
+          "kind": "역량질문 관련",
+          "expected": 9,
+          "extracted": 9,
+          "hit": 9,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Exclusion",
+                "name": "연구 또는 시험을 하기 위한 특허발명의 실시"
+              },
+              {
+                "label": "Exclusion",
+                "name": "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "특허출원을 한 때부터 국내에 있는 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "조제행위와 그 조제에 의한 의약"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "연구 또는 시험을 하기 위한 특허발명의 실시"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "특허출원을 한 때부터 국내에 있는 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "조제행위와 그 조제에 의한 의약"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 100,
+          "kind": "역량질문 관련",
+          "expected": 24,
+          "extracted": 24,
+          "hit": 14,
+          "extra": 10,
+          "missed_nodes": [
+            "Remedy:침해행위를조성한물건의폐기",
+            "Remedy:침해행위에제공된설비의제거"
+          ],
+          "missed_rels": [
+            "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기",
+            "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거",
+            "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기",
+            "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거",
+            "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자",
+            "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자"
+          ],
+          "extra_nodes": [
+            "Remedy:물건의폐기",
+            "Remedy:설비의제거"
+          ],
+          "extra_rels": [
+            "Actor:전용실시권자 -CAN_CLAIM-> Remedy:물건의폐기",
+            "Actor:전용실시권자 -CAN_CLAIM-> Remedy:설비의제거",
+            "Actor:특허권자 -CAN_CLAIM-> Remedy:물건의폐기",
+            "Actor:특허권자 -CAN_CLAIM-> Remedy:설비의제거",
+            "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자",
+            "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허권자"
+              },
+              {
+                "label": "Actor",
+                "name": "전용실시권자"
+              },
+              {
+                "label": "Actor",
+                "name": "침해한 자"
+              },
+              {
+                "label": "Actor",
+                "name": "침해할 우려가 있는 자"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해의 금지 또는 예방"
+              },
+              {
+                "label": "Remedy",
+                "name": "물건의 폐기"
+              },
+              {
+                "label": "Remedy",
+                "name": "설비의 제거"
+              },
+              {
+                "label": "Remedy",
+                "name": "그 밖에 침해의 예방에 필요한 행위"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "물건의 폐기"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "물건의 폐기"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "설비의 제거"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "설비의 제거"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 116,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 9,
+          "hit": 9,
+          "extra": 0,
+          "missed_nodes": [
+            "Actor:특허심판원"
+          ],
+          "missed_rels": [
+            "Procedure:특허거절결정등에대한심판 -HANDLED_BY-> Actor:특허심판원"
+          ],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 받은 자"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허거절결정 등에 대한 심판"
+              },
+              {
+                "label": "Decision",
+                "name": "특허거절결정"
+              },
+              {
+                "label": "Decision",
+                "name": "특허권의 존속기간의 연장등록거절결정"
+              },
+              {
+                "label": "Period",
+                "name": "그 결정등본을 송달받은 날부터 3개월 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 받은 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허거절결정"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허권의 존속기간의 연장등록거절결정"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "특허거절결정 등에 대한 심판"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "그 결정등본을 송달받은 날부터 3개월 이내"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 180,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 0,
+          "hit": 0,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [],
+            "relationships": []
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 186,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 7,
+          "hit": 5,
+          "extra": 2,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Right:전용실시권",
+            "Right:특허권"
+          ],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허권 또는 전용실시권을 침해한 자"
+              },
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Right",
+                "name": "전용실시권"
+              },
+              {
+                "label": "Penalty",
+                "name": "7년 이하의 징역"
+              },
+              {
+                "label": "Penalty",
+                "name": "1억원 이하의 벌금"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "7년 이하의 징역"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "1억원 이하의 벌금"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        }
+      ]
+    },
+    {
+      "metrics": {
+        "recall": 0.7857142857142857,
+        "hallucination_rate": 0.37142857142857144,
+        "cq_answerable": 8,
+        "cq_total": 9,
+        "expected": 84,
+        "extracted": 105,
+        "hit": 66
+      },
+      "passed": false,
+      "cq": [
+        {
+          "cq_id": "CQ01",
+          "path": "Invention -ELIGIBLE_FOR-> Right ; Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "산업상이용할수있는발명 → 특허 / 특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ02",
+          "path": "Invention -NOT_ELIGIBLE_FOR-> Right",
+          "answerable": true,
+          "example": "특허출원전에국내또는국외에서공지되었거나공연히실시된발명 → 특허"
+        },
+        {
+          "cq_id": "CQ03",
+          "path": "Actor -CAN_FILE-> Procedure",
+          "answerable": true,
+          "example": "누구든지 → 출원심사의청구"
+        },
+        {
+          "cq_id": "CQ04",
+          "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+          "answerable": false,
+          "example": ""
+        },
+        {
+          "cq_id": "CQ05",
+          "path": "Procedure -HAS_DEADLINE-> Period",
+          "answerable": true,
+          "example": "심판 → 그결정등본을송달받은날부터3개월이내"
+        },
+        {
+          "cq_id": "CQ06",
+          "path": "Right -HAS_DURATION-> Period",
+          "answerable": true,
+          "example": "특허권 → 특허출원일후20년이되는날까지"
+        },
+        {
+          "cq_id": "CQ07",
+          "path": "Actor -PUNISHED_BY-> Penalty",
+          "answerable": true,
+          "example": "특허권또는전용실시권을침해한자 → 7년이하의징역"
+        },
+        {
+          "cq_id": "CQ08",
+          "path": "Right -NOT_EFFECTIVE_FOR-> Exclusion",
+          "answerable": true,
+          "example": "특허권 → 특허출원을한때부터국내에있는물건"
+        },
+        {
+          "cq_id": "CQ09",
+          "path": "Actor -CAN_CLAIM-> Remedy",
+          "answerable": true,
+          "example": "특허권자 → 침해의금지또는예방"
+        }
+      ],
+      "chunks": [
+        {
+          "chunk_index": 15,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 7,
+          "hit": 0,
+          "extra": 7,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [
+            "Actor:지식재산처장",
+            "Actor:특허심판원장",
+            "Actor:특허에관한절차를밟는자",
+            "Procedure:전자문서이용신고"
+          ],
+          "extra_rels": [
+            "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:전자문서이용신고",
+            "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:지식재산처장",
+            "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:특허심판원장"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허에 관한 절차를 밟는 자"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원장"
+              },
+              {
+                "label": "Procedure",
+                "name": "전자문서 이용신고"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허에 관한 절차를 밟는 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "전자문서 이용신고"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "특허심판원장"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 17,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 13,
+          "hit": 7,
+          "extra": 6,
+          "missed_nodes": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명"
+          ],
+          "missed_rels": [
+            "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "extra_nodes": [
+            "Invention:그발명",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명",
+            "Invention:특허출원한발명"
+          ],
+          "extra_rels": [
+            "Invention:그발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명 -NOT_ELIGIBLE_FOR-> Right:특허",
+            "Invention:특허출원한발명 -NOT_ELIGIBLE_FOR-> Right:특허"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "산업상 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 공지(公知)되었거나 공연(公然)히 실시된 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중(公衆)이 이용할 수 있는 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "그 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "특허출원한 발명"
+              },
+              {
+                "label": "Invention",
+                "name": "다른 특허출원의 출원서에 최초로 첨부된 명세서 또는 도면에 기재된 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "산업상 이용할 수 있는 발명"
+                ],
+                "type": "ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 공지(公知)되었거나 공연(公然)히 실시된 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중(公衆)이 이용할 수 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "그 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "특허출원한 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Invention",
+                  "다른 특허출원의 출원서에 최초로 첨부된 명세서 또는 도면에 기재된 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 21,
+          "kind": "역량질문 관련",
+          "expected": 8,
+          "extracted": 13,
+          "hit": 5,
+          "extra": 8,
+          "missed_nodes": [
+            "Right:특허를받을수있는권리"
+          ],
+          "missed_rels": [
+            "Actor:그승계인 -HOLDS-> Right:특허를받을수있는권리",
+            "Actor:발명을한사람 -HOLDS-> Right:특허를받을수있는권리"
+          ],
+          "extra_nodes": [
+            "Actor:2명이상이공동으로발명한경우",
+            "Actor:무권리자",
+            "Actor:정당한권리자",
+            "Actor:지식재산처직원",
+            "Actor:특허심판원직원"
+          ],
+          "extra_rels": [
+            "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허",
+            "Actor:그승계인 -HOLDS-> Right:특허",
+            "Actor:발명을한사람 -HOLDS-> Right:특허"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Invention",
+                "name": "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+              },
+              {
+                "label": "Right",
+                "name": "특허"
+              },
+              {
+                "label": "Actor",
+                "name": "발명을 한 사람"
+              },
+              {
+                "label": "Actor",
+                "name": "그 승계인"
+              },
+              {
+                "label": "Actor",
+                "name": "2명 이상이 공동으로 발명한 경우"
+              },
+              {
+                "label": "Actor",
+                "name": "무권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처 직원"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원 직원"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Invention",
+                  "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+                ],
+                "type": "NOT_ELIGIBLE_FOR",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "발명을 한 사람"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "그 승계인"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "2명 이상이 공동으로 발명한 경우"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 51,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 11,
+          "hit": 11,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "누구든지"
+              },
+              {
+                "label": "Procedure",
+                "name": "출원심사의 청구"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Period",
+                "name": "특허출원일부터 3년 이내"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Period",
+                "name": "30일 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "누구든지"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HANDLED_BY",
+                "end": [
+                  "Actor",
+                  "지식재산처장"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "특허출원일부터 3년 이내"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "정당한 권리자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "출원심사의 청구"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "30일 이내"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 73,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 13,
+          "hit": 3,
+          "extra": 10,
+          "missed_nodes": [
+            "Period:특허권을설정등록한날부터특허출원일후20년이되는날까지"
+          ],
+          "missed_rels": [
+            "Right:특허권 -HAS_DURATION-> Period:특허권을설정등록한날부터특허출원일후20년이되는날까지"
+          ],
+          "extra_nodes": [
+            "Actor:정당한권리자",
+            "Period:5년의기간까지",
+            "Period:실시할수없었던기간",
+            "Period:특허출원일후20년이되는날까지",
+            "Period:허가등을받은날부터14년"
+          ],
+          "extra_rels": [
+            "Actor:정당한권리자 -HOLDS-> Right:특허권",
+            "Right:특허권 -HAS_DURATION-> Period:5년의기간까지",
+            "Right:특허권 -HAS_DURATION-> Period:실시할수없었던기간",
+            "Right:특허권 -HAS_DURATION-> Period:특허출원일후20년이되는날까지",
+            "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Period",
+                "name": "특허출원일 후 20년이 되는 날까지"
+              },
+              {
+                "label": "Period",
+                "name": "무권리자의 특허출원일의 다음 날부터"
+              },
+              {
+                "label": "Actor",
+                "name": "정당한 권리자"
+              },
+              {
+                "label": "Period",
+                "name": "5년의 기간까지"
+              },
+              {
+                "label": "Period",
+                "name": "허가등을 받은 날부터 14년"
+              },
+              {
+                "label": "Period",
+                "name": "실시할 수 없었던 기간"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "정당한 권리자"
+                ],
+                "type": "HOLDS",
+                "end": [
+                  "Right",
+                  "특허권"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "특허출원일 후 20년이 되는 날까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "무권리자의 특허출원일의 다음 날부터"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "5년의 기간까지"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "허가등을 받은 날부터 14년"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "HAS_DURATION",
+                "end": [
+                  "Period",
+                  "실시할 수 없었던 기간"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 82,
+          "kind": "역량질문 관련",
+          "expected": 9,
+          "extracted": 9,
+          "hit": 9,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Right",
+                "name": "특허권"
+              },
+              {
+                "label": "Exclusion",
+                "name": "연구 또는 시험을 하기 위한 특허발명의 실시"
+              },
+              {
+                "label": "Exclusion",
+                "name": "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "특허출원을 한 때부터 국내에 있는 물건"
+              },
+              {
+                "label": "Exclusion",
+                "name": "조제행위와 그 조제에 의한 의약"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "연구 또는 시험을 하기 위한 특허발명의 실시"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "특허출원을 한 때부터 국내에 있는 물건"
+                ]
+              },
+              {
+                "start": [
+                  "Right",
+                  "특허권"
+                ],
+                "type": "NOT_EFFECTIVE_FOR",
+                "end": [
+                  "Exclusion",
+                  "조제행위와 그 조제에 의한 의약"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 100,
+          "kind": "역량질문 관련",
+          "expected": 24,
+          "extracted": 22,
+          "hit": 18,
+          "extra": 4,
+          "missed_nodes": [],
+          "missed_rels": [
+            "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해할우려가있는자",
+            "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자",
+            "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해한자",
+            "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자"
+          ],
+          "extra_nodes": [
+            "Actor:지식재산처소속공무원",
+            "Actor:지식재산처장",
+            "Actor:통상실시권자",
+            "Decision:확정된결정"
+          ],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "특허권자"
+              },
+              {
+                "label": "Actor",
+                "name": "전용실시권자"
+              },
+              {
+                "label": "Actor",
+                "name": "통상실시권자"
+              },
+              {
+                "label": "Actor",
+                "name": "지식재산처 소속 공무원"
+              },
+              {
+                "label": "Actor",
+                "name": "침해한 자"
+              },
+              {
+                "label": "Actor",
+                "name": "침해할 우려가 있는 자"
+              },
+              {
+                "label": "Decision",
+                "name": "확정된 결정"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해의 금지 또는 예방"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해행위를 조성한 물건의 폐기"
+              },
+              {
+                "label": "Remedy",
+                "name": "침해행위에 제공된 설비의 제거"
+              },
+              {
+                "label": "Remedy",
+                "name": "그 밖에 침해의 예방에 필요한 행위"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위를 조성한 물건의 폐기"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "침해행위에 제공된 설비의 제거"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "전용실시권자"
+                ],
+                "type": "CAN_CLAIM",
+                "end": [
+                  "Remedy",
+                  "그 밖에 침해의 예방에 필요한 행위"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해한 자"
+                ]
+              },
+              {
+                "start": [
+                  "Remedy",
+                  "침해의 금지 또는 예방"
+                ],
+                "type": "CLAIMED_AGAINST",
+                "end": [
+                  "Actor",
+                  "침해할 우려가 있는 자"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 116,
+          "kind": "역량질문 관련",
+          "expected": 11,
+          "extracted": 12,
+          "hit": 8,
+          "extra": 4,
+          "missed_nodes": [
+            "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자"
+          ],
+          "missed_rels": [
+            "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판",
+            "Procedure:특허거절결정등에대한심판 -HANDLED_BY-> Actor:특허심판원"
+          ],
+          "extra_nodes": [
+            "Actor:지식재산처장",
+            "Actor:특허거절결정등을받은자",
+            "Procedure:특허취소신청"
+          ],
+          "extra_rels": [
+            "Actor:특허거절결정등을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판"
+          ],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "지식재산처장"
+              },
+              {
+                "label": "Actor",
+                "name": "특허심판원"
+              },
+              {
+                "label": "Actor",
+                "name": "특허거절결정 등을 받은 자"
+              },
+              {
+                "label": "Decision",
+                "name": "특허거절결정"
+              },
+              {
+                "label": "Decision",
+                "name": "특허권의 존속기간의 연장등록거절결정"
+              },
+              {
+                "label": "Procedure",
+                "name": "특허취소신청"
+              },
+              {
+                "label": "Procedure",
+                "name": "심판"
+              },
+              {
+                "label": "Period",
+                "name": "그 결정등본을 송달받은 날부터 3개월 이내"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허거절결정 등을 받은 자"
+                ],
+                "type": "CAN_FILE",
+                "end": [
+                  "Procedure",
+                  "심판"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허거절결정"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "심판"
+                ],
+                "type": "TARGETS",
+                "end": [
+                  "Decision",
+                  "특허권의 존속기간의 연장등록거절결정"
+                ]
+              },
+              {
+                "start": [
+                  "Procedure",
+                  "심판"
+                ],
+                "type": "HAS_DEADLINE",
+                "end": [
+                  "Period",
+                  "그 결정등본을 송달받은 날부터 3개월 이내"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 180,
+          "kind": "역량질문 무관",
+          "expected": 0,
+          "extracted": 0,
+          "hit": 0,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [],
+            "relationships": []
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        },
+        {
+          "chunk_index": 186,
+          "kind": "역량질문 관련",
+          "expected": 5,
+          "extracted": 5,
+          "hit": 5,
+          "extra": 0,
+          "missed_nodes": [],
+          "missed_rels": [],
+          "extra_nodes": [],
+          "extra_rels": [],
+          "graph": {
+            "nodes": [
+              {
+                "label": "Actor",
+                "name": "특허권 또는 전용실시권을 침해한 자"
+              },
+              {
+                "label": "Penalty",
+                "name": "7년 이하의 징역"
+              },
+              {
+                "label": "Penalty",
+                "name": "1억원 이하의 벌금"
+              }
+            ],
+            "relationships": [
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "7년 이하의 징역"
+                ]
+              },
+              {
+                "start": [
+                  "Actor",
+                  "특허권 또는 전용실시권을 침해한 자"
+                ],
+                "type": "PUNISHED_BY",
+                "end": [
+                  "Penalty",
+                  "1억원 이하의 벌금"
+                ]
+              }
+            ]
+          },
+          "pruning": "PruningStats: nodes: 0, relationships: 0, properties: 0"
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "metrics": {
+      "recall": 0.8333333333333334,
+      "hallucination_rate": 0.34314574314574314,
+      "cq_answerable": 8,
+      "cq_total": 9,
+      "expected": 84,
+      "extracted": 106.66666666666667,
+      "hit": 70.0,
+      "recall_range": [
+        0.7857142857142857,
+        0.9047619047619048
+      ],
+      "hallucination_range": [
+        0.2761904761904762,
+        0.38181818181818183
+      ]
+    },
+    "cq_not_answerable": [
+      {
+        "cq_id": "CQ04",
+        "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+        "answerable": false,
+        "example": "",
+        "runs_ok": "0/3"
+      }
+    ],
+    "missed": {
+      "17": [
+        "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 (3/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 (3/3)",
+        "Invention:그발명이속하는기술분야에서통상의지식을가진사람이쉽게발명할수있는발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명과동일한발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)"
+      ],
+      "21": [
+        "Right:특허를받을수있는권리 (1/3)",
+        "Actor:그승계인 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:발명을한사람 -HOLDS-> Right:특허를받을수있는권리 (1/3)"
+      ],
+      "73": [
+        "Period:특허권을설정등록한날부터특허출원일후20년이되는날까지 (2/3)",
+        "Right:특허권 -HAS_DURATION-> Period:특허권을설정등록한날부터특허출원일후20년이되는날까지 (2/3)"
+      ],
+      "100": [
+        "Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Remedy:침해행위에제공된설비의제거 (1/3)",
+        "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자 (2/3)",
+        "Remedy:침해행위를조성한물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (2/3)",
+        "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해한자 (2/3)",
+        "Remedy:침해행위에제공된설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (2/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위를조성한물건의폐기 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:침해행위에제공된설비의제거 (1/3)",
+        "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:그밖에침해의예방에필요한행위 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)"
+      ],
+      "116": [
+        "Actor:특허심판원 (2/3)",
+        "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자 (1/3)",
+        "Procedure:특허거절결정등에대한심판 -HANDLED_BY-> Actor:특허심판원 (3/3)",
+        "Actor:특허거절결정또는특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)"
+      ]
+    },
+    "hallucinated": {
+      "15": [
+        "Actor:지식재산처장 (3/3)",
+        "Actor:특허심판원장 (3/3)",
+        "Actor:특허에관한절차를밟는자 (3/3)",
+        "Procedure:특허에관한절차 (2/3)",
+        "Procedure:전자문서이용신고 (2/3)",
+        "Actor:전자문서로특허에관한절차를밟으려는자 (1/3)",
+        "Procedure:전자문서이용신고절차 (1/3)",
+        "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:특허에관한절차 (2/3)",
+        "Procedure:특허에관한절차 -HANDLED_BY-> Actor:지식재산처장 (2/3)",
+        "Procedure:특허에관한절차 -HANDLED_BY-> Actor:특허심판원장 (2/3)",
+        "Actor:특허에관한절차를밟는자 -CAN_FILE-> Procedure:전자문서이용신고 (2/3)",
+        "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:지식재산처장 (2/3)",
+        "Procedure:전자문서이용신고 -HANDLED_BY-> Actor:특허심판원장 (2/3)",
+        "Actor:전자문서로특허에관한절차를밟으려는자 -CAN_FILE-> Procedure:전자문서이용신고절차 (1/3)",
+        "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:지식재산처장 (1/3)",
+        "Procedure:전자문서이용신고절차 -HANDLED_BY-> Actor:특허심판원장 (1/3)"
+      ],
+      "17": [
+        "Invention:특허출원한발명 (3/3)",
+        "Invention:그발명 (2/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명 (1/3)",
+        "Invention:특허출원한발명 -NOT_ELIGIBLE_FOR-> Right:특허 (3/3)",
+        "Invention:그발명 -NOT_ELIGIBLE_FOR-> Right:특허 (2/3)",
+        "Invention:다른특허출원의출원서에최초로첨부된명세서또는도면에기재된발명 -NOT_ELIGIBLE_FOR-> Right:특허 (1/3)"
+      ],
+      "21": [
+        "Actor:무권리자 (3/3)",
+        "Actor:정당한권리자 (3/3)",
+        "Actor:2명이상이공동으로발명한경우 (2/3)",
+        "Actor:지식재산처직원 (2/3)",
+        "Actor:특허심판원직원 (2/3)",
+        "Period:30일 (1/3)",
+        "Procedure:특허출원 (1/3)",
+        "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:정당한권리자 -HOLDS-> Right:특허를받을수있는권리 (1/3)",
+        "Actor:2명이상이공동으로발명한경우 -HOLDS-> Right:특허 (1/3)",
+        "Actor:그승계인 -HOLDS-> Right:특허 (1/3)",
+        "Actor:발명을한사람 -HOLDS-> Right:특허 (1/3)"
+      ],
+      "73": [
+        "Period:5년의기간까지 (3/3)",
+        "Invention:특허발명 (2/3)",
+        "Period:특허출원일후20년이되는날까지 (2/3)",
+        "Period:허가등을받은날부터14년 (2/3)",
+        "Actor:정당한권리자 (2/3)",
+        "Actor:무권리자 (1/3)",
+        "Actor:허가등을받은자 (1/3)",
+        "Period:허가등을받은날부터14년을초과하여 (1/3)",
+        "Period:실시할수없었던기간 (1/3)",
+        "Right:특허권 -HAS_DURATION-> Period:5년의기간까지 (3/3)",
+        "Right:특허권 -HAS_DURATION-> Period:특허출원일후20년이되는날까지 (2/3)",
+        "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년 (2/3)",
+        "Right:특허권 -HAS_DURATION-> Period:허가등을받은날부터14년을초과하여 (1/3)",
+        "Actor:정당한권리자 -HOLDS-> Right:특허권 (1/3)",
+        "Right:특허권 -HAS_DURATION-> Period:실시할수없었던기간 (1/3)"
+      ],
+      "100": [
+        "Actor:지식재산처소속공무원 (2/3)",
+        "Actor:지식재산처장 (2/3)",
+        "Remedy:물건의폐기 (1/3)",
+        "Remedy:설비의제거 (1/3)",
+        "Actor:통상실시권자 (1/3)",
+        "Decision:확정된결정 (1/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:물건의폐기 (1/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:설비의제거 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:물건의폐기 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:설비의제거 (1/3)",
+        "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:물건의폐기 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)",
+        "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해한자 (1/3)",
+        "Remedy:설비의제거 -CLAIMED_AGAINST-> Actor:침해할우려가있는자 (1/3)"
+      ],
+      "116": [
+        "Actor:특허권의존속기간의연장등록거절결정을받은자 (1/3)",
+        "Actor:지식재산처장 (1/3)",
+        "Actor:특허거절결정등을받은자 (1/3)",
+        "Procedure:특허취소신청 (1/3)",
+        "Actor:특허권의존속기간의연장등록거절결정을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)",
+        "Actor:특허거절결정등을받은자 -CAN_FILE-> Procedure:특허거절결정등에대한심판 (1/3)"
+      ],
+      "186": [
+        "Right:전용실시권 (1/3)",
+        "Right:특허권 (1/3)"
+      ]
+    },
+    "pruned_not_in_schema": {
+      "nodes": {},
+      "relationships": {}
+    }
+  },
+  "notes": [
+    "기대 결과 chunk 73에 제88조② 기산점을 넣은 효과: '무권리자의 특허출원일의 다음 날부터'는 3회 모두 일치(CQ06 예시로도 나옴)",
+    "제89조 연장 기간을 설명으로 막았지만 '5년의 기간까지'는 3회 모두, '허가등을 받은 날부터 14년'은 2회 뽑힘 → 기본 프롬프트에서는 설명의 [뽑지 않음]이 거의 지켜지지 않음",
+    "5회차(2회차 스키마) 대비 지어냄 증가(0.294 → 0.343): chunk 15 전자문서(7.3 → 10), chunk 21 고립 주체(무권리자·직원 등) 증가. CQ04는 0/3(특허심판원 HANDLED_BY 누락 2/3)",
+    "저장된 추출 결과로 계산(LLM 호출 없음, 현재 기대 결과 기준): 고립 노드를 지우는 후처리를 하면 5회차 지어냄 0.274 → 0.206, 7회차 0.343 → 0.287. 재현율은 거의 그대로(0.873, 0.829)",
+    "종합: 남은 지어냄의 대부분은 관계로 이어진 범위 밖 항목(전자문서 절차, 존속기간 연장, 조건문 이름 변형)이라 스키마 설명만으로는 0.1 이하에 닿기 어려움. 청크 단위 범위 판별 같은 별도 단계가 필요함"
+  ]
+}
