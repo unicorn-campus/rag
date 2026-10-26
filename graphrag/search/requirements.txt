@@ -1,0 +1,13 @@
+# --- GraphRAG search ---
+neo4j-graphrag[openai,cohere]>=1.22   # VectorCypherRetriever, VectorRetriever, CohereEmbeddings, OpenAILLM
+neo4j>=6.0                            # Neo4j Python driver (bolt://localhost:7687), read-only queries
+
+# --- Routing model (S1) ---
+typesafe-sdk>=0.7.5                   # TypeSafe Jev (jev-latest) decision model, Choice question
+
+# --- LLM / embedding clients ---
+openai>=2.0                           # OpenAI-compatible client used to call Groq (openai/gpt-oss-120b)
+cohere>=5.0                           # Cohere embed-v4.0 (same model as indexing)
+
+# --- Utilities ---
+python-dotenv>=1.0                    # Load API keys from .env and NEO4J_PASSWORD from neo4j/.env
