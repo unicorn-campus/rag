@@ -1,0 +1,59 @@
+{
+  "chunk_index": 60,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00060",
+        "label": "Chunk",
+        "properties": {
+          "text": "제67조의3(특허출원의 회복) ① 특허출원인이 정당한 사유로 다음 각 호의 어느 하나에 해당하는 기간을 지키지 못하 여 특허출원이 취하되거나 특허거절결정이 확정된 것으로 인정되는 경우에는 그 사유가 소멸한 날부터 2개월 이내에 출원심사의 청구 또는 재심사의 청구를 할 수 있다. 다만, 그 기간의 만료일부터 1년이 지난 때에는 그러하지 아니하다.\n1. 제59조제2항 또는 제3항에 따라 출원심사의 청구를 할 수 있는 기간\n2. 제67조의2제1항에 따라 재심사의 청구를 할 수 있는 기간\n② 제1항에 따른 출원심사의 청구 또는 재심사의 청구가 있는 경우에는 제59조제5항에도 불구하고 그 특허출원은 취하되지 아니한 것으로 보거나 특허거절결정이 확정되지 아니한 것으로 본다.\n\n제68조(심판규정의 심사에의 준용) 특허출원의 심사에 관하여는 제148조제1호부터 제5호까지 및 제7호를 준용한다.\n\n제69조 삭제\n\n제70조 삭제\n\n제71조 삭제\n\n제72조 삭제\n\n제73조 삭제\n\n제74조 삭제\n\n제75조 삭제\n\n제76조 삭제\n\n제77조 삭제\n\n제78조(심사 또는 소송절차의 중지) ① 특허출원의 심사에 필요한 경우에는 특허취소신청에 대한 결정이나 심결이 확정될 때까지 또는 소송절차가 완결될 때까지 그 심사절차를 중지할 수 있다.\n② 법원은 소송에 필요한 경우에는 특허출원에 대한 특허여부결정이 확정될 때까지 그 소송절차를 중지할 수 있다.\n③ 제1항 및 제2항에 따른 중지에 대해서는 불복할 수 없다.\n\n제78조의2 삭제\n\n제4장 특허료 및 특허등록 등",
+          "index": 60,
+          "source": "특허법.pdf",
+          "chunk_index": 60
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:0",
+        "label": "Actor",
+        "properties": {
+          "name": "법원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "소송절차"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:1",
+        "end_node_id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:0",
+        "end_node_id": "특허법.pdf::00060",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00060:1e9c4e93-3960-421c-a617-00c5dee466e2:1",
+        "end_node_id": "특허법.pdf::00060",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 2,
+  "entity_relationships": 1
+}

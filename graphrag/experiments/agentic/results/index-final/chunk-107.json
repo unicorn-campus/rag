@@ -1,0 +1,184 @@
+{
+  "chunk_index": 107,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00107",
+        "label": "Chunk",
+        "properties": {
+          "text": "제131조(특허권자 등의 신용회복) 법원은 고의나 과실로 특허권 또는 전용실시권을 침해함으로써 특허권자 또는 전용실시권자의 업무상 신용을 떨어뜨린 자에 대해서는 특허권자 또는 전용실시권자의 청구에 의하여 손해배상을 갈음하여 또는 손해배상과 함께 특허권자 또는 전용실시권자의 업무상 신용회복을 위하여 필요한 조치를 명할 수 있다.\n\n제132조(자료의 제출) ①법원은 특허권 또는 전용실시권 침해소송에서 당사자의 신청에 의하여 상대방 당사자에게 해당 침해의 증명 또는 침해로 인한 손해액의 산정에 필요한 자료의 제출을 명할 수 있다. 다만, 그 자료의 소지자가 그 자료의 제출을 거절할 정당한 이유가 있으면 그러하지 아니하다.\n② 법원은 자료의 소지자가 제1항에 따른 제출을 거부할 정당한 이유가 있다고 주장하는 경우에는 그 주장의 당부를 판단하기 위하여 자료의 제시를 명할 수 있다. 이 경우 법원은 그 자료를 다른 사람이 보게 하여서는 아니 된다.",
+          "index": 107,
+          "source": "특허법.pdf",
+          "chunk_index": 107
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:0",
+        "label": "Actor",
+        "properties": {
+          "name": "법원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:3",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권 또는 전용실시권을 침해한 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:4",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:5",
+        "label": "Right",
+        "properties": {
+          "name": "전용실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:6",
+        "label": "Remedy",
+        "properties": {
+          "name": "손해배상"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:7",
+        "label": "Procedure",
+        "properties": {
+          "name": "자료의 제출"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:7",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:1",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:2",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:6",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:3",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:1",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:4",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:2",
+        "end_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:0",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:1",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:2",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:3",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:4",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:5",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:6",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00107:f2e6ae79-d22a-4ace-bf3c-806908dbdaaf:7",
+        "end_node_id": "특허법.pdf::00107",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 8,
+  "entity_relationships": 6
+}

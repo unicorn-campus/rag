@@ -1,0 +1,38 @@
+# 에이전틱 실험 전용 그래프 DB. 원래 실습 그래프(neo4j/compose.yml, 7687)와 따로 둠
+# 기동(저장소 루트에서): docker compose --env-file neo4j/.env -f graphrag/experiments/agentic/neo4j/compose.yml up -d
+# 비밀번호는 원래 실습과 같은 neo4j/.env의 NEO4J_PASSWORD를 읽음(이 파일에는 적지 않음)
+# 프로젝트·컨테이너·볼륨 이름과 포트(7475, 7688)를 원래 것과 다르게 두어 데이터가 섞이지 않게 함
+name: agentic-neo4j
+services:
+  neo4j:
+    image: neo4j:2026.09.0-community
+    container_name: agentic-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?neo4j/.env에 NEO4J_PASSWORD를 넣을 것}
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
+      NEO4J_dbms_security_procedures_allowlist: "apoc.*,gds.*"
+      NEO4J_server_memory_heap_initial__size: 1G
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512M
+    ports:
+      - "7475:7474"   # Neo4j Browser
+      - "7688:7687"   # bolt
+    volumes:
+      - data:/data
+      - logs:/logs
+      - plugins:/plugins
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${NEO4J_AUTH#neo4j/}\" 'RETURN 1' >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 30s
+
+volumes:
+  data:
+    name: agentic-neo4j-data
+  logs:
+    name: agentic-neo4j-logs
+  plugins:
+    name: agentic-neo4j-plugins

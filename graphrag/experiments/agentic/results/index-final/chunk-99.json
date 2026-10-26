@@ -1,0 +1,59 @@
+{
+  "chunk_index": 99,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00099",
+        "label": "Chunk",
+        "properties": {
+          "text": "제120조(포기의 효과) 특허권ㆍ전용실시권 또는 통상실시권을 포기한 때에는 특허권ㆍ전용실시권 또는 통상실시권은 그때부터 소멸된다.\n\n제121조(질권) 특허권ㆍ전용실시권 또는 통상실시권을 목적으로 하는 질권을 설정하였을 때에는 질권자는 계약으로 특별히 정한 경우를 제외하고는 해당 특허발명을 실시할 수 없다.\n\n제122조(질권행사 등으로 인한 특허권의 이전에 따른 통상실시권) 특허권자(공유인 특허권을 분할청구한 경우에는 분 할청구를 한 공유자를 제외한 나머지 공유자를 말한다)는 특허권을 목적으로 하는 질권설정 또는 공유인 특허권의 분할청구 이전에 그 특허발명을 실시하고 있는 경우에는 그 특허권이 경매 등에 의하여 이전되더라도 그 특허발명에 대하여 통상실시권을 가진다. 이 경우 특허권자는 경매 등에 의하여 특허권을 이전받은 자에게 상당한 대가를 지급하여야 한다.\n\n제123조(질권의 물상대위) 질권은 이 법에 따른 보상금이나 특허발명의 실시에 대하여 받을 대가나 물건에 대해서도 행사할 수 있다. 다만, 그 보상금 등의 지급 또는 인도 전에 압류하여야 한다.\n\n제124조(상속인이 없는 경우 등의 특허권 소멸) ①특허권의 상속이 개시된 때 상속인이 없는 경우에는 그 특허권은 소멸된다.\n② 청산절차가 진행 중인 법인의 특허권은 법인의 청산종결등기일(청산종결등기가 되었더라도 청산사무가 사실상 끝나지 아니한 경우에는 청산사무가 사실상 끝난 날과 청산종결등기일부터 6개월이 지난 날 중 빠른 날로 한다. 이하 이 항에서 같다)까지 그 특허권의 이전등록을 하지 아니한 경우에는 청산종결등기일의 다음 날에 소멸한다.",
+          "index": 99,
+          "source": "특허법.pdf",
+          "chunk_index": 99
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:1",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:0",
+        "end_node_id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:0",
+        "end_node_id": "특허법.pdf::00099",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00099:0d9fd6c9-af1f-4bbe-aa0c-9667fb2f2b54:1",
+        "end_node_id": "특허법.pdf::00099",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 2,
+  "entity_relationships": 1
+}

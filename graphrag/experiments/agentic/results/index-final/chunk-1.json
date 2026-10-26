@@ -1,0 +1,220 @@
+{
+  "chunk_index": 1,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00001",
+        "label": "Chunk",
+        "properties": {
+          "text": "제3조(미성년자 등의 행위능력) ① 미성년자ㆍ피한정후견인 또는 피성년후견인은 법정대리인에 의하지 아니하면 특허에 관한 출원ㆍ청구, 그 밖의 절차(이하 “특허에 관한 절차”라 한다)를 밟을 수 없다. 다만, 미성년자와 피한정후견인 이 독립하여 법률행위를 할 수 있는 경우에는 그러하지 아니하다.\n② 제1항의 법정대리인은 후견감독인의 동의 없이 제132조의2에 따른 특허취소신청(이하 “특허취소신청”이라 한다)이나 상대방이 청구한 심판 또는 재심에 대한 절차를 밟을 수 있다.\n\n제4조(법인이 아닌 사단 등) 법인이 아닌 사단 또는 재단으로서 대표자나 관리인이 정하여져 있는 경우에는 그 사단 또는 재단의 이름으로 출원심사의 청구인, 특허취소신청인, 심판의 청구인ㆍ피청구인 또는 재심의 청구인ㆍ피청구인 이 될 수 있다.\n\n제5조(재외자의 특허관리인) ① 국내에 주소 또는 영업소가 없는 자(이하 “재외자”라 한다)는 재외자(법인의 경우에는 그 대표자)가 국내에 체류하는 경우를 제외하고는 그 재외자의 특허에 관한 대리인으로서 국내에 주소 또는 영업소가 있는 자(이하 “특허관리인”이라 한다)에 의해서만 특허에 관한 절차를 밟거나 이 법 또는 이 법에 따른 명령에 따라 행정청이 한 처분에 대하여 소(訴)를 제기할 수 있다.\n② 특허관리인은 위임된 권한의 범위에서 특허에 관한 모든 절차 및 이 법 또는 이 법에 따른 명령에 따라 행정청이 한 처분에 관한 소송에서 본인을 대리한다.",
+          "index": 1,
+          "source": "특허법.pdf",
+          "chunk_index": 1
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:3",
+        "label": "Actor",
+        "properties": {
+          "name": "법정대리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "label": "Actor",
+        "properties": {
+          "name": "법인이 아닌 사단 또는 재단"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:5",
+        "label": "Actor",
+        "properties": {
+          "name": "재외자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:6",
+        "label": "Actor",
+        "properties": {
+          "name": "특허관리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:7",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허취소신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:8",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:9",
+        "label": "Procedure",
+        "properties": {
+          "name": "재심"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:10",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:11",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허에 관한 절차"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:3",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:7",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:3",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:8",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:3",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:9",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:10",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:7",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:8",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:9",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:5",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:11",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:6",
+        "end_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:11",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:3",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:4",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:5",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:6",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:7",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:8",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:9",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:10",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00001:9014e1e7-aa89-4a12-9a40-f09d67154622:11",
+        "end_node_id": "특허법.pdf::00001",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 9,
+  "entity_relationships": 9
+}

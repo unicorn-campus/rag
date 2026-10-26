@@ -1,0 +1,140 @@
+{
+  "chunk_index": 26,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00026",
+        "label": "Chunk",
+        "properties": {
+          "text": "제38조(특허를 받을 수 있는 권리의 승계) ① 특허출원 전에 이루어진 특허를 받을 수 있는 권리의 승계는 그 승계인이 특허출원을 하여야 제3자에게 대항할 수 있다.\n② 동일한 자로부터 동일한 특허를 받을 수 있는 권리를 승계한 자가 둘 이상인 경우 그 승계한 권리에 대하여 같은 날에 둘 이상의 특허출원이 있으면 특허출원인 간에 협의하여 정한 자에게만 승계의 효력이 발생한다.\n③ 동일한 자로부터 동일한 발명 및 고안에 대한 특허를 받을 수 있는 권리 및 실용신안등록을 받을 수 있는 권리를 승계한 자가 둘 이상인 경우 그 승계한 권리에 대하여 같은 날에 특허출원 및 실용신안등록출원이 있으면 특허출원인 및 실용신안등록출원인 간에 협의하여 정한 자에게만 승계의 효력이 발생한다.\n④ 특허출원 후에는 특허를 받을 수 있는 권리의 승계는 상속, 그 밖의 일반승계의 경우를 제외하고는 특허출원인변 경신고를 하여야만 그 효력이 발생한다.\n⑤ 특허를 받을 수 있는 권리의 상속, 그 밖의 일반승계가 있는 경우에는 승계인은 지체 없이 그 취지를 지식재산처장에게 신고하여야 한다.\n⑥ 동일한 자로부터 동일한 특허를 받을 수 있는 권리를 승계한 자가 둘 이상인 경우 그 승계한 권리에 대하여 같은 날에 둘 이상의 특허출원인변경신고가 있으면 신고를 한 자 간에 협의하여 정한 자에게만 신고의 효력이 발생한다.\n⑦ 제2항ㆍ제3항 또는 제6항의 경우에는 제36조제6항을 준용한다.\n\n제39조 삭제\n\n제40조 삭제",
+          "index": 26,
+          "source": "특허법.pdf",
+          "chunk_index": 26
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:0",
+        "label": "Actor",
+        "properties": {
+          "name": "그 승계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:3",
+        "label": "Actor",
+        "properties": {
+          "name": "승계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "신고"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:5",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:6",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원인변경신고"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:0",
+        "end_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:3",
+        "end_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:4",
+        "end_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:5",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:3",
+        "end_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:6",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:0",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:1",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:3",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:4",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:5",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00026:fb7df65a-19df-4a1a-a2c4-b48f36c58b2a:6",
+        "end_node_id": "특허법.pdf::00026",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 4
+}

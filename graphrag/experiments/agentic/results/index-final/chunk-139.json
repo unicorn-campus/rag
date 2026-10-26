@@ -1,0 +1,59 @@
+{
+  "chunk_index": 139,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00139",
+        "label": "Chunk",
+        "properties": {
+          "text": "제154조의3(참고인 의견서의 제출) ① 심판장은 산업에 미치는 영향 등을 고려하여 사건 심리에 필요하다고 인정되는 경우 공공단체, 그 밖의 참고인에게 심판사건에 관한 의견서를 제출하게 할 수 있다.\n② 국가기관과 지방자치단체는 공익과 관련된 사항에 관하여 특허심판원에 심판사건에 관한 의견서를 제출할 수 있다.\n③ 심판장은 제1항 또는 제2항에 따라 참고인이 제출한 의견서에 대하여 당사자에게 구술 또는 서면에 의한 의견진 술의 기회를 주어야 한다.\n④ 제1항 또는 제2항에 따른 참고인의 선정 및 비용, 준수사항 등 참고인 의견서 제출에 필요한 사항은 총리령으로 정한다.\n\n제155조(참가) ① 제139조제1항에 따라 심판을 청구할 수 있는 자는 심리가 종결될 때까지 그 심판에 참가할 수 있다.\n② 제1항에 따른 참가인은 피참가인이 그 심판의 청구를 취하한 후에도 심판절차를 속행할 수 있다.\n③ 심판의 결과에 대하여 이해관계를 가진 자는 심리가 종결될 때까지 당사자의 어느 한쪽을 보조하기 위하여 그 심판에 참가할 수 있다.\n④ 제3항에 따른 참가인은 모든 심판절차를 밟을 수 있다.\n⑤ 제1항 또는 제3항에 따른 참가인에게 심판절차의 중단 또는 중지의 원인이 있으면 그 중단 또는 중지는 피참가 인에 대해서도 그 효력이 발생한다.",
+          "index": 139,
+          "source": "특허법.pdf",
+          "chunk_index": 139
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:0",
+        "label": "Actor",
+        "properties": {
+          "name": "제139조제1항에 따라 심판을 청구할 수 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:0",
+        "end_node_id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:0",
+        "end_node_id": "특허법.pdf::00139",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00139:3f3a87da-0906-4373-8f1f-e3bf08956d2d:1",
+        "end_node_id": "특허법.pdf::00139",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 2,
+  "entity_relationships": 1
+}

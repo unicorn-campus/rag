@@ -1,0 +1,81 @@
+{
+  "chunk_index": 186,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00186",
+        "label": "Chunk",
+        "properties": {
+          "text": "제224조의5(소송기록 열람 등의 청구 통지 등) ① 비밀유지명령이 내려진 소송(모든 비밀유지명령이 취소된 소송은 제외한다)에 관한 소송기록에 대하여 「민사소송법」 제163조제1항의 결정이 있었던 경우, 당사자가 같은 항에서 규정 하는 비밀 기재부분의 열람 등의 청구를 하였으나 그 청구 절차를 해당 소송에서 비밀유지명령을 받지 아니한 자가 밟은 경우에는 법원서기관, 법원사무관, 법원주사 또는 법원주사보(이하 이 조에서 “법원사무관등”이라 한다)는 「민사소송법」 제163조제1항의 신청을 한 당사자(그 열람 등의 청구를 한 자는 제외한다. 이하 제3항에서 같다)에게 그 청구 직후에 그 열람 등의 청구가 있었다는 사실을 알려야 한다.\n② 제1항의 경우에 법원사무관등은 제1항의 청구가 있었던 날부터 2주일이 지날 때까지(그 청구 절차를 밟은 자에 대한 비밀유지명령 신청이 그 기간 내에 이루어진 경우에는 그 신청에 대한 재판이 확정되는 시점까지) 그 청구 절차를 밟은 자에게 제1항의 비밀 기재부분의 열람 등을 하게 하여서는 아니 된다.\n③ 제2항은 제1항의 열람 등의 청구를 한 자에게 제1항의 비밀 기재부분의 열람 등을 하게 하는 것에 대하여 「민사소송법」 제163조제1항의 신청을 한 당사자 모두가 동의하는 경우에는 적용되지 아니한다.\n\n제12장 벌칙\n\n제225조(침해죄) ① 특허권 또는 전용실시권을 침해한 자는 7년 이하의 징역 또는 1억원 이하의 벌금에 처한다.\n② 제1항의 죄는 피해자의 명시적인 의사에 반하여 공소(公訴)를 제기할 수 없다.",
+          "index": 186,
+          "source": "특허법.pdf",
+          "chunk_index": 186
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권 또는 전용실시권을 침해한 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:1",
+        "label": "Penalty",
+        "properties": {
+          "name": "7년 이하의 징역"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:2",
+        "label": "Penalty",
+        "properties": {
+          "name": "1억원 이하의 벌금"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:0",
+        "end_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:1",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:0",
+        "end_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:2",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:0",
+        "end_node_id": "특허법.pdf::00186",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:1",
+        "end_node_id": "특허법.pdf::00186",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00186:a90c71e2-f8cc-4e21-a654-1ff865b8d7e8:2",
+        "end_node_id": "특허법.pdf::00186",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

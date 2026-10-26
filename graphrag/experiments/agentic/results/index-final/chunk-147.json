@@ -1,0 +1,206 @@
+{
+  "chunk_index": 147,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00147",
+        "label": "Chunk",
+        "properties": {
+          "text": "제172조(심사의 효력) 심사에서 밟은 특허에 관한 절차는 특허거절결정 또는 특허권의 존속기간의 연장등록거절결정에 대한 심판에서도 그 효력이 있다.\n\n제173조 삭제\n\n제174조 삭제\n\n제175조 삭제\n\n제176조(특허거절결정 등의 취소) ① 심판관은 제132조의17에 따른 심판이 청구된 경우에 그 청구가 이유 있다고 인정할 때에는 심결로써 특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 취소하여야 한다.\n② 심판에서 제1항에 따라 특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 취소할 경우에는 심사에 부칠 것이라는 심결을 할 수 있다.\n③ 제1항 및 제2항에 따른 심결에서 취소의 기본이 된 이유는 그 사건에 대하여 심사관을 기속한다.\n\n제177조 삭제\n\n제8장 재심\n\n제178조(재심의 청구) ① 당사자는 확정된 특허취소결정 또는 확정된 심결에 대하여 재심을 청구할 수 있다.\n② 제1항의 재심청구에 관하여는 「민사소송법」 제451조 및 제453조를 준용한다.\n\n제179조(제3자에 의한 재심청구) ① 심판의 당사자가 공모하여 제3자의 권리나 이익을 사해(詐害)할 목적으로 심결을 하게 하였을 때에는 제3자는 그 확정된 심결에 대하여 재심을 청구할 수 있다.\n② 제1항의 재심청구의 경우에는 심판의 당사자를 공동피청구인으로 한다.",
+          "index": 147,
+          "source": "특허법.pdf",
+          "chunk_index": 147
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:0",
+        "label": "Actor",
+        "properties": {
+          "name": "당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:1",
+        "label": "Actor",
+        "properties": {
+          "name": "제3자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "재심의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:3",
+        "label": "Decision",
+        "properties": {
+          "name": "확정된 특허취소결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:4",
+        "label": "Decision",
+        "properties": {
+          "name": "확정된 심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:6",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:7",
+        "label": "Decision",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:8",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:0",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:1",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:5",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:6",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:5",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:5",
+        "end_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:8",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:0",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:1",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:2",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:3",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:4",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:5",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:6",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:7",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00147:bacbc248-78f8-4fc7-b78a-e8f9f3522fc0:8",
+        "end_node_id": "특허법.pdf::00147",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 9,
+  "entity_relationships": 7
+}

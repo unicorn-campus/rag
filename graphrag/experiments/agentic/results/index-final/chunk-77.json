@@ -1,0 +1,81 @@
+{
+  "chunk_index": 77,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00077",
+        "label": "Chunk",
+        "properties": {
+          "text": "제92조의2(등록지연에 따른 특허권의 존속기간의 연장) ① 특허출원에 대하여 특허출원일부터 4년과 출원심사 청구일 부터 3년 중 늦은 날보다 지연되어 특허권의 설정등록이 이루어지는 경우에는 제88조제1항에도 불구하고 그 지연된 기간만큼 해당 특허권의 존속기간을 연장할 수 있다.\n② 제1항의 규정을 적용함에 있어서 출원인으로 인하여 지연된 기간은 제1항에 따른 특허권의 존속기간의 연장에서 제외된다. 다만, 출원인으로 인하여 지연된 기간이 겹치는 경우에는 특허권의 존속기간의 연장에서 제외되는 기간은 출원인으로 인하여 실제 지연된 기간을 초과하여서는 아니된다.\n③ 제2항에서 “출원인으로 인하여 지연된 기간”에 관한 사항은 대통령령으로 정한다.",
+          "index": 77,
+          "source": "특허법.pdf",
+          "chunk_index": 77
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:2",
+        "label": "Period",
+        "properties": {
+          "name": "특허출원일부터 4년"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:3",
+        "label": "Period",
+        "properties": {
+          "name": "출원심사 청구일부터 3년"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:1",
+        "end_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:2",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:1",
+        "end_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:1",
+        "end_node_id": "특허법.pdf::00077",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:2",
+        "end_node_id": "특허법.pdf::00077",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00077:879f7f44-6726-4f82-932b-eed0f369621f:3",
+        "end_node_id": "특허법.pdf::00077",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

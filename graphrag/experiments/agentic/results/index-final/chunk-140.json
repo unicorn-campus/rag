@@ -1,0 +1,272 @@
+{
+  "chunk_index": 140,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00140",
+        "label": "Chunk",
+        "properties": {
+          "text": "제156조(참가의 신청 및 결정) ① 심판에 참가하려는 자는 참가신청서를 심판장에게 제출하여야 한다.\n② 심판장은 참가신청이 있는 경우에는 참가신청서 부본을 당사자 및 다른 참가인에게 송달하고, 기간을 정하여 의견서를 제출할 수 있는 기회를 주어야 한다.\n③ 참가신청이 있는 경우에는 심판으로 그 참가 여부를 결정하여야 한다.\n④ 제3항에 따른 결정은 서면으로 하여야 하며, 그 이유를 붙여야 한다.\n⑤ 제3항에 따른 결정에 대해서는 불복할 수 없다.\n\n제157조(증거조사 및 증거보전) ① 심판에서는 당사자, 참가인 또는 이해관계인의 신청에 의하여 또는 직권으로 증거조사나 증거보전을 할 수 있다.\n② 제1항에 따른 증거조사 및 증거보전에 관하여는 「민사소송법」 중 증거조사 및 증거보전에 관한 규정을 준용한\n다. 다만, 심판관은 다음 각 호의 행위는 하지 못한다.\n1. 과태료의 결정\n2. 구인(拘引)을 명하는 행위\n3. 보증금을 공탁하게 하는 행위\n③ 증거보전신청은 심판청구 전에는 특허심판원장에게 하고, 심판계속 중에는 그 사건의 심판장에게 하여야 한다.\n④ 특허심판원장은 심판청구 전에 제1항에 따른 증거보전신청이 있으면 그 신청에 관여할 심판관을 지정한다.\n⑤ 심판장은 제1항에 따라 직권으로 증거조사나 증거보전을 하였을 때에는 그 결과를 당사자, 참가인 또는 이해관 계인에게 통지하고, 기간을 정하여 의견서를 제출할 수 있는 기회를 주어야 한다.",
+          "index": 140,
+          "source": "특허법.pdf",
+          "chunk_index": 140
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판에 참가하려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "참가신청서 제출"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:2",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:3",
+        "label": "Decision",
+        "properties": {
+          "name": "제3항에 따른 결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "의견서 제출"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:5",
+        "label": "Actor",
+        "properties": {
+          "name": "당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:6",
+        "label": "Actor",
+        "properties": {
+          "name": "다른 참가인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:7",
+        "label": "Actor",
+        "properties": {
+          "name": "이해관계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "label": "Procedure",
+        "properties": {
+          "name": "증거조사 및 증거보전"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:9",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:10",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:11",
+        "label": "Procedure",
+        "properties": {
+          "name": "증거보전신청"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:0",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:1",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:1",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:4",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:5",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:6",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:7",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:9",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:11",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:10",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:11",
+        "end_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:0",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:1",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:2",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:3",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:4",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:5",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:6",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:7",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:8",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:9",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:10",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00140:df2ef8b0-efc7-462e-a33f-a06cce4f2507:11",
+        "end_node_id": "특허법.pdf::00140",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 12,
+  "entity_relationships": 10
+}

@@ -1,0 +1,81 @@
+{
+  "chunk_index": 110,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00110",
+        "label": "Chunk",
+        "properties": {
+          "text": "제132조의3(특허취소신청절차에서의 특허의 정정) ① 특허취소신청절차가 진행 중인 특허에 대한 특허권자는 제136조제1항 각 호의 어느 하나에 해당하는 경우에만 제132조의13제2항에 따라 지정된 기간에 특허발명의 명세서 또는 도면에 대하여 정정청구를 할 수 있다.\n② 제1항에 따른 정정청구를 하였을 때에는 해당 특허취소신청절차에서 그 정정청구 전에 한 정정청구는 취하된 것으로 본다.\n③ 제1항에 따른 정정청구에 관하여는 제136조제3항부터 제6항까지, 제8항, 제10항부터 제13항까지, 제139조제3항 및 제140조제1항ㆍ제2항ㆍ제5항을 준용한다. 이 경우 제136조제11항 중 “제162조제3항에 따른 심리의 종결이 통지되기 전(같은 조 제4항에 따라 심리가 재개된 경우에는 그 후 다시 같은 조 제3항에 따른 심리의 종결이 통지되기 전)에”는 “제132조의13제2항 또는 제136조제6항에 따라 지정된 기간에”로 본다.\n④ 제1항에 따른 정정청구는 다음 각 호의 어느 하나에 해당하는 기간에만 취하할 수 있다.\n1. 제1항에 따라 정정을 청구할 수 있도록 지정된 기간과 그 기간의 만료일부터 1개월 이내의 기간\n2. 제3항에서 준용하는 제136조제6항에 따라 지정된 기간\n⑤ 제3항을 적용할 때 제132조의2에 따라 특허취소신청이 된 청구항을 정정하는 경우에는 제136조제5항을 준용하지 아니한다.",
+          "index": 110,
+          "source": "특허법.pdf",
+          "chunk_index": 110
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:2",
+        "label": "Period",
+        "properties": {
+          "name": "그 기간의 만료일부터 1개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:0",
+        "end_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:1",
+        "end_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:2",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:0",
+        "end_node_id": "특허법.pdf::00110",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:1",
+        "end_node_id": "특허법.pdf::00110",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00110:bfe31a72-578a-4a11-bd0c-59d292fb5b53:2",
+        "end_node_id": "특허법.pdf::00110",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

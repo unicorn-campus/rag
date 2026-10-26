@@ -1,0 +1,96 @@
+{
+  "chunk_index": 21,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00021",
+        "label": "Chunk",
+        "properties": {
+          "text": "제31조 삭제\n\n제32조(특허를 받을 수 없는 발명) 공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명에 대해서는 제29조제1항에도 불구하고 특허를 받을 수 없다.\n\n제33조(특허를 받을 수 있는 자) ① 발명을 한 사람 또는 그 승계인은 이 법에서 정하는 바에 따라 특허를 받을 수 있는 권리를 가진다. 다만, 지식재산처 직원 및 특허심판원 직원은 상속이나 유증(遺贈)의 경우를 제외하고는 재직 중 특허를 받을 수 없다.\n② 2명 이상이 공동으로 발명한 경우에는 특허를 받을 수 있는 권리를 공유한다.\n\n제34조(무권리자의 특허출원과 정당한 권리자의 보호) 발명자가 아닌 자로서 특허를 받을 수 있는 권리의 승계인이 아닌 자(이하 “무권리자”라 한다)가 한 특허출원이 제33조제1항 본문에 따른 특허를 받을 수 있는 권리를 가지지 아니한 사유로 제62조제2호에 해당하여 특허를 받지 못하게 된 경우에는 그 무권리자의 특허출원 후에 한 정당한 권리자의 특허출원은 무권리자가 특허출원한 때에 특허출원한 것으로 본다. 다만, 무권리자가 특허를 받지 못하게 된 날부터 30일이 지난 후에 정당한 권리자가 특허출원을 한 경우에는 그러하지 아니하다.",
+          "index": 21,
+          "source": "특허법.pdf",
+          "chunk_index": 21
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:0",
+        "label": "Invention",
+        "properties": {
+          "name": "공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:2",
+        "label": "Actor",
+        "properties": {
+          "name": "발명을 한 사람 또는 그 승계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:3",
+        "label": "Right",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:0",
+        "end_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:1",
+        "type": "NOT_ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:2",
+        "end_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:0",
+        "end_node_id": "특허법.pdf::00021",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:1",
+        "end_node_id": "특허법.pdf::00021",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:2",
+        "end_node_id": "특허법.pdf::00021",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00021:0b0b806a-5c7b-4d3c-b690-997e7f05b49b:3",
+        "end_node_id": "특허법.pdf::00021",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 2
+}

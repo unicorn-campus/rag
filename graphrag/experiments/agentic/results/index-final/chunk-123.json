@@ -1,0 +1,103 @@
+{
+  "chunk_index": 123,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00123",
+        "label": "Chunk",
+        "properties": {
+          "text": "제135조(권리범위 확인심판) ① 특허권자 또는 전용실시권자는 자신의 특허발명의 보호범위를 확인하기 위하여 특허권의 권리범위 확인심판을 청구할 수 있다.\n② 이해관계인은 타인의 특허발명의 보호범위를 확인하기 위하여 특허권의 권리범위 확인심판을 청구할 수 있다.\n\n③ 제1항 또는 제2항에 따른 특허권의 권리범위 확인심판을 청구하는 경우에 청구범위의 청구항이 둘 이상인 경우에는 청구항마다 청구할 수 있다.",
+          "index": 123,
+          "source": "특허법.pdf",
+          "chunk_index": 123
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:1",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:2",
+        "label": "Actor",
+        "properties": {
+          "name": "이해관계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허권의 권리범위 확인심판"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:0",
+        "end_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:1",
+        "end_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:2",
+        "end_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:0",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:1",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:2",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:f6de1142-b2b4-49e1-a41d-efe73d1a2807:3",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 3
+}

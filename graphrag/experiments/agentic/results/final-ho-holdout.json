@@ -1,0 +1,1348 @@
+{
+  "name": "final-ho",
+  "split": "holdout",
+  "repeat": 3,
+  "elapsed_sec": 39,
+  "llm_calls_per_run": [
+    12,
+    12,
+    12
+  ],
+  "llm_calls_per_chunk": 2.0,
+  "failures": [
+    [],
+    [],
+    []
+  ],
+  "metrics": {
+    "recall": 0.5526315789473685,
+    "hallucination_rate": 0.5076951846657317,
+    "cq_answerable": 4,
+    "cq_total": 9,
+    "expected": 38,
+    "extracted": 42.333333333333336,
+    "hit": 21.0,
+    "recall_range": [
+      0.39473684210526316,
+      0.7631578947368421
+    ],
+    "hallucination_range": [
+      0.42,
+      0.5869565217391305
+    ]
+  },
+  "cq": [
+    {
+      "cq_id": "CQ01",
+      "path": "Invention -ELIGIBLE_FOR-> Right ; Invention -NOT_ELIGIBLE_FOR-> Right",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ02",
+      "path": "Invention -NOT_ELIGIBLE_FOR-> Right",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ03",
+      "path": "Actor -CAN_FILE-> Procedure",
+      "answerable": true,
+      "example": "누구든지 → 특허취소신청",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ04",
+      "path": "Actor -CAN_FILE-> Procedure -TARGETS-> Decision ; Procedure -HANDLED_BY-> Actor",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ05",
+      "path": "Procedure -HAS_DEADLINE-> Period",
+      "answerable": true,
+      "example": "특허취소신청 → 특허권의설정등록일부터등록공고일후6개월이되는날까지",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ06",
+      "path": "Right -HAS_DURATION-> Period",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ07",
+      "path": "Actor -PUNISHED_BY-> Penalty",
+      "answerable": true,
+      "example": "증인 → 5년이하의징역또는5천만원이하의벌금",
+      "runs_ok": "3/3"
+    },
+    {
+      "cq_id": "CQ08",
+      "path": "Right -NOT_EFFECTIVE_FOR-> Exclusion",
+      "answerable": false,
+      "example": "",
+      "runs_ok": "0/3"
+    },
+    {
+      "cq_id": "CQ09",
+      "path": "Actor -CAN_CLAIM-> Remedy",
+      "answerable": true,
+      "example": "전용실시권자 → 손해배상청구",
+      "runs_ok": "2/3"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_index": 103,
+      "kind": "역량질문 관련",
+      "expected": 7,
+      "extracted": 7.333333333333333,
+      "hit": 3.3333333333333335,
+      "extra": 4.0,
+      "missed_nodes": [
+        "Remedy:손해의배상 (2/3)",
+        "Actor:고의또는과실로자기의특허권또는전용실시권을침해한자 (1/3)",
+        "Actor:전용실시권자 (1/3)",
+        "Actor:특허권자 (1/3)"
+      ],
+      "missed_rels": [
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:손해의배상 (2/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:손해의배상 (2/3)",
+        "Remedy:손해의배상 -CLAIMED_AGAINST-> Actor:고의또는과실로자기의특허권또는전용실시권을침해한자 (2/3)"
+      ],
+      "extra_nodes": [
+        "Right:전용실시권 (2/3)",
+        "Right:특허권 (2/3)",
+        "Remedy:손해배상청구 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:전용실시권자 -HOLDS-> Right:전용실시권 (2/3)",
+        "Actor:특허권자 -HOLDS-> Right:특허권 (2/3)",
+        "Actor:전용실시권자 -CAN_CLAIM-> Remedy:손해배상청구 (1/3)",
+        "Actor:특허권자 -CAN_CLAIM-> Remedy:손해배상청구 (1/3)",
+        "Remedy:손해배상청구 -CLAIMED_AGAINST-> Actor:고의또는과실로자기의특허권또는전용실시권을침해한자 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 109,
+      "kind": "역량질문 관련",
+      "expected": 7,
+      "extracted": 7.0,
+      "hit": 6.333333333333333,
+      "extra": 0.6666666666666666,
+      "missed_nodes": [
+        "Period:특허권의설정등록일부터등록공고일후6개월이되는날까지 (1/3)"
+      ],
+      "missed_rels": [
+        "Procedure:특허취소신청 -HAS_DEADLINE-> Period:특허권의설정등록일부터등록공고일후6개월이되는날까지 (1/3)"
+      ],
+      "extra_nodes": [
+        "Period:등록공고일후6개월이되는날까지 (1/3)"
+      ],
+      "extra_rels": [
+        "Procedure:특허취소신청 -HAS_DEADLINE-> Period:등록공고일후6개월이되는날까지 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 117,
+      "kind": "역량질문 관련",
+      "expected": 5,
+      "extracted": 10.333333333333334,
+      "hit": 5.0,
+      "extra": 5.333333333333333,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [
+        "Actor:특허권자 (2/3)",
+        "Right:특허권 (2/3)",
+        "Right:특허를받을수있는권리 (2/3)",
+        "Decision:특허를무효로한다는심결 (1/3)",
+        "Decision:특허무효심결 (1/3)",
+        "Decision:특허무효결정 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:이해관계인 -HOLDS-> Right:특허를받을수있는권리 (2/3)",
+        "Actor:특허권자 -HOLDS-> Right:특허권 (2/3)",
+        "Procedure:특허의무효심판 -TARGETS-> Decision:특허를무효로한다는심결 (1/3)",
+        "Procedure:특허의무효심판 -TARGETS-> Decision:특허무효심결 (1/3)",
+        "Procedure:특허의무효심판 -TARGETS-> Decision:특허무효결정 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 188,
+      "kind": "역량질문 관련",
+      "expected": 19,
+      "extracted": 17.666666666666668,
+      "hit": 6.333333333333333,
+      "extra": 11.333333333333334,
+      "missed_nodes": [
+        "Actor:이법에따라선서한증인감정인또는통역인 (2/3)",
+        "Penalty:3년이하의징역 (2/3)",
+        "Penalty:3천만원이하의벌금 (2/3)",
+        "Penalty:5년이하의징역 (2/3)",
+        "Penalty:5천만원이하의벌금 (2/3)",
+        "Actor:거짓이나그밖의부정한행위로특허특허권의존속기간의연장등록특허취소신청에대한결정또는심결을받은자 (1/3)",
+        "Actor:제41조제1항에따른외국에의특허출원금지또는비밀취급명령을위반한자 (1/3)"
+      ],
+      "missed_rels": [
+        "Actor:거짓이나그밖의부정한행위로특허특허권의존속기간의연장등록특허취소신청에대한결정또는심결을받은자 -PUNISHED_BY-> Penalty:3년이하의징역 (3/3)",
+        "Actor:거짓이나그밖의부정한행위로특허특허권의존속기간의연장등록특허취소신청에대한결정또는심결을받은자 -PUNISHED_BY-> Penalty:3천만원이하의벌금 (3/3)",
+        "Actor:이법에따라선서한증인감정인또는통역인 -PUNISHED_BY-> Penalty:5년이하의징역 (3/3)",
+        "Actor:이법에따라선서한증인감정인또는통역인 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (3/3)",
+        "Actor:제41조제1항에따른외국에의특허출원금지또는비밀취급명령을위반한자 -PUNISHED_BY-> Penalty:5년이하의징역 (3/3)",
+        "Actor:제41조제1항에따른외국에의특허출원금지또는비밀취급명령을위반한자 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (3/3)",
+        "Actor:제224조를위반한자 -PUNISHED_BY-> Penalty:3년이하의징역 (2/3)",
+        "Actor:제224조를위반한자 -PUNISHED_BY-> Penalty:3천만원이하의벌금 (2/3)",
+        "Actor:제224조의3제1항에따른비밀유지명령을위반한자 -PUNISHED_BY-> Penalty:5년이하의징역 (2/3)",
+        "Actor:제224조의3제1항에따른비밀유지명령을위반한자 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (2/3)"
+      ],
+      "extra_nodes": [
+        "Actor:감정인 (2/3)",
+        "Actor:증인 (2/3)",
+        "Actor:통역인 (2/3)",
+        "Penalty:3년이하의징역또는3천만원이하의벌금 (2/3)",
+        "Penalty:5년이하의징역또는5천만원이하의벌금 (2/3)",
+        "Actor:결정을받은자 (1/3)",
+        "Actor:특허출원금지또는비밀취급명령을위반한자 (1/3)"
+      ],
+      "extra_rels": [
+        "Actor:거짓이나그밖의부정한행위로특허특허권의존속기간의연장등록특허취소신청에대한결정또는심결을받은자 -PUNISHED_BY-> Penalty:3년이하의징역또는3천만원이하의벌금 (2/3)",
+        "Actor:제224조를위반한자 -PUNISHED_BY-> Penalty:3년이하의징역또는3천만원이하의벌금 (2/3)",
+        "Actor:제224조의3제1항에따른비밀유지명령을위반한자 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (2/3)",
+        "Actor:제41조제1항에따른외국에의특허출원금지또는비밀취급명령을위반한자 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (2/3)",
+        "Actor:감정인 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (1/3)",
+        "Actor:증인 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (1/3)",
+        "Actor:통역인 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (1/3)",
+        "Actor:이법에따라선서한증인감정인또는통역인 -PUNISHED_BY-> Penalty:5년이하의징역또는5천만원이하의벌금 (1/3)",
+        "Actor:감정인 -PUNISHED_BY-> Penalty:5년이하의징역 (1/3)",
+        "Actor:감정인 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (1/3)",
+        "Actor:결정을받은자 -PUNISHED_BY-> Penalty:3년이하의징역 (1/3)",
+        "Actor:결정을받은자 -PUNISHED_BY-> Penalty:3천만원이하의벌금 (1/3)",
+        "Actor:증인 -PUNISHED_BY-> Penalty:5년이하의징역 (1/3)",
+        "Actor:증인 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (1/3)",
+        "Actor:통역인 -PUNISHED_BY-> Penalty:5년이하의징역 (1/3)",
+        "Actor:통역인 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (1/3)",
+        "Actor:특허출원금지또는비밀취급명령을위반한자 -PUNISHED_BY-> Penalty:5년이하의징역 (1/3)",
+        "Actor:특허출원금지또는비밀취급명령을위반한자 -PUNISHED_BY-> Penalty:5천만원이하의벌금 (1/3)"
+      ]
+    },
+    {
+      "chunk_index": 5,
+      "kind": "역량질문 무관",
+      "expected": 0,
+      "extracted": 0.0,
+      "hit": 0.0,
+      "extra": 0.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [],
+      "extra_rels": []
+    },
+    {
+      "chunk_index": 71,
+      "kind": "역량질문 무관",
+      "expected": 0,
+      "extracted": 0.0,
+      "hit": 0.0,
+      "extra": 0.0,
+      "missed_nodes": [],
+      "missed_rels": [],
+      "extra_nodes": [],
+      "extra_rels": []
+    }
+  ],
+  "per_run": [
+    {
+      "recall": 0.5,
+      "hallucination_rate": 0.5869565217391305,
+      "cq_answerable": 4,
+      "cq_total": 9,
+      "expected": 38,
+      "extracted": 46,
+      "hit": 19
+    },
+    {
+      "recall": 0.39473684210526316,
+      "hallucination_rate": 0.5161290322580645,
+      "cq_answerable": 3,
+      "cq_total": 9,
+      "expected": 38,
+      "extracted": 31,
+      "hit": 15
+    },
+    {
+      "recall": 0.7631578947368421,
+      "hallucination_rate": 0.42,
+      "cq_answerable": 4,
+      "cq_total": 9,
+      "expected": 38,
+      "extracted": 50,
+      "hit": 29
+    }
+  ],
+  "raw_graphs": [
+    [
+      {
+        "nodes": [
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:0",
+            "label": "Actor",
+            "properties": {
+              "name": "특허권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:1",
+            "label": "Actor",
+            "properties": {
+              "name": "전용실시권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:2",
+            "label": "Actor",
+            "properties": {
+              "name": "침해한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:3",
+            "label": "Right",
+            "properties": {
+              "name": "특허권"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:4",
+            "label": "Right",
+            "properties": {
+              "name": "전용실시권"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "e48542a1-b06b-4389-ba87-1711263f122a:5",
+            "label": "Remedy",
+            "properties": {
+              "name": "손해배상청구"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:0",
+            "end_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:3",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:1",
+            "end_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:4",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:0",
+            "end_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:5",
+            "type": "CAN_CLAIM",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:1",
+            "end_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:5",
+            "type": "CAN_CLAIM",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:5",
+            "end_node_id": "e48542a1-b06b-4389-ba87-1711263f122a:2",
+            "type": "CLAIMED_AGAINST",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:0",
+            "label": "Actor",
+            "properties": {
+              "name": "누구든지"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:1",
+            "label": "Actor",
+            "properties": {
+              "name": "특허심판원장"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:2",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허취소신청"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:4",
+            "label": "Period",
+            "properties": {
+              "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:0",
+            "end_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:2",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:2",
+            "end_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:1",
+            "type": "HANDLED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:2",
+            "end_node_id": "d432eb2d-b857-4e68-9299-f63b90cfebeb:4",
+            "type": "HAS_DEADLINE",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:0",
+            "label": "Actor",
+            "properties": {
+              "name": "이해관계인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:1",
+            "label": "Actor",
+            "properties": {
+              "name": "심사관"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:2",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허의 무효심판"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:3",
+            "label": "Decision",
+            "properties": {
+              "name": "특허를 무효로 한다는 심결"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:4",
+            "label": "Right",
+            "properties": {
+              "name": "특허를 받을 수 있는 권리"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:5",
+            "label": "Actor",
+            "properties": {
+              "name": "특허권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:6",
+            "label": "Right",
+            "properties": {
+              "name": "특허권"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:0",
+            "end_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:2",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:1",
+            "end_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:2",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:2",
+            "end_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:3",
+            "type": "TARGETS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:0",
+            "end_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:4",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:5",
+            "end_node_id": "ea29a9f3-be56-4ee4-ad2a-001a4031fe02:6",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:0",
+            "label": "Actor",
+            "properties": {
+              "name": "증인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:1",
+            "label": "Actor",
+            "properties": {
+              "name": "감정인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:2",
+            "label": "Actor",
+            "properties": {
+              "name": "통역인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:4",
+            "label": "Actor",
+            "properties": {
+              "name": "제224조를 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:5",
+            "label": "Actor",
+            "properties": {
+              "name": "거짓이나 그 밖의 부정한 행위로 특허, 특허권의 존속기간의 연장등록, 특허취소신청에 대한 결정 또는 심결을 받은 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:6",
+            "label": "Actor",
+            "properties": {
+              "name": "비밀유지명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:7",
+            "label": "Actor",
+            "properties": {
+              "name": "외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "label": "Penalty",
+            "properties": {
+              "name": "5년 이하의 징역 또는 5천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:9",
+            "label": "Penalty",
+            "properties": {
+              "name": "3년 이하의 징역 또는 3천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:0",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:1",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:2",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:4",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:9",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:5",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:9",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:6",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:7",
+            "end_node_id": "c63fbcac-fce7-4c72-ae36-6a7fdb611b85:8",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      }
+    ],
+    [
+      {
+        "nodes": [],
+        "relationships": []
+      },
+      {
+        "nodes": [
+          {
+            "id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:0",
+            "label": "Actor",
+            "properties": {
+              "name": "누구든지"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:1",
+            "label": "Actor",
+            "properties": {
+              "name": "특허심판원장"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:2",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허취소신청"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:4",
+            "label": "Period",
+            "properties": {
+              "name": "등록공고일 후 6개월이 되는 날까지"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:0",
+            "end_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:2",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:2",
+            "end_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:1",
+            "type": "HANDLED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:2",
+            "end_node_id": "c97bbc4a-52a3-42dc-8ee5-4b4918e45d68:4",
+            "type": "HAS_DEADLINE",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:0",
+            "label": "Actor",
+            "properties": {
+              "name": "이해관계인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:1",
+            "label": "Actor",
+            "properties": {
+              "name": "심사관"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:2",
+            "label": "Actor",
+            "properties": {
+              "name": "특허권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:3",
+            "label": "Right",
+            "properties": {
+              "name": "특허를 받을 수 있는 권리"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:4",
+            "label": "Right",
+            "properties": {
+              "name": "특허권"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:5",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허의 무효심판"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "1d459af9-85b7-486e-b378-11d7c27d20b0:6",
+            "label": "Decision",
+            "properties": {
+              "name": "특허무효심결"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:0",
+            "end_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:5",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:1",
+            "end_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:5",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:5",
+            "end_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:6",
+            "type": "TARGETS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:0",
+            "end_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:3",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:2",
+            "end_node_id": "1d459af9-85b7-486e-b378-11d7c27d20b0:4",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:0",
+            "label": "Actor",
+            "properties": {
+              "name": "선서한 증인, 감정인 또는 통역인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:1",
+            "label": "Actor",
+            "properties": {
+              "name": "제224조를 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:2",
+            "label": "Actor",
+            "properties": {
+              "name": "거짓이나 그 밖의 부정한 행위로 특허, 특허권의 존속기간의 연장등록, 특허취소신청에 대한 결정 또는 심결을 받은 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:3",
+            "label": "Actor",
+            "properties": {
+              "name": "비밀유지명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:4",
+            "label": "Actor",
+            "properties": {
+              "name": "외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:5",
+            "label": "Penalty",
+            "properties": {
+              "name": "5년 이하의 징역 또는 5천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "2d12f905-bfa2-4239-bd8e-37975beeea29:6",
+            "label": "Penalty",
+            "properties": {
+              "name": "3년 이하의 징역 또는 3천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:0",
+            "end_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:5",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:1",
+            "end_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:6",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:2",
+            "end_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:6",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:3",
+            "end_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:5",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:4",
+            "end_node_id": "2d12f905-bfa2-4239-bd8e-37975beeea29:5",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      }
+    ],
+    [
+      {
+        "nodes": [
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:0",
+            "label": "Actor",
+            "properties": {
+              "name": "특허권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:1",
+            "label": "Actor",
+            "properties": {
+              "name": "전용실시권자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:2",
+            "label": "Actor",
+            "properties": {
+              "name": "침해한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:3",
+            "label": "Right",
+            "properties": {
+              "name": "특허권"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:4",
+            "label": "Right",
+            "properties": {
+              "name": "전용실시권"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:5",
+            "label": "Remedy",
+            "properties": {
+              "name": "손해의 배상"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:0",
+            "end_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:3",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:1",
+            "end_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:4",
+            "type": "HOLDS",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:0",
+            "end_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:5",
+            "type": "CAN_CLAIM",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:1",
+            "end_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:5",
+            "type": "CAN_CLAIM",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:5",
+            "end_node_id": "501fbc91-8609-4f91-b4d3-a807de3b2ae7:2",
+            "type": "CLAIMED_AGAINST",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "3c10797f-0131-44fb-b814-9ad64356cfd8:0",
+            "label": "Actor",
+            "properties": {
+              "name": "누구든지"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "3c10797f-0131-44fb-b814-9ad64356cfd8:1",
+            "label": "Actor",
+            "properties": {
+              "name": "특허심판원장"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "3c10797f-0131-44fb-b814-9ad64356cfd8:3",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허취소신청"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "3c10797f-0131-44fb-b814-9ad64356cfd8:4",
+            "label": "Period",
+            "properties": {
+              "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:0",
+            "end_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:3",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:3",
+            "end_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:1",
+            "type": "HANDLED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:3",
+            "end_node_id": "3c10797f-0131-44fb-b814-9ad64356cfd8:4",
+            "type": "HAS_DEADLINE",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:0",
+            "label": "Actor",
+            "properties": {
+              "name": "이해관계인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:1",
+            "label": "Actor",
+            "properties": {
+              "name": "심사관"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:3",
+            "label": "Procedure",
+            "properties": {
+              "name": "특허의 무효심판"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:5",
+            "label": "Decision",
+            "properties": {
+              "name": "특허 무효 결정"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:0",
+            "end_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:3",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:1",
+            "end_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:3",
+            "type": "CAN_FILE",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:3",
+            "end_node_id": "81d8f03c-cfea-4e41-a9c1-257d2bf14c5f:5",
+            "type": "TARGETS",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:0",
+            "label": "Actor",
+            "properties": {
+              "name": "증인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:1",
+            "label": "Actor",
+            "properties": {
+              "name": "감정인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:2",
+            "label": "Actor",
+            "properties": {
+              "name": "통역인"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:5",
+            "label": "Actor",
+            "properties": {
+              "name": "제224조를 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:6",
+            "label": "Actor",
+            "properties": {
+              "name": "결정을 받은 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:7",
+            "label": "Actor",
+            "properties": {
+              "name": "비밀유지명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:9",
+            "label": "Actor",
+            "properties": {
+              "name": "특허출원 금지 또는 비밀취급명령을 위반한 자"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "label": "Penalty",
+            "properties": {
+              "name": "5년 이하의 징역"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "label": "Penalty",
+            "properties": {
+              "name": "5천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:12",
+            "label": "Penalty",
+            "properties": {
+              "name": "3년 이하의 징역"
+            },
+            "embedding_properties": {}
+          },
+          {
+            "id": "eab27dbb-5868-4397-860a-362686339ab7:13",
+            "label": "Penalty",
+            "properties": {
+              "name": "3천만원 이하의 벌금"
+            },
+            "embedding_properties": {}
+          }
+        ],
+        "relationships": [
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:0",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:0",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:1",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:1",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:2",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:2",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:5",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:12",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:5",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:13",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:6",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:12",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:6",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:13",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:7",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:7",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:9",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:10",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          },
+          {
+            "start_node_id": "eab27dbb-5868-4397-860a-362686339ab7:9",
+            "end_node_id": "eab27dbb-5868-4397-860a-362686339ab7:11",
+            "type": "PUNISHED_BY",
+            "properties": {},
+            "embedding_properties": {}
+          }
+        ]
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      },
+      {
+        "nodes": [],
+        "relationships": []
+      }
+    ]
+  ]
+}

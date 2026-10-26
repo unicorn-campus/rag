@@ -1,0 +1,96 @@
+{
+  "chunk_index": 65,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00065",
+        "label": "Chunk",
+        "properties": {
+          "text": "④ 제2항 또는 제3항에 따른 특허출원 또는 특허권의 효력은 추가납부기간 또는 보전기간이 지난 날부터 특허료를 내거나 보전한 날까지의 기간(이하 이 조에서 “효력제한기간”이라 한다) 중에 타인이 특허출원된 발명 또는 특허발명을 실시한 행위에 대해서는 그 효력이 미치지 아니한다.\n⑤ 효력제한기간 중 국내에서 선의로 제2항 또는 제3항에 따른 특허출원된 발명 또는 특허발명을 업으로 실시하거나 이를 준비하고 있는 자는 그 실시하거나 준비하고 있는 발명 및 사업목적의 범위에서 그 특허출원된 발명 또는 특허발명에 대한 특허권에 대하여 통상실시권을 가진다.\n⑥ 제5항에 따라 통상실시권을 가진 자는 특허권자 또는 전용실시권자에게 상당한 대가를 지급하여야 한다.\n⑦ 제1항 본문에 따른 납부나 보전 또는 제3항 전단에 따른 신청에 필요한 사항은 총리령으로 정한다.",
+          "index": 65,
+          "source": "특허법.pdf",
+          "chunk_index": 65
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:0",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:1",
+        "label": "Exclusion",
+        "properties": {
+          "name": "타인이 특허출원된 발명 또는 특허발명을 실시한 행위"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:2",
+        "label": "Actor",
+        "properties": {
+          "name": "선의로 제2항 또는 제3항에 따른 특허출원된 발명 또는 특허발명을 업으로 실시하거나 이를 준비하고 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:3",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:0",
+        "end_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:1",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:2",
+        "end_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:0",
+        "end_node_id": "특허법.pdf::00065",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:1",
+        "end_node_id": "특허법.pdf::00065",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:2",
+        "end_node_id": "특허법.pdf::00065",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00065:5590ced7-1555-482b-b38d-bfb765631aa5:3",
+        "end_node_id": "특허법.pdf::00065",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 2
+}

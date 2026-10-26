@@ -1,0 +1,21 @@
+{
+  "chunk_index": 24,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00024",
+        "label": "Chunk",
+        "properties": {
+          "text": "⑤ 발명자 또는 고안자가 아닌 자로서 특허를 받을 수 있는 권리 또는 실용신안등록을 받을 수 있는 권리의 승계인이 아닌 자가 한 특허출원 또는 실용신안등록출원은 제1항부터 제3항까지의 규정을 적용할 때에는 처음부터 없었던 것으로 본다.\n⑥ 지식재산처장은 제2항의 경우에 특허출원인에게 기간을 정하여 협의의 결과를 신고할 것을 명하고, 그 기간에 신고가 없으면 제2항에 따른 협의는 성립되지 아니한 것으로 본다.",
+          "index": 24,
+          "source": "특허법.pdf",
+          "chunk_index": 24
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  },
+  "entity_nodes": 0,
+  "entity_relationships": 0
+}

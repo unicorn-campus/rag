@@ -1,0 +1,81 @@
+{
+  "chunk_index": 96,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00096",
+        "label": "Chunk",
+        "properties": {
+          "text": "제111조(재정서등본의 송달) ① 지식재산처장은 재정을 한 경우에는 당사자 및 그 특허에 관하여 등록을 한 권리를 가지는 자에게 재정서등본을 송달하여야 한다.\n② 제1항에 따라 당사자에게 재정서등본이 송달되었을 때에는 재정서에 적혀 있는 바에 따라 당사자 사이에 협의가 이루어진 것으로 본다.\n\n제111조의2(재정서의 변경) ① 재정을 받은 자는 재정서에 적혀 있는 제110조제2항제3호의 사항에 관하여 변경이 필요하면 그 원인을 증명하는 서류를 첨부하여 지식재산처장에게 변경청구를 할 수 있다.\n② 지식재산처장은 제1항에 따른 청구가 이유있다고 인정되면 재정서에 적혀 있는 사항을 변경할 수 있다. 이 경우 이해관계인의 의견을 들어야 한다.\n③ 제2항의 경우에 관하여는 제111조를 준용한다.\n\n제112조(대가의 공탁) 제110조제2항제2호에 따른 대가를 지급하여야 하는 자는 다음 각 호의 어느 하나에 해당하는 경우에는 그 대가를 공탁(供託)하여야 한다.\n1. 대가를 받을 자가 수령을 거부하거나 수령할 수 없는 경우\n2. 대가에 대하여 제190조제1항에 따른 소송이 제기된 경우\n3. 해당 특허권 또는 전용실시권을 목적으로 하는 질권이 설정되어 있는 경우. 다만, 질권자의 동의를 받은 경우에는 그러하지 아니하다.\n\n제113조(재정의 실효) 재정을 받은 자가 제110조제2항제2호에 따른 지급시기까지 대가(대가를 정기 또는 분할하여 지급할 경우에는 최초의 지급분)를 지급하지 아니하거나 공탁을 하지 아니한 경우에는 그 재정은 효력을 잃는다.",
+          "index": 96,
+          "source": "특허법.pdf",
+          "chunk_index": 96
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:0",
+        "label": "Actor",
+        "properties": {
+          "name": "재정을 받은 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "변경청구"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:0",
+        "end_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:2",
+        "end_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:0",
+        "end_node_id": "특허법.pdf::00096",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:1",
+        "end_node_id": "특허법.pdf::00096",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00096:1afe9cf7-3fde-4c1d-889f-bf1e0ecddd32:2",
+        "end_node_id": "특허법.pdf::00096",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

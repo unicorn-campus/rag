@@ -1,0 +1,96 @@
+{
+  "chunk_index": 118,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00118",
+        "label": "Chunk",
+        "properties": {
+          "text": "② 제1항에 따른 심판은 특허권이 소멸된 후에도 청구할 수 있다.\n③ 특허를 무효로 한다는 심결이 확정된 경우에는 그 특허권은 처음부터 없었던 것으로 본다. 다만, 제1항제4호에 따라 특허를 무효로 한다는 심결이 확정된 경우에는 특허권은 그 특허가 같은 호에 해당하게 된 때부터 없었던 것으로 본다.\n④ 심판장은 제1항에 따른 심판이 청구된 경우에는 그 취지를 해당 특허권의 전용실시권자나 그 밖에 특허에 관하여 등록을 한 권리를 가지는 자에게 알려야 한다.",
+          "index": 118,
+          "source": "특허법.pdf",
+          "chunk_index": 118
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:0",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:3",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:4",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:0",
+        "end_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:4",
+        "end_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:0",
+        "end_node_id": "특허법.pdf::00118",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:1",
+        "end_node_id": "특허법.pdf::00118",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:3",
+        "end_node_id": "특허법.pdf::00118",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00118:1fa0c1d1-d957-455b-9904-8202eb4ea7d7:4",
+        "end_node_id": "특허법.pdf::00118",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 2
+}

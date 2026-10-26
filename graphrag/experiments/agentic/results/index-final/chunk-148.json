@@ -1,0 +1,235 @@
+{
+  "chunk_index": 148,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00148",
+        "label": "Chunk",
+        "properties": {
+          "text": "제179조(제3자에 의한 재심청구) ① 심판의 당사자가 공모하여 제3자의 권리나 이익을 사해(詐害)할 목적으로 심결을 하게 하였을 때에는 제3자는 그 확정된 심결에 대하여 재심을 청구할 수 있다.\n② 제1항의 재심청구의 경우에는 심판의 당사자를 공동피청구인으로 한다.\n\n제180조(재심청구의 기간) ① 당사자는 특허취소결정 또는 심결 확정 후 재심사유를 안 날부터 30일 이내에 재심을 청구하여야 한다.\n② 대리권의 흠을 이유로 재심을 청구하는 경우에 제1항의 기간은 청구인 또는 법정대리인이 특허취소결정등본 또는 심결등본의 송달에 의하여 특허취소결정 또는 심결이 있는 것을 안 날의 다음 날부터 기산한다.\n③ 특허취소결정 또는 심결 확정 후 3년이 지나면 재심을 청구할 수 없다.\n④ 재심사유가 특허취소결정 또는 심결 확정 후에 생겼을 때에는 제3항의 기간은 그 사유가 발생한 날의 다음 날부터 기산한다.\n⑤ 제1항 및 제3항은 해당 심결 이전의 확정심결에 저촉된다는 이유로 재심을 청구하는 경우에는 적용하지 아니한다.",
+          "index": 148,
+          "source": "특허법.pdf",
+          "chunk_index": 148
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판의 당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:1",
+        "label": "Actor",
+        "properties": {
+          "name": "제3자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:2",
+        "label": "Actor",
+        "properties": {
+          "name": "당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:3",
+        "label": "Actor",
+        "properties": {
+          "name": "청구인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:4",
+        "label": "Actor",
+        "properties": {
+          "name": "법정대리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "제3자에 의한 재심청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:6",
+        "label": "Decision",
+        "properties": {
+          "name": "특허취소결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:7",
+        "label": "Decision",
+        "properties": {
+          "name": "심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:8",
+        "label": "Period",
+        "properties": {
+          "name": "30일 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:9",
+        "label": "Period",
+        "properties": {
+          "name": "3년"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:0",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:1",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:2",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:3",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:4",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:6",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:8",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "end_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:9",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:0",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:1",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:2",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:3",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:4",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:5",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:6",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:7",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:8",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:9fc570aa-87f5-413f-858f-e3abdf93616b:9",
+        "end_node_id": "특허법.pdf::00148",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 10,
+  "entity_relationships": 9
+}

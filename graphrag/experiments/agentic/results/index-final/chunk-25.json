@@ -1,0 +1,21 @@
+{
+  "chunk_index": 25,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00025",
+        "label": "Chunk",
+        "properties": {
+          "text": "제37조(특허를 받을 수 있는 권리의 이전 등) ① 특허를 받을 수 있는 권리는 이전할 수 있다.\n② 특허를 받을 수 있는 권리는 질권의 목적으로 할 수 없다.\n③ 특허를 받을 수 있는 권리가 공유인 경우에는 각 공유자는 다른 공유자 모두의 동의를 받아야만 그 지분을 양도 할 수 있다.",
+          "index": 25,
+          "source": "특허법.pdf",
+          "chunk_index": 25
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  },
+  "entity_nodes": 0,
+  "entity_relationships": 0
+}

@@ -1,0 +1,140 @@
+{
+  "chunk_index": 27,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00027",
+        "label": "Chunk",
+        "properties": {
+          "text": "제39조 삭제\n\n제40조 삭제\n\n제41조(국방상 필요한 발명 등) ① 정부는 국방상 필요한 경우 외국에 특허출원하는 것을 금지하거나 발명자ㆍ출원인 및 대리인에게 그 특허출원의 발명을 비밀로 취급하도록 명할 수 있다. 다만, 정부의 허가를 받은 경우에는 외국에 특허출원을 할 수 있다.\n② 정부는 특허출원된 발명이 국방상 필요한 경우에는 특허를 하지 아니할 수 있으며, 전시ㆍ사변 또는 이에 준하는 비상시에 국방상 필요한 경우에는 특허를 받을 수 있는 권리를 수용할 수 있다.\n③ 제1항에 따른 외국에의 특허출원 금지 또는 비밀취급에 따른 손실에 대해서는 정부는 정당한 보상금을 지급하여야 한다.\n④ 제2항에 따라 특허하지 아니하거나 수용한 경우에는 정부는 정당한 보상금을 지급하여야 한다.\n⑤ 제1항에 따른 외국에의 특허출원 금지 또는 비밀취급명령을 위반한 경우에는 그 발명에 대하여 특허를 받을 수 있는 권리를 포기한 것으로 본다.\n⑥ 제1항에 따른 외국에의 특허출원 금지 또는 비밀취급명령을 위반한 경우에는 외국에의 특허출원 금지 또는 비밀취급에 따른 손실보상금의 청구권을 포기한 것으로 본다.\n⑦ 제1항에 따른 외국에의 특허출원 금지 및 비밀취급의 절차, 제2항부터 제4항까지의 규정에 따른 수용, 보상금 지 급의 절차, 그 밖에 필요한 사항은 대통령령으로 정한다.",
+          "index": 27,
+          "source": "특허법.pdf",
+          "chunk_index": 27
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:0",
+        "label": "Actor",
+        "properties": {
+          "name": "정부"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:1",
+        "label": "Invention",
+        "properties": {
+          "name": "특허출원된 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:2",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:3",
+        "label": "Right",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "외국에 특허출원 금지 및 비밀취급"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "보상금 지급"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:0",
+        "end_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:1",
+        "end_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:2",
+        "type": "NOT_ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:4",
+        "end_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:5",
+        "end_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:0",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:1",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:2",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:3",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:4",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00027:c399281e-5901-44c5-893f-1ea38d82d2f2:5",
+        "end_node_id": "특허법.pdf::00027",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 4
+}

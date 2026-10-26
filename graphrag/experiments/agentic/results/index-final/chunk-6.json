@@ -1,0 +1,147 @@
+{
+  "chunk_index": 6,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00006",
+        "label": "Chunk",
+        "properties": {
+          "text": "제15조(기간의 연장 등) ① 지식재산처장은 청구에 따라 또는 직권으로 제132조의17에 따른 심판의 청구기간을 30일 이내에서 한 차례만 연장할 수 있다. 다만, 도서ㆍ벽지 등 교통이 불편한 지역에 있는 자의 경우에는 총리령으로 정하는 바에 따라 그 횟수 및 기간을 추가로 연장할 수 있다.\n② 지식재산처장ㆍ특허심판원장ㆍ심판장 또는 제57조제1항에 따른 심사관(이하 “심사관”이라 한다)은 이 법에 따라 특허에 관한 절차를 밟을 기간을 정한 경우에는 청구에 따라 그 기간을 단축 또는 연장하거나 직권으로 그 기간을 연장할 수 있다. 이 경우 지식재산처장 등은 그 절차의 이해관계인의 이익이 부당하게 침해되지 아니하도록 단축 또는 연장 여부를 결정하여야 한다.\n③ 심판장은 이 법에 따라 특허에 관한 절차를 밟을 기일을 정한 경우에는 청구에 따라 또는 직권으로 그 기일을 변경할 수 있다.",
+          "index": 6,
+          "source": "특허법.pdf",
+          "chunk_index": 6
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:0",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:2",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:3",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판 청구기간 연장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:5",
+        "label": "Period",
+        "properties": {
+          "name": "30일 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:0",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:1",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:2",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:3",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:4",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00006:9e148c3a-705f-48cb-bf75-aec781c3fa28:5",
+        "end_node_id": "특허법.pdf::00006",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 5
+}

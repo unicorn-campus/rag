@@ -1,0 +1,155 @@
+{
+  "chunk_index": 89,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00089",
+        "label": "Chunk",
+        "properties": {
+          "text": "제105조(디자인권의 존속기간 만료 후의 통상실시권) ① 특허출원일 전 또는 특허출원일과 같은 날에 출원되어 등록된 디자인권이 그 특허권과 저촉되는 경우 그 디자인권의 존속기간이 만료될 때에는 그 디자인권자는 그 디자인권의 범위에서 그 특허권에 대하여 통상실시권을 가지거나 그 디자인권의 존속기간 만료 당시 존재하는 그 특허권의 전용실시권에 대하여 통상실시권을 가진다.\n② 특허출원일 전 또는 특허출원일과 같은 날에 출원되어 등록된 디자인권이 그 특허권과 저촉되는 경우 그 디자인권의 존속기간이 만료될 때에는 다음 각 호의 어느 하나에 해당하는 권리를 가진 자는 원(原)권리의 범위에서 그 특허권에 대하여 통상실시권을 가지거나 그 디자인권의 존속기간 만료 당시 존재하는 그 특허권의 전용실시권에 대하여 통상실시권을 가진다.\n1. 그 디자인권의 존속기간 만료 당시 존재하는 그 디자인권에 대한 전용실시권\n2. 그 디자인권이나 그 디자인권에 대한 전용실시권에 대하여 「디자인보호법」 제104조제1항에 따라 효력이 발생한 통상실시권\n③ 제2항에 따라 통상실시권을 가진 자는 특허권자 또는 전용실시권자에게 상당한 대가를 지급하여야 한다.",
+          "index": 89,
+          "source": "특허법.pdf",
+          "chunk_index": 89
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:0",
+        "label": "Actor",
+        "properties": {
+          "name": "디자인권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:3",
+        "label": "Actor",
+        "properties": {
+          "name": "통상실시권을 가진 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:4",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:5",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:6",
+        "label": "Right",
+        "properties": {
+          "name": "전용실시권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:0",
+        "end_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:4",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:1",
+        "end_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:2",
+        "end_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:6",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:3",
+        "end_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:4",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:0",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:1",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:2",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:3",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:4",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:5",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00089:cbe72bf5-0ad7-4086-8535-50c03eb776bf:6",
+        "end_node_id": "특허법.pdf::00089",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 7,
+  "entity_relationships": 4
+}

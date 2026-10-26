@@ -1,0 +1,103 @@
+{
+  "chunk_index": 159,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00159",
+        "label": "Chunk",
+        "properties": {
+          "text": "제199조(국제출원에 의한 특허출원) ① 「특허협력조약」에 따라 국제출원일이 인정된 국제출원으로서 특허를 받기 위하여 대한민국을 지정국으로 지정한 국제출원은 그 국제출원일에 출원된 특허출원으로 본다.\n② 제1항에 따라 특허출원으로 보는 국제출원(이하 “국제특허출원”이라 한다)에 관하여는 제42조의2, 제42조의3 및 제54조를 적용하지 아니한다.\n\n제200조(공지 등이 되지 아니한 발명으로 보는 경우의 특례) 국제특허출원된 발명에 관하여 제30조제1항제1호를 적용받으려는 자는 그 취지를 적은 서면 및 이를 증명할 수 있는 서류를 같은 조 제2항에도 불구하고 총리령으로 정하는 기간에 지식재산처장에게 제출할 수 있다.\n\n제200조의2(국제특허출원의 출원서 등) ① 국제특허출원의 국제출원일까지 제출된 출원서는 제42조제1항에 따라 제출된 특허출원서로 본다.\n② 국제특허출원의 국제출원일까지 제출된 발명의 설명, 청구범위 및 도면은 제42조제2항에 따른 특허출원서에 최초로 첨부된 명세서 및 도면으로 본다.\n③ 국제특허출원에 대해서는 다음 각 호의 구분에 따른 요약서 또는 국어번역문을 제42조제2항에 따른 요약서로 본다.\n1. 국제특허출원의 요약서를 국어로 적은 경우: 국제특허출원의 요약서\n2. 국제특허출원의 요약서를 외국어로 적은 경우: 제201조제1항에 따라 제출된 국제특허출원의 요약서의 국어번역 문(제201조제3항 본문에 따라 새로운 국어번역문을 제출한 경우에는 마지막에 제출한 국제특허출원의 요약서의 국어번역문을 말한다)",
+          "index": 159,
+          "source": "특허법.pdf",
+          "chunk_index": 159
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:0",
+        "label": "Actor",
+        "properties": {
+          "name": "제30조제1항제1호를 적용받으려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "서면 및 서류 제출"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:2",
+        "label": "Period",
+        "properties": {
+          "name": "총리령으로 정하는 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:3",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:0",
+        "end_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:1",
+        "end_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:2",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:1",
+        "end_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:0",
+        "end_node_id": "특허법.pdf::00159",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:1",
+        "end_node_id": "특허법.pdf::00159",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:2",
+        "end_node_id": "특허법.pdf::00159",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00159:f142aa46-d15a-4f9a-9d97-b84e57180b3b:3",
+        "end_node_id": "특허법.pdf::00159",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 3
+}

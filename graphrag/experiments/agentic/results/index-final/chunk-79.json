@@ -1,0 +1,147 @@
+{
+  "chunk_index": 79,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00079",
+        "label": "Chunk",
+        "properties": {
+          "text": "제92조의3(등록지연에 따른 특허권의 존속기간의 연장등록출원) ① 제92조의2에 따라 특허권의 존속기간의 연장등록출원을 하려는 자(이하 이 조 및 제92조의4에서 “연장등록출원인”이라 한다)는 다음 각 호의 사항을 적은 특허권의 존속기간의 연장등록출원서를 지식재산처장에게 제출하여야 한다.\n1. 연장등록출원인의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 연장등록출원인의 대리인이 있는 경우에는 그 대리인의 성명 및 주소나 영업소의 소재지(대리인이 특허법인ㆍ특허법인(유한)인 경우에는 그 명칭, 사무소의 소재지 및 지정된 변리사의 성명)\n3. 연장 대상 특허권의 특허번호\n4. 연장신청의 기간\n5. 총리령이 정하는 연장이유(이를 증명할 수 있는 자료를 첨부하여야 한다)\n② 제1항에 따른 특허권의 존속기간의 연장등록출원은 특허권의 설정등록일부터 3개월 이내에 출원하여야 한다.\n③ 특허권이 공유인 경우에는 공유자 전원이 공동으로 특허권의 존속기간의 연장등록출원을 하여야 한다.\n④ 연장등록출원인은 심사관이 특허권의 존속기간의 연장등록 여부결정 전까지 연장등록출원서에 기재된 사항 중 제1항제4호 및 제5호의 사항에 대하여 보정할 수 있다. 다만, 제93조에 따라 준용되는 거절이유통지를 받은 후에는 해당 거절이유통지에 따른 의견서 제출기간에만 보정할 수 있다.",
+          "index": 79,
+          "source": "특허법.pdf",
+          "chunk_index": 79
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:0",
+        "label": "Actor",
+        "properties": {
+          "name": "연장등록출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:2",
+        "label": "Actor",
+        "properties": {
+          "name": "공유자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "등록지연에 따른 특허권의 존속기간의 연장등록출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:5",
+        "label": "Decision",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록 여부결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:6",
+        "label": "Period",
+        "properties": {
+          "name": "특허권의 설정등록일부터 3개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:0",
+        "end_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:2",
+        "end_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "end_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "end_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:5",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "end_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:6",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:0",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:1",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:2",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:4",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:5",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00079:db49b368-a6a2-4d75-8791-c020b57d5ac9:6",
+        "end_node_id": "특허법.pdf::00079",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 5
+}

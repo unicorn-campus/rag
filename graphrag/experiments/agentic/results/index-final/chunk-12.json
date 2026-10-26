@@ -1,0 +1,139 @@
+{
+  "chunk_index": 12,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00012",
+        "label": "Chunk",
+        "properties": {
+          "text": "제24조(중단 또는 중지의 효과) 특허에 관한 절차가 중단되거나 중지된 경우에는 그 기간의 진행은 정지되고, 그 절차의 수계통지를 하거나 그 절차를 속행하였을 때부터 다시 모든 기간이 진행된다.\n\n제25조(외국인의 권리능력) 재외자 중 외국인은 다음 각 호의 어느 하나에 해당하는 경우를 제외하고는 특허권 또는 특허에 관한 권리를 누릴 수 없다.\n1. 그 외국인이 속하는 국가에서 대한민국 국민에 대하여 그 국가의 국민과 같은 조건으로 특허권 또는 특허에 관한 권리를 인정하는 경우\n2. 대한민국이 그 외국인에 대하여 특허권 또는 특허에 관한 권리를 인정하는 경우에는 그 외국인이 속하는 국가에서 대한민국 국민에 대하여 그 국가의 국민과 같은 조건으로 특허권 또는 특허에 관한 권리를 인정하는 경우\n3. 조약 또는 이에 준하는 것(이하 “조약”이라 한다)에 따라 특허권 또는 특허에 관한 권리가 인정되는 경우\n\n제26조 삭제\n\n제27조 삭제",
+          "index": 12,
+          "source": "특허법.pdf",
+          "chunk_index": 12
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:2",
+        "label": "Right",
+        "properties": {
+          "name": "특허에 관한 권리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:3",
+        "label": "Exclusion",
+        "properties": {
+          "name": "그 외국인이 속하는 국가에서 대한민국 국민에 대하여 그 국가의 국민과 같은 조건으로 특허권 또는 특허에 관한 권리를 인정하는 경우"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:4",
+        "label": "Exclusion",
+        "properties": {
+          "name": "대한민국이 그 외국인에 대하여 특허권 또는 특허에 관한 권리를 인정하는 경우에는 그 외국인이 속하는 국가에서 대한민국 국민에 대하여 그 국가의 국민과 같은 조건으로 특허권 또는 특허에 관한 권리를 인정하는 경우"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:5",
+        "label": "Exclusion",
+        "properties": {
+          "name": "조약 또는 이에 준하는 것에 따라 특허권 또는 특허에 관한 권리가 인정되는 경우"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:1",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:3",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:1",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:4",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:1",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:5",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:2",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:3",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:2",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:4",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:2",
+        "end_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:5",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:1",
+        "end_node_id": "특허법.pdf::00012",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:2",
+        "end_node_id": "특허법.pdf::00012",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:3",
+        "end_node_id": "특허법.pdf::00012",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:4",
+        "end_node_id": "특허법.pdf::00012",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00012:3a469874-333a-4240-83c2-2e9894060165:5",
+        "end_node_id": "특허법.pdf::00012",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 5,
+  "entity_relationships": 6
+}

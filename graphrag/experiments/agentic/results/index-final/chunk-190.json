@@ -1,0 +1,59 @@
+{
+  "chunk_index": 190,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00190",
+        "label": "Chunk",
+        "properties": {
+          "text": "제231조(몰수 등) ① 제225조제1항에 해당하는 침해행위를 조성한 물건 또는 그 침해행위로부터 생긴 물건은 몰수하거 나 피해자의 청구에 따라 그 물건을 피해자에게 교부할 것을 선고하여야 한다.\n② 피해자는 제1항에 따른 물건을 받은 경우에는 그 물건의 가액을 초과하는 손해액에 대해서만 배상을 청구할 수 있다.\n\n제232조(과태료) ① 다음 각 호의 어느 하나에 해당하는 자에게는 50만원 이하의 과태료를 부과한다.\n1. 「민사소송법」 제299조제2항 및 같은 법 제367조에 따라 선서를 한 자로서 특허심판원에 대하여 거짓 진술을 한 자\n2. 특허심판원으로부터 증거조사 또는 증거보전에 관하여 서류나 그 밖의 물건 제출 또는 제시의 명령을 받은 자로서 정당한 이유 없이 그 명령에 따르지 아니한 자\n3. 특허심판원으로부터 증인ㆍ감정인 또는 통역인으로 소환된 자로서 정당한 이유 없이 소환에 따르지 아니하거나 선서ㆍ진술ㆍ증언ㆍ감정 또는 통역을 거부한 자\n② 제1항에 따른 과태료는 대통령령으로 정하는 바에 따라 지식재산처장이 부과ㆍ징수한다.\n\n부칙 <제21134호,2025. 11. 11.>(노동절 제정에 관한 법률)\n\n제1조(시행일) 이 법은 공포한 날부터 시행한다.\n\n제2조(다른 법률의 개정) ①부터 ⑧까지 생략\n⑨ 특허법 일부를 다음과 같이 개정한다. 제14조제4호 중 “「근로자의날제정에관한법률」에 따른 근로자의 날”을 “「노동절 제정에 관한 법률」에 따른 노동절”로 한다.",
+          "index": 190,
+          "source": "특허법.pdf",
+          "chunk_index": 190
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:0",
+        "label": "Actor",
+        "properties": {
+          "name": "피해자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:1",
+        "label": "Remedy",
+        "properties": {
+          "name": "배상"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:0",
+        "end_node_id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:1",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:0",
+        "end_node_id": "특허법.pdf::00190",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00190:fdde24c9-fc52-45d0-915e-8f23825bc1dd:1",
+        "end_node_id": "특허법.pdf::00190",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 2,
+  "entity_relationships": 1
+}

@@ -1,0 +1,140 @@
+{
+  "chunk_index": 150,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00150",
+        "label": "Chunk",
+        "properties": {
+          "text": "제182조(재심에 의하여 회복한 특허권에 대한 선사용자의 통상실시권) 제181조제1항 각 호의 어느 하나에 해당하는 경우에 해당 특허취소결정 또는 심결이 확정된 후 재심청구 등록 전에 국내에서 선의로 그 발명의 실시사업을 하고 있는 자 또는 그 사업을 준비하고 있는 자는 실시하고 있거나 준비하고 있는 발명 및 사업목적의 범위에서 그 특허권에 관하여 통상실시권을 가진다.\n\n제183조(재심에 의하여 통상실시권을 상실한 원권리자의 통상실시권) ① 제138조제1항 또는 제3항에 따라 통상실시권을 허락한다는 심결이 확정된 후 재심에서 그 심결과 상반되는 심결이 확정된 경우에는 재심청구 등록 전에 선의로 국내에서 그 발명의 실시사업을 하고 있는 자 또는 그 사업을 준비하고 있는 자는 원(原)통상실시권의 사업목적 및 발명의 범위에서 그 특허권 또는 재심의 심결이 확정된 당시에 존재하는 전용실시권에 대하여 통상실시권을 가진다.\n② 제1항에 따라 통상실시권을 가진 자는 특허권자 또는 전용실시권자에게 상당한 대가를 지급하여야 한다.\n\n제184조(재심에서의 심판규정 등의 준용) 특허취소결정 또는 심판에 대한 재심의 절차에 관하여는 그 성질에 반하지 아니하는 범위에서 특허취소신청 또는 심판의 절차에 관한 규정을 준용한다.\n\n제185조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.\n\n제9장 소송",
+          "index": 150,
+          "source": "특허법.pdf",
+          "chunk_index": 150
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:0",
+        "label": "Actor",
+        "properties": {
+          "name": "그 발명의 실시사업을 하고 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:1",
+        "label": "Actor",
+        "properties": {
+          "name": "그 사업을 준비하고 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:2",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "재심"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:6",
+        "label": "Decision",
+        "properties": {
+          "name": "심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:7",
+        "label": "Decision",
+        "properties": {
+          "name": "특허취소결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:0",
+        "end_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:2",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:1",
+        "end_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:2",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:5",
+        "end_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:6",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:5",
+        "end_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:0",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:1",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:2",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:5",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:6",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00150:abbb7f9a-d434-4ba2-837a-c90634916460:7",
+        "end_node_id": "특허법.pdf::00150",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 4
+}

@@ -1,0 +1,381 @@
+{
+  "status": "확정",
+  "schema_round": 2,
+  "match_rule": "fill-test-expected.json과 같음(이름 정규화 후 비교, aliases 인정)",
+  "chunks": [
+    {
+      "chunk_index": 103,
+      "kind": "역량질문 관련",
+      "reason": "제128조 손해배상청구권(CQ09와 같은 구제 패턴)",
+      "expected": "있음",
+      "nodes": [
+        {
+          "type": "Actor",
+          "name": "특허권자",
+          "aliases": []
+        },
+        {
+          "type": "Actor",
+          "name": "전용실시권자",
+          "aliases": []
+        },
+        {
+          "type": "Actor",
+          "name": "고의 또는 과실로 자기의 특허권 또는 전용실시권을 침해한 자",
+          "aliases": [
+            "침해한 자",
+            "자기의 특허권 또는 전용실시권을 침해한 자"
+          ]
+        },
+        {
+          "type": "Remedy",
+          "name": "손해의 배상",
+          "aliases": [
+            "손해배상",
+            "침해로 인하여 입은 손해의 배상"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "start": {
+            "type": "Actor",
+            "name": "특허권자"
+          },
+          "type": "CAN_CLAIM",
+          "end": {
+            "type": "Remedy",
+            "name": "손해의 배상"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "전용실시권자"
+          },
+          "type": "CAN_CLAIM",
+          "end": {
+            "type": "Remedy",
+            "name": "손해의 배상"
+          }
+        },
+        {
+          "start": {
+            "type": "Remedy",
+            "name": "손해의 배상"
+          },
+          "type": "CLAIMED_AGAINST",
+          "end": {
+            "type": "Actor",
+            "name": "고의 또는 과실로 자기의 특허권 또는 전용실시권을 침해한 자"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_index": 109,
+      "kind": "역량질문 관련",
+      "reason": "제132조의2 특허취소신청(청구 주체·기한·처리 기관 패턴)",
+      "expected": "있음",
+      "nodes": [
+        {
+          "type": "Actor",
+          "name": "누구든지",
+          "aliases": []
+        },
+        {
+          "type": "Procedure",
+          "name": "특허취소신청",
+          "aliases": []
+        },
+        {
+          "type": "Period",
+          "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지",
+          "aliases": []
+        },
+        {
+          "type": "Actor",
+          "name": "특허심판원장",
+          "aliases": []
+        }
+      ],
+      "relationships": [
+        {
+          "start": {
+            "type": "Actor",
+            "name": "누구든지"
+          },
+          "type": "CAN_FILE",
+          "end": {
+            "type": "Procedure",
+            "name": "특허취소신청"
+          }
+        },
+        {
+          "start": {
+            "type": "Procedure",
+            "name": "특허취소신청"
+          },
+          "type": "HAS_DEADLINE",
+          "end": {
+            "type": "Period",
+            "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지"
+          }
+        },
+        {
+          "start": {
+            "type": "Procedure",
+            "name": "특허취소신청"
+          },
+          "type": "HANDLED_BY",
+          "end": {
+            "type": "Actor",
+            "name": "특허심판원장"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_index": 117,
+      "kind": "역량질문 관련",
+      "reason": "제133조 특허무효심판(청구 주체·기한 패턴)",
+      "expected": "있음",
+      "nodes": [
+        {
+          "type": "Actor",
+          "name": "이해관계인",
+          "aliases": []
+        },
+        {
+          "type": "Actor",
+          "name": "심사관",
+          "aliases": []
+        },
+        {
+          "type": "Procedure",
+          "name": "특허의 무효심판",
+          "aliases": [
+            "무효심판"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "start": {
+            "type": "Actor",
+            "name": "이해관계인"
+          },
+          "type": "CAN_FILE",
+          "end": {
+            "type": "Procedure",
+            "name": "특허의 무효심판"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "심사관"
+          },
+          "type": "CAN_FILE",
+          "end": {
+            "type": "Procedure",
+            "name": "특허의 무효심판"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_index": 188,
+      "kind": "역량질문 관련",
+      "reason": "제227 ~ 229조의3 위증죄 등(CQ07과 같은 형벌 패턴)",
+      "expected": "있음",
+      "nodes": [
+        {
+          "type": "Actor",
+          "name": "이 법에 따라 선서한 증인, 감정인 또는 통역인",
+          "aliases": [
+            "선서한 증인, 감정인 또는 통역인",
+            "증인, 감정인 또는 통역인"
+          ]
+        },
+        {
+          "type": "Actor",
+          "name": "제224조를 위반한 자",
+          "aliases": [
+            "허위표시를 한 자"
+          ]
+        },
+        {
+          "type": "Actor",
+          "name": "거짓이나 그 밖의 부정한 행위로 특허, 특허권의 존속기간의 연장등록, 특허취소신청에 대한 결정 또는 심결을 받은 자",
+          "aliases": []
+        },
+        {
+          "type": "Actor",
+          "name": "제224조의3제1항에 따른 비밀유지명령을 위반한 자",
+          "aliases": [
+            "국내외에서 정당한 사유 없이 제224조의3제1항에 따른 비밀유지명령을 위반한 자",
+            "비밀유지명령을 위반한 자"
+          ]
+        },
+        {
+          "type": "Actor",
+          "name": "제41조제1항에 따른 외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자",
+          "aliases": [
+            "외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자"
+          ]
+        },
+        {
+          "type": "Penalty",
+          "name": "5년 이하의 징역",
+          "aliases": []
+        },
+        {
+          "type": "Penalty",
+          "name": "5천만원 이하의 벌금",
+          "aliases": []
+        },
+        {
+          "type": "Penalty",
+          "name": "3년 이하의 징역",
+          "aliases": []
+        },
+        {
+          "type": "Penalty",
+          "name": "3천만원 이하의 벌금",
+          "aliases": []
+        }
+      ],
+      "relationships": [
+        {
+          "start": {
+            "type": "Actor",
+            "name": "이 법에 따라 선서한 증인, 감정인 또는 통역인"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5년 이하의 징역"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "이 법에 따라 선서한 증인, 감정인 또는 통역인"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5천만원 이하의 벌금"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제224조를 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "3년 이하의 징역"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제224조를 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "3천만원 이하의 벌금"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "거짓이나 그 밖의 부정한 행위로 특허, 특허권의 존속기간의 연장등록, 특허취소신청에 대한 결정 또는 심결을 받은 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "3년 이하의 징역"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "거짓이나 그 밖의 부정한 행위로 특허, 특허권의 존속기간의 연장등록, 특허취소신청에 대한 결정 또는 심결을 받은 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "3천만원 이하의 벌금"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제224조의3제1항에 따른 비밀유지명령을 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5년 이하의 징역"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제224조의3제1항에 따른 비밀유지명령을 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5천만원 이하의 벌금"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제41조제1항에 따른 외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5년 이하의 징역"
+          }
+        },
+        {
+          "start": {
+            "type": "Actor",
+            "name": "제41조제1항에 따른 외국에의 특허출원 금지 또는 비밀취급명령을 위반한 자"
+          },
+          "type": "PUNISHED_BY",
+          "end": {
+            "type": "Penalty",
+            "name": "5천만원 이하의 벌금"
+          }
+        }
+      ]
+    },
+    {
+      "chunk_index": 5,
+      "kind": "역량질문 무관",
+      "reason": "제13 ~ 14조 재판관할·기간 계산(행정 조문)",
+      "expected": "없음",
+      "nodes": [],
+      "relationships": []
+    },
+    {
+      "chunk_index": 71,
+      "kind": "역량질문 무관",
+      "reason": "제85 ~ 86조 특허원부·특허증 발급(행정 조문)",
+      "expected": "없음",
+      "nodes": [],
+      "relationships": []
+    }
+  ],
+  "review_note": "클로니 검토(2026-10-26): 103 손해배상을 Right/HOLDS→Remedy/CAN_CLAIM·CLAIMED_AGAINST로, 109 HANDLED_BY 특허심판원장 추가, 117 절차명을 조문 제목 '특허의 무효심판'으로, 188 '또는' 묶음 주체를 하나로(스키마 이름 규칙)",
+  "confirmed": "2026-10-26 사용자 확정(클로니 검토안 그대로)"
+}

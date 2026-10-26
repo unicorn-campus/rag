@@ -1,0 +1,125 @@
+{
+  "chunk_index": 74,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00074",
+        "label": "Chunk",
+        "properties": {
+          "text": "제90조(허가등에 따른 특허권의 존속기간의 연장등록출원) ① 제89조제1항에 따라 특허권의 존속기간의 연장등록출원을 하려는 자(이하 이 조 및 제91조에서 “연장등록출원인”이라 한다)는 다음 각 호의 사항을 적은 특허권의 존속기간의 연장등록출원서를 지식재산처장에게 제출하여야 한다.\n1. 연장등록출원인의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 연장등록출원인의 대리인이 있는 경우에는 그 대리인의 성명 및 주소나 영업소의 소재지[대리인이 특허법인ㆍ특허법인(유한)인 경우에는 그 명칭, 사무소의 소재지 및 지정된 변리사의 성명]\n3. 연장대상특허권의 특허번호 및 연장대상청구범위의 표시\n4. 연장신청의 기간\n5. 제89조제1항에 따른 허가등의 내용\n6. 총리령으로 정하는 연장이유(이를 증명할 수 있는 자료를 첨부하여야 한다)\n② 제1항에 따른 특허권의 존속기간의 연장등록출원은 제89조제1항에 따른 허가등을 받은 날부터 3개월 이내에 출원하여야 한다. 다만, 제88조에 따른 특허권의 존속기간의 만료 전 6개월 이후에는 그 특허권의 존속기간의 연장등록출원을 할 수 없다.\n③ 특허권이 공유인 경우에는 공유자 모두가 공동으로 특허권의 존속기간의 연장등록출원을 하여야 한다.\n④ 제1항에 따른 특허권의 존속기간의 연장등록출원이 있으면 그 존속기간은 연장된 것으로 본다. 다만, 그 출원에 관하여 제91조의 연장등록거절결정이 확정된 경우에는 그러하지 아니하다.\n⑤ 지식재산처장은 제1항에 따른 특허권의 존속기간의 연장등록출원이 있으면 제1항 각 호의 사항을 특허공보에 게재하여야 한다.",
+          "index": 74,
+          "source": "특허법.pdf",
+          "chunk_index": 74
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:0",
+        "label": "Actor",
+        "properties": {
+          "name": "연장등록출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "허가등에 따른 특허권의 존속기간의 연장등록출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:4",
+        "label": "Decision",
+        "properties": {
+          "name": "연장등록거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:5",
+        "label": "Period",
+        "properties": {
+          "name": "허가등을 받은 날부터 3개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:0",
+        "end_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "end_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "end_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "end_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:0",
+        "end_node_id": "특허법.pdf::00074",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:1",
+        "end_node_id": "특허법.pdf::00074",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:2",
+        "end_node_id": "특허법.pdf::00074",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:4",
+        "end_node_id": "특허법.pdf::00074",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00074:438fc0a4-d856-455d-a1b0-8d1dc27a538c:5",
+        "end_node_id": "특허법.pdf::00074",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 5,
+  "entity_relationships": 4
+}

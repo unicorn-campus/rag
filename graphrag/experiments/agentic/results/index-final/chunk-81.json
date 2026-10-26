@@ -1,0 +1,96 @@
+{
+  "chunk_index": 81,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00081",
+        "label": "Chunk",
+        "properties": {
+          "text": "제94조(특허권의 효력) ① 특허권자는 업으로서 특허발명을 실시할 권리를 독점한다. 다만, 그 특허권에 관하여 전용실시권을 설정하였을 때에는 제100조제2항에 따라 전용실시권자가 그 특허발명을 실시할 권리를 독점하는 범위에서 는 그러하지 아니하다.\n② 특허발명의 실시가 제2조제3호나목에 따른 방법의 사용을 청약하는 행위인 경우 특허권의 효력은 그 방법의 사 용이 특허권 또는 전용실시권을 침해한다는 것을 알면서 그 방법의 사용을 청약하는 행위에만 미친다.\n\n제95조(허가등에 따른 존속기간이 연장된 경우의 특허권의 효력) 제90조제4항에 따라 특허권의 존속기간이 연장된 특허권의 효력은 그 연장등록의 이유가 된 허가등의 대상물건(그 허가등에 있어 물건에 대하여 특정의 용도가 정하여져 있는 경우에는 그 용도에 사용되는 물건)에 관한 그 특허발명의 실시 행위에만 미친다.",
+          "index": 81,
+          "source": "특허법.pdf",
+          "chunk_index": 81
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:3",
+        "label": "Right",
+        "properties": {
+          "name": "전용실시권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:0",
+        "end_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:2",
+        "end_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:0",
+        "end_node_id": "특허법.pdf::00081",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:1",
+        "end_node_id": "특허법.pdf::00081",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:2",
+        "end_node_id": "특허법.pdf::00081",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00081:0dab17cb-cde8-4bd8-bc77-d8b0d51e07d0:3",
+        "end_node_id": "특허법.pdf::00081",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 2
+}

@@ -1,0 +1,220 @@
+{
+  "chunk_index": 106,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00106",
+        "label": "Chunk",
+        "properties": {
+          "text": "제128조의2(감정사항 설명의무) 특허권 또는 전용실시권 침해소송에서 법원이 침해로 인한 손해액의 산정을 위하여 감 정을 명한 때에는 당사자는 감정인에게 감정에 필요한 사항을 설명하여야 한다.\n\n제129조(생산방법의 추정) 물건을 생산하는 방법의 발명에 관하여 특허가 된 경우에 그 물건과 동일한 물건은 그 특허된 방법에 의하여 생산된 것으로 추정한다. 다만, 그 물건이 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 특허출원 전에 국내에서 공지되었거나 공연히 실시된 물건\n2. 특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 물건\n\n제130조(과실의 추정) 타인의 특허권 또는 전용실시권을 침해한 자는 그 침해행위에 대하여 과실이 있는 것으로 추정한다.\n\n제131조(특허권자 등의 신용회복) 법원은 고의나 과실로 특허권 또는 전용실시권을 침해함으로써 특허권자 또는 전용실시권자의 업무상 신용을 떨어뜨린 자에 대해서는 특허권자 또는 전용실시권자의 청구에 의하여 손해배상을 갈음하여 또는 손해배상과 함께 특허권자 또는 전용실시권자의 업무상 신용회복을 위하여 필요한 조치를 명할 수 있다.",
+          "index": 106,
+          "source": "특허법.pdf",
+          "chunk_index": 106
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:0",
+        "label": "Invention",
+        "properties": {
+          "name": "물건을 생산하는 방법의 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:3",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:4",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:5",
+        "label": "Right",
+        "properties": {
+          "name": "전용실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:6",
+        "label": "Remedy",
+        "properties": {
+          "name": "손해배상"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:7",
+        "label": "Remedy",
+        "properties": {
+          "name": "업무상 신용회복을 위한 조치"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:8",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자 또는 전용실시권자의 업무상 신용을 떨어뜨린 자"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:0",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:1",
+        "type": "ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:2",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:4",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:2",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:2",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:7",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:4",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:4",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:7",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:6",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:8",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:7",
+        "end_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:8",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:0",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:1",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:2",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:3",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:4",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:5",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:6",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:7",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00106:786c6b4c-9d82-4e6a-a3a8-ee6efd843ac1:8",
+        "end_node_id": "특허법.pdf::00106",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 9,
+  "entity_relationships": 9
+}

@@ -1,0 +1,59 @@
+{
+  "chunk_index": 161,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00161",
+        "label": "Chunk",
+        "properties": {
+          "text": "④ 제1항에 따른 출원인이 국내서면제출기간에 제1항에 따른 발명의 설명 및 청구범위의 국어번역문을 제출하지 아니하면 그 국제특허출원을 취하한 것으로 본다.\n⑤ 특허출원인이 국내서면제출기간의 만료일(국내서면제출기간에 출원인이 출원심사의 청구를 한 경우에는 그 청 구일을 말하며, 이하 “기준일”이라 한다)까지 제1항에 따라 발명의 설명, 청구범위 및 도면(도면 중 설명부분에 한정한다)의 국어번역문(제3항 본문에 따라 새로운 국어번역문을 제출한 경우에는 마지막에 제출한 국어번역문을 말한\n다. 이하 이 조에서 “최종 국어번역문”이라 한다)을 제출한 경우에는 국제출원일까지 제출한 발명의 설명, 청구범위 및 도면(도면 중 설명부분에 한정한다)을 최종 국어번역문에 따라 국제출원일에 제47조제1항에 따른 보정을 한 것으로 본다.\n⑥ 특허출원인은 제47조제1항 및 제208조제1항에 따라 보정을 할 수 있는 기간에 최종 국어번역문의 잘못된 번역을 총리령으로 정하는 방법에 따라 정정할 수 있다. 이 경우 정정된 국어번역문에 관하여는 제5항을 적용하지 아니한다.\n⑦ 제6항 전단에 따라 제47조제1항제1호 또는 제2호에 따른 기간에 정정을 하는 경우에는 마지막 정정 전에 한 모든 정정은 처음부터 없었던 것으로 본다.\n⑧ 제2항에 따라 보정 후의 청구범위에 대한 국어번역문을 제출하는 경우에는 제204조제1항 및 제2항을 적용하지 아니한다.",
+          "index": 161,
+          "source": "특허법.pdf",
+          "chunk_index": 161
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:0",
+        "label": "Actor",
+        "properties": {
+          "name": "출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:0",
+        "end_node_id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:0",
+        "end_node_id": "특허법.pdf::00161",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00161:fab11b48-f2a1-4077-b6e2-92dfbf81eaf1:1",
+        "end_node_id": "특허법.pdf::00161",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 2,
+  "entity_relationships": 1
+}

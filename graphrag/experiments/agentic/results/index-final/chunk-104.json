@@ -1,0 +1,103 @@
+{
+  "chunk_index": 104,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00104",
+        "label": "Chunk",
+        "properties": {
+          "text": "③ 삭제\n④ 제1항에 따라 손해배상을 청구하는 경우 특허권 또는 전용실시권을 침해한 자가 그 침해행위로 인하여 얻은 이익액을 특허권자 또는 전용실시권자가 입은 손해액으로 추정한다.\n⑤ 제1항에 따라 손해배상을 청구하는 경우 그 특허발명의 실시에 대하여 합리적으로 받을 수 있는 금액을 특허권자 또는 전용실시권자가 입은 손해액으로 하여 손해배상을 청구할 수 있다.\n⑥ 제5항에도 불구하고 손해액이 같은 항에 따른 금액을 초과하는 경우에는 그 초과액에 대해서도 손해배상을 청구할 수 있다. 이 경우 특허권 또는 전용실시권을 침해한 자에게 고의 또는 중대한 과실이 없을 때에는 법원은 손해배 상액을 산정할 때 그 사실을 고려할 수 있다.\n⑦ 법원은 특허권 또는 전용실시권의 침해에 관한 소송에서 손해가 발생된 것은 인정되나 그 손해액을 증명하기 위하여 필요한 사실을 증명하는 것이 해당 사실의 성질상 극히 곤란한 경우에는 제2항부터 제6항까지의 규정에도 불구하고 변론 전체의 취지와 증거조사의 결과에 기초하여 상당한 손해액을 인정할 수 있다.\n⑧ 법원은 타인의 특허권 또는 전용실시권을 침해한 행위가 고의적인 것으로 인정되는 경우에는 제1항에도 불구하고 제2항부터 제7항까지의 규정에 따라 손해로 인정된 금액의 5배를 넘지 아니하는 범위에서 배상액을 정할 수 있다.",
+          "index": 104,
+          "source": "특허법.pdf",
+          "chunk_index": 104
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:1",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권 또는 전용실시권을 침해한 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:6",
+        "label": "Remedy",
+        "properties": {
+          "name": "손해배상"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:0",
+        "end_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:1",
+        "end_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:6",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:6",
+        "end_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:2",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:0",
+        "end_node_id": "특허법.pdf::00104",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:1",
+        "end_node_id": "특허법.pdf::00104",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:2",
+        "end_node_id": "특허법.pdf::00104",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00104:3f022ed2-ecf3-4822-a040-06c30d638a88:6",
+        "end_node_id": "특허법.pdf::00104",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 3
+}

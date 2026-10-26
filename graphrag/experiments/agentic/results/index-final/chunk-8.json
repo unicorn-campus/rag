@@ -1,0 +1,81 @@
+{
+  "chunk_index": 8,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00008",
+        "label": "Chunk",
+        "properties": {
+          "text": "제18조(절차의 효력 승계) 특허권 또는 특허에 관한 권리에 관하여 밟은 절차의 효력은 그 특허권 또는 특허에 관한 권리의 승계인에게 미친다.\n\n제19조(절차의 속행) 지식재산처장 또는 심판장은 특허에 관한 절차가 지식재산처 또는 특허심판원에 계속(係屬) 중일 때 특허권 또는 특허에 관한 권리가 이전되면 그 특허권 또는 특허에 관한 권리의 승계인에 대하여 그 절차를 속행 (續行)하게 할 수 있다.\n\n제20조(절차의 중단) 특허에 관한 절차가 다음 각 호의 어느 하나에 해당하는 경우에는 지식재산처 또는 특허심판원에 계속 중인 절차는 중단된다. 다만, 절차를 밟을 것을 위임받은 대리인이 있는 경우에는 그러하지 아니하다.\n1. 당사자가 사망한 경우\n2. 당사자인 법인이 합병에 따라 소멸한 경우\n3. 당사자가 절차를 밟을 능력을 상실한 경우\n4. 당사자의 법정대리인이 사망하거나 그 대리권을 상실한 경우\n5. 당사자의 신탁에 의한 수탁자의 임무가 끝난 경우\n6. 제11조제1항 각 호 외의 부분 단서에 따른 대표자가 사망하거나 그 자격을 상실한 경우\n7. 파산관재인 등 일정한 자격에 따라 자기 이름으로 남을 위하여 당사자가 된 자가 그 자격을 잃거나 사망한 경우",
+          "index": 8,
+          "source": "특허법.pdf",
+          "chunk_index": 8
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:0",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허에 관한 절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:0",
+        "end_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:0",
+        "end_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:0",
+        "end_node_id": "특허법.pdf::00008",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:1",
+        "end_node_id": "특허법.pdf::00008",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00008:846d36a3-d97e-439d-985e-683e0453dce1:2",
+        "end_node_id": "특허법.pdf::00008",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

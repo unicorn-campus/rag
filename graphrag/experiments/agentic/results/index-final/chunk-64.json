@@ -1,0 +1,81 @@
+{
+  "chunk_index": 64,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00064",
+        "label": "Chunk",
+        "properties": {
+          "text": "제81조의3(특허료의 추가납부 또는 보전에 의한 특허출원과 특허권의 회복 등) ① 특허권의 설정등록을 받으려는 자 또는 특허권자가 정당한 사유로 추가납부기간에 특허료를 내지 아니하였거나 보전기간에 보전하지 아니한 경우에는 그 사유가 소멸한 날부터 2개월 이내에 그 특허료를 내거나 보전할 수 있다. 다만, 추가납부기간의 만료일 또는 보전 기간의 만료일 중 늦은 날부터 1년이 지난 때에는 그러하지 아니하다.\n② 제1항에 따라 특허료를 내거나 보전한 자는 제81조제3항에도 불구하고 그 특허출원을 포기하지 아니한 것으로 보며, 그 특허권은 계속하여 존속하고 있던 것으로 본다.\n③ 추가납부기간에 특허료를 내지 아니하였거나 보전기간에 보전하지 아니하여 특허발명의 특허권이 소멸한 경우 그 특허권자는 추가납부기간 또는 보전기간 만료일부터 3개월 이내에 제79조에 따른 특허료의 2배를 내고, 그 소멸한 권리의 회복을 신청할 수 있다. 이 경우 그 특허권은 계속하여 존속하고 있던 것으로 본다.\n④ 제2항 또는 제3항에 따른 특허출원 또는 특허권의 효력은 추가납부기간 또는 보전기간이 지난 날부터 특허료를 내거나 보전한 날까지의 기간(이하 이 조에서 “효력제한기간”이라 한다) 중에 타인이 특허출원된 발명 또는 특허발명을 실시한 행위에 대해서는 그 효력이 미치지 아니한다.",
+          "index": 64,
+          "source": "특허법.pdf",
+          "chunk_index": 64
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:5",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:8",
+        "label": "Exclusion",
+        "properties": {
+          "name": "타인이 특허출원된 발명 또는 특허발명을 실시한 행위"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:1",
+        "end_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:5",
+        "end_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:8",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:1",
+        "end_node_id": "특허법.pdf::00064",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:5",
+        "end_node_id": "특허법.pdf::00064",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00064:524b32c9-daaa-404b-a87e-f68a1e0f9a35:8",
+        "end_node_id": "특허법.pdf::00064",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 3,
+  "entity_relationships": 2
+}

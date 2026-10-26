@@ -1,0 +1,103 @@
+{
+  "chunk_index": 132,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00132",
+        "label": "Chunk",
+        "properties": {
+          "text": "제140조의2(특허거절결정에 대한 심판청구방식) ① 제132조의17에 따라 특허거절결정에 대한 심판을 청구하려는 자는 제140조제1항에도 불구하고 다음 각 호의 사항을 적은 심판청구서를 특허심판원장에게 제출하여야 한다.\n1. 청구인의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 대리인이 있는 경우에는 그 대리인의 성명 및 주소나 영업소의 소재지[대리인이 특허법인ㆍ특허법인(유한)인 경우에는 그 명칭, 사무소의 소재지 및 지정된 변리사의 성명]\n3. 출원일 및 출원번호\n4. 발명의 명칭\n5. 특허거절결정일\n6. 심판사건의 표시\n7. 청구의 취지 및 그 이유\n② 제1항에 따라 제출된 심판청구서를 보정하는 경우에는 그 요지를 변경할 수 없다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 제1항제1호에 따른 청구인의 기재를 바로잡기 위하여 보정(청구인을 추가하는 것을 포함하되, 그 청구인의 동의가 있는 경우로 한정한다)하는 경우\n2. 제1항제7호에 따른 청구의 이유를 보정하는 경우",
+          "index": 132,
+          "source": "특허법.pdf",
+          "chunk_index": 132
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:0",
+        "label": "Actor",
+        "properties": {
+          "name": "청구인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허거절결정에 대한 심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:0",
+        "end_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:1",
+        "end_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:1",
+        "end_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:0",
+        "end_node_id": "특허법.pdf::00132",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:1",
+        "end_node_id": "특허법.pdf::00132",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:2",
+        "end_node_id": "특허법.pdf::00132",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00132:7e029ed4-f006-45a2-860a-7fa35be108dc:3",
+        "end_node_id": "특허법.pdf::00132",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 4,
+  "entity_relationships": 3
+}

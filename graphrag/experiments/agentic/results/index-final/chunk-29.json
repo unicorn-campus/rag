@@ -1,0 +1,147 @@
+{
+  "chunk_index": 29,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00029",
+        "label": "Chunk",
+        "properties": {
+          "text": "제42조의2(특허출원일 등) ① 특허출원일은 명세서 및 필요한 도면을 첨부한 특허출원서가 지식재산처장에게 도달한 날로 한다. 이 경우 명세서에 청구범위는 적지 아니할 수 있으나, 발명의 설명은 적어야 한다.\n② 특허출원인은 제1항 후단에 따라 특허출원서에 최초로 첨부한 명세서에 청구범위를 적지 아니한 경우에는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지 명세서에 청구범위를 적는 보정을 하여야 한다. 다만, 본문에 따른 기한 이전에 제60조제3항에 따른 출원심사 청구의 취지를 통지받은 경우에는 그 통지를 받은 날부터 3개월이 되는 날 또는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날 중 빠른 날까지 보정을 하여야 한다.\n③ 특허출원인이 제2항에 따른 보정을 하지 아니한 경우에는 제2항에 따른 기한이 되는 날의 다음 날에 해당 특허출원을 취하한 것으로 본다.",
+          "index": 29,
+          "source": "특허법.pdf",
+          "chunk_index": 29
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:3",
+        "label": "Period",
+        "properties": {
+          "name": "제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:4",
+        "label": "Period",
+        "properties": {
+          "name": "그 통지를 받은 날부터 3개월이 되는 날"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:5",
+        "label": "Period",
+        "properties": {
+          "name": "제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날 중 빠른 날까지"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:0",
+        "end_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "end_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "end_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "end_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "end_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:0",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:1",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:2",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:3",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:4",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00029:ddb15989-7495-4cbf-8c8b-f95d2f242929:5",
+        "end_node_id": "특허법.pdf::00029",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 5
+}

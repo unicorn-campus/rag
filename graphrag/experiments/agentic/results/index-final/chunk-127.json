@@ -1,0 +1,162 @@
+{
+  "chunk_index": 127,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00127",
+        "label": "Chunk",
+        "properties": {
+          "text": "제137조(정정의 무효심판) ① 이해관계인 또는 심사관은 제132조의3제1항, 제133조의2제1항, 제136조제1항 또는 이 조 제3항에 따른 특허발명의 명세서 또는 도면에 대한 정정이 다음 각 호의 어느 하나의 규정을 위반한 경우에는 정정의 무효심판을 청구할 수 있다.\n1. 제136조제1항 각 호의 어느 하나의 규정\n2. 제136조제3항부터 제5항까지의 규정(제132조의3제3항 또는 제133조의2제4항에 따라 준용되는 경우를 포함한다)\n② 제1항에 따른 심판청구에 관하여는 제133조제2항 및 제4항을 준용한다.\n③ 제1항에 따른 무효심판의 피청구인은 제136조제1항 각 호의 어느 하나에 해당하는 경우에만 제147조제1항 또는 제159조제1항 후단에 따라 지정된 기간에 특허발명의 명세서 또는 도면의 정정을 청구할 수 있다. 이 경우 심판장이 제147조제1항에 따라 지정된 기간 후에도 청구인이 증거를 제출하거나 새로운 무효사유를 주장함으로 인하여 정정의 청구를 허용할 필요가 있다고 인정하는 경우에는 기간을 정하여 정정청구를 하게 할 수 있다.\n④ 제3항에 따른 정정청구에 관하여는 제133조의2제2항부터 제5항까지의 규정을 준용한다. 이 경우 제133조의2제 3항 중 “제133조제1항”은 “제137조제1항”으로 보고, 같은 조 제4항 후단 중 “제133조의2제1항”을 “제137조제3항”으로 보며, 같은 조 제5항 각 호 외의 부분 및 같은 항 제1호 중 “제1항”을 각각 “제3항”으로 본다.\n⑤ 제1항에 따라 정정을 무효로 한다는 심결이 확정되었을 때에는 그 정정은 처음부터 없었던 것으로 본다.",
+          "index": 127,
+          "source": "특허법.pdf",
+          "chunk_index": 127
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:0",
+        "label": "Actor",
+        "properties": {
+          "name": "이해관계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:1",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:2",
+        "label": "Actor",
+        "properties": {
+          "name": "청구인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:3",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정의 무효심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:6",
+        "label": "Period",
+        "properties": {
+          "name": "지정된 기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:0",
+        "end_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:1",
+        "end_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:2",
+        "end_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:4",
+        "end_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:5",
+        "end_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:6",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:0",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:1",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:2",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:3",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:4",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:5",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00127:59ca430a-67eb-428b-8e28-bb5153dc7282:6",
+        "end_node_id": "특허법.pdf::00127",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 7,
+  "entity_relationships": 5
+}

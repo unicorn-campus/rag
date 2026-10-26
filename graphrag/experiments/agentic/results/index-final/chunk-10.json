@@ -1,0 +1,147 @@
+{
+  "chunk_index": 10,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00010",
+        "label": "Chunk",
+        "properties": {
+          "text": "제22조(수계신청) ① 제20조에 따라 중단된 절차에 관한 수계신청은 제21조 각 호의 어느 하나에 해당하는 자가 할 수 있다. 이 경우 그 상대방은 지식재산처장 또는 제143조에 따른 심판관(이하 “심판관”이라 한다)에게 제21조 각 호의 어느 하나에 해당하는 자에 대하여 수계신청할 것을 명하도록 요청할 수 있다.\n② 지식재산처장 또는 심판장은 제20조에 따라 중단된 절차에 관한 수계신청이 있으면 그 사실을 상대방에게 알려야 한다.\n③ 지식재산처장 또는 심판관은 제20조에 따라 중단된 절차에 관한 수계신청에 대하여 직권으로 조사하여 이유 없다고 인정하면 결정으로 기각하여야 한다.\n④ 지식재산처장 또는 심판관은 결정 또는 심결의 등본을 송달한 후에 중단된 절차에 관한 수계신청에 대해서는 수 계하게 할 것인지를 결정하여야 한다.\n⑤ 지식재산처장 또는 심판관은 제21조 각 호의 어느 하나에 해당하는 자가 중단된 절차를 수계하지 아니하면 직권으로 기간을 정하여 수계를 명하여야 한다.\n⑥ 제5항에 따른 기간에 수계가 없는 경우에는 그 기간이 끝나는 날의 다음 날에 수계가 있는 것으로 본다.\n⑦ 지식재산처장 또는 심판장은 제6항에 따라 수계가 있는 것으로 본 경우에는 그 사실을 당사자에게 알려야 한다.",
+          "index": 10,
+          "source": "특허법.pdf",
+          "chunk_index": 10
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:0",
+        "label": "Actor",
+        "properties": {
+          "name": "제21조 각 호의 어느 하나에 해당하는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "수계신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:3",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:4",
+        "label": "Decision",
+        "properties": {
+          "name": "결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:5",
+        "label": "Period",
+        "properties": {
+          "name": "제5항에 따른 기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:0",
+        "end_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "end_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "end_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "end_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "end_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:0",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:1",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:2",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:3",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:4",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00010:72060a34-361a-4eea-8d5a-2f4676668b12:5",
+        "end_node_id": "특허법.pdf::00010",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  },
+  "entity_nodes": 6,
+  "entity_relationships": 5
+}

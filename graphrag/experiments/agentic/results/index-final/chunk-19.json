@@ -1,0 +1,21 @@
+{
+  "chunk_index": 19,
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00019",
+        "label": "Chunk",
+        "properties": {
+          "text": "⑦ 제3항 또는 제4항을 적용할 때 제201조제4항에 따라 취하한 것으로 보는 국제특허출원 또는 「실용신안법」 제35조제4항에 따라 취하한 것으로 보는 국제실용신안등록출원은 다른 특허출원 또는 실용신안등록출원으로 보지 아니한다.",
+          "index": 19,
+          "source": "특허법.pdf",
+          "chunk_index": 19
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  },
+  "entity_nodes": 0,
+  "entity_relationships": 0
+}
