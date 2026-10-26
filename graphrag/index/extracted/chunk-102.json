@@ -1,0 +1,94 @@
+{
+  "chunk_index": 102,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00102",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00102",
+        "label": "Chunk",
+        "properties": {
+          "text": "제127조(침해로 보는 행위) 다음 각 호의 구분에 따른 행위를 업으로서 하는 경우에는 특허권 또는 전용실시권을 침해한 것으로 본다.\n1. 특허가 물건의 발명인 경우: 그 물건의 생산에만 사용하는 물건을 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 그 물건의 양도 또는 대여의 청약을 하는 행위\n2. 특허가 방법의 발명인 경우: 그 방법의 실시에만 사용하는 물건을 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 그 물건의 양도 또는 대여의 청약을 하는 행위",
+          "index": 102,
+          "source": "특허법.pdf",
+          "chunk_index": 102
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00102:0",
+        "label": "Invention",
+        "properties": {
+          "name": "물건의 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00102:1",
+        "label": "Invention",
+        "properties": {
+          "name": "방법의 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00102:2",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00102:0",
+        "end_node_id": "특허법.pdf::00102:2",
+        "type": "ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00102:1",
+        "end_node_id": "특허법.pdf::00102:2",
+        "type": "ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00102:0",
+        "end_node_id": "특허법.pdf::00102",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00102:1",
+        "end_node_id": "특허법.pdf::00102",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00102:2",
+        "end_node_id": "특허법.pdf::00102",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

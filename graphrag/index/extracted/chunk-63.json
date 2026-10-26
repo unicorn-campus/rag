@@ -1,0 +1,198 @@
+{
+  "chunk_index": 63,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00063",
+  "raw_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "kept_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00063",
+        "label": "Chunk",
+        "properties": {
+          "text": "제81조의2(특허료의 보전) ① 지식재산처장은 특허권의 설정등록을 받으려는 자 또는 특허권자가 제79조제3항 또는 제81조제1항에 따른 기간에 특허료의 일부를 내지 아니한 경우에는 특허료의 보전(補塡)을 명하여야 한다.\n② 제1항에 따라 보전명령을 받은 자는 그 보전명령을 받은 날부터 1개월 이내(이하 “보전기간”이라 한다)에 특허료를 보전할 수 있다.\n③ 제2항에 따라 특허료를 보전하는 자는 내지 아니한 금액의 2배의 범위에서 총리령으로 정한 금액을 내야 한다.",
+          "index": 63,
+          "source": "특허법.pdf",
+          "chunk_index": 63
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:0",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권의 설정등록을 받으려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:3",
+        "label": "Actor",
+        "properties": {
+          "name": "보전명령을 받은 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:4",
+        "label": "Actor",
+        "properties": {
+          "name": "특허료를 보전하는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:5",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:6",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허료의 보전"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:7",
+        "label": "Decision",
+        "properties": {
+          "name": "보전명령"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:8",
+        "label": "Period",
+        "properties": {
+          "name": "1개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00063:6",
+        "end_node_id": "특허법.pdf::00063:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:6",
+        "end_node_id": "특허법.pdf::00063:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:6",
+        "end_node_id": "특허법.pdf::00063:8",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:1",
+        "end_node_id": "특허법.pdf::00063:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:0",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:1",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:2",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:3",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:4",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:5",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:6",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:7",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00063:8",
+        "end_node_id": "특허법.pdf::00063",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

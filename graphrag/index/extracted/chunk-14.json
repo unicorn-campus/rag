@@ -1,0 +1,146 @@
+{
+  "chunk_index": 14,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00014",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00014",
+        "label": "Chunk",
+        "properties": {
+          "text": "제28조의2(고유번호의 기재) ① 특허에 관한 절차를 밟는 자 중 총리령으로 정하는 자는 지식재산처장 또는 특허심판원장에게 자신의 고유번호의 부여를 신청하여야 한다.\n② 지식재산처장 또는 특허심판원장은 제1항에 따른 신청을 받으면 신청인에게 고유번호를 부여하고, 그 사실을 알려야 한다.\n③ 지식재산처장 또는 특허심판원장은 특허에 관한 절차를 밟는 자가 제1항에 따라 고유번호를 신청하지 아니하면 그에게 직권으로 고유번호를 부여하고, 그 사실을 알려야 한다.\n④ 제2항 또는 제3항에 따라 고유번호를 부여받은 자가 특허에 관한 절차를 밟는 경우에는 총리령으로 정하는 서류에 자신의 고유번호를 적어야 한다. 이 경우 이 법 또는 이 법에 따른 명령에도 불구하고 그 서류에 주소(법인인 경우에는 영업소의 소재지를 말한다)를 적지 아니할 수 있다.\n⑤ 특허에 관한 절차를 밟는 자의 대리인에 관하여는 제1항부터 제4항까지의 규정을 준용한다.\n⑥ 고유번호의 부여 신청, 고유번호의 부여 및 통지, 그 밖에 고유번호에 관하여 필요한 사항은 총리령으로 정한다.",
+          "index": 14,
+          "source": "특허법.pdf",
+          "chunk_index": 14
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:0",
+        "label": "Actor",
+        "properties": {
+          "name": "총리령으로 정하는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:3",
+        "label": "Actor",
+        "properties": {
+          "name": "신청인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "고유번호의 부여 신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00014:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "고유번호의 부여 및 통지"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00014:0",
+        "end_node_id": "특허법.pdf::00014:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:4",
+        "end_node_id": "특허법.pdf::00014:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:4",
+        "end_node_id": "특허법.pdf::00014:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:0",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:1",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:2",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:3",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:4",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00014:5",
+        "end_node_id": "특허법.pdf::00014",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

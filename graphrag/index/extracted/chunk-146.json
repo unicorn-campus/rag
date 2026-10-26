@@ -1,0 +1,131 @@
+{
+  "chunk_index": 146,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00146",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00146",
+        "label": "Chunk",
+        "properties": {
+          "text": "제166조(심판비용액 또는 대가에 대한 집행권원) 이 법에 따라 특허심판원장이 정한 심판비용액 또는 심판관이 정한 대가에 관하여 확정된 결정은 집행력 있는 집행권원과 같은 효력을 가진다. 이 경우 집행력 있는 정본은 특허심판원 소속 공무원이 부여한다.\n\n제167조 삭제\n\n제168조 삭제\n\n제169조 삭제\n\n제170조(심사규정의 특허거절결정에 대한 심판에의 준용) ① 특허거절결정에 대한 심판에 관하여는 제47조제1항제1호 ㆍ제2호, 같은 조 제4항, 제51조, 제63조, 제63조의2 및 제66조를 준용한다. 이 경우 제51조제1항 본문 중 “제47조제 1항제2호 및 제3호에 따른 보정”은 “제47조제1항제2호에 따른 보정(제132조의17의 특허거절결정에 대한 심판청구 전에 한 것은 제외한다)”으로, 제63조의2 본문 중 “지식재산처장”은 “특허심판원장”으로 본다.\n② 제1항에 따라 준용되는 제63조는 특허거절결정의 이유와 다른 거절이유를 발견한 경우에만 적용한다.\n\n제171조(특허거절결정에 대한 심판의 특칙) 특허거절결정 또는 특허권의 존속기간의 연장등록거절결정에 대한 심판에 는 제147조제1항ㆍ제2항, 제155조 및 제156조를 적용하지 아니한다.\n\n제172조(심사의 효력) 심사에서 밟은 특허에 관한 절차는 특허거절결정 또는 특허권의 존속기간의 연장등록거절결정에 대한 심판에서도 그 효력이 있다.\n\n제173조 삭제\n\n제174조 삭제\n\n제175조 삭제",
+          "index": 146,
+          "source": "특허법.pdf",
+          "chunk_index": 146
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00146:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00146:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허거절결정에 대한 심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00146:2",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00146:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록거절결정에 대한 심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00146:4",
+        "label": "Decision",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록거절결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00146:1",
+        "end_node_id": "특허법.pdf::00146:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:1",
+        "end_node_id": "특허법.pdf::00146:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:3",
+        "end_node_id": "특허법.pdf::00146:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:0",
+        "end_node_id": "특허법.pdf::00146",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:1",
+        "end_node_id": "특허법.pdf::00146",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:2",
+        "end_node_id": "특허법.pdf::00146",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:3",
+        "end_node_id": "특허법.pdf::00146",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00146:4",
+        "end_node_id": "특허법.pdf::00146",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

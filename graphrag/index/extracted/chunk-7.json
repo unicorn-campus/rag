@@ -1,0 +1,175 @@
+{
+  "chunk_index": 7,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00007",
+  "raw_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "kept_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00007",
+        "label": "Chunk",
+        "properties": {
+          "text": "제16조(절차의 무효) ① 지식재산처장 또는 특허심판원장은 제46조에 따른 보정명령을 받은 자가 지정된 기간에 그 보정을 하지 아니하면 특허에 관한 절차를 무효로 할 수 있다. 다만, 제82조제2항에 따른 심사청구료를 내지 아니하여 보정명령을 받은 자가 지정된 기간에 그 심사청구료를 내지 아니하면 특허출원서에 첨부한 명세서에 관한 보정을 무효로 할 수 있다.\n② 지식재산처장 또는 특허심판원장은 제1항에 따라 특허에 관한 절차가 무효로 된 경우로서 지정된 기간을 지키지 못한 것이 정당한 사유에 의한 것으로 인정될 때에는 그 사유가 소멸한 날부터 2개월 이내에 보정명령을 받은 자의 청구에 따라 그 무효처분을 취소할 수 있다. 다만, 지정된 기간의 만료일부터 1년이 지났을 때에는 그러하지 아니하다.\n③ 지식재산처장 또는 특허심판원장은 제1항 본문ㆍ단서에 따른 무효처분 또는 제2항 본문에 따른 무효처분의 취 소처분을 할 때에는 그 보정명령을 받은 자에게 처분통지서를 송달하여야 한다.\n\n제17조(절차의 추후보완) 특허에 관한 절차를 밟은 자가 책임질 수 없는 사유로 다음 각 호의 어느 하나에 해당하는 기간을 지키지 못한 경우에는 그 사유가 소멸한 날부터 2개월 이내에 지키지 못한 절차를 추후 보완할 수 있다. 다만, 그 기간의 만료일부터 1년이 지났을 때에는 그러하지 아니하다.\n1. 제132조의17에 따른 심판의 청구기간\n2. 제180조제1항에 따른 재심의 청구기간\n\n제18조(절차의 효력 승계) 특허권 또는 특허에 관한 권리에 관하여 밟은 절차의 효력은 그 특허권 또는 특허에 관한 권리의 승계인에게 미친다.",
+          "index": 7,
+          "source": "특허법.pdf",
+          "chunk_index": 7
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:0",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:2",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:3",
+        "label": "Decision",
+        "properties": {
+          "name": "무효처분"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "무효처분을 취소"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:5",
+        "label": "Period",
+        "properties": {
+          "name": "2개월 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00007:6",
+        "label": "Period",
+        "properties": {
+          "name": "1년"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007:6",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:0",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:1",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:2",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:3",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:4",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:5",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00007:6",
+        "end_node_id": "특허법.pdf::00007",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

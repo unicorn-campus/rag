@@ -1,0 +1,146 @@
+{
+  "chunk_index": 52,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00052",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00052",
+        "label": "Chunk",
+        "properties": {
+          "text": "제60조(출원심사의 청구절차) ① 출원심사의 청구를 하려는 자는 다음 각 호의 사항을 적은 출원심사청구서를 지식재산처장에게 제출하여야 한다.\n1. 청구인의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 출원심사의 청구대상이 되는 특허출원의 표시\n② 지식재산처장은 출원공개 전에 출원심사의 청구가 있으면 출원공개 시에, 출원공개 후에 출원심사의 청구가 있으면 지체 없이 그 취지를 특허공보에 게재하여야 한다.\n③ 지식재산처장은 특허출원인이 아닌 자로부터 출원심사의 청구가 있으면 그 취지를 특허출원인에게 알려야 한다.\n\n제61조(우선심사) 지식재산처장은 다음 각 호의 어느 하나에 해당하는 특허출원에 대해서는 심사관에게 다른 특허출원에 우선하여 심사하게 할 수 있다.\n1. 제64조에 따른 출원공개 후 특허출원인이 아닌 자가 업(業)으로서 특허출원된 발명을 실시하고 있다고 인정되는 경우\n2. 대통령령으로 정하는 특허출원으로서 긴급하게 처리할 필요가 있다고 인정되는 경우\n3. 대통령령으로 정하는 특허출원으로서 재난의 예방ㆍ대응ㆍ복구 등에 필요하다고 인정되는 경우",
+          "index": 52,
+          "source": "특허법.pdf",
+          "chunk_index": 52
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:0",
+        "label": "Actor",
+        "properties": {
+          "name": "출원심사의 청구를 하려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:3",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "우선심사"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00052:5",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00052:0",
+        "end_node_id": "특허법.pdf::00052:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:1",
+        "end_node_id": "특허법.pdf::00052:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:4",
+        "end_node_id": "특허법.pdf::00052:5",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:0",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:1",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:2",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:3",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:4",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00052:5",
+        "end_node_id": "특허법.pdf::00052",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

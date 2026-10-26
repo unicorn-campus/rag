@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-26T23:17:51",
+  "chunks": 191,
+  "before": {
+    "entity_nodes": 752,
+    "entity_relationships": 477
+  },
+  "after": {
+    "entity_nodes": 752,
+    "entity_relationships": 477
+  },
+  "totals": {},
+  "by_reason": {},
+  "by_type": {},
+  "by_chunk": {}
+}

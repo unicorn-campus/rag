@@ -1,0 +1,139 @@
+{
+  "chunk_index": 91,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00091",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00091",
+        "label": "Chunk",
+        "properties": {
+          "text": "제107조(통상실시권 설정의 재정) ① 특허발명을 실시하려는 자는 특허발명이 다음 각 호의 어느 하나에 해당하고, 그 특허발명의 특허권자 또는 전용실시권자와 합리적인 조건으로 통상실시권 허락에 관한 협의(이하 이 조에서 “협의”라 한다)를 하였으나 합의가 이루어지지 아니하는 경우 또는 협의를 할 수 없는 경우에는 지식재산처장에게 통상실시권 설정에 관한 재정(裁定)(이하 “재정”이라 한다)을 청구할 수 있다. 다만, 공공의 이익을 위하여 비상업적으로 실시하려는 경우와 제4호에 해당하는 경우에는 협의 없이도 재정을 청구할 수 있다.\n1. 특허발명이 천재지변이나 그 밖의 불가항력 또는 대통령령으로 정하는 정당한 이유 없이 계속하여 3년 이상 국내에서 실시되고 있지 아니한 경우\n2. 특허발명이 정당한 이유 없이 계속하여 3년 이상 국내에서 상당한 영업적 규모로 실시되고 있지 아니하거나 적 당한 정도와 조건으로 국내수요를 충족시키지 못한 경우\n3. 특허발명의 실시가 공공의 이익을 위하여 특히 필요한 경우\n4. 사법적 절차 또는 행정적 절차에 의하여 불공정거래행위로 판정된 사항을 바로잡기 위하여 특허발명을 실시할 필요가 있는 경우\n5. 자국민 다수의 보건을 위협하는 질병을 치료하기 위하여 의약품(의약품 생산에 필요한 유효성분, 의약품 사용에 필요한 진단키트를 포함한다)을 수입하려는 국가(이하 이 조에서 “수입국”이라 한다)에 그 의약품을 수출할 수 있도록 특허발명을 실시할 필요가 있는 경우\n② 특허출원일부터 4년이 지나지 아니한 특허발명에 관하여는 제1항제1호 및 제2호를 적용하지 아니한다.",
+          "index": 91,
+          "source": "특허법.pdf",
+          "chunk_index": 91
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허발명을 실시하려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:3",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:4",
+        "label": "Invention",
+        "properties": {
+          "name": "특허발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00091:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "통상실시권 설정에 관한 재정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00091:0",
+        "end_node_id": "특허법.pdf::00091:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:5",
+        "end_node_id": "특허법.pdf::00091:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:0",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:1",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:2",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:3",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:4",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00091:5",
+        "end_node_id": "특허법.pdf::00091",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

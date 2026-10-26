@@ -1,0 +1,131 @@
+{
+  "chunk_index": 174,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00174",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00174",
+        "label": "Chunk",
+        "properties": {
+          "text": "제209조(변경출원시기의 제한) 「실용신안법」 제34조제1항에 따라 국제출원일에 출원된 실용신안등록출원으로 보는 국제출원을 기초로 하여 특허출원으로 변경출원을 하는 경우에는 이 법 제53조제1항에도 불구하고 「실용신안법」 제17조제1항에 따른 수수료를 내고 같은 법 제35조제1항에 따른 국어번역문(국어로 출원된 국제실용신안등록출원 의 경우는 제외한다)을 제출한 후(「실용신안법」 제40조제4항에 따라 국제출원일로 인정할 수 있었던 날에 출원된 것으로 보는 국제출원을 기초로 하는 경우에는 같은 항에 따른 결정이 있은 후)에만 변경출원을 할 수 있다.\n\n제210조(출원심사청구시기의 제한) 국제특허출원에 관하여는 제59조제2항에도 불구하고 다음 각 호의 어느 하나에 해당하는 때에만 출원심사의 청구를 할 수 있다.\n1. 국제특허출원의 출원인은 제201조제1항에 따라 국어번역문을 제출하고(국어로 출원된 국제특허출원의 경우는 제외한다) 제82조제1항에 따른 수수료를 낸 후\n2. 국제특허출원의 출원인이 아닌 자는 국내서면제출기간(제201조제1항 각 호 외의 부분 단서에 따라 국어번역문의 제출기간을 연장하여 달라는 취지를 적은 서면이 제출된 경우에는 연장된 국어번역문 제출 기간을 말한다)이 지난 후\n\n제211조(국제조사보고서 등에 기재된 문헌의 제출명령) 지식재산처장은 국제특허출원의 출원인에 대하여 기간을 정하여 「특허협력조약」 제18조의 국제조사보고서 또는 같은 조약 제35조의 국제예비심사보고서에 적혀 있는 문헌의 사 본을 제출하게 할 수 있다.\n\n제212조 삭제\n\n제213조 삭제",
+          "index": 174,
+          "source": "특허법.pdf",
+          "chunk_index": 174
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00174:0",
+        "label": "Actor",
+        "properties": {
+          "name": "국제특허출원의 출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00174:1",
+        "label": "Actor",
+        "properties": {
+          "name": "국제특허출원의 출원인이 아닌 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00174:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00174:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00174:4",
+        "label": "Period",
+        "properties": {
+          "name": "국내서면제출기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00174:0",
+        "end_node_id": "특허법.pdf::00174:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:1",
+        "end_node_id": "특허법.pdf::00174:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:3",
+        "end_node_id": "특허법.pdf::00174:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:0",
+        "end_node_id": "특허법.pdf::00174",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:1",
+        "end_node_id": "특허법.pdf::00174",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:2",
+        "end_node_id": "특허법.pdf::00174",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:3",
+        "end_node_id": "특허법.pdf::00174",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00174:4",
+        "end_node_id": "특허법.pdf::00174",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

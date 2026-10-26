@@ -1,0 +1,34 @@
+{
+  "chunk_index": 29,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00029",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00029",
+        "label": "Chunk",
+        "properties": {
+          "text": "제42조의2(특허출원일 등) ① 특허출원일은 명세서 및 필요한 도면을 첨부한 특허출원서가 지식재산처장에게 도달한 날로 한다. 이 경우 명세서에 청구범위는 적지 아니할 수 있으나, 발명의 설명은 적어야 한다.\n② 특허출원인은 제1항 후단에 따라 특허출원서에 최초로 첨부한 명세서에 청구범위를 적지 아니한 경우에는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지 명세서에 청구범위를 적는 보정을 하여야 한다. 다만, 본문에 따른 기한 이전에 제60조제3항에 따른 출원심사 청구의 취지를 통지받은 경우에는 그 통지를 받은 날부터 3개월이 되는 날 또는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날 중 빠른 날까지 보정을 하여야 한다.\n③ 특허출원인이 제2항에 따른 보정을 하지 아니한 경우에는 제2항에 따른 기한이 되는 날의 다음 날에 해당 특허출원을 취하한 것으로 본다.",
+          "index": 29,
+          "source": "특허법.pdf",
+          "chunk_index": 29
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

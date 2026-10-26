@@ -1,0 +1,94 @@
+{
+  "chunk_index": 112,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00112",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00112",
+        "label": "Chunk",
+        "properties": {
+          "text": "제132조의5(특허취소신청서 등의 보정ㆍ각하) ① 심판장은 다음 각 호의 어느 하나에 해당하는 경우에는 기간을 정하여 그 보정을 명하여야 한다.\n1. 특허취소신청서가 제132조의4제1항(같은 항 제4호는 제외한다)을 위반한 경우\n2. 특허취소신청에 관한 절차가 다음 각 목의 어느 하나에 해당하는 경우\n가. 제3조제1항 또는 제6조를 위반한 경우\n나. 이 법 또는 이 법에 따른 명령으로 정하는 방식을 위반한 경우\n다. 제82조에 따라 내야 할 수수료를 내지 아니한 경우\n② 심판장은 제1항에 따른 보정명령을 받은 자가 지정된 기간에 보정을 하지 아니하거나 보정한 사항이 제132조의 4제2항을 위반한 경우에는 특허취소신청서 또는 해당 절차와 관련된 청구 또는 신청 등을 결정으로 각하하여야 한다.\n③ 제2항에 따른 각하결정은 서면으로 하여야 하며, 그 이유를 붙여야 한다.\n\n제132조의6(보정할 수 없는 특허취소신청의 각하결정) ① 제132조의7제1항에 따른 합의체는 부적법한 특허취소신청으 로서 그 흠을 보정할 수 없을 때에는 제132조의4제3항에도 불구하고 특허권자에게 특허취소신청서의 부본을 송달 하지 아니하고, 결정으로 그 특허취소신청을 각하할 수 있다.\n② 제1항에 따른 각하결정에 대해서는 불복할 수 없다.",
+          "index": 112,
+          "source": "특허법.pdf",
+          "chunk_index": 112
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00112:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00112:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허취소신청에 관한 절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00112:2",
+        "label": "Decision",
+        "properties": {
+          "name": "각하결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00112:1",
+        "end_node_id": "특허법.pdf::00112:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00112:1",
+        "end_node_id": "특허법.pdf::00112:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00112:0",
+        "end_node_id": "특허법.pdf::00112",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00112:1",
+        "end_node_id": "특허법.pdf::00112",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00112:2",
+        "end_node_id": "특허법.pdf::00112",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

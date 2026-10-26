@@ -1,0 +1,72 @@
+{
+  "chunk_index": 18,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00018",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00018",
+        "label": "Chunk",
+        "properties": {
+          "text": "④ 특허출원한 발명이 다음 각 호의 요건을 모두 갖춘 실용신안등록출원의 출원서에 최초로 첨부된 명세서 또는 도면에 기재된 고안(考案)과 동일한 경우에 그 발명은 제1항에도 불구하고 특허를 받을 수 없다. 다만, 그 특허출원의 발명자와 실용신안등록출원의 고안자가 같거나 그 특허출원을 출원한 때의 출원인과 실용신안등록출원의 출원인이 같은 경우에는 그러하지 아니하다.\n1. 그 특허출원일 전에 출원된 실용신안등록출원일 것\n2. 그 특허출원 후 「실용신안법」 제15조에 따라 준용되는 이 법 제64조에 따라 출원공개되거나 「실용신안법」 제 21조제3항에 따라 등록공고된 실용신안등록출원일 것\n⑤ 제3항을 적용할 때 다른 특허출원이 제199조제2항에 따른 국제특허출원(제214조제4항에 따라 특허출원으로 보는 국제출원을 포함한다)인 경우 제3항 본문 중 “출원서에 최초로 첨부된 명세서 또는 도면”은 “국제출원일까지 제출한 발명의 설명, 청구범위 또는 도면”으로, 같은 항 제2호 중 “출원공개”는 “출원공개 또는 「특허협력조약」 제21조에 따라 국제공개”로 본다.\n⑥ 제4항을 적용할 때 실용신안등록출원이 「실용신안법」 제34조제2항에 따른 국제실용신안등록출원(같은 법 제40조제4항에 따라 실용신안등록출원으로 보는 국제출원을 포함한다)인 경우 제4항 본문 중 “출원서에 최초로 첨부된 명세서 또는 도면”은 “국제출원일까지 제출한 고안의 설명, 청구범위 또는 도면”으로, 같은 항 제2호 중 “출원공개”는 “출원공개 또는 「특허협력조약」 제21조에 따라 국제공개”로 본다.",
+          "index": 18,
+          "source": "특허법.pdf",
+          "chunk_index": 18
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00018:0",
+        "label": "Invention",
+        "properties": {
+          "name": "특허출원한 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00018:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00018:0",
+        "end_node_id": "특허법.pdf::00018:1",
+        "type": "NOT_ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00018:0",
+        "end_node_id": "특허법.pdf::00018",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00018:1",
+        "end_node_id": "특허법.pdf::00018",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "chunk_index": 170,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00170",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00170",
+        "label": "Chunk",
+        "properties": {
+          "text": "제206조(재외자의 특허관리인의 특례) ① 재외자인 국제특허출원의 출원인은 기준일까지는 제5조제1항에도 불구하고 특허관리인에 의하지 아니하고 특허에 관한 절차를 밟을 수 있다.\n② 제201조제1항에 따라 국어번역문을 제출한 재외자는 총리령으로 정하는 기간에 특허관리인을 선임하여 지식재산처장에게 신고하여야 한다.\n③ 제2항에 따른 선임신고가 없으면 그 국제특허출원은 취하된 것으로 본다.",
+          "index": 170,
+          "source": "특허법.pdf",
+          "chunk_index": 170
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:0",
+        "label": "Actor",
+        "properties": {
+          "name": "재외자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허관리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허에 관한 절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허관리인 선임 및 신고"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00170:5",
+        "label": "Period",
+        "properties": {
+          "name": "총리령으로 정하는 기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00170:0",
+        "end_node_id": "특허법.pdf::00170:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:0",
+        "end_node_id": "특허법.pdf::00170:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:4",
+        "end_node_id": "특허법.pdf::00170:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:4",
+        "end_node_id": "특허법.pdf::00170:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:0",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:1",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:2",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:3",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:4",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00170:5",
+        "end_node_id": "특허법.pdf::00170",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

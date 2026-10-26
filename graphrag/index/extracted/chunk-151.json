@@ -1,0 +1,204 @@
+{
+  "chunk_index": 151,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00151",
+  "raw_counts": {
+    "entity_nodes": 8,
+    "entity_relationships": 7,
+    "chunk_nodes": 1,
+    "from_chunk": 8
+  },
+  "kept_counts": {
+    "entity_nodes": 8,
+    "entity_relationships": 7,
+    "chunk_nodes": 1,
+    "from_chunk": 8
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00151",
+        "label": "Chunk",
+        "properties": {
+          "text": "제184조(재심에서의 심판규정 등의 준용) 특허취소결정 또는 심판에 대한 재심의 절차에 관하여는 그 성질에 반하지 아니하는 범위에서 특허취소신청 또는 심판의 절차에 관한 규정을 준용한다.\n\n제185조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.\n\n제9장 소송\n\n제186조(심결 등에 대한 소) ① 특허취소결정 또는 심결에 대한 소 및 특허취소신청서ㆍ심판청구서ㆍ재심청구서의 각하결정에 대한 소는 특허법원의 전속관할로 한다.\n② 제1항에 따른 소는 다음 각 호의 자만 제기할 수 있다.\n1. 당사자\n2. 참가인\n3. 해당 특허취소신청의 심리, 심판 또는 재심에 참가신청을 하였으나 신청이 거부된 자\n③ 제1항에 따른 소는 심결 또는 결정의 등본을 송달받은 날부터 30일 이내에 제기하여야 한다.\n④ 제3항의 기간은 불변기간으로 한다.\n⑤ 심판장은 주소 또는 거소가 멀리 떨어진 곳에 있거나 교통이 불편한 지역에 있는 자를 위하여 직권으로 제4항의 불변기간에 대하여 부가기간을 정할 수 있다.\n⑥ 특허취소를 신청할 수 있는 사항 또는 심판을 청구할 수 있는 사항에 관한 소는 특허취소결정이나 심결에 대한 것이 아니면 제기할 수 없다.\n⑦ 제162조제2항제5호에 따른 대가의 심결 및 제165조제1항에 따른 심판비용의 심결 또는 결정에 대해서는 독립하여 제1항에 따른 소를 제기할 수 없다.\n⑧ 제1항에 따른 특허법원의 판결에 대해서는 대법원에 상고할 수 있다.",
+          "index": 151,
+          "source": "특허법.pdf",
+          "chunk_index": 151
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:0",
+        "label": "Actor",
+        "properties": {
+          "name": "당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:1",
+        "label": "Actor",
+        "properties": {
+          "name": "참가인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:2",
+        "label": "Actor",
+        "properties": {
+          "name": "해당 특허취소신청의 심리, 심판 또는 재심에 참가신청을 하였으나 신청이 거부된 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "소"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:4",
+        "label": "Period",
+        "properties": {
+          "name": "심결 또는 결정의 등본을 송달받은 날부터 30일 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:5",
+        "label": "Decision",
+        "properties": {
+          "name": "특허취소결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:6",
+        "label": "Decision",
+        "properties": {
+          "name": "심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00151:7",
+        "label": "Decision",
+        "properties": {
+          "name": "각하결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00151:0",
+        "end_node_id": "특허법.pdf::00151:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:1",
+        "end_node_id": "특허법.pdf::00151:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:2",
+        "end_node_id": "특허법.pdf::00151:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:3",
+        "end_node_id": "특허법.pdf::00151:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:3",
+        "end_node_id": "특허법.pdf::00151:5",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:3",
+        "end_node_id": "특허법.pdf::00151:6",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:3",
+        "end_node_id": "특허법.pdf::00151:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:0",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:1",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:2",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:3",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:4",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:5",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:6",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00151:7",
+        "end_node_id": "특허법.pdf::00151",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

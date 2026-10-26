@@ -1,0 +1,94 @@
+{
+  "chunk_index": 120,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00120",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00120",
+        "label": "Chunk",
+        "properties": {
+          "text": "⑤ 제1항에 따른 정정청구는 다음 각 호의 어느 하나에 해당하는 기간에만 취하할 수 있다.\n1. 제1항에 따라 정정을 청구할 수 있도록 지정된 기간과 그 기간의 만료일부터 1개월 이내의 기간\n2. 제4항에서 준용하는 제136조제6항에 따라 지정된 기간\n⑥ 제4항을 적용할 때 제133조제1항에 따른 특허무효심판이 청구된 청구항을 정정하는 경우에는 제136조제5항을 준용하지 아니한다.",
+          "index": 120,
+          "source": "특허법.pdf",
+          "chunk_index": 120
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00120:0",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00120:1",
+        "label": "Period",
+        "properties": {
+          "name": "제1항에 따라 정정을 청구할 수 있도록 지정된 기간과 그 기간의 만료일부터 1개월 이내의 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00120:2",
+        "label": "Period",
+        "properties": {
+          "name": "제4항에서 준용하는 제136조제6항에 따라 지정된 기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00120:0",
+        "end_node_id": "특허법.pdf::00120:1",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00120:0",
+        "end_node_id": "특허법.pdf::00120:2",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00120:0",
+        "end_node_id": "특허법.pdf::00120",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00120:1",
+        "end_node_id": "특허법.pdf::00120",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00120:2",
+        "end_node_id": "특허법.pdf::00120",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

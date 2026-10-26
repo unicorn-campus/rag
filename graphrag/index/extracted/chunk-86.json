@@ -1,0 +1,146 @@
+{
+  "chunk_index": 86,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00086",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00086",
+        "label": "Chunk",
+        "properties": {
+          "text": "제102조(통상실시권) ① 특허권자는 그 특허권에 대하여 타인에게 통상실시권을 허락할 수 있다.\n② 통상실시권자는 이 법에 따라 또는 설정행위로 정한 범위에서 특허발명을 업으로서 실시할 수 있는 권리를 가진다.\n③ 제107조에 따른 통상실시권은 실시사업과 함께 이전하는 경우에만 이전할 수 있다.\n④ 제138조, 「실용신안법」 제32조 또는 「디자인보호법」 제123조에 따른 통상실시권은 그 통상실시권자의 해당 특허권ㆍ실용신안권 또는 디자인권과 함께 이전되고, 해당 특허권ㆍ실용신안권 또는 디자인권이 소멸되면 함께 소멸된다.\n⑤ 제3항 및 제4항에 따른 통상실시권 외의 통상실시권은 실시사업과 함께 이전하는 경우 또는 상속이나 그 밖의 일반승계의 경우를 제외하고는 특허권자(전용실시권에 관한 통상실시권의 경우에는 특허권자 및 전용실시권자)의 동의를 받아야만 이전할 수 있다.\n⑥ 제3항 및 제4항에 따른 통상실시권 외의 통상실시권은 특허권자(전용실시권에 관한 통상실시권의 경우에는 특허권자 및 전용실시권자)의 동의를 받아야만 그 통상실시권을 목적으로 하는 질권을 설정할 수 있다.\n⑦ 통상실시권에 관하여는 제99조제2항 및 제3항을 준용한다.\n\n제103조(선사용에 의한 통상실시권) 특허출원 시에 그 특허출원된 발명의 내용을 알지 못하고 그 발명을 하거나 그 발명을 한 사람으로부터 알게 되어 국내에서 그 발명의 실시사업을 하거나 이를 준비하고 있는 자는 그 실시하거나 준비하고 있는 발명 및 사업목적의 범위에서 그 특허출원된 발명의 특허권에 대하여 통상실시권을 가진다.",
+          "index": 86,
+          "source": "특허법.pdf",
+          "chunk_index": 86
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:2",
+        "label": "Actor",
+        "properties": {
+          "name": "통상실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:3",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:4",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:5",
+        "label": "Right",
+        "properties": {
+          "name": "전용실시권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00086:0",
+        "end_node_id": "특허법.pdf::00086:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:2",
+        "end_node_id": "특허법.pdf::00086:3",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:4",
+        "end_node_id": "특허법.pdf::00086:5",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:0",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:1",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:2",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:3",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:4",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:5",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

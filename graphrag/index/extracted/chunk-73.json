@@ -1,0 +1,94 @@
+{
+  "chunk_index": 73,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00073",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00073",
+        "label": "Chunk",
+        "properties": {
+          "text": "제88조(특허권의 존속기간) ① 특허권의 존속기간은 제87조제1항에 따라 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지로 한다.\n② 정당한 권리자의 특허출원이 제34조 또는 제35조에 따라 특허된 경우에는 제1항의 특허권의 존속기간은 무권리자의 특허출원일의 다음 날부터 기산한다.\n\n제89조(허가등에 따른 특허권의 존속기간의 연장) ① 특허발명을 실시하기 위하여 다른 법령에 따라 허가를 받거나 등록 등을 하여야 하고, 그 허가 또는 등록 등(이하 “허가등”이라 한다)을 위하여 필요한 유효성ㆍ안전성 등의 시험으로 인하여 장기간이 소요되는 대통령령으로 정하는 발명인 경우에는 제88조제1항에도 불구하고 그 실시할 수 없었던 기간에 대하여 5년의 기간까지 그 특허권의 존속기간(제92조의5제2항에 따라 특허권의 존속기간의 연장이 등록된 경우에는 그 연장된 날까지를 말한다 )을 한 차례만 연장할 수 있다. 다만, 허가등을 받은 날부터 14년을 초과하여 연장할 수 없다.\n② 제1항을 적용할 때 허가등을 받은 자에게 책임있는 사유로 소요된 기간은 제1항의 “실시할 수 없었던 기간”에 포 함되지 아니한다.",
+          "index": 73,
+          "source": "특허법.pdf",
+          "chunk_index": 73
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00073:0",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00073:1",
+        "label": "Period",
+        "properties": {
+          "name": "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00073:2",
+        "label": "Period",
+        "properties": {
+          "name": "무권리자의 특허출원일의 다음 날부터"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00073:0",
+        "end_node_id": "특허법.pdf::00073:1",
+        "type": "HAS_DURATION",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00073:0",
+        "end_node_id": "특허법.pdf::00073:2",
+        "type": "HAS_DURATION",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00073:0",
+        "end_node_id": "특허법.pdf::00073",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00073:1",
+        "end_node_id": "특허법.pdf::00073",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00073:2",
+        "end_node_id": "특허법.pdf::00073",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

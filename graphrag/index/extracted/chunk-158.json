@@ -1,0 +1,131 @@
+{
+  "chunk_index": 158,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00158",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00158",
+        "label": "Chunk",
+        "properties": {
+          "text": "제197조(대표자 등) ① 2인 이상이 공동으로 국제출원을 하는 경우에 제192조부터 제196조까지 및 제198조에 따른 절차는 출원인의 대표자가 밟을 수 있다.\n② 2인 이상이 공동으로 국제출원을 하는 경우에 출원인이 대표자를 정하지 아니한 경우에는 총리령으로 정하는 방법에 따라 대표자를 정할 수 있다.\n③ 제1항의 절차를 대리인에 의하여 밟으려는 자는 제3조에 따른 법정대리인을 제외하고는 변리사를 대리인으로 하여야 한다.\n\n제198조(수수료) ① 국제출원을 하려는 자는 수수료를 내야 한다.\n② 제1항에 따른 수수료, 그 납부방법 및 납부기간 등에 관하여 필요한 사항은 총리령으로 정한다.\n\n제198조의2(국제조사 및 국제예비심사) ① 지식재산처는 「특허협력조약」 제2조(xix)의 국제사무국(이하 “국제사무국”이라 한다)과 체결하는 협정에 따라 국제출원에 대한 국제조사기관 및 국제예비심사기관으로서의 업무를 수행한다.\n\n② 제1항에 따른 업무수행에 필요한 사항은 총리령으로 정한다.\n\n제2절 국제특허출원에 관한 특례\n\n제199조(국제출원에 의한 특허출원) ① 「특허협력조약」에 따라 국제출원일이 인정된 국제출원으로서 특허를 받기 위하여 대한민국을 지정국으로 지정한 국제출원은 그 국제출원일에 출원된 특허출원으로 본다.\n② 제1항에 따라 특허출원으로 보는 국제출원(이하 “국제특허출원”이라 한다)에 관하여는 제42조의2, 제42조의3 및 제54조를 적용하지 아니한다.",
+          "index": 158,
+          "source": "특허법.pdf",
+          "chunk_index": 158
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00158:0",
+        "label": "Actor",
+        "properties": {
+          "name": "출원인의 대표자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00158:1",
+        "label": "Actor",
+        "properties": {
+          "name": "변리사"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00158:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00158:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "제192조부터 제196조 및 제198조에 따른 절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00158:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "국제조사 및 국제예비심사"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00158:0",
+        "end_node_id": "특허법.pdf::00158:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:1",
+        "end_node_id": "특허법.pdf::00158:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:4",
+        "end_node_id": "특허법.pdf::00158:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:0",
+        "end_node_id": "특허법.pdf::00158",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:1",
+        "end_node_id": "특허법.pdf::00158",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:2",
+        "end_node_id": "특허법.pdf::00158",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:3",
+        "end_node_id": "특허법.pdf::00158",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00158:4",
+        "end_node_id": "특허법.pdf::00158",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

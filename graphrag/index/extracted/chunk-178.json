@@ -1,0 +1,175 @@
+{
+  "chunk_index": 178,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00178",
+  "raw_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "kept_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00178",
+        "label": "Chunk",
+        "properties": {
+          "text": "제215조의2(둘 이상의 청구항이 있는 특허출원의 등록에 관한 특칙) ① 둘 이상의 청구항이 있는 특허출원에 대한 특허결정을 받은 자가 특허료를 낼 때에는 청구항별로 이를 포기할 수 있다.\n② 제1항에 따른 청구항의 포기에 관하여 필요한 사항은 총리령으로 정한다.\n\n제216조(서류의 열람 등) ① 특허출원, 특허취소신청, 심판 등에 관한 증명, 서류의 등본 또는 초본의 발급, 특허원부 및 서류의 열람 또는 복사가 필요한 자는 지식재산처장 또는 특허심판원장에게 서류의 열람 등의 허가를 신청할 수 있다.\n② 지식재산처장 또는 특허심판원장은 제1항의 신청이 있더라도 다음 각 호의 어느 하나에 해당하는 서류를 비밀로 유지할 필요가 있다고 인정하는 경우에는 그 서류의 열람 또는 복사를 허가하지 아니할 수 있다.\n1. 출원공개 또는 설정등록되지 아니한 특허출원(제55조제1항에 따른 우선권 주장을 수반하는 특허출원이 출원공개 또는 설정등록된 경우에는 그 선출원은 제외한다)에 관한 서류\n2. 출원공개 또는 설정등록되지 아니한 특허출원의 제132조의17에 따른 특허거절결정에 대한 심판에 관한 서류\n3. 공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 서류",
+          "index": 178,
+          "source": "특허법.pdf",
+          "chunk_index": 178
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허결정을 받은 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원·특허취소신청·심판 등에 관한 서류의 열람 또는 복사가 필요한 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:3",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "서류의 열람 등의 허가 신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허거절결정에 대한 심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00178:6",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00178:1",
+        "end_node_id": "특허법.pdf::00178:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:4",
+        "end_node_id": "특허법.pdf::00178:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:4",
+        "end_node_id": "특허법.pdf::00178:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:5",
+        "end_node_id": "특허법.pdf::00178:6",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:5",
+        "end_node_id": "특허법.pdf::00178:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:0",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:1",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:2",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:3",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:4",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:5",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00178:6",
+        "end_node_id": "특허법.pdf::00178",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

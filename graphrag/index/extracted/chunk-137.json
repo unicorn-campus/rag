@@ -1,0 +1,242 @@
+{
+  "chunk_index": 137,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00137",
+  "raw_counts": {
+    "entity_nodes": 11,
+    "entity_relationships": 6,
+    "chunk_nodes": 1,
+    "from_chunk": 11
+  },
+  "kept_counts": {
+    "entity_nodes": 11,
+    "entity_relationships": 6,
+    "chunk_nodes": 1,
+    "from_chunk": 11
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00137",
+        "label": "Chunk",
+        "properties": {
+          "text": "제153조(심판절차의 중지) 제척 또는 기피 신청이 있으면 그 신청에 대한 결정이 있을 때까지 심판절차를 중지하여야 한다. 다만, 긴급한 경우에는 그러하지 아니하다.\n\n제153조의2(심판관의 회피) 심판관이 제148조 또는 제150조에 해당하는 경우에는 특허심판원장의 허가를 받아 그 사건에 대한 심판을 회피할 수 있다.\n\n제154조(심리 등) ① 심판은 구술심리 또는 서면심리로 한다. 다만, 당사자가 구술심리를 신청하였을 때에는 서면심리 만으로 결정할 수 있다고 인정되는 경우 외에는 구술심리를 하여야 한다.\n② 삭제\n③ 구술심리는 공개하여야 한다. 다만, 공공의 질서 또는 선량한 풍속에 어긋날 우려가 있으면 그러하지 아니하다.\n\n④ 심판장은 제1항에 따라 구술심리로 심판을 할 경우에는 그 기일 및 장소를 정하고, 그 취지를 적은 서면을 당사자 및 참가인에게 송달하여야 한다. 다만, 해당 사건의 이전 심리에 출석한 당사자 및 참가인에게 알렸을 때에는 그러하지 아니하다.\n⑤ 심판장은 제1항에 따라 구술심리로 심판을 할 경우에는 특허심판원장이 지정한 직원에게 기일마다 심리의 요지 와 그 밖에 필요한 사항을 적은 조서를 작성하게 하여야 한다.\n⑥ 제5항의 조서에는 심판의 심판장 및 조서를 작성한 직원이 기명날인하여야 한다.\n⑦ 제5항의 조서에 관하여는 「민사소송법」 제153조ㆍ제154조 및 제156조부터 제160조까지의 규정을 준용한다.\n\n⑧ 심판에 관하여는 「민사소송법」 제143조ㆍ제259조ㆍ제299조 및 제367조를 준용한다.\n⑨ 심판장은 구술심리 중 심판정 내의 질서를 유지한다.",
+          "index": 137,
+          "source": "특허법.pdf",
+          "chunk_index": 137
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:2",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:3",
+        "label": "Actor",
+        "properties": {
+          "name": "당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:4",
+        "label": "Actor",
+        "properties": {
+          "name": "참가인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:5",
+        "label": "Actor",
+        "properties": {
+          "name": "직원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:6",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:7",
+        "label": "Decision",
+        "properties": {
+          "name": "결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:8",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:9",
+        "label": "Procedure",
+        "properties": {
+          "name": "구술심리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00137:10",
+        "label": "Procedure",
+        "properties": {
+          "name": "서면심리"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00137:6",
+        "end_node_id": "특허법.pdf::00137:7",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:8",
+        "end_node_id": "특허법.pdf::00137:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:9",
+        "end_node_id": "특허법.pdf::00137:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:10",
+        "end_node_id": "특허법.pdf::00137:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:3",
+        "end_node_id": "특허법.pdf::00137:9",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:8",
+        "end_node_id": "특허법.pdf::00137:5",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:0",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:1",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:2",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:3",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:4",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:5",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:6",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:7",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:8",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:9",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00137:10",
+        "end_node_id": "특허법.pdf::00137",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

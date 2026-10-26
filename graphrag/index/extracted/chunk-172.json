@@ -1,0 +1,34 @@
+{
+  "chunk_index": 172,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00172",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00172",
+        "label": "Chunk",
+        "properties": {
+          "text": "③ 국제특허출원의 출원인은 국제특허출원에 관하여 출원공개(국어로 출원한 국제특허출원인 경우 「특허협력조약」 제21조에 따른 국제공개를 말한다. 이하 이 조에서 같다)가 있은 후 국제특허출원된 발명을 업으로 실시한 자에게 국제특허출원된 발명인 것을 서면으로 경고할 수 있다.\n④ 국제특허출원의 출원인은 제3항에 따른 경고를 받거나 출원공개된 발명임을 알고도 그 국제특허출원된 발명을 업으로서 실시한 자에게 그 경고를 받거나 출원공개된 발명임을 안 때부터 특허권의 설정등록 시까지의 기간 동안 그 특허발명의 실시에 대하여 합리적으로 받을 수 있는 금액에 상당하는 보상금의 지급을 청구할 수 있다. 다만, 그 청구권은 해당 특허출원이 특허권의 설정등록된 후에만 행사할 수 있다.",
+          "index": 172,
+          "source": "특허법.pdf",
+          "chunk_index": 172
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

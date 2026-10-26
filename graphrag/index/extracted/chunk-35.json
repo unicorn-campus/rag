@@ -1,0 +1,102 @@
+{
+  "chunk_index": 35,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00035",
+  "raw_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "kept_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00035",
+        "label": "Chunk",
+        "properties": {
+          "text": "제48조 삭제\n\n제49조 삭제\n\n제50조 삭제\n\n제51조(보정각하) ① 심사관은 제47조제1항제2호 및 제3호에 따른 보정이 같은 조 제2항 또는 제3항을 위반하거나 그 보정(같은 조 제3항제1호 및 제4호에 따른 보정 중 청구항을 삭제하는 보정은 제외한다)에 따라 새로운 거절이유가 발생한 것으로 인정하면 결정으로 그 보정을 각하하여야 한다. 다만, 다음 각 호의 어느 하나에 해당하는 보정인 경우에는 그러하지 아니하다.\n1. 제66조의2에 따른 직권보정을 하는 경우: 그 직권보정 전에 한 보정\n2. 제66조의3에 따른 직권 재심사를 하는 경우: 취소된 특허결정 전에 한 보정\n3. 제67조의2에 따른 재심사의 청구가 있는 경우: 그 청구 전에 한 보정\n② 제1항에 따른 각하결정은 서면으로 하여야 하며, 그 이유를 붙여야 한다.\n③ 제1항에 따른 각하결정에 대해서는 불복할 수 없다. 다만, 제132조의17에 따른 특허거절결정에 대한 심판에서 그 각하결정(제66조의3에 따른 직권 재심사를 하는 경우 취소된 특허결정 전에 한 각하결정과 제67조의2에 따른 재심사의 청구가 있는 경우 그 청구 전에 한 각하결정은 제외한다)에 대하여 다투는 경우에는 그러하지 아니하다.",
+          "index": 35,
+          "source": "특허법.pdf",
+          "chunk_index": 35
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00035:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00035:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허거절결정에 대한 심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00035:2",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00035:3",
+        "label": "Decision",
+        "properties": {
+          "name": "각하결정"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00035:1",
+        "end_node_id": "특허법.pdf::00035:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00035:0",
+        "end_node_id": "특허법.pdf::00035",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00035:1",
+        "end_node_id": "특허법.pdf::00035",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00035:2",
+        "end_node_id": "특허법.pdf::00035",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00035:3",
+        "end_node_id": "특허법.pdf::00035",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

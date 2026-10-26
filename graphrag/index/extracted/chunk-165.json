@@ -1,0 +1,34 @@
+{
+  "chunk_index": 165,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00165",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00165",
+        "label": "Chunk",
+        "properties": {
+          "text": "3. 제56조제1항 각 호 외의 부분 본문 중 “그 출원일부터 1년 3개월이 지난 때”는 “제214조제4항 또는 「실용신안법」 제40조제4항에 따라 국제출원일로 인정할 수 있었던 날부터 1년 3개월이 지난 때 또는 제214조제4항이나 「실용신안법」 제40조제4항에 따른 결정을 한 때 중 늦은 때”로 본다.",
+          "index": 165,
+          "source": "특허법.pdf",
+          "chunk_index": 165
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

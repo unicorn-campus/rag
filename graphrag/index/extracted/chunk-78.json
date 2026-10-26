@@ -1,0 +1,154 @@
+{
+  "chunk_index": 78,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00078",
+  "raw_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "kept_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00078",
+        "label": "Chunk",
+        "properties": {
+          "text": "③ 제2항에서 “출원인으로 인하여 지연된 기간”에 관한 사항은 대통령령으로 정한다.\n④ 제1항에 따라 특허출원일부터 4년을 기산할 때에는 제34조, 제35조, 제52조제2항, 제52조의2제2항, 제53조제 2항, 제199조제1항 및 제214조제4항에도 불구하고 다음 각 호에 해당하는 날을 특허출원일로 본다.\n1. 제34조 또는 제35조에 따른 정당한 권리자의 특허출원의 경우에는 정당한 권리자가 출원을 한 날\n2. 제52조에 따른 분할출원의 경우에는 분할출원을 한 날 2의2. 제52조의2에 따른 분리출원의 경우에는 분리출원을 한 날\n3. 제53조에 따른 변경출원의 경우에는 변경출원을 한 날\n4. 제199조제1항에 따라 특허출원으로 보는 국제출원의 경우에는 제203조제1항 각 호의 사항을 기재한 서면을 제출한 날\n5. 제214조에 따라 특허출원으로 보는 국제출원의 경우에는 국제출원의 출원인이 제214조제1항에 따라 결정을 신청한 날\n6. 제1호부터 제5호까지의 규정 중 어느 하나에 해당되지 아니하는 특허출원에 대하여는 그 특허출원일",
+          "index": 78,
+          "source": "특허법.pdf",
+          "chunk_index": 78
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:0",
+        "label": "Actor",
+        "properties": {
+          "name": "정당한 권리자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "분할출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "분리출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "변경출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "국제출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00078:6",
+        "label": "Period",
+        "properties": {
+          "name": "4년"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00078:0",
+        "end_node_id": "특허법.pdf::00078:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:1",
+        "end_node_id": "특허법.pdf::00078:6",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:0",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:1",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:2",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:3",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:4",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:5",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00078:6",
+        "end_node_id": "특허법.pdf::00078",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

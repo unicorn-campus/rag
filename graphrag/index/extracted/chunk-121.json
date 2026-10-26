@@ -1,0 +1,116 @@
+{
+  "chunk_index": 121,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00121",
+  "raw_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "kept_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00121",
+        "label": "Chunk",
+        "properties": {
+          "text": "제134조(특허권 존속기간의 연장등록의 무효심판) ① 이해관계인 또는 심사관은 제92조에 따른 특허권의 존속기간의 연장등록이 다음 각 호의 어느 하나에 해당하는 경우에는 무효심판을 청구할 수 있다.\n1. 특허발명을 실시하기 위하여 제89조에 따른 허가등을 받을 필요가 없는 출원에 대하여 연장등록이 된 경우\n2. 특허권자 또는 그 특허권의 전용실시권 또는 등록된 통상실시권을 가진 자가 제89조에 따른 허가등을 받지 아니한 출원에 대하여 연장등록이 된 경우\n3. 연장등록에 따라 연장된 기간이 제89조에 따라 인정되는 연장의 기간을 초과하는 경우\n4. 해당 특허권자가 아닌 자의 출원에 대하여 연장등록이 된 경우\n5. 제90조제3항을 위반한 출원에 대하여 연장등록이 된 경우\n6. 제90조제7항을 위반하여 하나의 허가등에 대하여 둘 이상의 특허권의 존속기간이 연장등록된 경우\n② 이해관계인 또는 심사관은 제92조의5에 따른 특허권의 존속기간의 연장등록이 다음 각 호의 어느 하나에 해당하면 무효심판을 청구할 수 있다.\n1. 연장등록에 따라 연장된 기간이 제92조의2에 따라 인정되는 연장의 기간을 초과한 경우\n2. 해당 특허권자가 아닌 자의 출원에 대하여 연장등록이 된 경우\n3. 제92조의3제3항을 위반한 출원에 대하여 연장등록이 된 경우\n③ 제1항 및 제2항에 따른 심판의 청구에 관하여는 제133조제2항 및 제4항을 준용한다.",
+          "index": 121,
+          "source": "특허법.pdf",
+          "chunk_index": 121
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00121:0",
+        "label": "Actor",
+        "properties": {
+          "name": "이해관계인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00121:1",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00121:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "무효심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00121:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00121:0",
+        "end_node_id": "특허법.pdf::00121:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:1",
+        "end_node_id": "특허법.pdf::00121:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:2",
+        "end_node_id": "특허법.pdf::00121:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:0",
+        "end_node_id": "특허법.pdf::00121",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:1",
+        "end_node_id": "특허법.pdf::00121",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:2",
+        "end_node_id": "특허법.pdf::00121",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00121:3",
+        "end_node_id": "특허법.pdf::00121",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "chunk_index": 144,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00144",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00144",
+        "label": "Chunk",
+        "properties": {
+          "text": "제164조의2(조정위원회 회부) ① 심판장은 심판사건을 합리적으로 해결하기 위하여 필요하다고 인정되면 당사자의 동의를 받아 해당 심판사건의 절차를 중지하고 결정으로 해당 사건을 조정위원회에 회부할 수 있다.\n② 심판장은 제1항에 따라 조정위원회에 회부한 때에는 해당 심판사건의 기록을 조정위원회에 송부하여야 한다.\n③ 심판장은 조정위원회의 조정절차가 조정 불성립으로 종료되면 제1항에 따른 중지 결정을 취소하고 심판을 재개 하며, 조정이 성립된 경우에는 해당 심판청구는 취하된 것으로 본다.",
+          "index": 144,
+          "source": "특허법.pdf",
+          "chunk_index": 144
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00144:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00144:1",
+        "label": "Actor",
+        "properties": {
+          "name": "조정위원회"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00144:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "조정위원회 회부"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00144:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "조정절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00144:4",
+        "label": "Decision",
+        "properties": {
+          "name": "중지 결정을 취소"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00144:0",
+        "end_node_id": "특허법.pdf::00144:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:3",
+        "end_node_id": "특허법.pdf::00144:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:3",
+        "end_node_id": "특허법.pdf::00144:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:0",
+        "end_node_id": "특허법.pdf::00144",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:1",
+        "end_node_id": "특허법.pdf::00144",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:2",
+        "end_node_id": "특허법.pdf::00144",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:3",
+        "end_node_id": "특허법.pdf::00144",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00144:4",
+        "end_node_id": "특허법.pdf::00144",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

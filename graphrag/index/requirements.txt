@@ -1,0 +1,13 @@
+# --- GraphRAG indexing ---
+neo4j-graphrag[openai,cohere]>=1.22   # LLMEntityRelationExtractor, GraphPruning, Neo4jWriter, SinglePropertyExactMatchResolver, CohereEmbeddings, vector index helpers
+neo4j>=6.0                            # Neo4j Python driver (bolt://localhost:7687)
+
+# --- LLM / embedding clients ---
+openai>=2.0                           # OpenAI-compatible client used to call Groq (openai/gpt-oss-120b)
+cohere>=5.0                           # Cohere embed-v4.0 (same model as the vector DB)
+
+# --- Vector database (read chunks) ---
+chromadb>=1.0                         # Read chunks from the shared vectordb/ (collection: patent_law)
+
+# --- Utilities ---
+python-dotenv>=1.0                    # Load API keys from .env and NEO4J_PASSWORD from neo4j/.env

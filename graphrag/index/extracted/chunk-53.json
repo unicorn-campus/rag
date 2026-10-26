@@ -1,0 +1,125 @@
+{
+  "chunk_index": 53,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00053",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00053",
+        "label": "Chunk",
+        "properties": {
+          "text": "제62조(특허거절결정) 심사관은 특허출원이 다음 각 호의 어느 하나의 거절이유(이하 “거절이유”라 한다)에 해당하는 경우에는 특허거절결정을 하여야 한다.\n1. 제25조ㆍ제29조ㆍ제32조ㆍ제36조제1항부터 제3항까지 또는 제44조에 따라 특허를 받을 수 없는 경우\n2. 제33조제1항 본문에 따른 특허를 받을 수 있는 권리를 가지지 아니하거나 같은 항 단서에 따라 특허를 받을 수 없는 경우\n3. 조약을 위반한 경우\n4. 제42조제3항ㆍ제4항ㆍ제8항 또는 제45조에 따른 요건을 갖추지 아니한 경우\n5. 제47조제2항에 따른 범위를 벗어난 보정인 경우\n6. 제52조제1항에 따른 범위를 벗어난 분할출원 또는 제52조의2제1항에 따른 범위를 벗어나는 분리출원인 경우\n7. 제53조제1항에 따른 범위를 벗어난 변경출원인 경우\n\n제63조(거절이유통지) ① 심사관은 다음 각 호의 어느 하나에 해당하는 경우 특허출원인에게 거절이유를 통지하고, 기간을 정하여 의견서를 제출할 수 있는 기회를 주어야 한다. 다만, 제51조제1항에 따라 각하결정을 하려는 경우에는 그러하지 아니하다.\n1. 제62조에 따라 특허거절결정을 하려는 경우\n2. 제66조의3제1항에 따른 직권 재심사를 하여 취소된 특허결정 전에 이미 통지한 거절이유로 특허거절결정을 하려는 경우\n② 심사관은 청구범위에 둘 이상의 청구항이 있는 특허출원에 대하여 제1항 본문에 따라 거절이유를 통지할 때에는 그 통지서에 거절되는 청구항을 명확히 밝히고, 그 청구항에 관한 거절이유를 구체적으로 적어야 한다.",
+          "index": 53,
+          "source": "특허법.pdf",
+          "chunk_index": 53
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:2",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:3",
+        "label": "Decision",
+        "properties": {
+          "name": "각하결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:4",
+        "label": "Decision",
+        "properties": {
+          "name": "특허결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00053:5",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00053:0",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00053:1",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00053:2",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00053:3",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00053:4",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00053:5",
+        "end_node_id": "특허법.pdf::00053",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

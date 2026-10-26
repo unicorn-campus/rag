@@ -1,0 +1,72 @@
+{
+  "chunk_index": 66,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00066",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00066",
+        "label": "Chunk",
+        "properties": {
+          "text": "제82조(수수료) ① 특허에 관한 절차를 밟는 자는 수수료를 내야 한다.\n② 특허출원인이 아닌 자가 출원심사의 청구를 한 후 그 특허출원서에 첨부한 명세서를 보정하여 청구범위에 적은 청구항의 수가 증가한 경우에는 그 증가한 청구항에 관하여 내야 할 심사청구료는 특허출원인이 내야 한다.\n③ 제1항에 따른 수수료, 그 납부방법 및 납부기간, 그 밖에 필요한 사항은 총리령으로 정한다.",
+          "index": 66,
+          "source": "특허법.pdf",
+          "chunk_index": 66
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00066:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인이 아닌 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00066:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00066:0",
+        "end_node_id": "특허법.pdf::00066:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00066:0",
+        "end_node_id": "특허법.pdf::00066",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00066:1",
+        "end_node_id": "특허법.pdf::00066",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

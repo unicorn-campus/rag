@@ -1,0 +1,34 @@
+{
+  "chunk_index": 131,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00131",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00131",
+        "label": "Chunk",
+        "properties": {
+          "text": "③ 제135조제1항ㆍ제2항에 따른 권리범위 확인심판을 청구할 때에는 특허발명과 대비할 수 있는 설명서 및 필요한 도면을 첨부하여야 한다.\n④ 제138조제1항에 따른 통상실시권 허락의 심판의 심판청구서에는 제1항 각 호의 사항 외에 다음 사항을 추가로 적어야 한다.\n1. 실시하려는 자기의 특허의 번호 및 명칭\n2. 실시되어야 할 타인의 특허발명ㆍ등록실용신안 또는 등록디자인의 번호ㆍ명칭 및 특허나 등록 연월일\n3. 특허발명ㆍ등록실용신안 또는 등록디자인의 통상실시권의 범위ㆍ기간 및 대가\n⑤ 제136조제1항에 따른 정정심판을 청구할 때에는 심판청구서에 정정한 명세서 또는 도면을 첨부하여야 한다.",
+          "index": 131,
+          "source": "특허법.pdf",
+          "chunk_index": 131
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "chunk_index": 175,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00175",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00175",
+        "label": "Chunk",
+        "properties": {
+          "text": "제214조(결정에 의하여 특허출원으로 되는 국제출원) ① 국제출원의 출원인은 「특허협력조약」 제4조(1)(ii)의 지정국에 대한민국을 포함하는 국제출원(특허출원만 해당한다)이 다음 각 호의 어느 하나에 해당하는 경우 총리령으로 정하는 기간에 총리령으로 정하는 바에 따라 지식재산처장에게 같은 조약 제25조(2)(a)에 따른 결정을 하여줄 것을 신청할 수 있다.\n1. 「특허협력조약」 제2조(xv)의 수리관청이 그 국제출원에 대하여 같은 조약 제25조(1)(a)에 따른 거부를 한 경우\n2. 「특허협력조약」 제2조(xv)의 수리관청이 그 국제출원에 대하여 같은 조약 제25조(1)(a) 또는 (b)에 따른 선언을 한 경우\n3. 국제사무국이 그 국제출원에 대하여 같은 조약 제25조(1)(a)에 따른 인정을 한 경우\n② 제1항의 신청을 하려는 자는 그 신청 시 발명의 설명, 청구범위 또는 도면(도면 중 설명부분에 한정한다), 그 밖에 총리령으로 정하는 국제출원에 관한 서류의 국어번역문을 지식재산처장에게 제출하여야 한다.\n③ 지식재산처장은 제1항의 신청이 있으면 그 신청에 관한 거부ㆍ선언 또는 인정이 「특허협력조약」 및 같은 조약규칙에 따라 정당하게 된 것인지에 관하여 결정을 하여야 한다.\n④ 지식재산처장은 제3항에 따라 그 거부ㆍ선언 또는 인정이 「특허협력조약」 및 같은 조약규칙에 따라 정당하게 된 것이 아니라고 결정을 한 경우에는 그 결정에 관한 국제출원은 그 국제출원에 대하여 거부ㆍ선언 또는 인정이 없었다면 국제출원일로 인정할 수 있었던 날에 출원된 특허출원으로 본다.",
+          "index": 175,
+          "source": "특허법.pdf",
+          "chunk_index": 175
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00175:0",
+        "label": "Actor",
+        "properties": {
+          "name": "국제출원 출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00175:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00175:2",
+        "label": "Actor",
+        "properties": {
+          "name": "수리관청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00175:3",
+        "label": "Actor",
+        "properties": {
+          "name": "국제사무국"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00175:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "신청"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00175:0",
+        "end_node_id": "특허법.pdf::00175:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:4",
+        "end_node_id": "특허법.pdf::00175:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:0",
+        "end_node_id": "특허법.pdf::00175",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:1",
+        "end_node_id": "특허법.pdf::00175",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:2",
+        "end_node_id": "특허법.pdf::00175",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:3",
+        "end_node_id": "특허법.pdf::00175",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:4",
+        "end_node_id": "특허법.pdf::00175",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

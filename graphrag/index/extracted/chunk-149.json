@@ -1,0 +1,219 @@
+{
+  "chunk_index": 149,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00149",
+  "raw_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 7,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "kept_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 7,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00149",
+        "label": "Chunk",
+        "properties": {
+          "text": "제181조(재심에 의하여 회복된 특허권의 효력 제한) ① 다음 각 호의 어느 하나에 해당하는 경우에 특허권의 효력은 해당 특허취소결정 또는 심결이 확정된 후 재심청구 등록 전에 선의로 수출 또는 수입하거나 국내에서 생산 또는 취득한 물건에는 미치지 아니한다.\n1. 무효가 된 특허권(존속기간이 연장등록된 특허권을 포함한다)이 재심에 의하여 회복된 경우\n2. 특허권의 권리범위에 속하지 아니한다는 심결이 확정된 후 재심에 의하여 그 심결과 상반되는 심결이 확정된 경우\n3. 거절한다는 취지의 심결이 있었던 특허출원 또는 특허권의 존속기간의 연장등록출원이 재심에 의하여 특허권의 설정등록 또는 특허권의 존속기간의 연장등록이 된 경우\n4. 취소된 특허권이 재심에 의하여 회복된 경우\n② 제1항 각 호의 어느 하나에 해당하는 경우의 특허권의 효력은 다음 각 호의 어느 하나의 행위에 미치지 아니한다.\n1. 해당 특허취소결정 또는 심결이 확정된 후 재심청구 등록 전에 한 해당 발명의 선의의 실시\n2. 특허가 물건의 발명인 경우에는 그 물건의 생산에만 사용하는 물건을 해당 특허취소결정 또는 심결이 확정된 후 재심청구 등록 전에 선의로 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 양도 또는 대여의 청약을 하는 행위\n3. 특허가 방법의 발명인 경우에는 그 방법의 실시에만 사용하는 물건을 해당 특허취소결정 또는 심결이 확정된 후 재심청구 등록 전에 선의로 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 양도 또는 대여를 청약하는 행위",
+          "index": 149,
+          "source": "특허법.pdf",
+          "chunk_index": 149
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:0",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:1",
+        "label": "Decision",
+        "properties": {
+          "name": "특허취소결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:2",
+        "label": "Decision",
+        "properties": {
+          "name": "심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "재심청구 등록"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:4",
+        "label": "Period",
+        "properties": {
+          "name": "재심청구 등록 전에"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:5",
+        "label": "Exclusion",
+        "properties": {
+          "name": "선의로 수출 또는 수입하거나 국내에서 생산 또는 취득한 물건"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:6",
+        "label": "Exclusion",
+        "properties": {
+          "name": "해당 발명의 선의의 실시"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:7",
+        "label": "Exclusion",
+        "properties": {
+          "name": "그 물건의 생산에만 사용하는 물건을 선의로 생산·양도·대여·수출·수입하거나 양도·대여의 청약을 하는 행위"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:8",
+        "label": "Exclusion",
+        "properties": {
+          "name": "그 방법의 실시에만 사용하는 물건을 선의로 생산·양도·대여·수출·수입하거나 양도·대여를 청약하는 행위"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00149:3",
+        "end_node_id": "특허법.pdf::00149:1",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:3",
+        "end_node_id": "특허법.pdf::00149:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:3",
+        "end_node_id": "특허법.pdf::00149:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149:5",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149:6",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149:7",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149:8",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:1",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:2",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:3",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:4",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:5",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:6",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:7",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:8",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

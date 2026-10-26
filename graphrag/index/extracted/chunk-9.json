@@ -1,0 +1,244 @@
+{
+  "chunk_index": 9,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00009",
+  "raw_counts": {
+    "entity_nodes": 13,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 13
+  },
+  "kept_counts": {
+    "entity_nodes": 13,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 13
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00009",
+        "label": "Chunk",
+        "properties": {
+          "text": "제21조(중단된 절차의 수계) 제20조에 따라 지식재산처 또는 특허심판원에 계속 중인 절차가 중단된 경우에는 다음 각 호의 구분에 따른 자가 그 절차를 수계(受繼)하여야 한다.\n1. 제20조제1호의 경우: 사망한 당사자의 상속인ㆍ상속재산관리인 또는 법률에 따라 절차를 속행할 자. 다만, 상속 인은 상속을 포기할 수 있을 때까지 그 절차를 수계하지 못한다.\n2. 제20조제2호의 경우: 합병에 따라 설립되거나 합병 후 존속하는 법인\n3. 제20조제3호 및 제4호의 경우: 절차를 밟을 능력을 회복한 당사자 또는 법정대리인이 된 자\n4. 제20조제5호의 경우: 새로운 수탁자\n5. 제20조제6호의 경우: 새로운 대표자 또는 각 당사자\n6. 제20조제7호의 경우: 같은 자격을 가진 자",
+          "index": 9,
+          "source": "특허법.pdf",
+          "chunk_index": 9
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:0",
+        "label": "Procedure",
+        "properties": {
+          "name": "절차"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:3",
+        "label": "Actor",
+        "properties": {
+          "name": "사망한 당사자의 상속인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:4",
+        "label": "Actor",
+        "properties": {
+          "name": "상속재산관리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:5",
+        "label": "Actor",
+        "properties": {
+          "name": "법률에 따라 절차를 속행할 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:6",
+        "label": "Actor",
+        "properties": {
+          "name": "합병에 따라 설립되거나 합병 후 존속하는 법인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:7",
+        "label": "Actor",
+        "properties": {
+          "name": "절차를 밟을 능력을 회복한 당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:8",
+        "label": "Actor",
+        "properties": {
+          "name": "법정대리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:9",
+        "label": "Actor",
+        "properties": {
+          "name": "새로운 수탁자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:10",
+        "label": "Actor",
+        "properties": {
+          "name": "새로운 대표자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:11",
+        "label": "Actor",
+        "properties": {
+          "name": "각 당사자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00009:12",
+        "label": "Actor",
+        "properties": {
+          "name": "같은 자격을 가진 자"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00009:0",
+        "end_node_id": "특허법.pdf::00009:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:0",
+        "end_node_id": "특허법.pdf::00009:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:0",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:1",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:2",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:3",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:4",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:5",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:6",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:7",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:8",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:9",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:10",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:11",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00009:12",
+        "end_node_id": "특허법.pdf::00009",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

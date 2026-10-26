@@ -1,0 +1,94 @@
+{
+  "chunk_index": 28,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00028",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00028",
+        "label": "Chunk",
+        "properties": {
+          "text": "제42조(특허출원) ① 특허를 받으려는 자는 다음 각 호의 사항을 적은 특허출원서를 지식재산처장에게 제출하여야 한다.\n1. 특허출원인의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 특허출원인의 대리인이 있는 경우에는 그 대리인의 성명 및 주소나 영업소의 소재지[대리인이 특허법인ㆍ특허법인(유한)인 경우에는 그 명칭, 사무소의 소재지 및 지정된 변리사의 성명]\n3. 발명의 명칭\n4. 발명자의 성명 및 주소\n② 제1항에 따른 특허출원서에는 발명의 설명ㆍ청구범위를 적은 명세서와 필요한 도면 및 요약서를 첨부하여야 한다.\n③ 제2항에 따른 발명의 설명은 다음 각 호의 요건을 모두 충족하여야 한다.\n1. 그 발명이 속하는 기술분야에서 통상의 지식을 가진 사람이 그 발명을 쉽게 실시할 수 있도록 명확하고 상세하게 적을 것\n2. 그 발명의 배경이 되는 기술을 적을 것\n④ 제2항에 따른 청구범위에는 보호받으려는 사항을 적은 항(이하 “청구항”이라 한다)이 하나 이상 있어야 하며, 그 청구항은 다음 각 호의 요건을 모두 충족하여야 한다.\n1. 발명의 설명에 의하여 뒷받침될 것\n2. 발명이 명확하고 간결하게 적혀 있을 것\n⑤ 삭제\n⑥ 제2항에 따른 청구범위에는 보호받으려는 사항을 명확히 할 수 있도록 발명을 특정하는 데 필요하다고 인정되는 구조ㆍ방법ㆍ기능ㆍ물질 또는 이들의 결합관계 등을 적어야 한다.\n⑦ 삭제\n⑧ 제2항에 따른 청구범위의 기재방법에 관하여 필요한 사항은 대통령령으로 정한다.\n⑨ 제2항에 따른 발명의 설명, 도면 및 요약서의 기재방법 등에 관하여 필요한 사항은 총리령으로 정한다.",
+          "index": 28,
+          "source": "특허법.pdf",
+          "chunk_index": 28
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00028:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허를 받으려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00028:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00028:2",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00028:0",
+        "end_node_id": "특허법.pdf::00028:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00028:1",
+        "end_node_id": "특허법.pdf::00028:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00028:0",
+        "end_node_id": "특허법.pdf::00028",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00028:1",
+        "end_node_id": "특허법.pdf::00028",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00028:2",
+        "end_node_id": "특허법.pdf::00028",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

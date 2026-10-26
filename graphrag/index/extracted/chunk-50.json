@@ -1,0 +1,109 @@
+{
+  "chunk_index": 50,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00050",
+  "raw_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "kept_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00050",
+        "label": "Chunk",
+        "properties": {
+          "text": "제58조의2(전문기관 등록의 취소 등) ① 지식재산처장은 제58조제2항에 따른 전문기관이 제1호에 해당하는 경우에는 전문기관의 등록을 취소하여야 하며, 제2호 또는 제3호에 해당하는 경우에는 그 등록을 취소하거나 6개월 이내의 기간을 정하여 업무의 전부 또는 일부의 정지를 명할 수 있다.\n1. 거짓이나 그 밖의 부정한 방법으로 등록을 한 경우\n2. 제58조제5항에 따른 등록기준에 맞지 아니하게 된 경우\n3. 전문기관의 임직원이 특허출원 중인 발명(국제출원 중인 발명을 포함한다)에 관하여 직무상 알게 된 비밀을 누설하거나 도용한 경우\n② 지식재산처장은 제1항에 따라 전문기관의 등록을 취소하거나 업무정지를 명하려면 청문을 하여야 한다.\n③ 제1항에 따른 처분의 세부 기준과 절차 등에 관하여 필요한 사항은 총리령으로 정한다.",
+          "index": 50,
+          "source": "특허법.pdf",
+          "chunk_index": 50
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:0",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "업무정지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:3",
+        "label": "Period",
+        "properties": {
+          "name": "6개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00050:0",
+        "end_node_id": "특허법.pdf::00050:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:2",
+        "end_node_id": "특허법.pdf::00050:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:0",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:1",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:2",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "chunk_index": 59,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00059",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00059",
+        "label": "Chunk",
+        "properties": {
+          "text": "제67조(특허여부결정의 방식) ① 특허결정 및 특허거절결정(이하 “특허여부결정”이라 한다)은 서면으로 하여야 하며, 그 이유를 붙여야 한다.\n② 지식재산처장은 특허여부결정이 있는 경우에는 그 결정의 등본을 특허출원인에게 송달하여야 한다.\n\n제67조의2(재심사의 청구) ① 특허출원인은 그 특허출원에 관하여 특허결정의 등본을 송달받은 날부터 제79조에 따른 설정등록을 받기 전까지의 기간 또는 특허거절결정등본을 송달받은 날부터 3개월(제15조제1항에 따라 제132조의17에 따른 기간이 연장된 경우 그 연장된 기간을 말한다) 이내에 그 특허출원의 명세서 또는 도면을 보정하여 해당 특허출원에 관한 재심사(이하 “재심사”라 한다)를 청구할 수 있다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 재심사를 청구할 때에 이미 재심사에 따른 특허여부의 결정이 있는 경우\n2. 제132조의17에 따른 심판청구가 있는 경우(제176조제1항에 따라 특허거절결정이 취소된 경우는 제외한다)\n3. 그 특허출원이 분리출원인 경우\n② 특허출원인은 제1항에 따른 재심사의 청구와 함께 의견서를 제출할 수 있다.\n③ 제1항에 따라 재심사가 청구된 경우 그 특허출원에 대하여 종전에 이루어진 특허결정 또는 특허거절결정은 취소된 것으로 본다. 다만, 재심사의 청구절차가 제16조제1항에 따라 무효로 된 경우에는 그러하지 아니하다.\n④ 제1항에 따른 재심사의 청구는 취하할 수 없다.",
+          "index": 59,
+          "source": "특허법.pdf",
+          "chunk_index": 59
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "재심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:2",
+        "label": "Decision",
+        "properties": {
+          "name": "특허결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:4",
+        "label": "Period",
+        "properties": {
+          "name": "특허출원에 관하여 특허결정의 등본을 송달받은 날부터 제79조에 따른 설정등록을 받기 전까지의 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:5",
+        "label": "Period",
+        "properties": {
+          "name": "특허거절결정등본을 송달받은 날부터 3개월 이내"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00059:0",
+        "end_node_id": "특허법.pdf::00059:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059:3",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:0",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:2",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:3",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:4",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:5",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

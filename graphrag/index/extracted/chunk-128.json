@@ -1,0 +1,138 @@
+{
+  "chunk_index": 128,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00128",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00128",
+        "label": "Chunk",
+        "properties": {
+          "text": "제138조(통상실시권 허락의 심판) ① 특허권자, 전용실시권자 또는 통상실시권자는 해당 특허발명이 제98조에 해당하여 실시의 허락을 받으려는 경우에 그 타인이 정당한 이유 없이 허락하지 아니하거나 그 타인의 허락을 받을 수 없을 때에는 자기의 특허발명의 실시에 필요한 범위에서 통상실시권 허락의 심판을 청구할 수 있다.\n② 제1항에 따른 청구가 있는 경우에 그 특허발명이 그 특허출원일 전에 출원된 타인의 특허발명 또는 등록실용신 안과 비교하여 상당한 경제적 가치가 있는 중요한 기술적 진보를 가져오는 것이 아니면 통상실시권을 허락하여서 는 아니 된다.\n③ 제1항에 따른 심판에 따라 통상실시권을 허락한 자가 그 통상실시권을 허락받은 자의 특허발명을 실시할 필요가 있는 경우 그 통상실시권을 허락받은 자가 실시를 허락하지 아니하거나 실시의 허락을 받을 수 없을 때에는 통상실시권을 허락받아 실시하려는 특허발명의 범위에서 통상실시권 허락의 심판을 청구할 수 있다.\n④ 제1항 및 제3항에 따라 통상실시권을 허락받은 자는 특허권자, 실용신안권자, 디자인권자 또는 그 전용실시권자에게 대가를 지급하여야 한다. 다만, 자기가 책임질 수 없는 사유로 지급할 수 없는 경우에는 그 대가를 공탁하여야 한다.\n⑤ 제4항에 따른 통상실시권자는 그 대가를 지급하지 아니하거나 공탁을 하지 아니하면 그 특허발명, 등록실용신안 또는 등록디자인이나 이와 유사한 디자인을 실시할 수 없다.",
+          "index": 128,
+          "source": "특허법.pdf",
+          "chunk_index": 128
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00128:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00128:1",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00128:2",
+        "label": "Actor",
+        "properties": {
+          "name": "통상실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00128:3",
+        "label": "Actor",
+        "properties": {
+          "name": "통상실시권을 허락받은 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00128:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "통상실시권 허락의 심판"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00128:0",
+        "end_node_id": "특허법.pdf::00128:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:1",
+        "end_node_id": "특허법.pdf::00128:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:2",
+        "end_node_id": "특허법.pdf::00128:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:3",
+        "end_node_id": "특허법.pdf::00128:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:0",
+        "end_node_id": "특허법.pdf::00128",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:1",
+        "end_node_id": "특허법.pdf::00128",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:2",
+        "end_node_id": "특허법.pdf::00128",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:3",
+        "end_node_id": "특허법.pdf::00128",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00128:4",
+        "end_node_id": "특허법.pdf::00128",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

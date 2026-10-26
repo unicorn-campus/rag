@@ -1,0 +1,94 @@
+{
+  "chunk_index": 130,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00130",
+  "raw_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "kept_counts": {
+    "entity_nodes": 3,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 3
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00130",
+        "label": "Chunk",
+        "properties": {
+          "text": "제140조(심판청구방식) ① 심판을 청구하려는 자는 다음 각 호의 사항을 적은 심판청구서를 특허심판원장에게 제출하여야 한다.\n1. 당사자의 성명 및 주소(법인인 경우에는 그 명칭 및 영업소의 소재지)\n2. 대리인이 있는 경우에는 그 대리인의 성명 및 주소나 영업소의 소재지[대리인이 특허법인ㆍ특허법인(유한)인 경우에는 그 명칭, 사무소의 소재지 및 지정된 변리사의 성명]\n3. 심판사건의 표시\n4. 청구의 취지 및 그 이유\n② 제1항에 따라 제출된 심판청구서의 보정은 그 요지를 변경할 수 없다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 제1항제1호에 따른 당사자 중 특허권자의 기재를 바로잡기 위하여 보정(특허권자를 추가하는 것을 포함하되, 청구인이 특허권자인 경우에는 추가되는 특허권자의 동의가 있는 경우로 한정한다)하는 경우\n2. 제1항제4호에 따른 청구의 이유를 보정하는 경우\n3. 제135조제1항에 따른 권리범위 확인심판에서 심판청구서의 확인대상 발명(청구인이 주장하는 피청구인의 발명을 말한다)의 설명서 또는 도면에 대하여 피청구인이 자신이 실제로 실시하고 있는 발명과 비교하여 다르다고 주장하는 경우에 청구인이 피청구인의 실시 발명과 동일하게 하기 위하여 심판청구서의 확인대상 발명의 설명서 또는 도면을 보정하는 경우\n③ 제135조제1항ㆍ제2항에 따른 권리범위 확인심판을 청구할 때에는 특허발명과 대비할 수 있는 설명서 및 필요한 도면을 첨부하여야 한다.",
+          "index": 130,
+          "source": "특허법.pdf",
+          "chunk_index": 130
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00130:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판을 청구하려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00130:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00130:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00130:0",
+        "end_node_id": "특허법.pdf::00130:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00130:1",
+        "end_node_id": "특허법.pdf::00130:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00130:0",
+        "end_node_id": "특허법.pdf::00130",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00130:1",
+        "end_node_id": "특허법.pdf::00130",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00130:2",
+        "end_node_id": "특허법.pdf::00130",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

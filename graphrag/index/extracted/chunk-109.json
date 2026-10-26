@@ -1,0 +1,116 @@
+{
+  "chunk_index": 109,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00109",
+  "raw_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "kept_counts": {
+    "entity_nodes": 4,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 4
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00109",
+        "label": "Chunk",
+        "properties": {
+          "text": "제6장의2 특허취소신청\n\n제132조의2(특허취소신청) ① 누구든지 특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지 그 특허가 다음 각 호의 어느 하나에 해당하는 경우에는 특허심판원장에게 특허취소신청을 할 수 있다. 이 경우 청구범위의 청구항이 둘 이상인 경우에는 청구항마다 특허취소신청을 할 수 있다.\n1. 제29조(같은 조 제1항제1호에 해당하는 경우와 같은 호에 해당하는 발명에 의하여 쉽게 발명할 수 있는 경우는 제외한다)에 위반된 경우\n2. 제36조제1항부터 제3항까지의 규정에 위반된 경우\n② 제1항에도 불구하고 특허공보에 게재된 제87조제3항제7호에 따른 선행기술에 기초한 이유로는 특허취소신청을 할 수 없다.",
+          "index": 109,
+          "source": "특허법.pdf",
+          "chunk_index": 109
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00109:0",
+        "label": "Actor",
+        "properties": {
+          "name": "누구든지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00109:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허취소신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00109:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00109:3",
+        "label": "Period",
+        "properties": {
+          "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00109:0",
+        "end_node_id": "특허법.pdf::00109:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:1",
+        "end_node_id": "특허법.pdf::00109:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:1",
+        "end_node_id": "특허법.pdf::00109:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:0",
+        "end_node_id": "특허법.pdf::00109",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:1",
+        "end_node_id": "특허법.pdf::00109",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:2",
+        "end_node_id": "특허법.pdf::00109",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:3",
+        "end_node_id": "특허법.pdf::00109",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

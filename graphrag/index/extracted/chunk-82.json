@@ -1,0 +1,138 @@
+{
+  "chunk_index": 82,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00082",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00082",
+        "label": "Chunk",
+        "properties": {
+          "text": "제95조(허가등에 따른 존속기간이 연장된 경우의 특허권의 효력) 제90조제4항에 따라 특허권의 존속기간이 연장된 특허권의 효력은 그 연장등록의 이유가 된 허가등의 대상물건(그 허가등에 있어 물건에 대하여 특정의 용도가 정하여져 있는 경우에는 그 용도에 사용되는 물건)에 관한 그 특허발명의 실시 행위에만 미친다.\n\n제96조(특허권의 효력이 미치지 아니하는 범위) ① 특허권의 효력은 다음 각 호의 어느 하나에 해당하는 사항에는 미치지 아니한다.\n1. 연구 또는 시험(「약사법」에 따른 의약품의 품목허가ㆍ품목신고 및 「농약관리법」에 따른 농약의 등록을 위한 연구 또는 시험을 포함한다)을 하기 위한 특허발명의 실시\n2. 국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건\n3. 특허출원을 한 때부터 국내에 있는 물건\n② 둘 이상의 의약[사람의 질병의 진단ㆍ경감ㆍ치료ㆍ처치(處置) 또는 예방을 위하여 사용되는 물건을 말한다. 이하 같다]이 혼합되어 제조되는 의약의 발명 또는 둘 이상의 의약을 혼합하여 의약을 제조하는 방법의 발명에 관한 특허권의 효력은 「약사법」에 따른 조제행위와 그 조제에 의한 의약에는 미치지 아니한다.\n\n제97조(특허발명의 보호범위) 특허발명의 보호범위는 청구범위에 적혀 있는 사항에 의하여 정하여진다.",
+          "index": 82,
+          "source": "특허법.pdf",
+          "chunk_index": 82
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00082:0",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00082:1",
+        "label": "Exclusion",
+        "properties": {
+          "name": "연구 또는 시험을 하기 위한 특허발명의 실시"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00082:2",
+        "label": "Exclusion",
+        "properties": {
+          "name": "국내를 통과하는데 불과한 선박ㆍ항공기ㆍ차량 또는 이에 사용되는 기계ㆍ기구ㆍ장치, 그 밖의 물건"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00082:3",
+        "label": "Exclusion",
+        "properties": {
+          "name": "특허출원을 한 때부터 국내에 있는 물건"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00082:4",
+        "label": "Exclusion",
+        "properties": {
+          "name": "둘 이상의 의약이 혼합되어 제조되는 의약의 발명 또는 둘 이상의 의약을 혼합하여 의약을 제조하는 방법의 발명에 관한 특허권"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00082:0",
+        "end_node_id": "특허법.pdf::00082:1",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:0",
+        "end_node_id": "특허법.pdf::00082:2",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:0",
+        "end_node_id": "특허법.pdf::00082:3",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:0",
+        "end_node_id": "특허법.pdf::00082:4",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:0",
+        "end_node_id": "특허법.pdf::00082",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:1",
+        "end_node_id": "특허법.pdf::00082",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:2",
+        "end_node_id": "특허법.pdf::00082",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:3",
+        "end_node_id": "특허법.pdf::00082",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00082:4",
+        "end_node_id": "특허법.pdf::00082",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

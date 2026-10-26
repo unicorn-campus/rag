@@ -1,0 +1,34 @@
+{
+  "chunk_index": 126,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00126",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00126",
+        "label": "Chunk",
+        "properties": {
+          "text": "⑨ 제1항에 따른 정정심판에는 제147조제1항ㆍ제2항, 제155조 및 제156조를 적용하지 아니한다.\n⑩ 특허발명의 명세서 또는 도면에 대하여 정정을 한다는 심결이 확정되었을 때에는 그 정정 후의 명세서 또는 도면에 따라 특허출원, 출원공개, 특허결정 또는 심결 및 특허권의 설정등록이 된 것으로 본다.\n⑪ 청구인은 제162조제3항에 따른 심리의 종결이 통지되기 전(같은 조 제4항에 따라 심리가 재개된 경우에는 그 후 다시 같은 조 제3항에 따른 심리의 종결이 통지되기 전)에 제140조제5항에 따른 심판청구서에 첨부된 정정한 명세서 또는 도면에 대하여 보정할 수 있다.\n⑫ 특허발명의 명세서 또는 도면에 대한 정정을 한다는 심결이 있는 경우 특허심판원장은 그 내용을 지식재산처장에게 알려야 한다.\n⑬ 지식재산처장은 제12항에 따른 통보가 있으면 이를 특허공보에 게재하여야 한다.",
+          "index": 126,
+          "source": "특허법.pdf",
+          "chunk_index": 126
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

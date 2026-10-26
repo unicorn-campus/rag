@@ -1,0 +1,72 @@
+{
+  "chunk_index": 20,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00020",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00020",
+        "label": "Chunk",
+        "properties": {
+          "text": "제30조(공지 등이 되지 아니한 발명으로 보는 경우) ① 특허를 받을 수 있는 권리를 가진 자의 발명이 다음 각 호의 어느 하나에 해당하게 된 경우 그 날부터 12개월 이내에 특허출원을 하면 그 특허출원된 발명에 대하여 제29조제1항 또는 제2항을 적용할 때에는 그 발명은 같은 조 제1항 각 호의 어느 하나에 해당하지 아니한 것으로 본다.\n1. 특허를 받을 수 있는 권리를 가진 자에 의하여 그 발명이 제29조제1항 각 호의 어느 하나에 해당하게 된 경우. 다만, 조약 또는 법률에 따라 국내 또는 국외에서 출원공개되거나 등록공고된 경우는 제외한다.\n2. 특허를 받을 수 있는 권리를 가진 자의 의사에 반하여 그 발명이 제29조제1항 각 호의 어느 하나에 해당하게 된 경우\n② 제1항제1호를 적용받으려는 자는 특허출원서에 그 취지를 적어 출원하여야 하고, 이를 증명할 수 있는 서류를 총리령으로 정하는 방법에 따라 특허출원일부터 30일 이내에 지식재산처장에게 제출하여야 한다.\n③ 제2항에도 불구하고 총리령으로 정하는 보완수수료를 납부한 경우에는 다음 각 호의 어느 하나에 해당하는 기간에 제1항제1호를 적용받으려는 취지를 적은 서류 또는 이를 증명할 수 있는 서류를 제출할 수 있다.\n1. 제47조제1항에 따라 보정할 수 있는 기간\n2. 제66조에 따른 특허결정 또는 제176조제1항에 따른 특허거절결정 취소심결(특허등록을 결정한 심결에 한정하되, 재심심결을 포함한다)의 등본을 송달받은 날부터 3개월 이내의 기간. 다만, 제79조에 따른 설정등록을 받으려는 날이 3개월보다 짧은 경우에는 그 날까지의 기간\n\n제31조 삭제",
+          "index": 20,
+          "source": "특허법.pdf",
+          "chunk_index": 20
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00020:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리를 가진 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00020:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00020:0",
+        "end_node_id": "특허법.pdf::00020:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00020:0",
+        "end_node_id": "특허법.pdf::00020",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00020:1",
+        "end_node_id": "특허법.pdf::00020",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

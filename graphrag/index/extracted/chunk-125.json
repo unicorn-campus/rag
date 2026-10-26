@@ -1,0 +1,161 @@
+{
+  "chunk_index": 125,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00125",
+  "raw_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "kept_counts": {
+    "entity_nodes": 7,
+    "entity_relationships": 3,
+    "chunk_nodes": 1,
+    "from_chunk": 7
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00125",
+        "label": "Chunk",
+        "properties": {
+          "text": "④ 제1항에 따른 명세서 또는 도면의 정정은 청구범위를 실질적으로 확장하거나 변경할 수 없다.\n⑤ 제1항에 따른 정정 중 같은 항 제1호 또는 제2호에 해당하는 정정은 정정 후의 청구범위에 적혀 있는 사항이 특허출원을 하였을 때에 특허를 받을 수 있는 것이어야 한다.\n⑥ 심판관은 제1항에 따른 심판청구가 다음 각 호의 어느 하나에 해당한다고 인정하는 경우에는 청구인에게 그 이유를 통지하고, 기간을 정하여 의견서를 제출할 수 있는 기회를 주어야 한다.\n1. 제1항 각 호의 어느 하나에 해당하지 아니한 경우\n2. 제3항에 따른 범위를 벗어난 경우\n3. 제4항 또는 제5항을 위반한 경우\n⑦ 제1항에 따른 정정심판은 특허권이 소멸된 후에도 청구할 수 있다. 다만, 특허취소결정이 확정되거나 특허를 무 효(제133조제1항제4호에 의한 무효는 제외한다)로 한다는 심결이 확정된 후에는 그러하지 아니하다.\n⑧ 특허권자는 전용실시권자, 질권자와 제100조제4항ㆍ제102조제1항 및 「발명진흥법」 제10조제1항에 따른 통상실시권을 갖는 자의 동의를 받아야만 제1항에 따른 정정심판을 청구할 수 있다. 다만, 특허권자가 정정심판을 청구 하기 위하여 동의를 받아야 하는 자가 무효심판을 청구한 경우에는 그러하지 아니하다.\n⑨ 제1항에 따른 정정심판에는 제147조제1항ㆍ제2항, 제155조 및 제156조를 적용하지 아니한다.\n⑩ 특허발명의 명세서 또는 도면에 대하여 정정을 한다는 심결이 확정되었을 때에는 그 정정 후의 명세서 또는 도면에 따라 특허출원, 출원공개, 특허결정 또는 심결 및 특허권의 설정등록이 된 것으로 본다.",
+          "index": 125,
+          "source": "특허법.pdf",
+          "chunk_index": 125
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:1",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:3",
+        "label": "Actor",
+        "properties": {
+          "name": "질권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:4",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00125:6",
+        "label": "Procedure",
+        "properties": {
+          "name": "심판청구"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00125:0",
+        "end_node_id": "특허법.pdf::00125:5",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:0",
+        "end_node_id": "특허법.pdf::00125:4",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:6",
+        "end_node_id": "특허법.pdf::00125:1",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:0",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:1",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:2",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:3",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:4",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:5",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00125:6",
+        "end_node_id": "특허법.pdf::00125",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

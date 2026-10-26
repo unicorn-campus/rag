@@ -1,0 +1,138 @@
+{
+  "chunk_index": 119,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00119",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00119",
+        "label": "Chunk",
+        "properties": {
+          "text": "제133조의2(특허무효심판절차에서의 특허의 정정) ① 제133조제1항에 따른 심판의 피청구인은 제136조제1항 각 호의 어느 하나에 해당하는 경우에만 제147조제1항 또는 제159조제1항 후단에 따라 지정된 기간에 특허발명의 명세서 또는 도면에 대하여 정정청구를 할 수 있다. 이 경우 심판장이 제147조제1항에 따라 지정된 기간 후에도 청구인이 증거를 제출하거나 새로운 무효사유를 주장함으로 인하여 정정청구를 허용할 필요가 있다고 인정하는 경우에는 기간을 정하여 정정청구를 하게 할 수 있다.\n② 제1항에 따른 정정청구를 하였을 때에는 해당 무효심판절차에서 그 정정청구 전에 한 정정청구는 취하된 것으로 본다.\n③ 심판장은 제1항에 따른 정정청구가 있을 때에는 그 청구서의 부본을 제133조제1항에 따른 심판의 청구인에게 송달하여야 한다.\n④ 제1항에 따른 정정청구에 관하여는 제136조제3항부터 제6항까지, 제8항 및 제10항부터 제13항까지, 제139조제3항 및 제140조제1항ㆍ제2항ㆍ제5항을 준용한다. 이 경우 제136조제11항 중 “제162조제3항에 따른 심리의 종결이 통지되기 전(같은 조 제4항에 따라 심리가 재개된 경우에는 그 후 다시 같은 조 제3항에 따른 심리의 종결이 통지되기 전)에”는 “제133조의2제1항 또는 제136조제6항에 따라 지정된 기간에”로 본다.",
+          "index": 119,
+          "source": "특허법.pdf",
+          "chunk_index": 119
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00119:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심판의 피청구인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00119:1",
+        "label": "Actor",
+        "properties": {
+          "name": "청구인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00119:2",
+        "label": "Actor",
+        "properties": {
+          "name": "심판장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00119:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00119:4",
+        "label": "Period",
+        "properties": {
+          "name": "지정된 기간"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00119:0",
+        "end_node_id": "특허법.pdf::00119:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:1",
+        "end_node_id": "특허법.pdf::00119:3",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:3",
+        "end_node_id": "특허법.pdf::00119:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:3",
+        "end_node_id": "특허법.pdf::00119:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:0",
+        "end_node_id": "특허법.pdf::00119",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:1",
+        "end_node_id": "특허법.pdf::00119",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:2",
+        "end_node_id": "특허법.pdf::00119",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:3",
+        "end_node_id": "특허법.pdf::00119",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00119:4",
+        "end_node_id": "특허법.pdf::00119",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

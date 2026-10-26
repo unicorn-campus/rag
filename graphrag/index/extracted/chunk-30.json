@@ -1,0 +1,160 @@
+{
+  "chunk_index": 30,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00030",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00030",
+        "label": "Chunk",
+        "properties": {
+          "text": "제42조의3(외국어특허출원 등) ① 특허출원인이 명세서 및 도면(도면 중 설명부분에 한정한다. 이하 제2항 및 제5항에 서 같다)을 국어가 아닌 총리령으로 정하는 언어로 적겠다는 취지를 특허출원을 할 때 특허출원서에 적은 경우에는 그 언어로 적을 수 있다.\n② 특허출원인이 특허출원서에 최초로 첨부한 명세서 및 도면을 제1항에 따른 언어로 적은 특허출원(이하 “외국어 특허출원”이라 한다)을 한 경우에는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지 그 명세서 및 도면의 국어번역문을 총리령으로 정하는 방법에 따라 제출하여야 한다. 다만, 본문에 따른 기한 이전에 제60조제3항에 따른 출원심사 청구의 취지를 통지받은 경우에는 그 통지를 받은 날부터 3개월이 되는 날 또는 제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날 중 빠른 날까지 제출하여야 한다.\n③ 제2항에 따라 국어번역문을 제출한 특허출원인은 제2항에 따른 기한 이전에 그 국어번역문을 갈음하여 새로운 국어번역문을 제출할 수 있다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 명세서 또는 도면을 보정(제5항에 따라 보정한 것으로 보는 경우는 제외한다)한 경우\n2. 특허출원인이 출원심사의 청구를 한 경우\n④ 특허출원인이 제2항에 따른 명세서의 국어번역문을 제출하지 아니한 경우에는 제2항에 따른 기한이 되는 날의 다음 날에 해당 특허출원을 취하한 것으로 본다.",
+          "index": 30,
+          "source": "특허법.pdf",
+          "chunk_index": 30
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "출원심사의 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "외국어 특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:3",
+        "label": "Period",
+        "properties": {
+          "name": "제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:4",
+        "label": "Period",
+        "properties": {
+          "name": "그 통지를 받은 날부터 3개월이 되는 날"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:5",
+        "label": "Period",
+        "properties": {
+          "name": "제2항에 따른 기한이 되는 날"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00030:0",
+        "end_node_id": "특허법.pdf::00030:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:0",
+        "end_node_id": "특허법.pdf::00030:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:2",
+        "end_node_id": "특허법.pdf::00030:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:2",
+        "end_node_id": "특허법.pdf::00030:4",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:2",
+        "end_node_id": "특허법.pdf::00030:5",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:0",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:1",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:2",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:3",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:4",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00030:5",
+        "end_node_id": "특허법.pdf::00030",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

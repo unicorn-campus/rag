@@ -1,0 +1,72 @@
+{
+  "chunk_index": 58,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00058",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00058",
+        "label": "Chunk",
+        "properties": {
+          "text": "제66조의3(특허결정 이후 직권 재심사) ① 심사관은 특허결정된 특허출원에 관하여 명백한 거절이유를 발견한 경우에는 직권으로 특허결정을 취소하고, 그 특허출원을 다시 심사(이하 “직권 재심사”라 한다)할 수 있다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 거절이유가 제42조제3항제2호, 같은 조 제8항 및 제45조에 따른 요건에 관한 것인 경우\n2. 그 특허결정에 따라 특허권이 설정등록된 경우\n3. 그 특허출원이 취하되거나 포기된 경우\n② 제1항에 따라 심사관이 직권 재심사를 하려면 특허결정을 취소한다는 사실을 특허출원인에게 통지하여야 한다.\n③ 특허출원인이 제2항에 따른 통지를 받기 전에 그 특허출원이 제1항제2호 또는 제3호에 해당하게 된 경우에는 특허결정의 취소는 처음부터 없었던 것으로 본다.\n\n제67조(특허여부결정의 방식) ① 특허결정 및 특허거절결정(이하 “특허여부결정”이라 한다)은 서면으로 하여야 하며, 그 이유를 붙여야 한다.\n② 지식재산처장은 특허여부결정이 있는 경우에는 그 결정의 등본을 특허출원인에게 송달하여야 한다.",
+          "index": 58,
+          "source": "특허법.pdf",
+          "chunk_index": 58
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00058:0",
+        "label": "Actor",
+        "properties": {
+          "name": "심사관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00058:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "직권 재심사"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00058:0",
+        "end_node_id": "특허법.pdf::00058:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00058:0",
+        "end_node_id": "특허법.pdf::00058",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00058:1",
+        "end_node_id": "특허법.pdf::00058",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

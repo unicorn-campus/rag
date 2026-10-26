@@ -1,0 +1,34 @@
+{
+  "chunk_index": 85,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00085",
+  "raw_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "kept_counts": {
+    "entity_nodes": 0,
+    "entity_relationships": 0,
+    "chunk_nodes": 1,
+    "from_chunk": 0
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00085",
+        "label": "Chunk",
+        "properties": {
+          "text": "제101조(특허권 및 전용실시권의 등록의 효력) ① 다음 각 호의 어느 하나에 해당하는 사항은 등록하여야만 효력이 발생한다.\n1. 특허권의 이전(상속이나 그 밖의 일반승계에 의한 경우는 제외한다), 포기에 의한 소멸 또는 처분의 제한\n2. 전용실시권의 설정ㆍ이전(상속이나 그 밖의 일반승계에 의한 경우는 제외한다)ㆍ변경ㆍ소멸(혼동에 의한 경우는 제외한다) 또는 처분의 제한\n3. 특허권 또는 전용실시권을 목적으로 하는 질권의 설정ㆍ이전(상속이나 그 밖의 일반승계에 의한 경우는 제외한다)ㆍ변경ㆍ소멸(혼동에 의한 경우는 제외한다) 또는 처분의 제한\n② 제1항 각 호에 따른 특허권ㆍ전용실시권 및 질권의 상속이나 그 밖의 일반승계의 경우에는 지체 없이 그 취지를 지식재산처장에게 신고하여야 한다.",
+          "index": 85,
+          "source": "특허법.pdf",
+          "chunk_index": 85
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": []
+  }
+}

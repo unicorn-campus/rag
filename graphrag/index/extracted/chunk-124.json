@@ -1,0 +1,72 @@
+{
+  "chunk_index": 124,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00124",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00124",
+        "label": "Chunk",
+        "properties": {
+          "text": "제136조(정정심판) ① 특허권자는 다음 각 호의 어느 하나에 해당하는 경우에는 특허발명의 명세서 또는 도면에 대하여 정정심판을 청구할 수 있다.\n1. 청구범위를 감축하는 경우\n2. 잘못 기재된 사항을 정정하는 경우\n3. 분명하지 아니하게 기재된 사항을 명확하게 하는 경우\n② 제1항에도 불구하고 다음 각 호의 어느 하나에 해당하는 기간에는 정정심판을 청구할 수 없다.\n1. 특허취소신청이 특허심판원에 계속 중인 때부터 그 결정이 확정될 때까지의 기간. 다만, 특허무효심판의 심결 또는 정정의 무효심판의 심결에 대한 소가 특허법원에 계속 중인 경우에는 특허법원에서 변론이 종결(변론 없이 한 판결의 경우에는 판결의 선고를 말한다)된 날까지 정정심판을 청구할 수 있다.\n2. 특허무효심판 또는 정정의 무효심판이 특허심판원에 계속 중인 기간\n③ 제1항에 따른 명세서 또는 도면의 정정은 특허발명의 명세서 또는 도면에 기재된 사항의 범위에서 할 수 있다. 다만, 제1항제2호에 따라 잘못된 기재를 정정하는 경우에는 출원서에 최초로 첨부된 명세서 또는 도면에 기재된 사항의 범위에서 할 수 있다.\n④ 제1항에 따른 명세서 또는 도면의 정정은 청구범위를 실질적으로 확장하거나 변경할 수 없다.\n⑤ 제1항에 따른 정정 중 같은 항 제1호 또는 제2호에 해당하는 정정은 정정 후의 청구범위에 적혀 있는 사항이 특허출원을 하였을 때에 특허를 받을 수 있는 것이어야 한다.",
+          "index": 124,
+          "source": "특허법.pdf",
+          "chunk_index": 124
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정심판"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00124:0",
+        "end_node_id": "특허법.pdf::00124:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:0",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:1",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

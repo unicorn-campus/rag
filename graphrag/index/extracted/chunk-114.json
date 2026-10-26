@@ -1,0 +1,258 @@
+{
+  "chunk_index": 114,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00114",
+  "raw_counts": {
+    "entity_nodes": 13,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 13
+  },
+  "kept_counts": {
+    "entity_nodes": 13,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 13
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00114",
+        "label": "Chunk",
+        "properties": {
+          "text": "제132조의9(참가) ① 특허권에 관하여 권리를 가진 자 또는 이해관계를 가진 자는 특허취소신청에 대한 결정이 있을 때까지 특허권자를 보조하기 위하여 그 심리에 참가할 수 있다.\n② 제1항의 참가에 관하여는 제155조제4항ㆍ제5항 및 제156조를 준용한다.\n\n제132조의10(특허취소신청의 심리에서의 직권심리) ① 심판관은 특허취소신청에 관하여 특허취소신청인, 특허권자 또는 참가인이 제출하지 아니한 이유에 대해서도 심리할 수 있다.\n② 심판관은 특허취소신청에 관하여 특허취소신청인이 신청하지 아니한 청구항에 대해서는 심리할 수 없다.\n\n제132조의11(특허취소신청의 병합 또는 분리) ① 심판관 합의체는 하나의 특허권에 관한 둘 이상의 특허취소신청에 대해서는 특별한 사정이 있는 경우를 제외하고는 그 심리를 병합하여 결정하여야 한다.\n② 심판관 합의체는 특허취소신청의 심리에 필요하다고 인정하는 경우에는 제1항에 따라 병합된 심리를 분리할 수 있다.\n\n제132조의12(특허취소신청의 취하) ① 특허취소신청은 제132조의14제2항에 따라 결정등본이 송달되기 전까지만 취하할 수 있다. 다만, 제132조의13제2항에 따라 특허권자 및 참가인에게 특허의 취소이유가 통지된 후에는 취하할 수 없다.\n② 둘 이상의 청구항에 관하여 특허취소신청이 있는 경우에는 청구항마다 취하할 수 있다.\n③ 제1항 또는 제2항에 따른 취하가 있으면 그 특허취소신청 또는 그 청구항에 대한 특허취소신청은 처음부터 없었던 것으로 본다.",
+          "index": 114,
+          "source": "특허법.pdf",
+          "chunk_index": 114
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:0",
+        "label": "Actor",
+        "properties": {
+          "name": "권리를 가진 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:1",
+        "label": "Actor",
+        "properties": {
+          "name": "이해관계를 가진 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:2",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:3",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:4",
+        "label": "Actor",
+        "properties": {
+          "name": "특허취소신청인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:5",
+        "label": "Actor",
+        "properties": {
+          "name": "참가인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:6",
+        "label": "Actor",
+        "properties": {
+          "name": "심판관 합의체"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:7",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허취소신청에 대한 심리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:8",
+        "label": "Procedure",
+        "properties": {
+          "name": "직권심리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:9",
+        "label": "Procedure",
+        "properties": {
+          "name": "취하"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:10",
+        "label": "Decision",
+        "properties": {
+          "name": "특허취소신청에 대한 결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:11",
+        "label": "Period",
+        "properties": {
+          "name": "결정등본이 송달되기 전까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00114:12",
+        "label": "Period",
+        "properties": {
+          "name": "특허의 취소이유가 통지된 후"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00114:7",
+        "end_node_id": "특허법.pdf::00114:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:7",
+        "end_node_id": "특허법.pdf::00114:6",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:7",
+        "end_node_id": "특허법.pdf::00114:10",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:9",
+        "end_node_id": "특허법.pdf::00114:11",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:0",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:1",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:2",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:3",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:4",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:5",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:6",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:7",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:8",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:9",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:10",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:11",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00114:12",
+        "end_node_id": "특허법.pdf::00114",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

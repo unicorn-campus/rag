@@ -1,0 +1,138 @@
+{
+  "chunk_index": 100,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00100",
+  "raw_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "kept_counts": {
+    "entity_nodes": 5,
+    "entity_relationships": 4,
+    "chunk_nodes": 1,
+    "from_chunk": 5
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00100",
+        "label": "Chunk",
+        "properties": {
+          "text": "제125조(특허실시보고) 지식재산처장은 특허권자ㆍ전용실시권자 또는 통상실시권자에게 특허발명의 실시 여부 및 그 규모 등에 관하여 보고하게 할 수 있다.\n\n제125조의2(대가 및 보상금액에 대한 집행권원) 이 법에 따라 지식재산처장이 정한 대가와 보상금액에 관하여 확정된 결정은 집행력 있는 집행권원(執行權原)과 같은 효력을 가진다. 이 경우 집행력 있는 정본은 지식재산처 소속 공무원이 부여한다.\n\n제6장 특허권자의 보호\n\n제126조(권리침해에 대한 금지청구권 등) ① 특허권자 또는 전용실시권자는 자기의 권리를 침해한 자 또는 침해할 우려가 있는 자에 대하여 그 침해의 금지 또는 예방을 청구할 수 있다.\n② 특허권자 또는 전용실시권자가 제1항에 따른 청구를 할 때에는 침해행위를 조성한 물건(물건을 생산하는 방법의 발명인 경우에는 침해행위로 생긴 물건을 포함한다)의 폐기, 침해행위에 제공된 설비의 제거, 그 밖에 침해의 예방 에 필요한 행위를 청구할 수 있다.",
+          "index": 100,
+          "source": "특허법.pdf",
+          "chunk_index": 100
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00100:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00100:1",
+        "label": "Actor",
+        "properties": {
+          "name": "전용실시권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00100:2",
+        "label": "Actor",
+        "properties": {
+          "name": "침해한 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00100:3",
+        "label": "Actor",
+        "properties": {
+          "name": "침해할 우려가 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00100:4",
+        "label": "Remedy",
+        "properties": {
+          "name": "침해의 금지 또는 예방"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00100:0",
+        "end_node_id": "특허법.pdf::00100:4",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:1",
+        "end_node_id": "특허법.pdf::00100:4",
+        "type": "CAN_CLAIM",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:4",
+        "end_node_id": "특허법.pdf::00100:2",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:4",
+        "end_node_id": "특허법.pdf::00100:3",
+        "type": "CLAIMED_AGAINST",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:0",
+        "end_node_id": "특허법.pdf::00100",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:1",
+        "end_node_id": "특허법.pdf::00100",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:2",
+        "end_node_id": "특허법.pdf::00100",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:3",
+        "end_node_id": "특허법.pdf::00100",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00100:4",
+        "end_node_id": "특허법.pdf::00100",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

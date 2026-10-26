@@ -1,0 +1,72 @@
+{
+  "chunk_index": 90,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00090",
+  "raw_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "kept_counts": {
+    "entity_nodes": 2,
+    "entity_relationships": 1,
+    "chunk_nodes": 1,
+    "from_chunk": 2
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00090",
+        "label": "Chunk",
+        "properties": {
+          "text": "제106조(특허권의 수용) ① 정부는 특허발명이 전시, 사변 또는 이에 준하는 비상시에 국방상 필요한 경우에는 특허권을 수용할 수 있다.\n② 특허권이 수용되는 경우에는 그 특허발명에 관한 특허권 외의 권리는 소멸된다.\n③ 정부는 제1항에 따라 특허권을 수용하는 경우에는 특허권자, 전용실시권자 또는 통상실시권자에 대하여 정당한 보상금을 지급하여야 한다.\n④ 특허권의 수용 및 보상금의 지급에 필요한 사항은 대통령령으로 정한다.\n\n제106조의2(정부 등에 의한 특허발명의 실시) ① 정부는 특허발명이 국가 비상사태, 극도의 긴급상황 또는 공공의 이익을 위하여 비상업적(非商業的)으로 실시할 필요가 있다고 인정하는 경우에는 그 특허발명을 실시하거나 정부 외의 자에게 실시하게 할 수 있다.\n② 정부 또는 제1항에 따른 정부 외의 자는 타인의 특허권이 존재한다는 사실을 알았거나 알 수 있을 때에는 제1항에 따른 실시 사실을 특허권자, 전용실시권자 또는 통상실시권자에게 신속하게 알려야 한다.\n③ 정부 또는 제1항에 따른 정부 외의 자는 제1항에 따라 특허발명을 실시하는 경우에는 특허권자, 전용실시권자 또는 통상실시권자에게 정당한 보상금을 지급하여야 한다.\n④ 특허발명의 실시 및 보상금의 지급에 필요한 사항은 대통령령으로 정한다.",
+          "index": 90,
+          "source": "특허법.pdf",
+          "chunk_index": 90
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00090:0",
+        "label": "Actor",
+        "properties": {
+          "name": "정부"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00090:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허권의 수용"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00090:0",
+        "end_node_id": "특허법.pdf::00090:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00090:0",
+        "end_node_id": "특허법.pdf::00090",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00090:1",
+        "end_node_id": "특허법.pdf::00090",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "chunk_index": 95,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00095",
+  "raw_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "kept_counts": {
+    "entity_nodes": 9,
+    "entity_relationships": 5,
+    "chunk_nodes": 1,
+    "from_chunk": 9
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00095",
+        "label": "Chunk",
+        "properties": {
+          "text": "제109조(산업재산권분쟁조정위원회 및 관계 부처의 장의 의견청취) 지식재산처장은 재정을 할 때 필요하다고 인정하는 경우에는 「발명진흥법」 제41조에 따른 산업재산권분쟁조정위원회(이하 “조정위원회”라 한다) 및 관계 부처의 장의 의견을 들을 수 있고, 관계 행정기관이나 관계인에게 협조를 요청할 수 있다.\n\n제110조(재정의 방식 등) ① 재정은 서면으로 하고, 그 이유를 구체적으로 적어야 한다.\n② 제1항에 따른 재정에는 다음 각 호의 사항을 구체적으로 적어야 한다.\n1. 통상실시권의 범위 및 기간\n2. 대가와 그 지급방법 및 지급시기\n3. 제107조제1항제5호에 따른 재정의 경우에는 그 특허발명의 특허권자ㆍ전용실시권자 또는 통상실시권자(재정에 따른 경우는 제외한다)가 공급하는 의약품과 외관상 구분할 수 있는 포장ㆍ표시 및 재정에서 정한 사항을 공시할 인터넷 주소\n4. 그 밖에 재정을 받은 자가 그 특허발명을 실시할 경우 법령 또는 조약에 따른 내용을 이행하기 위하여 필요한 준수사항\n③ 지식재산처장은 정당한 사유가 있는 경우를 제외하고는 재정청구일부터 6개월 이내에 재정에 관한 결정을 하여야 한다.\n④ 제107조제1항제5호에 따른 재정청구가 같은 조 제7항 및 제8항에 해당하고 같은 조 제9항에 따른 서류가 모두 제출된 경우에는 지식재산처장은 정당한 사유가 있는 경우를 제외하고는 통상실시권 설정의 재정을 하여야 한다.",
+          "index": 95,
+          "source": "특허법.pdf",
+          "chunk_index": 95
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:0",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "재정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:2",
+        "label": "Decision",
+        "properties": {
+          "name": "재정에 관한 결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:3",
+        "label": "Period",
+        "properties": {
+          "name": "재정청구일부터 6개월 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:4",
+        "label": "Procedure",
+        "properties": {
+          "name": "통상실시권 설정의 재정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:5",
+        "label": "Actor",
+        "properties": {
+          "name": "산업재산권분쟁조정위원회"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:6",
+        "label": "Actor",
+        "properties": {
+          "name": "관계 부처의 장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:7",
+        "label": "Actor",
+        "properties": {
+          "name": "관계 행정기관"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00095:8",
+        "label": "Actor",
+        "properties": {
+          "name": "관계인"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00095:1",
+        "end_node_id": "특허법.pdf::00095:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:1",
+        "end_node_id": "특허법.pdf::00095:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:1",
+        "end_node_id": "특허법.pdf::00095:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:4",
+        "end_node_id": "특허법.pdf::00095:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:4",
+        "end_node_id": "특허법.pdf::00095:3",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:0",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:1",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:2",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:3",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:4",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:5",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:6",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:7",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00095:8",
+        "end_node_id": "특허법.pdf::00095",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}

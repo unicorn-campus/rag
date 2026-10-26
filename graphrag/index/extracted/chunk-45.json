@@ -1,0 +1,139 @@
+{
+  "chunk_index": 45,
+  "source": "특허법.pdf",
+  "chunk_id": "특허법.pdf::00045",
+  "raw_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "kept_counts": {
+    "entity_nodes": 6,
+    "entity_relationships": 2,
+    "chunk_nodes": 1,
+    "from_chunk": 6
+  },
+  "pruned": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "특허법.pdf::00045",
+        "label": "Chunk",
+        "properties": {
+          "text": "제55조(특허출원 등을 기초로 한 우선권 주장) ① 특허를 받으려는 자는 자신이 특허나 실용신안등록을 받을 수 있는 권리를 가진 특허출원 또는 실용신안등록출원으로 먼저 한 출원(이하 “선출원”이라 한다)의 출원서에 최초로 첨부된 명세서 또는 도면에 기재된 발명을 기초로 그 특허출원한 발명에 관하여 우선권을 주장할 수 있다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다.\n1. 그 특허출원이 선출원의 출원일부터 1년이 지난 후에 출원된 경우\n2. 선출원이 제52조제2항(「실용신안법」 제11조에 따라 준용되는 경우를 포함한다)에 따른 분할출원 또는 제52조의 2제2항(「실용신안법」 제11조에 따라 준용되는 경우를 포함한다)에 따른 분리출원이거나 제53조제2항 또는 「실용신안법」 제10조제2항에 따른 변경출원인 경우\n3. 그 특허출원을 할 때에 선출원이 포기ㆍ무효 또는 취하된 경우\n4. 그 특허출원을 할 때에 선출원이 설정등록되었거나 특허거절결정, 실용신안등록거절결정 또는 거절한다는 취지의 심결이 확정된 경우\n② 제1항에 따른 우선권을 주장하려는 자는 특허출원을 할 때 특허출원서에 그 취지와 선출원의 표시를 하여야 한다.",
+          "index": 45,
+          "source": "특허법.pdf",
+          "chunk_index": 45
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허를 받으려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:2",
+        "label": "Right",
+        "properties": {
+          "name": "실용신안등록을 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:4",
+        "label": "Decision",
+        "properties": {
+          "name": "실용신안등록거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00045:5",
+        "label": "Invention",
+        "properties": {
+          "name": "발명"
+        },
+        "embedding_properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00045:0",
+        "end_node_id": "특허법.pdf::00045:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:0",
+        "end_node_id": "특허법.pdf::00045:2",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:0",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:1",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:2",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:3",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:4",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00045:5",
+        "end_node_id": "특허법.pdf::00045",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
+  }
+}
