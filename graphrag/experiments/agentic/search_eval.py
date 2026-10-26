@@ -178,7 +178,24 @@ def driver_for(uri: str):
     return d
 
 
-async def answer_one(search: AgenticSearch, mode: str, question: str) -> dict:
+async def answer_one(search: AgenticSearch, mode: str, question: str, react=None) -> dict:
+    """mode: base(원래 검색), agentic(고정 워크플로우: 분해·검색·답변·검증), react(ReAct 에이전트)."""
+    import time
+
+    started = time.time()
+    out = await _answer(search, mode, question, react)
+    out["seconds"] = round(time.time() - started, 1)
+    if "model_calls" not in out:
+        out["model_calls"] = {"base": 1, "agentic": 3}[mode]   # Groq 호출 수(Jev 제외)
+    return out
+
+
+async def _answer(search: AgenticSearch, mode: str, question: str, react=None) -> dict:
+    if mode == "react":
+        r = await asyncio.to_thread(react.ask, question)
+        return {"route": "react", "confidence": None, "context": r["context"], "answer": r["answer"],
+                "steps": r["steps"], "model_calls": r["model_calls"], "tool_calls": r["tool_calls"],
+                "forced_final": r["forced_final"], "errors": r["errors"], "failed": r["failed"]}
     if mode == "agentic":
         r = await search.ask_agentic(question)
         return {"route": r["route"].choice, "confidence": r["route"].confidence, "context": r["context"],
@@ -194,6 +211,8 @@ async def main() -> None:
     p.add_argument("--repeat", type=int, default=2)
     p.add_argument("--graphs", nargs="+", choices=list(GRAPHS), default=list(GRAPHS), help="비교할 그래프(기본: 둘 다)")
     p.add_argument("--tag", default="", help="결과 파일 이름에 붙일 표시(추가 반복 등)")
+    p.add_argument("--modes", nargs="+", choices=["base", "agentic", "react"], default=["base", "agentic"],
+                   help="비교할 검색 방식(react: ReAct 에이전트, react_search.py)")
     args = p.parse_args()
     out_file = OUT_FILE.with_name(f"search-eval{'-' + args.tag if args.tag else ''}.json")
     report = REPORT.with_name(f"search-eval-report{'-' + args.tag if args.tag else ''}.md")
@@ -207,19 +226,30 @@ async def main() -> None:
     for gname, uri in ((g, GRAPHS[g]) for g in args.graphs):
         driver = driver_for(uri)
         search = AgenticSearch(driver)
+        react = None
+        if "react" in args.modes:
+            from react_search import ReactSearch
+            react = ReactSearch(driver)
         try:
             for rep in range(args.repeat):
-                for mode in ("base", "agentic"):
+                for mode in args.modes:
                     for q in questions:
-                        a = await answer_one(search, mode, q["question"])
+                        try:
+                            a = await answer_one(search, mode, q["question"], react)
+                        except Exception as e:   # 실패는 빼지 않고 근거 없음 답(0점)으로 기록(윤큐 판정 규칙)
+                            a = {"route": "error", "confidence": None, "context": "", "answer": graph_search.NO_EVIDENCE,
+                                 "failed": True, "errors": [type(e).__name__], "seconds": None, "model_calls": None}
                         item = key_by_q.get(q["question"])
                         kp = await keypoint_recall(judge, item, a["answer"]) if item else None
                         fa = await faithfulness(judge, a["context"], a["answer"])
                         rows.append({"graph": gname, "search": mode, "repeat": rep, **q, **a,
                                      "keypoint_recall": kp, "faithfulness": fa})
+                        write_json(out_file, rows)   # 답변마다 저장(중간에 멈춰도 결과를 잃지 않게)
                         print(f"  [{gname}/{mode}/{rep + 1}] {q['id']} 경로 {a['route']} 요점 {kp if kp is None else round(kp, 2)} "
                               f"충실도 {fa if fa is None else round(fa, 2)}", flush=True)
         finally:
+            if react:
+                react.close()
             search.close()
             driver.close()
     write_json(out_file, rows)
@@ -237,20 +267,23 @@ def fmt(x: float | None) -> str:
 
 
 def render(rows: list[dict], repeat: int) -> str:
-    combos = [(g, s) for g in dict.fromkeys(r["graph"] for r in rows) for s in ("base", "agentic")]
-    names = {("orig", "base"): "원래 그래프 + 원래 검색", ("orig", "agentic"): "원래 그래프 + 에이전틱 검색",
-             ("agentic", "base"): "실험 그래프 + 원래 검색", ("agentic", "agentic"): "실험 그래프 + 에이전틱 검색"}
+    modes = list(dict.fromkeys(r["search"] for r in rows))
+    combos = [(g, s) for g in dict.fromkeys(r["graph"] for r in rows) for s in modes]
+    gname = {"orig": "원래 그래프", "agentic": "실험 그래프"}
+    sname = {"base": "원래 검색", "agentic": "고정 워크플로우", "react": "ReAct 에이전트"}
+    names = {(g, s): f"{gname[g]} + {sname[s]}" for g, s in combos}
     lines = ["# 검색 답변 품질 비교", "",
              f"- 시험 질문: graphrag/search/test-questions.md(확정본 13개), 조합마다 {repeat}회",
              f"- 채점 모델: {JUDGE_MODEL}(답변 모델 openai/gpt-oss-120b와 다른 계열), 어느 조합의 답인지 알려 주지 않음",
              "- 요점 재현율: 역량질문 9개, 확정된 요점(cq-keypoints.json 31개) 중 답에 든 비율(3회 다수결)",
              "- 근거 충실도: 13개 전부, 답의 주장 중 검색 컨텍스트로 뒷받침되는 비율", "",
-             "## 1. 요약", "", "| 조합 | 요점 재현율(역량질문) | 근거 충실도(전체) | 근거 충실도(Global·Hybrid) |", "|---|---|---|---|"]
+             "## 1. 요약", "", "| 조합 | 요점 재현율(역량질문) | 근거 충실도(전체) | 근거 충실도(Global·Hybrid) | 질문당 Groq 호출 | 질문당 초 |", "|---|---|---|---|---|---|"]
     for c in combos:
         rs = [r for r in rows if (r["graph"], r["search"]) == c]
         gh = [r for r in rs if r["expected"] in ("global", "hybrid")]
         lines.append(f"| {names[c]} | {fmt(mean([r['keypoint_recall'] for r in rs]))} | "
-                     f"{fmt(mean([r['faithfulness'] for r in rs]))} | {fmt(mean([r['faithfulness'] for r in gh]))} |")
+                     f"{fmt(mean([r['faithfulness'] for r in rs]))} | {fmt(mean([r['faithfulness'] for r in gh]))} | "
+                     f"{fmt(mean([r.get('model_calls') for r in rs]))} | {fmt(mean([r.get('seconds') for r in rs]))} |")
     lines += ["", "## 2. 질문별 요점 재현율 / 근거 충실도(반복 평균)", "",
               "| ID | " + " | ".join(names[c] for c in combos) + " |", "|---|" + "---|" * len(combos)]
     for qid in dict.fromkeys(r["id"] for r in rows):
@@ -261,7 +294,19 @@ def render(rows: list[dict], repeat: int) -> str:
         lines.append(f"| {qid} | " + " | ".join(cells) + " |")
     routes = Counter((r["graph"], r["search"], r["route"]) for r in rows)
     lines += ["", "## 3. 선택된 검색 방식(전 반복 합계)", ""]
-    lines += [f"- {names[c]}: " + ", ".join(f"{k} {routes[(c[0], c[1], k)]}" for k in ("local", "global", "hybrid")) for c in combos]
+    lines += [f"- {names[c]}: " + ", ".join(f"{k} {routes[(c[0], c[1], k)]}" for k in ("local", "global", "hybrid", "react")
+                                             if routes[(c[0], c[1], k)]) for c in combos]
+    react_rows = [r for r in rows if r["search"] == "react"]
+    ok_rows = [r for r in react_rows if not r.get("failed")]
+    if ok_rows:
+        tools = Counter(s["tool"] for r in ok_rows for s in r.get("steps", []))
+        lines += ["", "## 3-1. ReAct 에이전트 행동 통계", "",
+                  f"- 다시 시도해도 실패해 0점 처리한 답: {len(react_rows) - len(ok_rows)}/{len(react_rows)}, "
+                  f"재시도로 회복한 답: {sum(1 for r in ok_rows if r.get('errors'))}",
+                  f"- 질문당 모델 호출 평균 {fmt(mean([r['model_calls'] for r in ok_rows]))}회(최소 {min(r['model_calls'] for r in ok_rows)}, 최대 {max(r['model_calls'] for r in ok_rows)}), "
+                  f"도구 호출 평균 {fmt(mean([r['tool_calls'] for r in ok_rows]))}회",
+                  f"- 상한(모델 8회)에 걸려 답을 따로 만든 경우: {sum(r['forced_final'] for r in ok_rows)}/{len(ok_rows)}",
+                  "- 도구별 호출 수: " + ", ".join(f"{k} {v}" for k, v in tools.most_common())]
     lines += ["", "## 4. 답변 예시(1회차)", ""]
     for qid in dict.fromkeys(r["id"] for r in rows):
         for c in combos:
