@@ -161,6 +161,21 @@ async def keypoint_recall(judge, item: dict, answer: str, votes: int = 3) -> flo
     return sum(hits) / n
 
 
+REFUSAL_PROMPT = """[목표] 답변이 질문에 실질적인 답을 내놓았는지, 근거가 없다며 답을 거절했는지 판정함
+[질문] {question}
+[답변]
+{answer}
+[판정] 답변의 핵심이 "근거를 찾지 못함", "확인되지 않음", "제공된 내용에 없음"처럼 답을 내놓지 않는 것이면 refused=true.
+질문이 묻는 대상(기간·형벌·금액·관할 등)에 대해 구체적인 내용을 하나라도 답으로 제시하면 refused=false(일부에 '확인되지 않음'이 섞여도 false)
+[출력] JSON 하나만: {{"refused": true}}"""
+
+
+async def judge_refusal(judge, question: str, answer: str) -> bool | None:
+    """채점 모델이 '거절했는가'를 판정함(그래프 밖 질문의 거절률, 답할 수 있는 질문의 잘못된 거절 수를 세기 위함)."""
+    r = await judge_json(judge, REFUSAL_PROMPT.format(question=question, answer=answer))
+    return r.get("refused") if isinstance(r.get("refused"), bool) else None
+
+
 async def faithfulness(judge, context: str, answer: str) -> float | None:
     if not context:
         return None
@@ -194,13 +209,14 @@ async def answer_one(search: AgenticSearch, mode: str, question: str, react=None
 
 
 async def _answer(search: AgenticSearch, mode: str, question: str, react=None) -> dict:
-    if mode in ("react", "react2"):
+    if mode in ("react", "react2", "react3"):
         r = await asyncio.to_thread(react[mode].ask, question)
         if r["failed"]:   # 바깥의 같은 재시도 정책을 타도록 예외로 올림
             raise RuntimeError("ReAct 실패: " + ", ".join(r["errors"]))
         return {"route": mode, "confidence": None, "context": r["context"], "answer": r["answer"],
                 "steps": r["steps"], "model_calls": r["model_calls"], "tool_calls": r["tool_calls"],
-                "forced_final": r["forced_final"], "errors": r["errors"], "failed": r["failed"]}
+                "forced_final": r["forced_final"], "errors": r["errors"], "failed": r["failed"],
+                "refusal_mechanism": r.get("refusal")}
     if mode == "agentic":
         r = await search.ask_agentic(question)
         return {"route": r["route"].choice, "confidence": r["route"].confidence, "context": r["context"],
@@ -216,8 +232,8 @@ async def main() -> None:
     p.add_argument("--repeat", type=int, default=2)
     p.add_argument("--graphs", nargs="+", choices=list(GRAPHS), default=list(GRAPHS), help="비교할 그래프(기본: 둘 다)")
     p.add_argument("--tag", default="", help="결과 파일 이름에 붙일 표시(추가 반복 등)")
-    p.add_argument("--modes", nargs="+", choices=["base", "agentic", "react", "react2"], default=["base", "agentic"],
-                   help="비교할 검색 방식(react: ReAct 에이전트, react2: 도구 결과에 원문을 넣은 ReAct v2)")
+    p.add_argument("--modes", nargs="+", choices=["base", "agentic", "react", "react2", "react3"], default=["base", "agentic"],
+                   help="비교할 검색 방식(react: ReAct 에이전트, react2: 도구 결과에 원문을 넣은 ReAct v2, react3: v2 + 거절 장치)")
     p.add_argument("--questions-file", help="질문과 요점이 함께 든 확정 JSON(예: new-questions.json). 없으면 기존 13문항과 cq-keypoints.json")
     p.add_argument("--shuffle", action="store_true", help="회차마다 (방식, 질문) 실행 순서를 무작위로 섞음(시드 고정)")
     p.add_argument("--render-only", action="store_true", help="LLM 호출 없이 저장된 결과(results/search-eval-{tag}.json)로 보고서만 다시 씀")
@@ -250,10 +266,11 @@ async def main() -> None:
         driver = driver_for(uri)
         search = AgenticSearch(driver)
         react = {}
-        if {"react", "react2"} & set(args.modes):
+        if {"react", "react2", "react3"} & set(args.modes):
             from react_search import ReactSearch
             # 재시도는 바깥(아래)에서 세 방식에 같은 정책으로 적용하므로 안쪽 재시도는 끔
-            react = {"react": ReactSearch(driver, retries=1), "react2": ReactSearch(driver, with_source=True, retries=1)}
+            react = {"react": ReactSearch(driver, retries=1), "react2": ReactSearch(driver, with_source=True, retries=1),
+                     "react3": ReactSearch(driver, with_source=True, retries=1, refuse=True)}
         try:
             for rep in range(args.repeat):
                 pairs = [(mode, q) for mode in args.modes for q in questions]
@@ -274,13 +291,14 @@ async def main() -> None:
                     a["errors"] = errors
                     a.setdefault("failed", False)
                     item = key_by_q.get(q["question"])
-                    kp = await keypoint_recall(judge, item, a["answer"]) if item else None
+                    kp = await keypoint_recall(judge, item, a["answer"]) if item and item.get("keypoints") else None
                     fa = await faithfulness(judge, a["context"], a["answer"])
+                    refused = await judge_refusal(judge, q["question"], a["answer"])
                     rows.append({"graph": gname, "search": mode, "repeat": rep, "order": order, **q, **a,
-                                 "keypoint_recall": kp, "faithfulness": fa})
+                                 "keypoint_recall": kp, "faithfulness": fa, "refused": refused})
                     write_json(out_file, rows)   # 답변마다 저장(중간에 멈춰도 결과를 잃지 않게)
                     print(f"  [{gname}/{mode}/{rep + 1}] {q['id']} 경로 {a['route']} 요점 {kp if kp is None else round(kp, 2)} "
-                          f"충실도 {fa if fa is None else round(fa, 2)}", flush=True)
+                          f"충실도 {fa if fa is None else round(fa, 2)} 거절 {refused}", flush=True)
         finally:
             for r in react.values():
                 r.close()
@@ -306,7 +324,7 @@ def render(rows: list[dict], repeat: int, source: dict | None = None) -> str:
     modes = list(dict.fromkeys(r["search"] for r in rows))
     combos = [(g, s) for g in dict.fromkeys(r["graph"] for r in rows) for s in modes]
     gname = {"orig": "원래 그래프", "agentic": "실험 그래프"}
-    sname = {"base": "원래 검색", "agentic": "고정 워크플로우", "react": "ReAct 에이전트", "react2": "ReAct v2(원문 포함)"}
+    sname = {"base": "원래 검색", "agentic": "고정 워크플로우", "react": "ReAct 에이전트", "react2": "ReAct v2(원문 포함)", "react3": "ReAct v3(거절 장치)"}
     names = {(g, s): f"{gname[g]} + {sname[s]}" for g, s in combos}
     n_q = len({r["id"] for r in rows})
     n_scored = len({r["id"] for r in rows if r["keypoint_recall"] is not None})
@@ -316,12 +334,13 @@ def render(rows: list[dict], repeat: int, source: dict | None = None) -> str:
              f"- 채점 모델: {JUDGE_MODEL}(답변 모델 openai/gpt-oss-120b와 다른 계열), 어느 조합의 답인지 알려 주지 않음",
              f"- 요점 재현율: 채점 문항 {n_scored}개, 확정된 요점({source['keys']} {source['n_keys']}개) 중 답에 든 비율(3회 다수결)",
              f"- 근거 충실도: {n_q}개 전부, 답의 주장 중 검색 컨텍스트로 뒷받침되는 비율", "",
-             "## 1. 요약", "", "| 조합 | 요점 재현율 | 근거 충실도(전체) | 근거 충실도(Global·Hybrid) | 질문당 Groq 호출 | 질문당 초 |", "|---|---|---|---|---|---|"]
+             "## 1. 요약", "", "| 조합 | 요점 재현율 | 근거 충실도(전체) | 근거 충실도(Global·Hybrid) | 거절률 | 질문당 Groq 호출 | 질문당 초 |", "|---|---|---|---|---|---|---|"]
     for c in combos:
         rs = [r for r in rows if (r["graph"], r["search"]) == c]
         gh = [r for r in rs if r["expected"] in ("global", "hybrid")]
         lines.append(f"| {names[c]} | {fmt(mean([r['keypoint_recall'] for r in rs]))} | "
                      f"{fmt(mean([r['faithfulness'] for r in rs]))} | {fmt(mean([r['faithfulness'] for r in gh]))} | "
+                     f"{fmt(mean([float(r['refused']) for r in rs if r.get('refused') is not None]))} | "
                      f"{fmt(mean([r.get('model_calls') for r in rs]))} | {fmt(mean([r.get('seconds') for r in rs]))} |")
     lines += ["", "## 2. 질문별 요점 재현율 / 근거 충실도(반복 평균)", "",
               "| ID | " + " | ".join(names[c] for c in combos) + " |", "|---|" + "---|" * len(combos)]
@@ -333,9 +352,9 @@ def render(rows: list[dict], repeat: int, source: dict | None = None) -> str:
         lines.append(f"| {qid} | " + " | ".join(cells) + " |")
     routes = Counter((r["graph"], r["search"], r["route"]) for r in rows)
     lines += ["", "## 3. 선택된 검색 방식(전 반복 합계)", ""]
-    lines += [f"- {names[c]}: " + ", ".join(f"{k} {routes[(c[0], c[1], k)]}" for k in ("local", "global", "hybrid", "react", "react2", "error")
+    lines += [f"- {names[c]}: " + ", ".join(f"{k} {routes[(c[0], c[1], k)]}" for k in ("local", "global", "hybrid", "react", "react2", "react3", "error")
                                              if routes[(c[0], c[1], k)]) for c in combos]
-    react_rows = [r for r in rows if r["search"] in ("react", "react2")]
+    react_rows = [r for r in rows if r["search"] in ("react", "react2", "react3")]
     ok_rows = [r for r in react_rows if not r.get("failed")]
     if ok_rows:
         tools = Counter(s["tool"] for r in ok_rows for s in r.get("steps", []))

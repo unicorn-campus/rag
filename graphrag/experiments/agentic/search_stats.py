@@ -18,7 +18,9 @@ from collections import defaultdict
 
 from harness import EXP_DIR, RESULTS_DIR
 
-NAMES = {"base": "원래 검색", "agentic": "고정 워크플로우", "react": "ReAct v1", "react2": "ReAct v2(원문 포함)"}
+NAMES = {"base": "원래 검색", "agentic": "고정 워크플로우", "react": "ReAct v1", "react2": "ReAct v2(원문 포함)",
+         "react3": "ReAct v3(거절 장치)"}
+GRAPH_WEAK = {"N02", "N18"}   # 특허법에는 있지만 그래프 스키마 밖 조문(특허료, 등록지연 연장)이라 원문까지 가지 못하는 질문
 N_BOOT = 10000
 
 
@@ -50,7 +52,34 @@ def bootstrap(a: dict[str, float], b: dict[str, float], seed: int = 7) -> tuple[
     return sum(diffs) / len(diffs), boots[int(0.025 * N_BOOT)], boots[int(0.975 * N_BOOT)]
 
 
+def refusal_section(rows: list[dict]) -> list[str]:
+    """거절 지표: 그래프 밖 질문은 거절률(높을수록 좋음), 답할 수 있는 질문은 잘못된 거절 수(낮을수록 좋음)."""
+    if not any("refused" in r for r in rows):
+        return []
+    modes = [m for m in NAMES if any(r["search"] == m for r in rows)]
+    outside = [r for r in rows if r.get("expected") == "outside"]
+    weak = [r for r in rows if r["id"] in GRAPH_WEAK]
+    answerable = [r for r in rows if r.get("expected") != "outside" and r["id"] not in GRAPH_WEAK]
+
+    def rate(rs: list[dict], m: str) -> str:
+        xs = [r["refused"] for r in rs if r["search"] == m and r.get("refused") is not None]
+        return f"{sum(xs)}/{len(xs)} ({sum(xs) / len(xs):.2f})" if xs else "-"
+
+    lines = ["", "## 4. 거절", "", "| 방식 | 그래프 밖 질문 거절(높을수록 좋음) | 그래프가 약한 N02·N18 거절 | 답할 수 있는 질문의 잘못된 거절(낮을수록 좋음) |",
+             "|---|---|---|---|"]
+    for m in modes:
+        lines.append(f"| {NAMES[m]} | {rate(outside, m)} | {rate(weak, m)} | {rate(answerable, m)} |")
+    if outside:
+        lines += ["", "| 그래프 밖 문항 | " + " | ".join(NAMES[m] for m in modes) + " |", "|---|" + "---|" * len(modes)]
+        for q in sorted({r["id"] for r in outside}):
+            lines.append(f"| {q} | " + " | ".join(rate([r for r in outside if r["id"] == q], m) for m in modes) + " |")
+    return lines
+
+
 def render(rows: list[dict], tag: str) -> str:
+    if not any(r["keypoint_recall"] is not None for r in rows):   # 그래프 밖 질문만 있는 자료(요점 없음)
+        return "\n".join([f"# 검색 비교 통계({tag})", "", f"- 자료: results/search-eval-{tag}.json, 질문 {len({r['id'] for r in rows})}개(요점 없음, 거절 여부만 봄)"]
+                         + refusal_section(rows)) + "\n"
     pq, pr = per_question(rows), per_run(rows)
     modes = [m for m in NAMES if m in pq]
     by_type: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
@@ -80,6 +109,7 @@ def render(rows: list[dict], tag: str) -> str:
               "|---|---|" + "---|" * len(modes)]
     for q in sorted(pq[modes[0]]):
         lines.append(f"| {q} | {qtype[q]} | " + " | ".join(f"{pq[m].get(q, float('nan')):.2f}" for m in modes) + " |")
+    lines += refusal_section(rows)
     return "\n".join(lines) + "\n"
 
 

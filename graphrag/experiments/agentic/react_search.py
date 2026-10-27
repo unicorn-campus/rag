@@ -61,6 +61,32 @@ V2_RULES = """
 - 관계만으로 답하지 말고, 질문의 하위 질문마다 원문 근거가 있는지 확인한 뒤 답함. 원문이 안 보이면 read_chunk를 씀
 """
 
+# v3: 거절 장치. 그래프(특허법 조문)에 근거가 없는 질문에 답을 지어내지 않게 함
+V3_RULES = """
+[v3 거절 규칙]
+- 이 그래프는 특허법 조문만 담고 있음. 관찰한 원문에 없는 내용은 일반 지식으로 보태지 않음
+- 원문으로 질문의 핵심(묻는 대상의 주체·기한·형량·금액·관할 등)을 확인하지 못했으면 지어내지 말고 "그래프에서 근거를 찾지 못함"이라고만 답함
+"""
+
+GROUND_PROMPT = """[목표] 답변이 관찰한 특허법 조문 원문에 근거하는지 판정함
+
+[질문]
+{question}
+
+[관찰(도구 결과, 조문 원문 포함)]
+{observations}
+
+[답변]
+{answer}
+
+[판정 기준]
+- grounded=true: 관찰한 조문 원문이 질문의 핵심(묻는 대상의 주체·기한·형량·금액·관할 등)을 직접 정하고 있고, 답변의 핵심 내용이 그 원문과 맞음
+- grounded=false: 원문에 질문의 핵심이 없음(다른 법률·하위 법령의 내용이거나 다른 조문을 끌어다 맞춤), 또는 답변의 핵심이 원문에 없는 일반 지식임
+- 답변 일부만 원문에 없으면 핵심이 원문에 있는 한 true
+
+[출력] JSON 하나만: {{"grounded": true, "reason": "한 줄"}}
+"""
+
 FINAL_PROMPT = """아래는 특허법 지식그래프 도구로 모은 관찰입니다. 이것만으로 질문에 답하세요.
 
 [질문]
@@ -78,7 +104,7 @@ FINAL_PROMPT = """아래는 특허법 지식그래프 도구로 모은 관찰입
 class ReactSearch:
     """원래 그래프(또는 지정한 그래프)를 읽기 전용 도구로 탐색하는 ReAct 에이전트."""
 
-    def __init__(self, driver, with_source: bool = False, retries: int = 3) -> None:
+    def __init__(self, driver, with_source: bool = False, retries: int = 3, refuse: bool = False) -> None:
         """with_source=True면 v2(도구 결과에 출처 원문 포함). retries는 Groq 형식 오류 때 처음부터 다시 시도하는 횟수(평가에서는 바깥에서 같은 정책을 쓰려고 1)."""
         import neo4j
         from langchain.agents import create_agent
@@ -87,6 +113,7 @@ class ReactSearch:
 
         self.driver = driver
         self.with_source = with_source
+        self.refuse = refuse   # v3: 거절 장치(원문 미확인 규칙 + 근거 판정 에이전트)
         self.retries = retries
         self._shown: set[int] = set()
         self._read = neo4j.RoutingControl.READ
@@ -94,7 +121,8 @@ class ReactSearch:
         self.llm = ChatGroq(model=MODEL_NAME, temperature=0, reasoning_effort="medium",
                             api_key=os.environ["GROQ_API_KEY"], max_retries=3)
         self.agent = create_agent(
-            self.llm, self._tools(), system_prompt=SYSTEM_PROMPT + (V2_RULES if with_source else ""),
+            self.llm, self._tools(),
+            system_prompt=SYSTEM_PROMPT + (V2_RULES if with_source else "") + (V3_RULES if refuse else ""),
             middleware=[ModelCallLimitMiddleware(run_limit=MAX_MODEL_CALLS, exit_behavior="end"),
                         ToolCallLimitMiddleware(run_limit=MAX_TOOL_CALLS)])
 
@@ -247,18 +275,49 @@ class ReactSearch:
         if not answer:   # 상한에 걸려 최종 답이 없으면 모은 관찰로 답변 1회
             forced = True
             answer = (self.llm.invoke(FINAL_PROMPT.format(question=question, observations=observations or "(없음)")).content or "").strip()
-        return {"answer": answer or graph_search.NO_EVIDENCE, "context": observations, "steps": steps,
-                "model_calls": len(ai) + (1 if forced else 0), "tool_calls": len(tool_msgs), "forced_final": forced,
-                "errors": errors, "failed": False, "seconds": round(time.time() - started, 1)}
+        answer = answer or graph_search.NO_EVIDENCE
+        refusal = {"refused": False, "reason": "", "checked": False}
+        extra_calls = 0
+        if self.refuse:   # v3 거절 장치
+            saw_source = bool(self._shown) or any(s["tool"] == "read_chunk" for s in steps)
+            if not saw_source:   # 1단계(규칙): 조문 원문을 하나도 보지 못함
+                refusal = {"refused": True, "reason": "조문 원문을 하나도 확인하지 못함", "checked": False}
+            elif graph_search.NO_EVIDENCE not in answer:   # 2단계(근거 판정 에이전트 1회)
+                extra_calls = 1
+                refusal = self._ground_check(question, observations, answer)
+            if refusal["refused"]:
+                answer = f"{graph_search.NO_EVIDENCE}\n(확인한 원문으로는 질문에 답할 수 없음: {refusal['reason']})"
+        return {"answer": answer, "context": observations, "steps": steps,
+                "model_calls": len(ai) + (1 if forced else 0) + extra_calls, "tool_calls": len(tool_msgs), "forced_final": forced,
+                "refusal": refusal, "errors": errors, "failed": False, "seconds": round(time.time() - started, 1)}
+
+    def _ground_check(self, question: str, observations: str, answer: str) -> dict:
+        """근거 판정 에이전트: 관찰한 조문 원문이 질문의 핵심을 직접 정하고 있고 답이 그 원문에 기반하는지 판정함.
+
+        판정이 실패하면(형식 오류 등) 답을 그대로 둠(거절로 처리하지 않음).
+        """
+        import json
+
+        prompt = GROUND_PROMPT.format(question=question, observations=observations[:12000], answer=answer)
+        for _ in range(2):
+            try:
+                text = self.llm.invoke(prompt).content or ""
+                data = json.loads(text[text.find("{"): text.rfind("}") + 1])
+                ok = bool(data.get("grounded"))
+                return {"refused": not ok, "reason": str(data.get("reason", ""))[:150], "checked": True}
+            except Exception:
+                continue
+        return {"refused": False, "reason": "판정 실패", "checked": False}
 
 
 def main() -> None:
     setup_console()
     load_dotenv(ENV_FILE)
     driver = graph_search.precheck()
-    agent = ReactSearch(driver, with_source="--v2" in sys.argv)   # --v2: 도구 결과에 출처 원문 포함
+    v3 = "--v3" in sys.argv   # --v3: v2 + 거절 장치
+    agent = ReactSearch(driver, with_source=v3 or "--v2" in sys.argv, refuse=v3)   # --v2: 도구 결과에 출처 원문 포함
     try:
-        r = agent.ask([a for a in sys.argv[1:] if a != "--v2"][0])
+        r = agent.ask([a for a in sys.argv[1:] if a not in ("--v2", "--v3")][0])
         for i, s in enumerate(r["steps"], 1):
             print(f"[행동 {i}] {s['tool']}({s['args']})")
         print(f"[모델 {r['model_calls']}회, 도구 {r['tool_calls']}회, {r['seconds']}초{', 상한 도달로 답 따로 생성' if r['forced_final'] else ''}]")
