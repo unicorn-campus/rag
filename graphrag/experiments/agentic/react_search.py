@@ -54,6 +54,13 @@ SYSTEM_PROMPT = f"""당신은 특허법 지식그래프를 도구로 탐색해 �
 - 답 끝에 "근거:" 줄을 두고, 답에 쓴 조문 번호(예: 제29조, 원문에서 확인한 것만) 또는 엔티티 이름을 쉼표로 나열함. 청크 번호는 쓰지 않음
 """
 
+# v2: 도구 결과에 출처 조문 원문을 함께 넣음(1차 비교에서 원문을 읽은 답 0.905, 안 읽은 답 0.516이었기 때문)
+V2_RULES = """
+[v2 추가 규칙]
+- 도구 결과 끝의 "출처 원문"은 그 엔티티·관계가 뽑힌 조문 원문임. 주체·조건·기한·처리 기관·형량은 원문으로 확인해 답에 담음
+- 관계만으로 답하지 말고, 질문의 하위 질문마다 원문 근거가 있는지 확인한 뒤 답함. 원문이 안 보이면 read_chunk를 씀
+"""
+
 FINAL_PROMPT = """아래는 특허법 지식그래프 도구로 모은 관찰입니다. 이것만으로 질문에 답하세요.
 
 [질문]
@@ -71,19 +78,23 @@ FINAL_PROMPT = """아래는 특허법 지식그래프 도구로 모은 관찰입
 class ReactSearch:
     """원래 그래프(또는 지정한 그래프)를 읽기 전용 도구로 탐색하는 ReAct 에이전트."""
 
-    def __init__(self, driver) -> None:
+    def __init__(self, driver, with_source: bool = False, retries: int = 3) -> None:
+        """with_source=True면 v2(도구 결과에 출처 원문 포함). retries는 Groq 형식 오류 때 처음부터 다시 시도하는 횟수(평가에서는 바깥에서 같은 정책을 쓰려고 1)."""
         import neo4j
         from langchain.agents import create_agent
         from langchain.agents.middleware import ModelCallLimitMiddleware, ToolCallLimitMiddleware
         from langchain_groq import ChatGroq
 
         self.driver = driver
+        self.with_source = with_source
+        self.retries = retries
+        self._shown: set[int] = set()
         self._read = neo4j.RoutingControl.READ
         self.base = graph_search.GraphSearch(driver)   # 원래 검색기(Local/Global 벡터 검색) 재사용
         self.llm = ChatGroq(model=MODEL_NAME, temperature=0, reasoning_effort="medium",
                             api_key=os.environ["GROQ_API_KEY"], max_retries=3)
         self.agent = create_agent(
-            self.llm, self._tools(), system_prompt=SYSTEM_PROMPT,
+            self.llm, self._tools(), system_prompt=SYSTEM_PROMPT + (V2_RULES if with_source else ""),
             middleware=[ModelCallLimitMiddleware(run_limit=MAX_MODEL_CALLS, exit_behavior="end"),
                         ToolCallLimitMiddleware(run_limit=MAX_TOOL_CALLS)])
 
@@ -93,6 +104,25 @@ class ReactSearch:
     def _q(self, query: str, **params) -> list[dict]:
         """읽기 트랜잭션으로 실행(쓰기 쿼리는 Neo4j가 거부함)."""
         return [r.data() for r in self.driver.execute_query(query, routing_=self._read, **params).records]
+
+    def _sources(self, idxs: list[int], limit: int = 3) -> str:
+        """v2: 출처 청크 원문을 붙임. 같은 질문 안에서 이미 보여 준 원문은 다시 넣지 않음."""
+        if not self.with_source:
+            return ""
+        idxs = [int(i) for i in dict.fromkeys(idxs)]
+        new = [i for i in idxs if i not in self._shown][:limit]
+        old = [i for i in idxs if i in self._shown]
+        parts = []
+        if new:
+            rows = self._q("MATCH (c:Chunk) WHERE c.index IN $ids RETURN c.index AS i, c.text AS t", ids=new)
+            text = {r["i"]: r["t"] for r in rows}
+            for i in new:
+                if i in text:
+                    self._shown.add(i)
+                    parts.append(f"[청크 #{i}]\n{text[i]}")
+        if old:
+            parts.append(f"(청크 #{', #'.join(map(str, old[:5]))} 원문은 앞의 관찰에 있음)")
+        return ("\n\n## 출처 원문\n" + "\n\n".join(parts)) if parts else ""
 
     # -----------------------------------------------------------------------
     # 도구
@@ -111,7 +141,7 @@ class ReactSearch:
                 chunks = ", #".join(str(c["chunk_index"]) for c in e["chunks"])
                 lines.append(f"- {e['type']}: {e['name']} (유사도 {e['score']:.2f}, 출처 청크 #{chunks or '-'})")
                 lines += [f"  · {r}" for r in e["relations"][:12]]
-            return "\n".join(lines)
+            return "\n".join(lines) + self._sources([c["chunk_index"] for e in items for c in e["chunks"]])
 
         @tool
         def get_neighbors(entity_name: str) -> str:
@@ -133,7 +163,7 @@ class ReactSearch:
             for r in rows:
                 out.append(f"- {r['type']}: {r['name']} (출처 청크 #{', #'.join(map(str, r['chunks'])) or '-'})")
                 out += [f"  · {x}" for x in r["rels"]] or ["  · (관계 없음)"]
-            return "\n".join(out)
+            return "\n".join(out) + self._sources([i for r in rows for i in r["chunks"][:2]])
 
         @tool
         def find_relations(relation_type: str, start_contains: str = "", end_contains: str = "") -> str:
@@ -146,11 +176,14 @@ class ReactSearch:
                 f"MATCH (a:__Entity__)-[r:{relation_type}]->(b:__Entity__) "
                 "WHERE a.name CONTAINS $s AND b.name CONTAINS $e "
                 "OPTIONAL MATCH (a)-[:FROM_CHUNK]->(c:Chunk) "
+                # 관계가 뽑힌 청크(양 끝이 함께 나온 청크)를 먼저 둠
+                "WITH a, b, c ORDER BY CASE WHEN EXISTS { (b)-[:FROM_CHUNK]->(c) } THEN 0 ELSE 1 END, c.index "
                 "RETURN a.name AS a, b.name AS b, collect(DISTINCT c.index)[..3] AS chunks LIMIT 20",
                 s=start_contains, e=end_contains)
             if not rows:
                 return "결과 없음"
-            return "\n".join(f"- {r['a']} -{relation_type}-> {r['b']} (출처 청크 #{', #'.join(map(str, r['chunks'])) or '-'})" for r in rows)
+            body = "\n".join(f"- {r['a']} -{relation_type}-> {r['b']} (출처 청크 #{', #'.join(map(str, r['chunks'])) or '-'})" for r in rows)
+            return body + self._sources([r["chunks"][0] for r in rows if r["chunks"]])
 
         @tool
         def search_communities(query: str) -> str:
@@ -190,8 +223,9 @@ class ReactSearch:
 
         started = time.time()
         errors: list[str] = []
-        for _ in range(3):   # Groq가 도구 호출 형식을 깨뜨리는 오류(400 output_parse_failed 등)는 처음부터 다시 시도
+        for _ in range(self.retries):   # Groq가 도구 호출 형식을 깨뜨리는 오류(400 output_parse_failed 등)는 처음부터 다시 시도
             self._seen: set = set()
+            self._shown = set()
             try:
                 result = self.agent.invoke({"messages": [{"role": "user", "content": question}]})
                 break
@@ -222,9 +256,9 @@ def main() -> None:
     setup_console()
     load_dotenv(ENV_FILE)
     driver = graph_search.precheck()
-    agent = ReactSearch(driver)
+    agent = ReactSearch(driver, with_source="--v2" in sys.argv)   # --v2: 도구 결과에 출처 원문 포함
     try:
-        r = agent.ask(sys.argv[1])
+        r = agent.ask([a for a in sys.argv[1:] if a != "--v2"][0])
         for i, s in enumerate(r["steps"], 1):
             print(f"[행동 {i}] {s['tool']}({s['args']})")
         print(f"[모델 {r['model_calls']}회, 도구 {r['tool_calls']}회, {r['seconds']}초{', 상한 도달로 답 따로 생성' if r['forced_final'] else ''}]")
