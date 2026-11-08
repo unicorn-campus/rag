@@ -1,0 +1,35 @@
+[
+  {
+    "cand": "cand_008",
+    "base_pass_hat_k": 9,
+    "base_pass_rate": 0.9167,
+    "hard_pass_hat_k": 11,
+    "hard_pass_rate": 0.9167,
+    "avg_input_tokens": 5213,
+    "avg_seconds": 4.18,
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  {
+    "cand": "cand_006",
+    "base_pass_hat_k": 10,
+    "base_pass_rate": 0.9167,
+    "hard_pass_hat_k": 9,
+    "hard_pass_rate": 0.8611,
+    "avg_input_tokens": 4531,
+    "avg_seconds": 4.58,
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  {
+    "cand": "cand_000",
+    "base_pass_hat_k": 9,
+    "base_pass_rate": 0.8611,
+    "hard_pass_hat_k": 8,
+    "hard_pass_rate": 0.7222,
+    "avg_input_tokens": 4478,
+    "avg_seconds": 3.02,
+    "unapproved_send": 0,
+    "hallucination": 0
+  }
+]

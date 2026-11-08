@@ -1,0 +1,6 @@
+[14:50:40] === 반복 1: 제안 시작(모델 sonnet) ===
+an error occurred during closing of asynchronous generator <async_generator object InternalClient._process_query_inner at 0x0000026C5760A240>
+asyncgen: <async_generator object InternalClient._process_query_inner at 0x0000026C5760A240>
+RuntimeError: aclose(): asynchronous generator is already running
+[14:51:46] 제안 결과: {'ok': False, 'reason': 'token_cap: 호출당 토큰 상한 3,000,000 초과', 'turns': 0, 'tokens': 3138903, 'seconds': 65.4, 'cost_usd_estimate': 0.0, 'denied': [], 'model': 'sonnet'}
+[14:51:46] 반복 1 끝: {} / 전선 ['cand_000'] / 누적 제안 토큰 3,138,903

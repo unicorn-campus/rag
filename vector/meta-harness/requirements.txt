@@ -1,0 +1,3 @@
+# vector/meta-harness: vector/harness의 .venv에 추가로 설치
+-r ../harness/requirements.txt
+claude-agent-sdk==0.2.176      # 제안자(로컬 Claude Code, claude.ai 구독 로그인) 헤드리스 실행

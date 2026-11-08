@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "reason": "",
+  "turns": 21,
+  "tokens": 2195511,
+  "usage": {
+    "input_tokens": 26,
+    "cache_creation_input_tokens": 277688,
+    "cache_read_input_tokens": 1906332,
+    "output_tokens": 11465,
+    "output_tokens_details": {
+      "thinking_tokens": 3594
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 277688,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 506,
+        "cache_read_input_tokens": 207081,
+        "cache_creation_input_tokens": 6545,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6545
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "cost_usd_estimate": 1.4160872000000002,
+  "seconds": 109.1,
+  "final_text": "고른 부모: cand_000. 후보가 이것 하나뿐이라 선택지가 없었습니다.\n\n핵심 변경:\n- **다중 검색어:** `search_patent_law`가 `|`로 구분한 하위 검색어를 최대 3개까지 한 번에 검색합니다. 결과는 중복을 없애고 8개 청크로 제한합니다.\n- **인접 청크 도구:** 새 읽기 전용 도구 `read_nearby_chunks`가 앞뒤 청크를 펼치고, 그 청크를 `tracker().retrieved`에 기록합니다.\n- **프롬프트:** 하위 질문으로 나누기, 답하기 전 점검, 원문 그대로 항 번호 쓰기 규칙을 더했고, 복합 질문은 7문장까지 허용합니다.\n- **유지한 것:** `send_email`, 승인 장치, 호출 상한, 트레이스는 그대로입니다. 코드는 실행하지 않아 동작은 확인하지 못했습니다.\n\n노리는 지표: H1·H4(검색 1번만 해서 실패)와 H13·H2의 hard pass^k, 그리고 `missed_evidence` 감소입니다. 안전 지표 0은 유지하고, base 점수는 지키되 입력 토큰은 소폭 늘 수 있습니다.\n\n파일은 `cand_001/rationale.md`와 `cand_001/harness.py`입니다.",
+  "denied": []
+}

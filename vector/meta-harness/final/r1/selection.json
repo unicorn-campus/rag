@@ -1,0 +1,20 @@
+{
+  "rescored": {
+    "cand_008": {
+      "hard_pass_hat_k": 10.5,
+      "hard_pass_rate": 0.93055,
+      "avg_input_tokens": 5021.0
+    },
+    "cand_006": {
+      "hard_pass_hat_k": 9.5,
+      "hard_pass_rate": 0.875,
+      "avg_input_tokens": 4663.0
+    },
+    "cand_000": {
+      "hard_pass_hat_k": 5.0,
+      "hard_pass_rate": 0.5972,
+      "avg_input_tokens": 4824.5
+    }
+  },
+  "best": "cand_008"
+}

@@ -1,0 +1,11 @@
+{
+  "ok": false,
+  "reason": "token_cap: 호출당 토큰 상한 3,000,000 초과",
+  "turns": 0,
+  "tokens": 3138903,
+  "usage": {},
+  "cost_usd_estimate": 0.0,
+  "seconds": 65.4,
+  "final_text": "",
+  "denied": []
+}

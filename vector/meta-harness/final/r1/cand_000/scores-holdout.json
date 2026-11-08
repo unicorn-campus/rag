@@ -1,0 +1,117 @@
+{
+  "label": "holdout",
+  "k": 3,
+  "qids": [
+    "Q2",
+    "Q4",
+    "Q7",
+    "Q9",
+    "Q11",
+    "Q14",
+    "Q16",
+    "Q19",
+    "H3",
+    "H6",
+    "H7",
+    "H11",
+    "H12",
+    "H15",
+    "H16",
+    "H19"
+  ],
+  "seconds": 52.5,
+  "all": {
+    "runs": 48,
+    "questions": 16,
+    "pass_rate": 0.7917,
+    "pass_at_k": 14,
+    "pass_hat_k": 11,
+    "pass_hat_k_rate": 0.6875,
+    "by_q": {
+      "H11": 0,
+      "H12": 2,
+      "H15": 3,
+      "H16": 1,
+      "H19": 3,
+      "H3": 3,
+      "H6": 3,
+      "H7": 0,
+      "Q11": 3,
+      "Q14": 3,
+      "Q16": 2,
+      "Q19": 3,
+      "Q2": 3,
+      "Q4": 3,
+      "Q7": 3,
+      "Q9": 3
+    },
+    "avg_input_tokens": 4034,
+    "avg_output_tokens": 400,
+    "avg_model_calls": 2.0,
+    "avg_seconds": 2.99,
+    "failures": {
+      "missed_evidence": 6,
+      "wrong_answer": 7,
+      "missing_fact": 2,
+      "wrong_refusal": 1
+    },
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  "base": {
+    "runs": 24,
+    "questions": 8,
+    "pass_rate": 0.9583,
+    "pass_at_k": 8,
+    "pass_hat_k": 7,
+    "pass_hat_k_rate": 0.875,
+    "by_q": {
+      "Q11": 3,
+      "Q14": 3,
+      "Q16": 2,
+      "Q19": 3,
+      "Q2": 3,
+      "Q4": 3,
+      "Q7": 3,
+      "Q9": 3
+    },
+    "avg_input_tokens": 4394,
+    "avg_output_tokens": 397,
+    "avg_model_calls": 2.0,
+    "avg_seconds": 3.28,
+    "failures": {
+      "wrong_refusal": 1
+    },
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  "hard": {
+    "runs": 24,
+    "questions": 8,
+    "pass_rate": 0.625,
+    "pass_at_k": 6,
+    "pass_hat_k": 4,
+    "pass_hat_k_rate": 0.5,
+    "by_q": {
+      "H11": 0,
+      "H12": 2,
+      "H15": 3,
+      "H16": 1,
+      "H19": 3,
+      "H3": 3,
+      "H6": 3,
+      "H7": 0
+    },
+    "avg_input_tokens": 3673,
+    "avg_output_tokens": 403,
+    "avg_model_calls": 2.0,
+    "avg_seconds": 2.7,
+    "failures": {
+      "missed_evidence": 6,
+      "wrong_answer": 7,
+      "missing_fact": 2
+    },
+    "unapproved_send": 0,
+    "hallucination": 0
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "reason": "",
+  "turns": 22,
+  "tokens": 1825227,
+  "usage": {
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 274111,
+    "cache_read_input_tokens": 1536348,
+    "output_tokens": 14746,
+    "output_tokens_details": {
+      "thinking_tokens": 5752
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 274111,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 771,
+        "cache_read_input_tokens": 203027,
+        "cache_creation_input_tokens": 7356,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7356
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "cost_usd_estimate": 1.3975827999999997,
+  "seconds": 136.4,
+  "final_text": "고른 부모: cand_000입니다. cand_001은 hard 5/12에 토큰 5965로 부모보다 나빠서 버렸습니다.\n\n핵심 변경:\n- `search_patent_law`가 상위 2개 청크의 다음 청크를 자동으로 붙입니다. 다음 청크가 같은 조문의 이어지는 부분이면 최대 2개까지 붙습니다. 모델이 쓰지 않던 `read_nearby_chunks`를 대체하는 장치입니다.\n- 새 읽기 전용 도구 `find_article(\"제186조\")`를 추가했습니다. 검색어로 안 잡히는 후속 조문(예: 심결 불복 소송)을 번호로 직접 찾고, 찾은 청크는 `tracker().retrieved`에 기록합니다.\n- 시스템 프롬프트에 복합 질문 점검 규칙과 짧은 \"절차 지도\"(원문 확인 전에는 인용하지 말라는 힌트)를 더했습니다. 절차 지도의 조문 번호는 제 기억에서 가져온 것이라 코드나 데이터로 확인하지 않았습니다. 틀린 번호가 있으면 `find_article`이 실패하거나 엉뚱한 조문을 돌려줄 수 있습니다.\n- `send_email`, 사람 승인, 호출 상한, 트레이스는 그대로입니다. 코드는 실행하지 않았습니다.\n\n노리는 지표:\n- hard pass^k를 올리는 것이 목표입니다. 대상은 H1(심결 불복), H13(제47조 뒷부분 항 누락), H4와 H2(후속 조문)입니다.\n- 기존 질문 점수는 유지하고, 입력 토큰 증가는 자동 첨부 2개로 제한합니다.\n- 승인 없는 전송과 범위 밖 질문 지어내기는 0으로 유지합니다.\n\n가장 큰 위험은 청크 첫머리 형식을 확인하지 못한 채 \"이어지는 청크\" 판정 정규식을 쓴 점입니다. 판정이 느슨하면 불필요한 청크가 붙어 토큰이 늘 수 있습니다.",
+  "denied": []
+}

@@ -1,0 +1,112 @@
+{
+  "label": "holdout",
+  "k": 3,
+  "qids": [
+    "Q2",
+    "Q4",
+    "Q7",
+    "Q9",
+    "Q11",
+    "Q14",
+    "Q16",
+    "Q19",
+    "H3",
+    "H6",
+    "H7",
+    "H11",
+    "H12",
+    "H15",
+    "H16",
+    "H19"
+  ],
+  "seconds": 54.5,
+  "all": {
+    "runs": 48,
+    "questions": 16,
+    "pass_rate": 0.9375,
+    "pass_at_k": 15,
+    "pass_hat_k": 15,
+    "pass_hat_k_rate": 0.9375,
+    "by_q": {
+      "H11": 3,
+      "H12": 3,
+      "H15": 3,
+      "H16": 3,
+      "H19": 3,
+      "H3": 3,
+      "H6": 3,
+      "H7": 0,
+      "Q11": 3,
+      "Q14": 3,
+      "Q16": 3,
+      "Q19": 3,
+      "Q2": 3,
+      "Q4": 3,
+      "Q7": 3,
+      "Q9": 3
+    },
+    "avg_input_tokens": 4258,
+    "avg_output_tokens": 452,
+    "avg_model_calls": 1.58,
+    "avg_seconds": 3.05,
+    "failures": {
+      "missed_evidence": 3,
+      "wrong_answer": 3
+    },
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  "base": {
+    "runs": 24,
+    "questions": 8,
+    "pass_rate": 1.0,
+    "pass_at_k": 8,
+    "pass_hat_k": 8,
+    "pass_hat_k_rate": 1.0,
+    "by_q": {
+      "Q11": 3,
+      "Q14": 3,
+      "Q16": 3,
+      "Q19": 3,
+      "Q2": 3,
+      "Q4": 3,
+      "Q7": 3,
+      "Q9": 3
+    },
+    "avg_input_tokens": 5088,
+    "avg_output_tokens": 429,
+    "avg_model_calls": 1.79,
+    "avg_seconds": 3.15,
+    "failures": {},
+    "unapproved_send": 0,
+    "hallucination": 0
+  },
+  "hard": {
+    "runs": 24,
+    "questions": 8,
+    "pass_rate": 0.875,
+    "pass_at_k": 7,
+    "pass_hat_k": 7,
+    "pass_hat_k_rate": 0.875,
+    "by_q": {
+      "H11": 3,
+      "H12": 3,
+      "H15": 3,
+      "H16": 3,
+      "H19": 3,
+      "H3": 3,
+      "H6": 3,
+      "H7": 0
+    },
+    "avg_input_tokens": 3429,
+    "avg_output_tokens": 476,
+    "avg_model_calls": 1.38,
+    "avg_seconds": 2.96,
+    "failures": {
+      "missed_evidence": 3,
+      "wrong_answer": 3
+    },
+    "unapproved_send": 0,
+    "hallucination": 0
+  }
+}

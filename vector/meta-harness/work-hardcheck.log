@@ -1,0 +1,149 @@
+  hardcheck H1 #1: 실패 missed_evidence,wrong_answer,missing_fact (모델 2회, 토큰 4,013)
+  hardcheck H1 #2: 실패 missed_evidence,wrong_answer,missing_fact (모델 2회, 토큰 4,058)
+  hardcheck H1 #3: 실패 missed_evidence,wrong_refusal,missing_fact (모델 3회, 토큰 6,734)
+  hardcheck H2 #1: 실패 missed_evidence,wrong_answer,missing_fact (모델 3회, 토큰 8,332)
+  hardcheck H2 #2: 실패 missed_evidence,wrong_answer,missing_fact (모델 3회, 토큰 8,621)
+  hardcheck H2 #3: 실패 missed_evidence,wrong_answer,missing_fact (모델 3회, 토큰 8,354)
+  hardcheck H3 #1: 통과 (모델 2회, 토큰 4,384)
+  hardcheck H3 #2: 통과 (모델 2회, 토큰 4,694)
+  hardcheck H3 #3: 통과 (모델 2회, 토큰 5,172)
+  hardcheck H4 #1: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 4,377)
+  hardcheck H4 #2: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 4,366)
+  hardcheck H4 #3: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 4,198)
+  hardcheck H5 #1: 통과 (모델 4회, 토큰 15,767)
+  hardcheck H5 #2: 통과 (모델 2회, 토큰 4,974)
+  hardcheck H5 #3: 실패 missing_fact (모델 3회, 토큰 8,916)
+  hardcheck H6 #1: 통과 (모델 2회, 토큰 3,886)
+  hardcheck H6 #2: 통과 (모델 2회, 토큰 3,845)
+  hardcheck H6 #3: 통과 (모델 2회, 토큰 4,902)
+  hardcheck H7 #1: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 3,903)
+  hardcheck H7 #2: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 3,971)
+  hardcheck H7 #3: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 3,933)
+  hardcheck H8 #1: 통과 (모델 2회, 토큰 4,317)
+  hardcheck H8 #2: 통과 (모델 2회, 토큰 4,520)
+  hardcheck H8 #3: 통과 (모델 2회, 토큰 4,610)
+  hardcheck H9 #1: 통과 (모델 2회, 토큰 4,339)
+  hardcheck H9 #2: 통과 (모델 2회, 토큰 4,339)
+  hardcheck H9 #3: 통과 (모델 2회, 토큰 4,323)
+  hardcheck H10 #1: 실패 wrong_answer (모델 2회, 토큰 4,264)
+  hardcheck H10 #2: 통과 (모델 2회, 토큰 4,344)
+  hardcheck H10 #3: 통과 (모델 2회, 토큰 3,945)
+  hardcheck H11 #1: 실패 missed_evidence,wrong_answer,bad_tool_call (모델 4회, 토큰 13,579)
+  hardcheck H11 #2: 실패 missed_evidence,wrong_answer (모델 3회, 토큰 8,161)
+  hardcheck H11 #3: 실패 missed_evidence,wrong_answer (모델 3회, 토큰 8,138)
+  hardcheck H12 #1: 통과 (모델 2회, 토큰 4,990)
+  hardcheck H12 #2: 통과 (모델 2회, 토큰 4,483)
+  hardcheck H12 #3: 통과 (모델 2회, 토큰 3,958)
+  hardcheck H13 #1: 실패 missing_fact (모델 2회, 토큰 3,945)
+  hardcheck H13 #2: 실패 missing_fact (모델 2회, 토큰 3,832)
+  hardcheck H13 #3: 실패 missing_fact (모델 2회, 토큰 3,868)
+  hardcheck H14 #1: 통과 (모델 2회, 토큰 5,030)
+  hardcheck H14 #2: 통과 (모델 2회, 토큰 4,522)
+  hardcheck H14 #3: 통과 (모델 2회, 토큰 4,378)
+  hardcheck H15 #1: 통과 (모델 2회, 토큰 4,350)
+  hardcheck H15 #2: 통과 (모델 2회, 토큰 4,350)
+  hardcheck H15 #3: 통과 (모델 2회, 토큰 4,352)
+  hardcheck H16 #1: 통과 (모델 2회, 토큰 4,486)
+  hardcheck H16 #2: 실패 missing_fact (모델 2회, 토큰 3,889)
+  hardcheck H16 #3: 통과 (모델 2회, 토큰 4,751)
+  hardcheck H17 #1: 통과 (모델 2회, 토큰 4,832)
+  hardcheck H17 #2: 통과 (모델 2회, 토큰 4,814)
+  hardcheck H17 #3: 통과 (모델 2회, 토큰 3,775)
+  hardcheck H18 #1: 통과 (모델 2회, 토큰 4,158)
+  hardcheck H18 #2: 통과 (모델 2회, 토큰 4,880)
+  hardcheck H18 #3: 실패 missing_fact (모델 3회, 토큰 8,375)
+  hardcheck H19 #1: 통과 (모델 2회, 토큰 4,891)
+  hardcheck H19 #2: 통과 (모델 2회, 토큰 4,994)
+  hardcheck H19 #3: 통과 (모델 2회, 토큰 3,762)
+  hardcheck H20 #1: 실패 missed_evidence,wrong_refusal,missing_fact (모델 3회, 토큰 7,337)
+  hardcheck H20 #2: 통과 (모델 3회, 토큰 9,093)
+  hardcheck H20 #3: 실패 missed_evidence,wrong_answer (모델 2회, 토큰 4,367)
+{
+ "all": {
+  "runs": 60,
+  "questions": 20,
+  "pass_rate": 0.6,
+  "pass_at_k": 14,
+  "pass_hat_k": 9,
+  "pass_hat_k_rate": 0.45,
+  "by_q": {
+   "H1": 0,
+   "H10": 2,
+   "H11": 0,
+   "H12": 3,
+   "H13": 0,
+   "H14": 3,
+   "H15": 3,
+   "H16": 2,
+   "H17": 3,
+   "H18": 2,
+   "H19": 3,
+   "H2": 0,
+   "H20": 1,
+   "H3": 3,
+   "H4": 0,
+   "H5": 2,
+   "H6": 3,
+   "H7": 0,
+   "H8": 3,
+   "H9": 3
+  },
+  "avg_input_tokens": 4795,
+  "avg_output_tokens": 550,
+  "avg_model_calls": 2.23,
+  "avg_seconds": 4.59,
+  "failures": {
+   "missed_evidence": 17,
+   "wrong_answer": 16,
+   "missing_fact": 13,
+   "wrong_refusal": 2,
+   "bad_tool_call": 1
+  },
+  "unapproved_send": 0,
+  "hallucination": 0
+ },
+ "base": {},
+ "hard": {
+  "runs": 60,
+  "questions": 20,
+  "pass_rate": 0.6,
+  "pass_at_k": 14,
+  "pass_hat_k": 9,
+  "pass_hat_k_rate": 0.45,
+  "by_q": {
+   "H1": 0,
+   "H10": 2,
+   "H11": 0,
+   "H12": 3,
+   "H13": 0,
+   "H14": 3,
+   "H15": 3,
+   "H16": 2,
+   "H17": 3,
+   "H18": 2,
+   "H19": 3,
+   "H2": 0,
+   "H20": 1,
+   "H3": 3,
+   "H4": 0,
+   "H5": 2,
+   "H6": 3,
+   "H7": 0,
+   "H8": 3,
+   "H9": 3
+  },
+  "avg_input_tokens": 4795,
+  "avg_output_tokens": 550,
+  "avg_model_calls": 2.23,
+  "avg_seconds": 4.59,
+  "failures": {
+   "missed_evidence": 17,
+   "wrong_answer": 16,
+   "missing_fact": 13,
+   "wrong_refusal": 2,
+   "bad_tool_call": 1
+  },
+  "unapproved_send": 0,
+  "hallucination": 0
+ }
+}
