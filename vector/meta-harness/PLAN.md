@@ -38,10 +38,12 @@
 | 기록 | 후보마다 소스·점수·트레이스를 폴더로 | 후보 폴더에 `harness.py`·`scores.json`·`runs.jsonl`·`traces/*.jsonl` |
 | 진단 | grep·cat으로 필요한 파일만 읽음(반복당 약 82개 파일) | 읽기 도구 Read·Grep·Glob만 허용 |
 | 제안 | 일부 수정 또는 **전면 재작성** | 문구 수정보다 **새 구조·새 장치** 제안을 권장 |
-| 선택 | 부모 선택 규칙 없음. 정확도·비용 Pareto 전선 유지 | 정확도(hard pass^k)·비용(입력 토큰) Pareto 전선 |
+| 선택 | 부모 선택 규칙 없음. 정확도·비용 최선 후보군(Pareto frontier) 유지 | 정확도(hard pass^k)·비용(입력 토큰) 최선 후보군 |
 | 과적합 방지 | 제안자는 test 결과를 보지 않음 | 기존·hard 모두 search / holdout으로 나누고 holdout은 아카이브에 넣지 않음 |
 | 교훈 | 요약보다 **원본 트레이스**가 효과 큼(Table 3: 중앙값 34.9 → 50.0) | 요약 대신 실행 기록 원본을 그대로 둠 |
 | 비용 | 반복당 약 1,000만 토큰 | 반복 수·제안자 비용 상한을 코드로 둠(7장) |
+
+> **최선 후보군(Pareto frontier)**: 정확도(hard pass^k)와 비용(입력 토큰)을 함께 볼 때, 두 기준 모두에서 자신보다 나은 후보가 없는 후보들의 모음입니다. 더 정확한 후보와 더 싼 후보가 함께 남고, 다음에 발전시킬 부모는 이 안에서 고릅니다.
 
 ## 4. 탐색 범위: 무엇을 새로 만들 수 있고, 무엇은 고정하나
 
@@ -61,7 +63,7 @@ PLAN.md                 이 계획서
 README.md               실행법·결과(완료 후)
 hard_questions.py       어려운 질문 20개 + 채점기(조문·핵심 사실·근거). 새 파일
 splits.py               기존 20·hard 20을 각각 search 12 / holdout 8로 분할(기존 질문은 import만)
-meta_loop.py            바깥 루프: 제안 → 안전 게이트 → 평가 → 기록 → 전선 갱신
+meta_loop.py            바깥 루프: 제안 → 안전 게이트 → 평가 → 기록 → 최선 후보군 갱신
 proposer.py             Claude Code 호출(claude-agent-sdk), 도구·쓰기 경로 제한, 비용 기록
 evaluator.py            후보 import → search/holdout 평가(기존 채점기 + hard 채점기)
 safety_gate.py          정적 검사 + 안전 테스트(가짜 LLM)
@@ -70,9 +72,9 @@ archive/<run_id>/
   cand_000/             기준 = 현재 Step5(v3)
     harness.py  scores.json  runs.jsonl  traces/*.jsonl
   cand_001/ ...         harness.py + rationale.md(가설, 바꾼 구조, 노리는 지표)
-  frontier.json         Pareto 전선
+  frontier.json         최선 후보군(Pareto frontier)
   history.jsonl         반복별 점수·비용·게이트 결과
-report.md               궤적, 전선, 최종 후보의 새 구조와 기준 대비 diff, holdout 결과, 비용
+report.md               궤적, 최선 후보군, 최종 후보의 새 구조와 기준 대비 diff, holdout 결과, 비용
 test_meta.py            단위 테스트(가짜 제안자·가짜 LLM)
 ```
 
@@ -89,7 +91,7 @@ test_meta.py            단위 테스트(가짜 제안자·가짜 LLM)
    - 잴 지표: 정확도(hard pass^k가 핵심, 기존 pass^k), 비용(입력 토큰), 시간, 실패 유형
    - 실행 기록과 트레이스 원본을 후보 폴더에 남깁니다.
    - 안전 지표(승인 없는 전송, 범위 밖 지어내기)가 0이 아니거나, 기존 search pass^k가 기준보다 편차 이상 떨어지면 탈락입니다.
-4. **기록·선택** — `history.jsonl`에 남기고 Pareto 전선(hard pass^k ↑, 입력 토큰 ↓)을 갱신합니다. 다음 부모는 지정하지 않고 제안자가 아카이브를 보고 고릅니다(논문 방식).
+4. **기록·선택** — `history.jsonl`에 남기고 최선 후보군(hard pass^k ↑, 입력 토큰 ↓)을 갱신합니다. 다음 부모는 지정하지 않고 제안자가 아카이브를 보고 고릅니다(논문 방식).
 
 ## 7. 예산 (메타 루프에도 하네스를 둠, 구독 기준)
 
@@ -113,7 +115,7 @@ test_meta.py            단위 테스트(가짜 제안자·가짜 LLM)
   - 기존 20: search 12(Q1·Q3·Q5·Q6·Q8·Q10·Q12·Q13·Q15·Q17·Q18·Q20) / holdout 8(Q2·Q4·Q7·Q9·Q11·Q14·Q16·Q19)
   - hard 20: 유형(2장 표)별로 고르게 search 12 / holdout 8
 - 제안자에게는 search 결과와 트레이스만 보입니다. holdout 질문과 결과는 아카이브 밖에 둡니다.
-- **편차 대비:** 질문 12개 × 3회는 질문 1개가 8.3%p라 운이 크게 섞입니다. 전선에 오른 후보는 search를 한 번 더 돌려 평균으로 판단합니다.
+- **편차 대비:** 질문 12개 × 3회는 질문 1개가 8.3%p라 운이 크게 섞입니다. 최선 후보군에 오른 후보는 search를 한 번 더 돌려 평균으로 판단합니다.
 - **최종 비교:** 기준(cand_000 = 현재 v3) 대 최종 후보를 holdout(16문항)과 전체(40문항)에서 비교합니다. 비교 지표는 hard pass^k, 기존 pass^k, 토큰, 시간입니다. 나아지지 않으면 그대로 보고합니다.
 
 ## 9. 진행 단계와 완료 기준
@@ -136,7 +138,7 @@ test_meta.py            단위 테스트(가짜 제안자·가짜 LLM)
 | 평가 문항에 맞춘 꼼수(질문 문자열·정답 조문 하드코딩) | 정적 검사로 탐지, holdout으로 확인 |
 | 새 구조가 기존 질문을 망가뜨림 | 기존 search pass^k 하락 시 탈락, 최종 전체 40문항 비교 |
 | 비용 폭주 | 반복·턴·금액 상한(7장), 매 반복 비용 기록 |
-| 편차로 가짜 개선 | 전선 후보 재평가, 최종은 holdout과 전체(8장) |
+| 편차로 가짜 개선 | 최선 후보군 재평가, 최종은 holdout과 전체(8장) |
 | `vectordb/` 변경 | 작업 후 `git restore vectordb/` |
 
 ## 11. 결정 사항 (2026-11-08 승인)

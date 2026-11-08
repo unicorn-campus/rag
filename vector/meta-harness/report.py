@@ -52,11 +52,13 @@ def write_report(run: str) -> Path:
                  f"{p.get('tokens', 0):,} | ${p.get('cost_usd_estimate', 0):.2f} | "
                  f"{r.get('reject_reason') or '; '.join(r.get('gate_problems') or [])[:80] or '-'} |")
     L += ["", f"제안자 누적 토큰 {total_tok:,} · 환산 비용 합계 ${total_cost:.2f}(구독 사용량 참고치, 실제 청구 아님)", "",
-          "## 2. Pareto 전선 (hard pass^k ↑, 입력 토큰 ↓)", "",
+          "## 2. 최선 후보군(Pareto frontier) (hard pass^k ↑, 입력 토큰 ↓)", "",
+          "> **최선 후보군(Pareto frontier)**: 정확도(hard pass^k)와 비용(입력 토큰)을 함께 볼 때, 두 기준 모두에서 "
+          "자신보다 나은 후보가 없는 후보들의 모음입니다. 더 정확한 후보와 더 싼 후보가 함께 남고, 다음에 발전시킬 부모는 이 안에서 고릅니다.", "",
           "| 후보 | hard pass^k | 기존 pass^k | 평균 입력 토큰 |", "|---|---:|---:|---:|"]
     L += [f"| {f['cand']} | {f['hard_pass_hat_k']}/12 | {f['base_pass_hat_k']}/12 | {f['avg_input_tokens']:,} |" for f in front]
     if sel:
-        L += ["", "## 3. 최종 후보 선택 (전선 후보를 search로 한 번 더 평가한 두 번의 평균)", "",
+        L += ["", "## 3. 최종 후보 선택 (최선 후보군을 search로 한 번 더 평가한 두 번의 평균)", "",
               "| 후보 | hard pass^k 평균 | hard 통과율 평균 | 입력 토큰 평균 |", "|---|---:|---:|---:|"]
         L += [f"| {n}{' **(선택)**' if n == best else ''} | {v['hard_pass_hat_k']:.1f}/12 | {v['hard_pass_rate']:.0%} | "
               f"{v['avg_input_tokens']:,.0f} |" for n, v in sel["rescored"].items()]

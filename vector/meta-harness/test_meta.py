@@ -2,7 +2,7 @@
 
 - 안전 게이트: 기준 후보는 통과, 나쁜 후보(HITL 제거, 상한 해제, 금지 import, 파일 쓰기, 질문 하드코딩)는 탈락
 - 제안자 경로 제한: 아카이브 밖 읽기, 후보 폴더 밖 쓰기, 그 밖의 도구를 막음
-- hard 채점기, 분할, Pareto 전선
+- hard 채점기, 분할, 최선 후보군(Pareto frontier)
 실행: ../harness/.venv/Scripts/python -m pytest -q
 """
 
@@ -101,7 +101,7 @@ def test_path_guard(tmp_path):
 
 
 # ---------------------------------------------------------------------------
-# hard 채점기·분할·전선
+# hard 채점기·분할·최선 후보군
 # ---------------------------------------------------------------------------
 def test_score_hard_requires_articles_facts_and_evidence(monkeypatch):
     class FakeR:

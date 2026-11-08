@@ -1,10 +1,10 @@
-"""Meta-Harness 바깥 루프: 제안 → 안전 게이트 → 평가 → 기록 → Pareto 전선 갱신.
+"""Meta-Harness 바깥 루프: 제안 → 안전 게이트 → 평가 → 기록 → 최선 후보군(Pareto frontier) 갱신.
 
 실행(vector/meta-harness에서, vector/harness의 .venv 파이썬으로):
     python meta_loop.py init  --run r1                 # 아카이브 준비 + 기준 후보(cand_000) 평가
     python meta_loop.py loop  --run r1 --iters 1       # 제안 반복(시험 1회)
     python meta_loop.py loop  --run r1 --iters 8       # 본 반복(이어서 진행, 이미 있는 후보는 건너뜀)
-    python meta_loop.py final --run r1                 # 전선 후보 재평가 → holdout·전체 비교 → report.md
+    python meta_loop.py final --run r1                 # 최선 후보군 재평가 → holdout·전체 비교 → report.md
 
 - 아카이브(archive/<run>/)는 제안자가 읽는 곳: search 질문의 점수·실행 기록·트레이스만 들어감
 - holdout·전체 평가는 final/<run>/에 따로 둠(제안자가 볼 수 없음)
@@ -187,7 +187,7 @@ def cmd_loop(run: str, iters: int, k: int, model: str, max_turns: int, token_cap
             row["reject_reason"] = why if p.ok else (p.reason or "제안 실패")
         append_jsonl(rd / "history.jsonl", row)
         front = update_frontier(rd)
-        log(f"반복 {i} 끝: {row.get('scores')} / 전선 {[f['cand'] for f in front]} / 누적 제안 토큰 {used:,}")
+        log(f"반복 {i} 끝: {row.get('scores')} / 최선 후보군 {[f['cand'] for f in front]} / 누적 제안 토큰 {used:,}")
 
 
 def cmd_final(run: str, k: int) -> None:
@@ -200,7 +200,7 @@ def cmd_final(run: str, k: int) -> None:
     names = [f["cand"] for f in front]
     if "cand_000" not in names:
         names.append("cand_000")
-    # 1) 편차 대비: 전선 후보를 search로 한 번 더 평가해 두 번의 평균으로 최종 후보를 고름
+    # 1) 편차 대비: 최선 후보군을 search로 한 번 더 평가해 두 번의 평균으로 최종 후보를 고름
     rescored = {}
     for n in names:
         s2 = evaluate(rd / n, SPLITS["search"], k, out_dir=fd / n, label="search2", log=log)

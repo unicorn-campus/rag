@@ -10,8 +10,10 @@ archive/ ──▶│ 제안자(Claude Code, 구독)                │
  cand_001   │   cand_i/rationale.md → cand_i/harness.py │
  ...        │ 안전 게이트(코드) → 평가(search 24문항×3) │──▶ history.jsonl, frontier.json
             └──────────────────────────────────────────┘
-최종: 전선 후보 재평가 → holdout 16문항·전체 40문항으로 기준과 비교 → report-<run>.md
+최종: 최선 후보군 재평가 → holdout 16문항·전체 40문항으로 기준과 비교 → report-<run>.md
 ```
+
+> **최선 후보군(Pareto frontier)**: 정확도(hard pass^k)와 비용(입력 토큰)을 함께 볼 때, 두 기준 모두에서 자신보다 나은 후보가 없는 후보들의 모음입니다. 더 정확한 후보와 더 싼 후보가 함께 남고, 다음에 발전시킬 부모는 이 안에서 고릅니다.
 
 ## 파일
 
@@ -26,7 +28,7 @@ archive/ ──▶│ 제안자(Claude Code, 구독)                │
 | `meta_loop.py` | 바깥 루프: `init`(기준 평가) → `loop`(제안 반복) → `final`(holdout·전체 비교, 보고서) |
 | `report.py` | 보고서 `report-<run>.md` 생성 |
 | `baseline/harness.py` | 기준 후보(cand_000): 현재 하네스 그대로 |
-| `test_meta.py` | 단위 테스트: 게이트가 나쁜 후보 7종을 막는지, 경로 제한, hard 채점기, 전선 |
+| `test_meta.py` | 단위 테스트: 게이트가 나쁜 후보 7종을 막는지, 경로 제한, hard 채점기, 최선 후보군 |
 
 ## 안전 장치 (평가 점수를 위해 안전을 버리지 못하게)
 
@@ -36,7 +38,7 @@ archive/ ──▶│ 제안자(Claude Code, 구독)                │
   - 사람 승인(HITL) 유지
   - 허용 밖 도메인 차단
   - 반복 상한(모델 호출 12회 이내)
-- **탈락 기준:** 승인 없는 전송이나 지어내기가 1건이라도 있거나, 기존 질문 pass^k가 기준보다 1문항 넘게 떨어지면 전선에 넣지 않습니다.
+- **탈락 기준:** 승인 없는 전송이나 지어내기가 1건이라도 있거나, 기존 질문 pass^k가 기준보다 1문항 넘게 떨어지면 최선 후보군에 넣지 않습니다.
 - **과적합 방지:** 제안자는 search 질문 결과만 봅니다. holdout은 `final/`에만 있습니다.
 
 ## 실행 (`vector/meta-harness`에서, `vector/harness`의 .venv)
