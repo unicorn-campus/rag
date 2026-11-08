@@ -1,0 +1,19 @@
+# --- hybrid-search에서 가져오는 검색기 의존성 (vector/hybrid-search/requirements.txt와 같음) ---
+langchain-core>=1.0            # Prompt, Runnable, Retriever, Document
+langchain-classic>=1.0         # EnsembleRetriever (weighted RRF)
+langchain-groq>=1.0            # ChatGroq (openai/gpt-oss-120b)
+langchain-chroma>=1.0          # ChromaDB wrapper
+chromadb>=1.0                  # shared vectordb
+langchain-cohere>=0.6          # CohereEmbeddings (embed-v4.0)
+langchain-community>=0.4       # BM25Retriever (archived but works)
+rank-bm25>=0.2.2               # BM25Okapi
+kiwipiepy>=0.21                # Kiwi tokenizer
+python-dotenv>=1.0             # .env
+
+# --- 하네스 실습 추가 의존성 ---
+langchain>=1.3                 # create_agent + middleware (call limits, human-in-the-loop)
+langgraph>=1.2                 # checkpointer (InMemorySaver), Command(resume=...)
+opentelemetry-sdk>=1.30        # step5 trace spans/events
+
+# --- Testing ---
+pytest>=8.0

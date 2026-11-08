@@ -1,0 +1,587 @@
+[
+  {
+    "stage": 3,
+    "question": "특허권의 존속기간은?",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "sources": [
+      73
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3255,
+    "output_tokens": 220,
+    "seconds": 4.1,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q1",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허권의 존속기간은?",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "sources": [
+      73
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 5557,
+    "output_tokens": 209,
+    "seconds": 1.2,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q1",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허권의 존속기간은?",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "sources": [
+      73
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 5557,
+    "output_tokens": 220,
+    "seconds": 1.1,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q1",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
+    "answer": "논문에 이미 공개된 발명은 특허출원 전에 공지·공연히 실시된 것으로 보아 특허를 받을 수 없습니다(제29조제1항제1호).\n근거: 청크 #17",
+    "sources": [
+      17
+    ],
+    "retrieved": [
+      20,
+      17,
+      55,
+      171
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "제29조 공개 선행기술 6개월"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제29조 공개 선행기술 6개월\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3720,
+    "output_tokens": 630,
+    "seconds": 2.6,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q2",
+    "trial": 1,
+    "passed": false,
+    "failures": [
+      "wrong_answer"
+    ],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
+    "answer": "논문에 먼저 공개된 발명은 특허출원 전에 공지(公知)된 것으로 보아 특허를 받을 수 없는 발명에 해당합니다(제29조제1항제1호). 다만, 그 공개가 12개월 이내에 이루어졌고, 특허를 받을 권리를 가진 자가 그 발명을 공개한 경우라면 12개월 이내에 특허출원을 하면 공지된 발명으로 보지 않을 수 있습니다(제30조제1항). 따라서 논문 발표 직후 바로 특허출원을 하면 특허를 받을 가능성이 있습니다. 그러나 12개월을 초과하면 특허를 받을 수 없습니다.\n근거: 청크 #17, #20",
+    "sources": [
+      17,
+      20
+    ],
+    "retrieved": [
+      20,
+      17,
+      55,
+      171
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "제29조 공개 선행기술 6개월"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제29조 공개 선행기술 6개월\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3720,
+    "output_tokens": 677,
+    "seconds": 3.2,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q2",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
+    "answer": "네, 논문 등으로 먼저 공개한 발명이라도 그 공개일로부터 12개월 이내에 특허출원을 하면 “공지 등이 되지 아니한 발명”으로 보아 특허를 받을 수 있습니다(제30조).\n근거: 청크 #20",
+    "sources": [
+      20
+    ],
+    "retrieved": [
+      55,
+      171,
+      20,
+      165
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "논문 공개 특허 출원 6개월"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 출원 6개월\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3466,
+    "output_tokens": 407,
+    "seconds": 3.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q2",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제42조 출원 방법",
+    "answer": "특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭, 발명자의 성명·주소 등을 기재해야 합니다(제42조제1항). 출원서에는 발명의 설명·청구범위를 적은 명세서와 필요한 도면 및 요약서를 첨부해야 합니다(제42조제2항). 명세서의 설명은 발명이 속한 기술 분야의 통상의 지식을 가진 사람이 쉽게 실시할 수 있도록 명확하고 상세하게 작성해야 합니다(제42조제3항). 청구범위는 보호받으려는 사항을 포함하는 하나 이상의 청구항으로 구성되며, 발명의 설명에 의해 뒷받침되고 명확·간결하게 적혀야 합니다(제42조제4항).\n근거: 청크 #28",
+    "sources": [
+      28
+    ],
+    "retrieved": [
+      28,
+      30,
+      40,
+      38
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "제42조 출원 방법"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제42조 출원 방법\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3254,
+    "output_tokens": 358,
+    "seconds": 3.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q3",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제42조 출원 방법",
+    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 합니다. 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭, 발명자의 성명·주소 등 4가지 사항을 기재해야 합니다. 또한, 출원서에는 발명의 설명·청구범위가 포함된 명세서와 필요한 도면 및 요약서를 첨부해야 합니다. 청구범위는 보호받고자 하는 사항을 명시한 청구항을 하나 이상 포함하고, 발명의 설명에 의해 뒷받침되어야 합니다.\n근거: 청크 #28",
+    "sources": [
+      28
+    ],
+    "retrieved": [
+      28,
+      30,
+      40,
+      38
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "제42조 출원 방법"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제42조 출원 방법\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3254,
+    "output_tokens": 318,
+    "seconds": 1.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q3",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제42조 출원 방법",
+    "answer": "특허를 받으려는 자는 제42조에 따라 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭, 발명자의 성명·주소 등을 기재해야 합니다(제42조 제1항). 또한, 출원서에는 발명의 설명·청구범위가 포함된 명세서와 필요한 도면 및 요약서를 첨부해야 합니다(제42조 제2항). 청구범위는 보호받고자 하는 사항을 포함하는 하나 이상의 청구항으로 구성되어야 하며, 발명의 설명에 의해 뒷받침되고 명확·간결하게 적혀야 합니다(제42조 제4항).\n근거: 청크 #28",
+    "sources": [
+      28
+    ],
+    "retrieved": [
+      28,
+      30,
+      40,
+      38
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "제42조 출원 방법"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제42조 출원 방법\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3254,
+    "output_tokens": 327,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q3",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "저작권 보호기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [],
+    "model_calls": 1,
+    "input_tokens": 952,
+    "output_tokens": 84,
+    "seconds": 0.7,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q4",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "저작권 보호기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [],
+    "model_calls": 1,
+    "input_tokens": 952,
+    "output_tokens": 103,
+    "seconds": 0.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q4",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "저작권 보호기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [],
+    "model_calls": 1,
+    "input_tokens": 952,
+    "output_tokens": 84,
+    "seconds": 0.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q4",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      0,
+      21,
+      17,
+      32
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허법 제1조"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3515,
+    "output_tokens": 477,
+    "seconds": 2.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q5",
+    "trial": 1,
+    "passed": false,
+    "failures": [
+      "over_refusal"
+    ],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      0,
+      21,
+      17,
+      32
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허법 제1조"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3515,
+    "output_tokens": 695,
+    "seconds": 2.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q5",
+    "trial": 2,
+    "passed": false,
+    "failures": [
+      "over_refusal"
+    ],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 3,
+    "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      0,
+      21,
+      17,
+      32
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허법 제1조"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3515,
+    "output_tokens": 767,
+    "seconds": 3.2,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q5",
+    "trial": 3,
+    "passed": false,
+    "failures": [
+      "over_refusal"
+    ],
+    "bad_tool_calls": 0
+  }
+]
