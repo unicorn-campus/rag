@@ -30,6 +30,27 @@ archive/ ──▶│ 제안자(Claude Code, 구독)                │
 | `baseline/harness.py` | 기준 후보(cand_000): 현재 하네스 그대로 |
 | `test_meta.py` | 단위 테스트: 게이트가 나쁜 후보 7종을 막는지, 경로 제한, hard 채점기, 최선 후보군 |
 
+### 실행하면 생기는 파일 (아카이브·최종 평가)
+
+`cand_XXX`는 `archive/r1/cand_000` ~ `cand_008`입니다. 제안자는 `archive/<run>/` 안만 읽을 수 있고, `final/<run>/`은 볼 수 없습니다.
+
+| 파일·폴더 | 무엇인가 | 누가 쓰고 → 누가 읽나 |
+|---|---|---|
+| `cand_XXX/harness.py` | 후보 하네스 코드. `class Candidate(Step5)` 하나를 정의하고 바꾸고 싶은 메서드만 덮어씀 | 제안자 → 게이트·평가기 |
+| `cand_XXX/rationale.md` | 후보를 만든 이유: 진단(근거가 된 qid와 기록), 가설, 바꾼 구조, 노리는 지표, 예상 위험 | 제안자 → 다음 제안자 |
+| `cand_XXX/scores-search.json` | search 점수 요약: 기존·hard별 pass^k, pass@k, 통과율, 질문별 통과 횟수, 평균 토큰, 실패 유형 | 평가기 → 제안자 |
+| `cand_XXX/runs-search.jsonl` | 실행 1회당 한 줄: 질문, 답, 실패 유형, 검색된 청크, 도구 호출, 하네스 사건, 토큰 | 평가기 → 제안자(Grep) |
+| `cand_XXX/traces/*.jsonl` | OpenTelemetry span 원본(LLM 토큰·도구 요청, 도구 입력·결과 청크, 차단·승인 이벤트). 평가 워커마다 파일 하나 | 평가기 → 제안자(Grep) |
+| `cand_XXX/gate.json` | 안전 게이트 결과(통과 여부, 탈락 이유) | meta_loop → 사람·제안자 |
+| `cand_XXX/proposer.json` · `proposer_log.jsonl` | 제안자 턴·토큰·환산 비용 / 제안자가 쓴 도구 호출과 글(요약) | meta_loop → 사람 |
+| `archive/<run>/history.jsonl` | 반복별 후보, 게이트 결과, 점수 요약, 제안자 사용량(한 줄 = 반복 1회) | meta_loop → 제안자 |
+| `archive/<run>/frontier.json` | 최선 후보군 목록(hard pass^k ↑, 입력 토큰 ↓) | meta_loop → 제안자(부모 고르기) |
+| `archive/<run>/lib/` | 하네스 라이브러리 원본 복사본(`step0`~`step5`, `common.py`, `hybrid_rag.py`). 평가 파일은 넣지 않음 | 제안자가 읽기만 |
+| `final/<run>/<cand>/` | 최종 단계의 search 재평가(`search2`)·holdout·전체 평가 기록과 점수 | meta_loop → 사람 |
+| `final/<run>/selection.json` | 최선 후보군 재평가 평균과 최종 선택 후보 | meta_loop → 사람 |
+| `report-<run>.md` | 최종 보고서: 궤적, 최선 후보군, 선택, holdout 비교, 과적합 점검, 코드 diff | 사람이 읽음 |
+| `logs/` · `work/hardcheck/` | 실행 로그 / hard set 확정 때 쓴 기준 하네스 측정(pass^k 9/20) | 사람이 읽음 |
+
 ## 안전 장치 (평가 점수를 위해 안전을 버리지 못하게)
 
 - **제안자 격리:** 도구는 Read·Grep·Glob·Write·Edit뿐입니다. 아카이브 밖 읽기(holdout 질문·평가 파일)와 이번 후보 폴더 밖 쓰기는 훅이 막습니다. 사용자·프로젝트 설정도 읽지 않습니다.
