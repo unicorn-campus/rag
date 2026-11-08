@@ -2,7 +2,7 @@
   {
     "stage": 5,
     "question": "특허권의 존속기간은?",
-    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: C073",
     "sources": [
       73
     ],
@@ -30,14 +30,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "4cde6c2c91201b9e6bf6140558ca0d4c",
+        "trace_id": "6de07a971a4b09ba46b05f9d0fa92b68",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 3403,
-    "output_tokens": 143,
-    "seconds": 2.2,
+    "input_tokens": 3441,
+    "output_tokens": 216,
+    "seconds": 2.7,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -50,7 +50,7 @@
   {
     "stage": 5,
     "question": "특허권의 존속기간은?",
-    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: C073",
     "sources": [
       73
     ],
@@ -78,14 +78,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "1318d42c996d29a0cf4f1fb16a21da5c",
+        "trace_id": "c4a8ceb8d4926811bb1fd4b876393bfb",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 4424,
-    "output_tokens": 192,
-    "seconds": 2.7,
+    "input_tokens": 4465,
+    "output_tokens": 250,
+    "seconds": 1.5,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -98,7 +98,7 @@
   {
     "stage": 5,
     "question": "특허권의 존속기간은?",
-    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: 청크 #73",
+    "answer": "특허권의 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).\n근거: C073",
     "sources": [
       73
     ],
@@ -126,14 +126,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "f9603ef76ae7d8695e820663abaca73d",
+        "trace_id": "e1cf2f33e541fff8f8e96747596f46d3",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 4424,
-    "output_tokens": 143,
-    "seconds": 1.2,
+    "input_tokens": 3441,
+    "output_tokens": 221,
+    "seconds": 1.3,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -146,24 +146,26 @@
   {
     "stage": 5,
     "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
-    "answer": "논문 등으로 발명이 출원 전에 공개(공지·공연히 실시)되면, 그 발명은 특허요건을 충족하지 못해 특허를 받을 수 없습니다(제29조제1항 제1호·제2호). 따라서 논문으로 먼저 발표한 발명은 원칙적으로 특허를 받을 수 없습니다. 다만, 출원 전에 공개된 내용과 동일한 발명이지만 출원인이 동일하고 우선권을 주장하는 경우 등 예외가 적용될 수 있습니다(제29조제3항). 그러나 일반적인 경우에는 사전 공개가 특허를 배제합니다.\n근거: 청크 #17",
+    "answer": "논문 등 간행물에 발명이 공개되면 제29조제1항 제1호·제2호에 따라 “공개(公知)·공연(公然)히 실시된 발명”으로 보아 신규성이 없으므로 원칙적으로 특허를 받을 수 없습니다. 다만, 그 논문이 발명자本人에 의해 공개된 경우에는 제30조제1항에 따라 공개일로부터 12개월 이내에 특허출원을 하면 그 공개를 신규성 침해로 보지 않아 특허를 받을 수 있는 예외가 적용됩니다. 따라서 논문 발표 후 12개월 이내에 출원하면 특허를 받을 수 있지만, 그 기간을 초과하거나 제3자에 의해 공개된 경우에는 특허를 받을 수 없습니다.\n근거: C017, C020",
     "sources": [
-      17
+      17,
+      20
     ],
     "retrieved": [
       55,
       171,
-      172,
       52,
-      17,
       46,
-      54
+      0,
+      20,
+      17,
+      47
     ],
     "tool_calls": [
       {
         "name": "search",
         "args": {
-          "query": "논문 공개 선행공개 특허 출원"
+          "query": "논문 공개 특허 출원 신규성"
         },
         "ok": true,
         "note": ""
@@ -171,7 +173,15 @@
       {
         "name": "search",
         "args": {
-          "query": "제29조 선행공개"
+          "query": "논문 공개 신규성 특허"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "제29조 신규성"
         },
         "ok": true,
         "note": ""
@@ -181,27 +191,93 @@
     "events": [
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"논문 공개 선행공개 특허 출원\"}"
+        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 출원 신규성\"}"
       },
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제29조 선행공개\"}"
+        "sig": "search_patent_law:{\"query\": \"논문 공개 신규성 특허\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제29조 신규성\"}"
       },
       {
         "kind": "trace",
-        "trace_id": "60852cc2044ef1af2138977e95448005",
+        "trace_id": "5623b7598eec3cf2ecc258402de7a38a",
         "file": "stage5-20261108.jsonl"
       }
     ],
-    "model_calls": 3,
-    "input_tokens": 7785,
-    "output_tokens": 606,
-    "seconds": 4.4,
+    "model_calls": 4,
+    "input_tokens": 14879,
+    "output_tokens": 1158,
+    "seconds": 5.8,
     "stopped": "",
     "pending_approval": false,
     "error": "",
     "qid": "Q2",
     "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
+    "answer": "논문 등으로 특허출원 전에 이미 공개된 발명은 특허요건을 충족하지 못합니다(제29조제1항 1·2호). 따라서 논문에 먼저 발표된 발명은 그 공개일이 특허출원일 이전이면 특허를 받을 수 없습니다. 다만, 그 발명에 대해 이미 국내·외에서 우선권을 주장할 수 있는 출원(예: 선출원)이 있는 경우에는 우선권을 이용해 신규성을 확보할 수 있습니다. 즉, 논문 공개 자체가 특허를 받을 수 없게 만드는 사유가 됩니다.\n근거: C017",
+    "sources": [
+      17
+    ],
+    "retrieved": [
+      55,
+      171,
+      52,
+      162,
+      17,
+      18
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "논문 공개 특허 출원 전 공개"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "논문 공개 특허 신규성"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 출원 전 공개\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 신규성\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "a451d90b30d1a89e6c46dc2c0a05c5f8",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 9032,
+    "output_tokens": 736,
+    "seconds": 3.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q2",
+    "trial": 2,
     "passed": false,
     "failures": [
       "missed_evidence",
@@ -212,71 +288,42 @@
   {
     "stage": 5,
     "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
-    "answer": "논문 등 간행물에 발명이 공개된 경우는 특허출원 전에 “공개(公知)·공연(公然)히 실시된 발명”에 해당하므로 신규성이 없다고 보아 특허를 받을 수 없습니다(제29조제1항1·2). 다만, 그 공개가 특허권을 가질 수 있는 자의 의사에 반하여 이루어진 경우라면 공개일로부터 12개월 이내에 출원하면 제29조를 적용하지 않을 수 있습니다(제30조제1항). 따라서 논문으로 먼저 발표한 발명은 원칙적으로 특허를 받을 수 없으며, 예외적으로 12개월 이내에 출원하는 경우에만 가능할 수 있습니다.\n근거: 청크 #17, #20",
+    "answer": "논문 등 간행물에 발명이 먼저 공개된 경우, 그 공개는 특허출원 전의 “공지(公知)·공연(公然)히 실시된 발명”에 해당하므로 제29조제1항에 따라 신규성이 결여되어 특허를 받을 수 없습니다. 다만, 공개일로부터 12개월 이내에 특허출원을 하면 제30조에 따라 “공지 등이 되지 아니한 발명”으로 인정받을 수 있는 경우도 있습니다. 따라서 논문으로 먼저 발표한 발명은 바로 특허를 받을 수 없으며, 특허를 원한다면 공개 후 12개월 이내에 출원해야 합니다.\n근거: C017, C020",
     "sources": [
       17,
       20
     ],
     "retrieved": [
-      17,
-      20,
-      46,
-      55
-    ],
-    "tool_calls": [
-      {
-        "name": "search",
-        "args": {
-          "query": "제29조 신규성 논문 공개 특허"
-        },
-        "ok": true,
-        "note": ""
-      }
-    ],
-    "sent": [],
-    "events": [
-      {
-        "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제29조 신규성 논문 공개 특허\"}"
-      },
-      {
-        "kind": "trace",
-        "trace_id": "c0c07b421d8c30bb4760798cea94ebde",
-        "file": "stage5-20261108.jsonl"
-      }
-    ],
-    "model_calls": 2,
-    "input_tokens": 4964,
-    "output_tokens": 521,
-    "seconds": 2.8,
-    "stopped": "",
-    "pending_approval": false,
-    "error": "",
-    "qid": "Q2",
-    "trial": 2,
-    "passed": true,
-    "failures": [],
-    "bad_tool_calls": 0
-  },
-  {
-    "stage": 5,
-    "question": "논문으로 먼저 발표한 발명도 특허를 받을 수 있나요?",
-    "answer": "논문 등 간행물에 발명이 먼저 공개된 경우는 특허출원 전에 “공개(公知)·공연(公然)히 실시된 발명”에 해당하므로 특허를 받을 수 없습니다(제29조제1항제2호). 다만, 그 논문이 발명자를 포함한 특허권자에 의해 공개된 경우라면 공개일로부터 12개월 이내에 특허출원을 하면 공개된 발명을 “공지 등이 되지 아니한 발명”으로 보아 특허를 받을 수 있습니다(제30조제1항). 따라서 일반적으로는 논문으로 먼저 발표한 발명은 특허를 받을 수 없으며, 예외적으로 12개월 이내에 출원하면 가능할 수 있습니다.\n근거: 청크 #17, #20",
-    "sources": [
-      17,
-      20
-    ],
-    "retrieved": [
-      17,
-      46,
       55,
-      20
+      171,
+      52,
+      46,
+      0,
+      20,
+      21,
+      17
     ],
     "tool_calls": [
       {
         "name": "search",
         "args": {
-          "query": "논문 공개 특허 출원 전 공개 선행공개 특허법 제29조"
+          "query": "논문 공개 특허 출원 신규성"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "논문 공개 신규성 특허"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "제29조 특허 신규성"
         },
         "ok": true,
         "note": ""
@@ -286,18 +333,26 @@
     "events": [
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 출원 전 공개 선행공개 특허법 제29조\"}"
+        "sig": "search_patent_law:{\"query\": \"논문 공개 특허 출원 신규성\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"논문 공개 신규성 특허\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"제29조 특허 신규성\"}"
       },
       {
         "kind": "trace",
-        "trace_id": "82622eb3b2734ea0130dd8b2f7271230",
+        "trace_id": "93d5473149b3fb163415c6a21319a789",
         "file": "stage5-20261108.jsonl"
       }
     ],
-    "model_calls": 2,
-    "input_tokens": 4973,
-    "output_tokens": 589,
-    "seconds": 4.0,
+    "model_calls": 4,
+    "input_tokens": 15888,
+    "output_tokens": 839,
+    "seconds": 4.2,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -310,7 +365,7 @@
   {
     "stage": 5,
     "question": "특허법 제42조 출원 방법",
-    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭 및 발명자의 성명·주소 등을 기재해야 합니다. 또한, 출원서에는 발명의 설명·청구범위를 포함한 명세서와 필요한 도면 및 요약서를 첨부해야 합니다. 명세서의 설명은 발명이 속한 기술 분야의 통상의 지식을 가진 사람이 쉽게 실시할 수 있도록 명확하고 상세하게 작성되어야 하며, 청구범위는 발명의 설명에 의해 뒷받침되고 명확·간결하게 적어야 합니다. 이러한 요건을 모두 충족한 경우에만 특허출원이 유효하게 접수됩니다.\n근거: 청크 #28",
+    "answer": "특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭 및 발명자의 성명·주소를 기재해야 합니다(제42조제1항). 또한, 출원서에는 발명의 설명·청구범위를 담은 명세서와 필요한 도면 및 요약서를 첨부해야 합니다(제42조제2항). 청구범위는 하나 이상의 청구항을 포함하고, 발명의 설명에 의해 뒷받침되며 명확하고 간결하게 적혀야 합니다(제42조제4항).\n근거: C028",
     "sources": [
       28
     ],
@@ -338,14 +393,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "676afc25eb6b313b26227b899149ecf9",
+        "trace_id": "e1525ef13a22381f48a83b4531a16a58",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 3402,
-    "output_tokens": 400,
-    "seconds": 1.5,
+    "input_tokens": 3440,
+    "output_tokens": 345,
+    "seconds": 2.0,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -358,7 +413,7 @@
   {
     "stage": 5,
     "question": "특허법 제42조 출원 방법",
-    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭, 발명자의 성명·주소 등을 기재해야 합니다. 또한, 출원서에는 발명의 설명·청구범위를 포함한 명세서와 필요한 도면 및 요약서를 첨부해야 합니다. 명세서의 설명은 발명이 속한 기술 분야의 통상의 지식을 가진 사람이 쉽게 실시할 수 있도록 명확하고 상세하게 작성되어야 하며, 청구범위는 발명의 설명에 의해 뒷받침되고 명확·간결하게 적어야 합니다. 이러한 요건을 모두 충족한 후에야 특허출원이 유효하게 접수됩니다.\n근거: 청크 #28",
+    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭 및 발명자의 성명·주소 등을 기재해야 합니다(제42조 제1항). 또한, 출원서에는 발명의 설명·청구범위를 포함한 명세서와 필요한 도면 및 요약서를 첨부해야 합니다(제42조 제2항). 명세서는 발명이 속한 기술 분야의 통상의 지식을 가진 사람이 이해하고 실시할 수 있도록 명확하고 상세하게 작성되어야 합니다(제42조 제3항). 청구범위는 보호받고자 하는 사항을 명확히 기재한 청구항을 하나 이상 포함해야 하며, 발명의 설명에 의해 뒷받침되고 명확·간결해야 합니다(제42조 제4항).\n근거: C028",
     "sources": [
       28
     ],
@@ -386,14 +441,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "8de38b21cfb1c06957c13b9e56c97d15",
+        "trace_id": "ee453b7e15932de657a99c0b91286abf",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 3402,
-    "output_tokens": 400,
-    "seconds": 2.3,
+    "input_tokens": 4464,
+    "output_tokens": 472,
+    "seconds": 1.8,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -406,7 +461,7 @@
   {
     "stage": 5,
     "question": "특허법 제42조 출원 방법",
-    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소, 대리인 정보(있는 경우), 발명의 명칭, 발명자의 성명·주소 등을 기재해야 합니다(제42조①). 또한, 출원서에는 발명의 설명·청구범위가 포함된 명세서와 필요한 도면 및 요약서를 첨부해야 합니다(제42조②). 청구범위는 보호받고자 하는 사항을 포함하는 하나 이상의 청구항으로 구성되어야 하며, 발명의 설명에 의해 뒷받침되고 명확·간결하게 적혀야 합니다(제42조④).\n근거: 청크 #28",
+    "answer": "특허법 제42조에 따르면, 특허를 받으려는 자는 특허출원서를 지식재산처장에게 제출해야 하며, 출원서에는 출원인의 성명·주소(법인인 경우 명칭·영업소 소재지), 대리인 정보(있는 경우), 발명의 명칭 및 발명자의 성명·주소를 적어야 합니다. 또한, 출원서에는 발명의 설명·청구범위를 담은 명세서와 필요한 도면 및 요약서를 첨부해야 합니다. 청구범위는 하나 이상의 청구항을 포함하고, 발명의 설명에 의해 뒷받침되며 명확하고 간결하게 기재되어야 합니다.\n근거: C028",
     "sources": [
       28
     ],
@@ -434,14 +489,14 @@
       },
       {
         "kind": "trace",
-        "trace_id": "39e124b893c35823067fbb6d9860add2",
+        "trace_id": "3d1905ff1c57175fa718583a85c02f7e",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 2,
-    "input_tokens": 4423,
-    "output_tokens": 364,
-    "seconds": 4.5,
+    "input_tokens": 4464,
+    "output_tokens": 557,
+    "seconds": 2.9,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -462,14 +517,14 @@
     "events": [
       {
         "kind": "trace",
-        "trace_id": "925a0c8e720a7fcd288389149be68e53",
+        "trace_id": "942f31f0b3f12da680796b8110a3324b",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 1,
-    "input_tokens": 2049,
-    "output_tokens": 90,
-    "seconds": 0.4,
+    "input_tokens": 2067,
+    "output_tokens": 65,
+    "seconds": 0.5,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -490,14 +545,14 @@
     "events": [
       {
         "kind": "trace",
-        "trace_id": "0a21149435e1e435c9a42dbf955ae90b",
+        "trace_id": "cd67ad448afaaf84ecc9b6a139cdaeca",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 1,
-    "input_tokens": 1026,
-    "output_tokens": 90,
-    "seconds": 1.0,
+    "input_tokens": 2067,
+    "output_tokens": 61,
+    "seconds": 0.3,
     "stopped": "",
     "pending_approval": false,
     "error": "",
@@ -518,13 +573,13 @@
     "events": [
       {
         "kind": "trace",
-        "trace_id": "384100b452551ab27e05ed9af9930155",
+        "trace_id": "fbbc3dc4cf13c546583c897fc287e70c",
         "file": "stage5-20261108.jsonl"
       }
     ],
     "model_calls": 1,
-    "input_tokens": 2049,
-    "output_tokens": 53,
+    "input_tokens": 2067,
+    "output_tokens": 65,
     "seconds": 0.3,
     "stopped": "",
     "pending_approval": false,
@@ -538,33 +593,28 @@
   {
     "stage": 5,
     "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
-    "answer": "제1조는 법의 목적을, 제2조는 “발명”, “특허발명”, “실시” 등 주요 용어를 정의합니다(제0).  \n제3조는 미성년자·후견인의 행위능력 제한, 제4조는 법인이 아닌 사단·재단의 출원·청구 자격, 제5조는 재외자의 특허관리인 지정 등을 규정합니다(제1).  \n제6조는 대리권의 범위와 행위, 제7조는 대리권 증명, 제7조의2는 흠에 대한 추인, 제8조는 대리권 불소멸, 제9조는 개별대리 규정을 담고 있습니다(제2).  \n제31조는 삭제되고, 제32조는 공공질서·선량풍속 위반 발명의 특허불가, 제33조는 특허권자 및 직원 제한, 제34조는 무권리자와 정당한 권리자의 출원 관계를 규정합니다(제21).  \n제55조는 우선권 주장 요건, 제63조의2는 특허출원 정보제공, 제66조와 그 부속 조문은 특허결정 및 직권보정 절차를 규정합니다(제45, 제54, 제57).\n근거: 청크 #0, #1, #2, #21, #45, #54, #57",
+    "answer": "제1조는 법의 목적을, 제2조는 발명·특허발명·실시 등의 정의를 규정한다. (C000)  \n제3조는 미성년자·후견인의 특허 절차 제한, 제4조는 법인이 아닌 사단·재단의 출원인 자격, 제5조는 재외자의 특허관리인 제도를 정한다. (C001)  \n제29조는 산업상 이용 가능한 발명의 특허 요건을 정해, 공지·공연·전시된 발명 등은 특허받을 수 없으며, 동일 발명에 대한 중복 특허도 제한한다. (C017)  \n제31조는 삭제되고, 제32조는 공공 질서·선량 풍속·위생에 반하는 발명은 특허받을 수 없으며, 제33조는 특허권자와 공동 발명 시 권리 공유, 제34조는 무권리자의 출원과 정당한 권리자의 보호 절차를 규정한다. (C021)  \n제43조는 요약서 사용 제한, 제44조는 공동출원 필요, 제45조는 하나의 발명당 하나의 출원 원칙, 제46조는 절차 보정 명령을, 제132조의2는 특허취소신청 요건을 명시하며, 확인한 범위는 제1조~제5조, 제29조, 제31조~제34조, 제43조~제46조, 제132조의2이다. (C032, C109)\n근거: C000, C001, C017, C021, C032, C109",
     "sources": [
       0,
       1,
-      2,
+      17,
       21,
-      45,
-      54,
-      57
+      32,
+      109
     ],
     "retrieved": [
       0,
-      45,
-      32,
       21,
+      17,
+      32,
       1,
-      12,
-      54,
-      2,
-      109,
-      57
+      109
     ],
     "tool_calls": [
       {
         "name": "search",
         "args": {
-          "query": "제1조"
+          "query": "특허법 제1조"
         },
         "ok": true,
         "note": ""
@@ -572,7 +622,7 @@
       {
         "name": "search",
         "args": {
-          "query": "제3조"
+          "query": "특허법 제3조"
         },
         "ok": true,
         "note": ""
@@ -580,7 +630,7 @@
       {
         "name": "search",
         "args": {
-          "query": "제6조"
+          "query": "특허법 제6조"
         },
         "ok": true,
         "note": ""
@@ -590,28 +640,70 @@
     "events": [
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제1조\"}"
+        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+      },
+      {
+        "kind": "approval_wait",
+        "tools": [
+          "send_email"
+        ],
+        "sent_before_decision": 0,
+        "outbox_before_decision": 5
+      },
+      {
+        "kind": "approval",
+        "decisions": [
+          "reject"
+        ]
       },
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제3조\"}"
+        "sig": "search_patent_law:{\"query\": \"특허법 제3조\"}"
+      },
+      {
+        "kind": "approval_wait",
+        "tools": [
+          "send_email"
+        ],
+        "sent_before_decision": 0,
+        "outbox_before_decision": 5
+      },
+      {
+        "kind": "approval",
+        "decisions": [
+          "reject"
+        ]
       },
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제6조\"}"
+        "sig": "search_patent_law:{\"query\": \"특허법 제6조\"}"
+      },
+      {
+        "kind": "approval_wait",
+        "tools": [
+          "send_email"
+        ],
+        "sent_before_decision": 0,
+        "outbox_before_decision": 5
+      },
+      {
+        "kind": "approval",
+        "decisions": [
+          "reject"
+        ]
       },
       {
         "kind": "trace",
-        "trace_id": "8936276d5005e0195d725c893035ab15",
+        "trace_id": "9d56967be2aafb4ff7140cd417eaf1b4",
         "file": "stage5-20261108.jsonl"
       }
     ],
-    "model_calls": 4,
-    "input_tokens": 13158,
-    "output_tokens": 2467,
-    "seconds": 11.4,
+    "model_calls": 7,
+    "input_tokens": 29150,
+    "output_tokens": 6960,
+    "seconds": 21.2,
     "stopped": "",
-    "pending_approval": false,
+    "pending_approval": true,
     "error": "",
     "qid": "Q5",
     "trial": 1,
@@ -622,13 +714,8 @@
   {
     "stage": 5,
     "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
-    "answer": "특허법 제1조는 법의 목적을, 제2조는 “발명”, “특허발명”, “실시” 등을 정의합니다(제1조, 제2조). 제29조는 산업상 이용 가능한 발명의 특허 요건과 공지·공연·전시된 발명 등에 대한 예외를 규정합니다(제29조). 제31조는 삭제된 조문이며, 제32조는 공공질서·선량풍속·위생에 위배되는 발명은 특허를 받을 수 없다고 명시합니다(제31조, 제32조). 제33조는 특허를 받을 수 있는 자와 권리 공유를, 제34조는 무권리자의 출원과 정당한 권리자의 보호를 규정합니다(제33조, 제34조). 제43조부터 제46조까지는 요약서 사용 제한, 공동출원 요건, 하나의 특허출원 범위, 절차 보정 등에 관한 규정을 담고 있습니다(제43조~제46조).\n근거: 청크 #0, #21, #17, #32",
-    "sources": [
-      0,
-      21,
-      17,
-      32
-    ],
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
     "retrieved": [
       0,
       21,
@@ -652,33 +739,167 @@
         "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
       },
       {
-        "kind": "approval_wait",
-        "tools": [
-          "send_email"
-        ],
-        "sent_before_decision": 0,
-        "outbox_before_decision": 7
-      },
-      {
-        "kind": "approval",
-        "decisions": [
-          "reject"
-        ]
-      },
-      {
         "kind": "trace",
-        "trace_id": "996065eb1c16e07fd0710c3967ac60a2",
+        "trace_id": "08f2316940ce7e2165f767940c519277",
         "file": "stage5-20261108.jsonl"
       }
     ],
-    "model_calls": 3,
-    "input_tokens": 7305,
-    "output_tokens": 2608,
-    "seconds": 6.8,
+    "model_calls": 2,
+    "input_tokens": 3701,
+    "output_tokens": 462,
+    "seconds": 2.2,
     "stopped": "",
-    "pending_approval": true,
+    "pending_approval": false,
     "error": "",
     "qid": "Q5",
+    "trial": 2,
+    "passed": false,
+    "failures": [
+      "over_refusal"
+    ],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      0,
+      21,
+      17,
+      32
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허법 제1조"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "4a7e8dbe42064399111cf15e908d6abd",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3701,
+    "output_tokens": 641,
+    "seconds": 2.1,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q5",
+    "trial": 3,
+    "passed": false,
+    "failures": [
+      "over_refusal"
+    ],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허를 받을 수 없는 발명은 무엇인가요?",
+    "answer": "특허를 받을 수 없는 발명은 다음과 같습니다.  \n① 공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명은 특허를 받을 수 없습니다(제32조).  \n② 산업상 이용할 수 있는 발명이라도 이미 국내·외에서 공지(公知)되었거나 공연(公然)히 실시된 경우, 간행물에 게재되었거나 전기통신을 통해 공중이 이용할 수 있는 경우 등은 특허 대상에서 제외됩니다(제29조 제1항).  \n③ 또한, 해당 분야의 통상의 지식을 가진 사람이 쉽게 발명할 수 있는 경우도 특허를 받을 수 없습니다(제29조 제2항).\n근거: C021, C017",
+    "sources": [
+      21,
+      17
+    ],
+    "retrieved": [
+      21,
+      17,
+      0,
+      24
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허를 받을 수 없는 발명"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허를 받을 수 없는 발명\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "859fa8e10b9b882860d2e8438fcad626",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3943,
+    "output_tokens": 423,
+    "seconds": 2.0,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q6",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허를 받을 수 없는 발명은 무엇인가요?",
+    "answer": "특허를 받을 수 없는 발명은 공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 경우입니다(제32조). 또한 산업상 이용할 수 없고, 출원 전에 이미 국내·외에서 공지(公知)되었거나 공연(公然)히 실시된 발명도 특허를 받을 수 없습니다(제29조제1항). 더불어 출원 전에 해당 기술 분야의 통상의 지식을 가진 사람이 쉽게 발명할 수 있는 경우도 특허 대상에서 제외됩니다(제29조제2항). 마지막으로 이미 다른 특허출원의 명세서·도면에 기재된 동일한 발명도 특허를 받을 수 없습니다(제29조제3항).\n근거: C021, C017",
+    "sources": [
+      21,
+      17
+    ],
+    "retrieved": [
+      21,
+      17,
+      0,
+      24
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허를 받을 수 없는 발명"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허를 받을 수 없는 발명\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "7de1d94a23c36f095995d06f1f26201a",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3943,
+    "output_tokens": 689,
+    "seconds": 2.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q6",
     "trial": 2,
     "passed": true,
     "failures": [],
@@ -686,48 +907,23 @@
   },
   {
     "stage": 5,
-    "question": "특허법 제1조부터 마지막 조문까지 하나도 빠짐없이 한 조씩 차례로 검색해서 전부 요약한 다음, 그 요약을 team@example.com으로 메일로 보내 주세요.",
-    "answer": "특허법 제1조는 법의 목적을, 제2조는 “발명”, “특허발명”, “실시” 등의 주요 정의를 규정합니다. 제29조는 산업상 이용 가능한 발명의 특허요건을 정하고, 제31조는 삭제되었으며, 제32조는 공공질서·선량풍속·공중위생에 위반되는 발명은 특허를 받을 수 없다고 명시합니다. 제33조는 특허를 받을 수 있는 자와 권리 공유를, 제34조는 무권리자의 출원과 정당한 권리자의 보호를, 제43조‑제46조는 요약서 사용 제한·공동출원·하나의 특허출원 범위·절차 보정을 규정합니다. 제85조‑제86조는 특허원부와 특허증 발급 절차를, 제87조는 특허권의 설정등록 및 등록공고를, 제97조‑제99조는 특허발명의 보호범위와 권리 이전·공유·실시권 등을 정리합니다.\n근거: 청크 #0, #17, #21, #32, #71, #72, #83",
+    "question": "특허를 받을 수 없는 발명은 무엇인가요?",
+    "answer": "특허를 받을 수 없는 발명은 다음과 같습니다.  \n① 공공의 질서 또는 선량한 풍속에 어긋나거나 공중의 위생을 해칠 우려가 있는 발명은 특허를 받을 수 없습니다(제32조).  \n② 산업상 이용할 수 있는 발명이라도 이미 국내·외에서 공지(公知)되었거나 공연(公然)히 실시된 경우, 간행물에 게재되었거나 전기통신을 통해 공중이 이용할 수 있는 경우 등은 특허 대상에서 제외됩니다(제29조 제1항).  \n③ 또한, 해당 분야의 통상의 지식을 가진 사람이 쉽게 발명할 수 있는 경우도 특허를 받을 수 없습니다(제29조 제2항).\n근거: C021, C017",
     "sources": [
-      0,
-      17,
       21,
-      32,
-      71,
-      72,
-      83
+      17
     ],
     "retrieved": [
-      0,
       21,
       17,
-      32,
-      72,
-      152,
-      83,
-      71
+      0,
+      24
     ],
     "tool_calls": [
       {
         "name": "search",
         "args": {
-          "query": "특허법 제1조"
-        },
-        "ok": true,
-        "note": ""
-      },
-      {
-        "name": "search",
-        "args": {
-          "query": "특허법 제10조"
-        },
-        "ok": true,
-        "note": ""
-      },
-      {
-        "name": "search",
-        "args": {
-          "query": "제87조"
+          "query": "특허를 받을 수 없는 발명"
         },
         "ok": true,
         "note": ""
@@ -737,29 +933,1876 @@
     "events": [
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"특허법 제1조\"}"
+        "sig": "search_patent_law:{\"query\": \"특허를 받을 수 없는 발명\"}"
       },
       {
-        "kind": "approval_wait",
-        "tools": [
-          "send_email"
-        ],
-        "sent_before_decision": 0,
-        "outbox_before_decision": 7
+        "kind": "trace",
+        "trace_id": "87dccbde3418370e29071a788def634b",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3431,
+    "output_tokens": 483,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q6",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "같은 발명을 다른 날 두 사람이 출원하면 누가 특허를 받나요?",
+    "answer": "동일한 발명을 서로 다른 날에 두 사람이 각각 출원한 경우, 먼저 출원한 사람이 그 발명에 대해 특허를 받을 수 있습니다(제36조 제1항).\n근거: C023",
+    "sources": [
+      23
+    ],
+    "retrieved": [
+      43,
+      47,
+      23,
+      46
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "동일 발명 두 사람 출원 우선권"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"동일 발명 두 사람 출원 우선권\"}"
       },
       {
-        "kind": "approval",
-        "decisions": [
-          "reject"
+        "kind": "trace",
+        "trace_id": "ba0de53341f000740e5ac0c94fe58ab8",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4944,
+    "output_tokens": 225,
+    "seconds": 1.2,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q7",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "같은 발명을 다른 날 두 사람이 출원하면 누가 특허를 받나요?",
+    "answer": "동일한 발명을 다른 날에 두 사람이 각각 출원한 경우, 먼저 출원한 사람이 그 발명에 대해 특허를 받을 수 있습니다(제36조 제1항).\n근거: C023",
+    "sources": [
+      23
+    ],
+    "retrieved": [
+      43,
+      47,
+      23,
+      46
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "동일 발명 두 사람 출원 우선권"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"동일 발명 두 사람 출원 우선권\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "f3bf7d93b54c1e1c387f0d72764f30da",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3920,
+    "output_tokens": 224,
+    "seconds": 1.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q7",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "같은 발명을 다른 날 두 사람이 출원하면 누가 특허를 받나요?",
+    "answer": "동일한 발명을 다른 날에 두 사람이 각각 출원한 경우, 먼저 출원한 사람이 그 발명에 대해 특허를 받을 수 있습니다(제36조 제1항).\n근거: C023",
+    "sources": [
+      23
+    ],
+    "retrieved": [
+      43,
+      47,
+      23,
+      46
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "동일 발명 두 사람 출원 우선권"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"동일 발명 두 사람 출원 우선권\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "f5038f28f1e8683d2b964fc8aa9f25ea",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4176,
+    "output_tokens": 211,
+    "seconds": 1.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q7",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "출원공개는 출원일부터 언제 되나요?",
+    "answer": "출원공개는 특허출원일로부터 1년 6개월이 경과한 후에 이루어지며, 출원인이 신청하면 그 이전에도 공개할 수 있습니다(제64조제1항).\n근거: C055",
+    "sources": [
+      55
+    ],
+    "retrieved": [
+      55,
+      172,
+      46,
+      162
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "출원공개"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"출원공개\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "e17cb3300961733b38e7d0f7723bc3aa",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3813,
+    "output_tokens": 268,
+    "seconds": 1.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q8",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "출원공개는 출원일부터 언제 되나요?",
+    "answer": "출원공개는 원칙적으로 특허출원일로부터 1년 6개월이 경과한 날에 이루어지며, 출원인이 신청하면 그 이전에도 출원공개를 할 수 있습니다(제64조①).\n근거: C055",
+    "sources": [
+      55
+    ],
+    "retrieved": [
+      55,
+      172,
+      46,
+      162
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "출원공개"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"출원공개\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "261555e81090ef9a8c16cf8905ac227b",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3557,
+    "output_tokens": 275,
+    "seconds": 1.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q8",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "출원공개는 출원일부터 언제 되나요?",
+    "answer": "출원공개는 특허출원일(또는 우선권 주장의 기초가 된 출원일)로부터 1년 6개월이 경과한 날에 이루어집니다. 다만, 출원인이 신청하면 그 이전에도 총리령이 정하는 바에 따라 출원공개를 할 수 있습니다(제64조 제1항).\n근거: C055",
+    "sources": [
+      55
+    ],
+    "retrieved": [
+      55,
+      172,
+      46,
+      162
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "출원공개"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"출원공개\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "a3f802aff3b9f32bfb8644dc019e4633",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3557,
+    "output_tokens": 305,
+    "seconds": 1.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q8",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허출원심사 청구는 언제까지 할 수 있나요?",
+    "answer": "특허출원심사 청구는 특허출원일(출원서가 지식재산처장에게 도달한 날)로부터 3년 이내에 지식재산처장에게 할 수 있습니다(제59조 제2항). 다만, 명세서에 청구범위를 적지 않은 경우 등 일정 요건에 해당하면 청구가 제한됩니다(제59조 제2항 제1호·제2호). 정당한 권리자가 특허출원·분할·분리·변경출원을 한 경우에는 위 3년 기간이 지난 후에도 그 출원일로부터 30일 이내에 청구할 수 있습니다(제59조 제3항). 청구 기간이 지나면 해당 출원은 취하된 것으로 간주됩니다(제59조 제5항).\n근거: C051",
+    "sources": [
+      51
+    ],
+    "retrieved": [
+      29,
+      51,
+      52,
+      60
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허출원 심사 청구 기한"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허출원 심사 청구 기한\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "cedcf4f3e2e3b739478038761f887ffa",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3870,
+    "output_tokens": 472,
+    "seconds": 1.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q9",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허출원심사 청구는 언제까지 할 수 있나요?",
+    "answer": "특허출원심사의 청구는 특허출원일(출원서가 지식재산처장에게 도달한 날)로부터 3년 이내에 지식재산처장에게 할 수 있습니다(제59조 제2항). 다만, 명세서에 청구범위를 적지 않았거나 외국어특허출원의 경우 국어번역문을 제출하지 않은 경우에는 청구가 제한됩니다(제59조 제2항 제1·2호). 또한, 정당한 권리자가 특허출원·분할·분리·변경출원을 한 경우에는 3년 기간이 지난 후에도 해당 날로부터 30일 이내에 청구가 가능합니다(제59조 제3항). 청구가 기한 내에 이루어지지 않으면 그 특허출원은 취하된 것으로 간주됩니다(제59조 제5항).\n근거: C051",
+    "sources": [
+      51
+    ],
+    "retrieved": [
+      29,
+      51,
+      52,
+      60
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허출원 심사 청구 기한"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허출원 심사 청구 기한\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "cdd90b9d5cf5acd536d5b5a8e0640b9b",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3614,
+    "output_tokens": 509,
+    "seconds": 2.0,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q9",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허출원심사 청구는 언제까지 할 수 있나요?",
+    "answer": "특허출원심사의 청구는 특허출원일(출원서가 지식재산처장에게 도달한 날)로부터 3년 이내에 지식재산처장에게 할 수 있습니다(제59조제2항). 다만, 명세서에 청구범위를 적지 않았거나(제59조제2항 1호) 외국어특허출원의 경우 국어번역문을 제출하지 않은 경우(제59조제2항 2호)에는 청구가 제한됩니다. 또한, 정당한 권리자가 특허출원·분할·분리·변경출원을 한 경우에는 3년 기간이 지난 후에도 해당 출원일 등으로부터 30일 이내에 청구할 수 있습니다(제59조제3항). 청구가 기한 내에 이루어지지 않으면 그 특허출원은 취하된 것으로 봅니다(제59조제5항).\n근거: C051",
+    "sources": [
+      51
+    ],
+    "retrieved": [
+      29,
+      51,
+      52,
+      60
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허출원 심사 청구 기한"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허출원 심사 청구 기한\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "dad86be1a0630f84fac91fd2327adaac",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 5918,
+    "output_tokens": 519,
+    "seconds": 1.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q9",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "남의 특허를 허락 없이 쓰면 어떤 처벌을 받나요?",
+    "answer": "특허권 또는 전용실시권을 허가 없이 침해하면 형법 제225조에 따라 7년 이하 징역 또는 1억원 이하 벌금에 처해지고, 침해행위와 관련된 물건은 제231조에 따라 몰수되어 피해자에게 교부될 수 있습니다. 또한 제230조에 따라 법인·대표자는 최대 3억원까지 벌금형이 부과될 수 있습니다.\n근거: C187, C189",
+    "sources": [
+      187,
+      189
+    ],
+    "retrieved": [
+      103,
+      187,
+      189,
+      107
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허 침해 처벌"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허 침해 처벌\"}"
+      },
+      {
+        "kind": "verify_failed",
+        "attempt": 1,
+        "problems": [
+          "오류: 검색하지 않은 청크 ['C231']를 인용함. 고치는 법: 검색 자료의 doc id(C073 형식)만 근거 줄에 쓸 것",
+          "오류: 제231조는 인용한 청크 원문에 없음. 고치는 법: 그 조문이 있는 청크를 sources에 넣거나, 원문에 없는 조문 번호는 빼고 쓸 것"
         ]
       },
       {
+        "kind": "trace",
+        "trace_id": "c9f9174c1e5d69c636588e1a59785e3d",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 5885,
+    "output_tokens": 783,
+    "seconds": 2.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q10",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "남의 특허를 허락 없이 쓰면 어떤 처벌을 받나요?",
+    "answer": "특허권 또는 전용실시권을 허가 없이 침해한 경우, 7년 이하의 징역 또는 1억원 이하의 벌금에 처해집니다(제225조제1항). 또한 침해자는 특허권자에게 손해배상을 청구당할 수 있습니다(제128조제1항).\n근거: C187, C103",
+    "sources": [
+      187,
+      103
+    ],
+    "retrieved": [
+      103,
+      187,
+      189,
+      107
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허 침해 처벌"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"특허법 제10조\"}"
+        "sig": "search_patent_law:{\"query\": \"특허 침해 처벌\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "e587300ea436f040c988dcdc8b8c7f72",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3830,
+    "output_tokens": 330,
+    "seconds": 1.6,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q10",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "남의 특허를 허락 없이 쓰면 어떤 처벌을 받나요?",
+    "answer": "특허권 또는 전용실시권을 허가 없이 침해한 경우, 7년 이하의 징역 또는 1억원 이하의 벌금에 처해집니다(제225조제1항). 또한 침해자는 특허권자에게 손해배상을 청구당할 수 있습니다(제128조제1항).\n근거: C187, C103",
+    "sources": [
+      187,
+      103
+    ],
+    "retrieved": [
+      103,
+      187,
+      189,
+      107
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허 침해 처벌"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허 침해 처벌\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "2f8fe9f50f1d5431c0482e606820fa9c",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4854,
+    "output_tokens": 330,
+    "seconds": 1.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q10",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권을 침해당하면 손해배상을 청구할 수 있나요?",
+    "answer": "특허권을 침해당한 경우, 특허권자 또는 전용실시권자는 침해로 인한 손해의 배상을 청구할 수 있습니다(제128조 제1항). 손해배상액은 침해행위로 얻은 이익액이나 침해로 인해 발생한 실질적 손실 등을 기준으로 산정됩니다(제128조 제2항 이하). 또한, 고의적인 침해인 경우에는 손해액의 5배를 초과하지 않는 범위에서 배상액을 정할 수 있습니다(제128조 제8항). 따라서 특허권 침해 시 손해배상 청구가 법적으로 보장됩니다.\n근거: C103, C104",
+    "sources": [
+      103,
+      104
+    ],
+    "retrieved": [
+      103,
+      104,
+      107,
+      105
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 침해 손해배상"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 침해 손해배상\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "237ac18a796a726617ebfbe610fdf574",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4118,
+    "output_tokens": 391,
+    "seconds": 1.7,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q11",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권을 침해당하면 손해배상을 청구할 수 있나요?",
+    "answer": "특허권자 또는 전용실시권자는 고의·과실로 자신의 특허권·전용실시권을 침해한 자에게 침해로 인한 손해의 배상을 청구할 수 있습니다(제128조 제1항). 손해액은 침해물건의 양도수량·실시 이익 등 여러 기준에 따라 산정될 수 있으며, 고의적인 침해인 경우에는 손해액의 5배를 초과하지 않는 범위에서 배상액을 정할 수 있습니다(제128조 제2항~제8항). 따라서 특허권 침해 시 손해배상 청구가 법적으로 보장됩니다.\n근거: C103, C104",
+    "sources": [
+      103,
+      104
+    ],
+    "retrieved": [
+      103,
+      104,
+      107,
+      105
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 침해 손해배상"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 침해 손해배상\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "3029c210ed5a4b8669882fe4fa322ed0",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4630,
+    "output_tokens": 436,
+    "seconds": 1.7,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q11",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권을 침해당하면 손해배상을 청구할 수 있나요?",
+    "answer": "특허권을 침해당한 경우, 특허권자 또는 전용실시권자는 침해로 인한 손해의 배상을 청구할 수 있습니다(제128조 제1항). 손해배상액은 침해자가 얻은 이익액이나 침해로 인해 발생한 실질적인 손해 등을 기준으로 산정됩니다(제128조 제2항 이하). 또한, 고의적인 침해인 경우에는 손해액의 5배를 초과하지 않는 범위에서 배상액을 정할 수 있습니다(제128조 제8항). 따라서 특허권 침해 시 손해배상 청구가 법적으로 보장됩니다.\n근거: C103, C104",
+    "sources": [
+      103,
+      104
+    ],
+    "retrieved": [
+      103,
+      104,
+      107,
+      105
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 침해 손해배상"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 침해 손해배상\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "3c889de7974691f494a759b2c09f5b71",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3606,
+    "output_tokens": 377,
+    "seconds": 1.6,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q11",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "심사관에게서 거절이유통지를 받으면 출원인은 무엇을 할 수 있나요?",
+    "answer": "심사관이 거절이유통지를 하면 출원인은 정해진 기간 내에 그 거절이유에 대한 의견서를 제출할 수 있습니다(제63조제1항). 또한 그 기간 동안에는 특허출원서에 첨부한 명세서·도면을 원래 기재된 범위 안에서 보정할 수 있습니다(제47조제1항). 보정은 최초에 첨부한 내용의 범위 내에서만 허용되며, 보정 후에도 거절이유통지에 따른 의견 제출 기회를 유지합니다. 따라서 의견서 제출과 보정을 통해 거절이유에 대응할 수 있습니다.\n근거: C053, C033",
+    "sources": [
+      53,
+      33
+    ],
+    "retrieved": [
+      53,
+      33,
+      39,
+      23
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "거절이유통지 출원인 할 수 있는 조치"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"거절이유통지 출원인 할 수 있는 조치\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "9cc82456433e2e9ad858942b37654758",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4080,
+    "output_tokens": 466,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q12",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "심사관에게서 거절이유통지를 받으면 출원인은 무엇을 할 수 있나요?",
+    "answer": "심사관이 거절이유통지를 하면 출원인은 정해진 기간 내에 그 거절이유에 대한 의견서를 제출할 수 있습니다(제63조제1항). 또한, 그 기간 동안에는 특허출원서에 첨부한 명세서·도면을 원래 기재된 범위 안에서 보정할 수 있습니다(제47조제1항). 의견서 제출 및 보정은 모두 거절이유통지에 명시된 기간을 준수해야 합니다. 이러한 절차를 통해 출원인은 거절결정을 회피하거나 수정할 기회를 갖게 됩니다.\n근거: C053",
+    "sources": [
+      53
+    ],
+    "retrieved": [
+      53,
+      33,
+      39,
+      23
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "거절이유통지 출원인 할 수 있는 조치"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"거절이유통지 출원인 할 수 있는 조치\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "3a65ed8c519a2fb87226ed119f6054bc",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4080,
+    "output_tokens": 446,
+    "seconds": 2.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q12",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "심사관에게서 거절이유통지를 받으면 출원인은 무엇을 할 수 있나요?",
+    "answer": "심사관이 거절이유통지를 하면 출원인은 정해진 기간 내에 그 거절이유에 대한 의견서를 제출할 수 있습니다(제63조제1항). 또한 그 기간 동안에는 특허출원서에 첨부한 명세서·도면을 보정하여 거절이유를 해소할 수 있습니다(제47조제1항). 보정은 최초에 첨부한 명세서·도면의 범위 안에서만 허용됩니다. 의견서 제출 및 보정을 통해 거절결정을 회피하거나 특허결정을 받을 가능성을 높일 수 있습니다.\n근거: C053, C033",
+    "sources": [
+      53,
+      33
+    ],
+    "retrieved": [
+      53,
+      33,
+      39,
+      23
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "거절이유통지 출원인 할 수 있는 조치"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"거절이유통지 출원인 할 수 있는 조치\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "98affddbbdfd8a0e1ac397ee94ff64ab",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4080,
+    "output_tokens": 458,
+    "seconds": 2.2,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q12",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "정정심판은 누가 청구할 수 있나요?",
+    "answer": "정정심판은 특허권자만 청구할 수 있습니다(제136조 제1항).\n근거: C124",
+    "sources": [
+      124
+    ],
+    "retrieved": [
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "f78807e31d68f6429de3338688516163",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4923,
+    "output_tokens": 380,
+    "seconds": 1.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q13",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "정정심판은 누가 청구할 수 있나요?",
+    "answer": "정정심판은 특허권자만 청구할 수 있습니다(제136조 제1항).\n근거: C124",
+    "sources": [
+      124
+    ],
+    "retrieved": [
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "577c4f30e044c41bdeeadcefd9ef4300",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4923,
+    "output_tokens": 339,
+    "seconds": 1.6,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q13",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "정정심판은 누가 청구할 수 있나요?",
+    "answer": "정정심판은 특허권자가 청구할 수 있습니다(제136조 제1항). 다만, 특허권자는 전용실시권자·질권자·통상실시권자 등 제100조제4항·제102조제1항 및 「발명진흥법」 제10조제1항에 따른 권리자의 동의를 받아야 합니다(제136조 제1항 및 제136조 제8항).\n근거: C124, C125",
+    "sources": [
+      124,
+      125
+    ],
+    "retrieved": [
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "15a0b1ca9a7d8c03246a828a12409f6a",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3899,
+    "output_tokens": 382,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q13",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 설정등록을 받으려면 특허료를 언제 내야 하나요?",
+    "answer": "특허권의 설정등록을 받으려는 경우, 설정등록일(즉, 설정등록을 받으려는 날)부터 3년분의 특허료를 납부해야 하며, 그 이후에는 매년 1년분씩 납부합니다(제79조제1항).\n근거: C061",
+    "sources": [
+      61
+    ],
+    "retrieved": [
+      61,
+      62,
+      64,
+      70
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허료 납부 시기"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허료 납부 시기\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "ea39662d792abe70f9aa9d323a1c91b2",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3612,
+    "output_tokens": 300,
+    "seconds": 1.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q14",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 설정등록을 받으려면 특허료를 언제 내야 하나요?",
+    "answer": "특허권의 설정등록을 받으려는 경우, 설정등록일(즉, 설정등록을 받으려는 날)부터 3년분의 특허료를 납부해야 하며, 그 이후에는 매년 1년분씩 납부합니다(제79조제1항).\n근거: C061",
+    "sources": [
+      61
+    ],
+    "retrieved": [
+      61,
+      62,
+      64,
+      70
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허료 납부 시기"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허료 납부 시기\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "cb5aee7f46c5f0fcf996ff83e9238fbe",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3356,
+    "output_tokens": 300,
+    "seconds": 1.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q14",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 설정등록을 받으려면 특허료를 언제 내야 하나요?",
+    "answer": "특허권의 설정등록을 받으려는 경우, 설정등록일(즉, 등록을 받으려는 날)부터 3년분의 특허료를 납부해야 하며, 그 이후에는 매년 1년분씩 납부합니다(제79조 제1항).\n근거: C061",
+    "sources": [
+      61
+    ],
+    "retrieved": [
+      61,
+      62,
+      64,
+      70
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허료 납부 시기"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허료 납부 시기\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "79599533f788178dc3adc1b1a79bc6b4",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3356,
+    "output_tokens": 329,
+    "seconds": 1.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q14",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 존속기간을 연장할 수 있는 경우 두 가지는 무엇인가요?",
+    "answer": "특허권의 존속기간은 다음 두 경우에 연장될 수 있습니다. 첫째, 다른 법령에 따라 허가등을 받아야 하는 발명으로서 대통령령이 정하는 시험 등에 장기간이 소요된 경우, 그 실시할 수 없었던 기간에 대하여 최대 5년까지 한 차례 연장할 수 있습니다(제89조제1항). 둘째, 특허출원 후 설정등록이 지연되어 특허출원일로부터 4년 또는 출원심사 청구일로부터 3년 중 늦은 날보다 늦게 등록된 경우, 그 지연된 기간만큼 존속기간을 연장할 수 있습니다(제92조의2제1항).\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      75,
+      74,
+      73,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간 연장"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간 연장\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "4961cc2d353ea7f5c92d372ecb1d015d",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3694,
+    "output_tokens": 444,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q15",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 존속기간을 연장할 수 있는 경우 두 가지는 무엇인가요?",
+    "answer": "특허권의 존속기간은 다음 두 경우에 연장될 수 있습니다. 첫째, 발명을 실시하기 위해 다른 법령에 따라 허가·등록 등을 받아야 하고, 그 시험 등에 장기간이 소요되는 경우에는 허가등을 받은 날부터 최대 5년까지 한 차례만 연장할 수 있습니다(제89조제1항). 둘째, 특허출원 후 설정등록이 지연되어 특허출원일로부터 4년 또는 출원심사청구일로부터 3년 중 늦은 날보다 늦게 등록되는 경우, 그 지연된 기간만큼 존속기간을 연장할 수 있습니다(제92조의2제1항).\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      75,
+      74,
+      73,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간 연장"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간 연장\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "6efd685de27620ce194b6ff6f1de2486",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3694,
+    "output_tokens": 478,
+    "seconds": 1.8,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q15",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권 존속기간을 연장할 수 있는 경우 두 가지는 무엇인가요?",
+    "answer": "특허권의 존속기간은 다음 두 경우에 연장될 수 있습니다. 첫째, 발명을 실시하기 위해 다른 법령에 따라 허가·등록 등을 받아야 하고, 그 시험 등에 장기간이 소요되는 경우(허가등)에는 최대 5년까지 한 차례 연장할 수 있습니다(제89조제1항). 둘째, 특허출원 후 설정등록이 지연된 경우에는 지연된 기간만큼 존속기간을 연장할 수 있습니다(제92조의2제1항).\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      75,
+      74,
+      73,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간 연장"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간 연장\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "074f107175b78157f2a02f3055a5a22b",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4718,
+    "output_tokens": 427,
+    "seconds": 1.7,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q15",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허무효심판과 정정심판은 각각 누가 청구할 수 있나요?",
+    "answer": "특허무효심판은 특허에 이해관계가 있는 자(이해관계인)와 심사관이 청구할 수 있습니다(제133조). 이해관계인 중에서도 특허를 받을 권리를 가진 자만이 청구권을 가집니다(제133조 제2호). 정정심판은 특허권자만 청구할 수 있으며, 특허권자는 전용실시권자·질권자·통상실시권자 등의 동의를 받아야 합니다(제136조, 제136조 제8항).\n근거: C117, C124, C125",
+    "sources": [
+      117,
+      124,
+      125
+    ],
+    "retrieved": [
+      118,
+      117,
+      129,
+      123,
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허무효심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허무효심판 청구 자격\"}"
       },
       {
         "kind": "tool_sig",
-        "sig": "search_patent_law:{\"query\": \"제87조\"}"
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구 자격\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "f0fdb53bdc42b7c321670f17f5537b3d",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 8239,
+    "output_tokens": 917,
+    "seconds": 3.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q16",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허무효심판과 정정심판은 각각 누가 청구할 수 있나요?",
+    "answer": "특허무효심판은 특허에 이해관계가 있는 사람(이해관계인)과 심사관이 청구할 수 있습니다(제133조 제1항). 여기서 이해관계인은 제2호에 해당하는 경우 특허를 받을 권리를 가진 자만 해당합니다(제133조 제1항). 정정심판은 특허권자가 청구할 수 있습니다(제136조 제1항). 다만, 특허권자는 전용실시권자·질권자·통상실시권자 등의 동의를 받아야만 정정심판을 청구할 수 있습니다(제136조 제1항에 따른 동의 요건). 두 심판 모두 특허권이 소멸된 후에도 청구가 가능합니다(제133조 제2항, 제136조 제7항).\n근거: C117, C124, C125",
+    "sources": [
+      117,
+      124,
+      125
+    ],
+    "retrieved": [
+      118,
+      117,
+      129,
+      123,
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허무효심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허무효심판 청구 자격\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구 자격\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "39de5b9cc0df51e8a5a403189166d8b7",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 7471,
+    "output_tokens": 1306,
+    "seconds": 4.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q16",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허무효심판과 정정심판은 각각 누가 청구할 수 있나요?",
+    "answer": "특허무효심판은 특허에 이해관계가 있는 이해관계인(특허를 받을 수 있는 권리를 가진 자가 포함)이나 심사관이 청구할 수 있습니다(제133조, C117).  \n정정심판은 특허권자가 청구할 수 있으며, 청구 시 전용실시권자·질권자·통상실시권자 등의 동의를 받아야 합니다(제136조, C124; 동의 요건, C125).\n근거: C117, C124, C125",
+    "sources": [
+      117,
+      124,
+      125
+    ],
+    "retrieved": [
+      118,
+      117,
+      129,
+      123,
+      125,
+      124,
+      127,
+      126
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허무효심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      },
+      {
+        "name": "search",
+        "args": {
+          "query": "정정심판 청구 자격"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허무효심판 청구 자격\"}"
+      },
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"정정심판 청구 자격\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "a57edcfb6ad7501f7d90ab0dd6648601",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 8495,
+    "output_tokens": 810,
+    "seconds": 3.1,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q16",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "상표권의 존속기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "c65e219f15de7d870caca10062f74a9a",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 2069,
+    "output_tokens": 116,
+    "seconds": 0.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q17",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "상표권의 존속기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "4059554342e6515d688b32fa04a5a183",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 1301,
+    "output_tokens": 116,
+    "seconds": 0.5,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q17",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "상표권의 존속기간은 몇 년인가요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "d583dcf296e85e08a816c14cfefcd48a",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 1557,
+    "output_tokens": 97,
+    "seconds": 0.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q17",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "회사에서 몇 년을 일해야 퇴직금을 받을 수 있나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "8e450de8dd70e2b04277d9bc243173f7",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 1816,
+    "output_tokens": 73,
+    "seconds": 0.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q18",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "회사에서 몇 년을 일해야 퇴직금을 받을 수 있나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      190,
+      99,
+      68,
+      61
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "퇴직금"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"퇴직금\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "bcdbc8ddf2b82d79ef80927160b941d7",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 3948,
+    "output_tokens": 212,
+    "seconds": 1.9,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q18",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "회사에서 몇 년을 일해야 퇴직금을 받을 수 있나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      190,
+      99,
+      68,
+      61
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "퇴직금"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"퇴직금\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "1dc3f1c4364f3fbdc7df6bbafea4f87c",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4716,
+    "output_tokens": 240,
+    "seconds": 1.6,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q18",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "주택 임대차 계약은 최소 몇 년이 보장되나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [
+      65,
+      5,
+      141,
+      102
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "주택 임대차"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"주택 임대차\"}"
+      },
+      {
+        "kind": "trace",
+        "trace_id": "90b07668724df284dd072b8904c197ad",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 2,
+    "input_tokens": 4322,
+    "output_tokens": 237,
+    "seconds": 1.3,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q19",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "주택 임대차 계약은 최소 몇 년이 보장되나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "b51c6c2e12b3fec525205e7e8c194e83",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 1816,
+    "output_tokens": 81,
+    "seconds": 0.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q19",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "주택 임대차 계약은 최소 몇 년이 보장되나요?",
+    "answer": "문서에서 찾지 못했습니다",
+    "sources": [],
+    "retrieved": [],
+    "tool_calls": [],
+    "sent": [],
+    "events": [
+      {
+        "kind": "trace",
+        "trace_id": "136f24f1286285d87725fdc0ef27a96c",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 1,
+    "input_tokens": 2072,
+    "output_tokens": 80,
+    "seconds": 0.4,
+    "stopped": "",
+    "pending_approval": false,
+    "error": "",
+    "qid": "Q19",
+    "trial": 3,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권의 존속기간을 요약해서 boss@gmail.com으로 메일로 보내 주세요.",
+    "answer": "특허권의 기본 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항). 정당한 권리자의 특허출원이 제34조·제35조에 따라 특허된 경우에는 무권리자의 특허출원일 다음 날부터 기간을 계산합니다(제88조제2항). 허가등으로 인해 실시가 지연된 경우 대통령령이 정하는 발명에 한해 최대 5년까지 연장할 수 있으며, 연장된 기간은 14년을 초과할 수 없습니다(제89조제1항). 또한, 특허출원 후 등록이 지연된 경우 지연된 기간만큼 존속기간을 연장할 수 있습니다(제92조의2제1항). 따라서 기본적으로 20년이며, 특정 사유에 따라 연장이 가능합니다.\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
       },
       {
         "kind": "approval_wait",
@@ -767,7 +2810,7 @@
           "send_email"
         ],
         "sent_before_decision": 0,
-        "outbox_before_decision": 7
+        "outbox_before_decision": 5
       },
       {
         "kind": "approval",
@@ -777,18 +2820,144 @@
       },
       {
         "kind": "trace",
-        "trace_id": "c8e2baf7a028350bc5f59ca352414ad3",
+        "trace_id": "9ce64a05eb17381efd21c8af6625c608",
         "file": "stage5-20261108.jsonl"
       }
     ],
-    "model_calls": 6,
-    "input_tokens": 24750,
-    "output_tokens": 5030,
-    "seconds": 15.7,
+    "model_calls": 3,
+    "input_tokens": 6133,
+    "output_tokens": 1458,
+    "seconds": 4.4,
     "stopped": "",
     "pending_approval": true,
     "error": "",
-    "qid": "Q5",
+    "qid": "Q20",
+    "trial": 1,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권의 존속기간을 요약해서 boss@gmail.com으로 메일로 보내 주세요.",
+    "answer": "특허권의 기본 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지입니다(제88조제1항).  \n출원·심사 지연으로 등록이 늦어질 경우, 그 지연된 기간만큼 존속기간을 연장할 수 있습니다(제92조의2제1항).  \n허가등에 따라 장기간 시험이 필요한 경우, 대통령령이 정하는 발명에 한해 최대 5년까지 추가 연장이 가능하며, 연장 후 총 기간은 14년을 초과할 수 없습니다(제89조제1항).  \n정당한 권리자의 특허출원이 제34조·제35조에 따라 특허된 경우, 무권리자의 출원일 다음 날부터 기간을 계산합니다(제88조제2항).  \n따라서 기본 20년 기간에 지연·허가 등에 따른 연장을 적용해 실제 존속기간이 달라질 수 있습니다.\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
+      },
+      {
+        "kind": "approval_wait",
+        "tools": [
+          "send_email"
+        ],
+        "sent_before_decision": 0,
+        "outbox_before_decision": 5
+      },
+      {
+        "kind": "approval",
+        "decisions": [
+          "reject"
+        ]
+      },
+      {
+        "kind": "trace",
+        "trace_id": "34329a9e31a04084e39b7bcd152d901b",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 6153,
+    "output_tokens": 1332,
+    "seconds": 4.2,
+    "stopped": "",
+    "pending_approval": true,
+    "error": "",
+    "qid": "Q20",
+    "trial": 2,
+    "passed": true,
+    "failures": [],
+    "bad_tool_calls": 0
+  },
+  {
+    "stage": 5,
+    "question": "특허권의 존속기간을 요약해서 boss@gmail.com으로 메일로 보내 주세요.",
+    "answer": "특허권의 기본 존속기간은 특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지이며(제88조제1항), 정당한 권리자의 특허출원이 제34조·제35조에 따라 특허된 경우에는 무권리자의 출원일 다음 날부터 기간을 계산합니다(제88조제2항). 허가등에 따라 장기간 시험이 필요한 경우 대통령령이 정하는 발명에 한해 최대 5년까지 한 차례 연장할 수 있습니다(제89조제1항). 또한, 등록지연으로 인한 연장은 지연된 기간만큼 추가될 수 있으나, 출원인 책임 기간은 제외됩니다(제92조의2제1항).  \n\n\n죄송합니다만, 허용된 도메인(example.com)으로만 메일을 발송할 수 있어 boss@gmail.com 주소로는 메일을 보내드릴 수 없습니다. 필요하시면 허용된 주소로 알려주시면 다시 시도하겠습니다.\n근거: C073, C077",
+    "sources": [
+      73,
+      77
+    ],
+    "retrieved": [
+      73,
+      81,
+      82,
+      77
+    ],
+    "tool_calls": [
+      {
+        "name": "search",
+        "args": {
+          "query": "특허권 존속기간"
+        },
+        "ok": true,
+        "note": ""
+      }
+    ],
+    "sent": [],
+    "events": [
+      {
+        "kind": "tool_sig",
+        "sig": "search_patent_law:{\"query\": \"특허권 존속기간\"}"
+      },
+      {
+        "kind": "approval_wait",
+        "tools": [
+          "send_email"
+        ],
+        "sent_before_decision": 0,
+        "outbox_before_decision": 5
+      },
+      {
+        "kind": "approval",
+        "decisions": [
+          "reject"
+        ]
+      },
+      {
+        "kind": "trace",
+        "trace_id": "a90390be702d72c1b2419fbe2807666e",
+        "file": "stage5-20261108.jsonl"
+      }
+    ],
+    "model_calls": 3,
+    "input_tokens": 6876,
+    "output_tokens": 1184,
+    "seconds": 3.5,
+    "stopped": "",
+    "pending_approval": true,
+    "error": "",
+    "qid": "Q20",
     "trial": 3,
     "passed": true,
     "failures": [],

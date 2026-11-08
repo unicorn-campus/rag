@@ -1,8 +1,8 @@
 """3단계: 답변 스키마 검증과 근거 대조 (교재 34~35p, 할루시네이션 전파 대응 / 50~51p 코드 검사 먼저).
 
 2단계에 더하는 장치 (싼 것부터 차례로 거르는 관문)
-1. 스키마 검증: 최종 답을 Answer(text, sources) 스키마로 바꿔 검증함. 답 마지막 줄 "근거: 청크 #번호"를
-   코드가 sources로 읽음. 거절이 아닌데 sources가 비면 스키마 단계에서 거부
+1. 스키마 검증: 최종 답을 Answer(text, sources) 스키마로 바꿔 검증함. 답 마지막 줄 "근거: C073, C077"을
+   코드가 sources로 읽음(v3: 청크 id를 숫자 대신 C+세 자리로 써 조문 번호와 혼동하지 않게 함). 거절이 아닌데 sources가 비면 스키마 단계에서 거부
    (create_agent의 response_format=ToolStrategy도 시험했으나, Groq gpt-oss가 강제 도구 호출(tool_choice=required)을
    자주 깨뜨려 400 오류가 나서 형식 줄 파싱으로 바꿈)
 2. 근거 대조(코드): ① 인용한 청크가 이번 실행에서 실제로 검색된 청크인가 ② 답에 쓴 조문 번호가 인용 청크 원문에 있는가
@@ -27,15 +27,16 @@ from pydantic import BaseModel, Field, ValidationError, model_validator
 import common
 from common import NOT_FOUND, RunRecord, UsageCallback, articles_in
 from step0_baseline import run_cli
-from step2_context import CORE_PROMPT, Step2, wrap_doc
+from step2_context import CORE_PROMPT, Step2, doc_id, wrap_doc
 
 MAX_REGENERATE = 1
 
 OUTPUT_RULE = """
 
-[출력 형식] 답의 마지막 줄은 반드시 "근거: 청크 #번호, #번호" 형식(번호는 검색 결과의 doc id).
+[출력 형식] 답의 마지막 줄은 반드시 "근거: C073, C077" 형식(검색 결과의 doc id를 그대로 씀. 조문 번호 제N조와 다름).
 하네스가 이 줄로 근거를 대조하므로, 근거로 쓰지 않은 청크는 넣지 않음. 거절할 때는 이 줄을 쓰지 않음"""
 SOURCES_LINE = re.compile(r"근거\s*[:：]\s*(.*)$", re.MULTILINE)
+DOC_ID_RE = re.compile(r"\bC\s*(\d{1,3})\b")   # "C073" → 73
 
 REGEN_PROMPT = """아래 검색 자료만 근거로 질문에 다시 답하세요. 앞선 답은 검증에 실패했습니다.
 
@@ -51,7 +52,7 @@ REGEN_PROMPT = """아래 검색 자료만 근거로 질문에 다시 답하세�
 [검색 자료]
 {docs}
 
-[출력] JSON 하나만 출력: {{"text": "답(근거 조문 번호 포함)", "sources": [근거 청크 번호]}}
+[출력] JSON 하나만 출력: {{"text": "답(근거 조문 번호 포함)", "sources": ["C073"처럼 근거 doc id]}}
 자료에 근거가 없으면 {{"text": "{not_found}", "sources": []}}"""
 
 
@@ -60,7 +61,7 @@ class Answer(BaseModel):
 
     text: str = Field(min_length=1, max_length=2000, description="사용자에게 보여 줄 답. 근거 조문 번호(제N조)를 밝힘")
     sources: list[int] = Field(default_factory=list,
-                               description="답의 근거가 된 청크 번호(<doc id>). 근거를 못 찾아 거절할 때만 빈 목록")
+                               description="답의 근거가 된 청크 번호(<doc id> C073 → 73). 근거를 못 찾아 거절할 때만 빈 목록")
 
     @model_validator(mode="after")
     def need_sources(self):
@@ -71,9 +72,9 @@ class Answer(BaseModel):
 
 
 def to_answer(text: str) -> Answer:
-    """자유 문장 답을 Answer 스키마로 바꿈. 마지막 '근거:' 줄의 #번호가 sources. 스키마 위반이면 ValidationError."""
+    """자유 문장 답을 Answer 스키마로 바꿈. 마지막 '근거:' 줄의 C073 같은 doc id가 sources. 스키마 위반이면 ValidationError."""
     lines = SOURCES_LINE.findall(text or "")
-    sources = [int(n) for n in re.findall(r"#\s*(\d+)", lines[-1])] if lines else []
+    sources = [int(n) for n in DOC_ID_RE.findall(lines[-1])] if lines else []
     body = SOURCES_LINE.sub("", text or "").strip() if lines else (text or "").strip()
     return Answer(text=body or (text or "").strip() or "-", sources=sources)
 
@@ -85,7 +86,8 @@ def check_grounding(ans: Answer, retrieved: list[int], chunks: dict[int, str]) -
     problems = []
     unknown = [s for s in ans.sources if s not in retrieved]
     if unknown:
-        problems.append(f"오류: 검색하지 않은 청크 {unknown}를 인용함. 고치는 법: 검색 자료의 doc id만 sources에 넣을 것")
+        problems.append(f"오류: 검색하지 않은 청크 {[doc_id(u) for u in unknown]}를 인용함. "
+                        "고치는 법: 검색 자료의 doc id(C073 형식)만 근거 줄에 쓸 것")
     cited_articles = set().union(*(articles_in(chunks.get(s, "")) for s in ans.sources if s in retrieved))
     missing = sorted(articles_in(ans.text) - cited_articles)
     if missing:
@@ -95,8 +97,11 @@ def check_grounding(ans: Answer, retrieved: list[int], chunks: dict[int, str]) -
 
 
 def parse_answer(text: str) -> Answer:
-    """LLM 출력에서 바깥 {...}를 떼어 Answer로 검증함(Groq JSON 모드 대신 직접 파싱, 과거 실습 교훈)."""
-    return Answer.model_validate(json.loads(text[text.find("{"): text.rfind("}") + 1]))
+    """LLM 출력에서 바깥 {...}를 떼어 Answer로 검증함(Groq JSON 모드 대신 직접 파싱, 과거 실습 교훈).
+    sources의 "C073" 같은 doc id는 청크 번호 73으로 바꿈. 숫자만 쓴 값은 조문 번호와 헷갈리므로 받지 않음."""
+    data = json.loads(text[text.find("{"): text.rfind("}") + 1])
+    data["sources"] = [int(m) for s in data.get("sources", []) for m in DOC_ID_RE.findall(str(s))]
+    return Answer.model_validate(data)
 
 
 class Step3(Step2):
@@ -123,7 +128,7 @@ class Step3(Step2):
         try:   # ① 스키마 검증(코드)
             ans, problems = to_answer(rec.answer), []
         except ValidationError as e:
-            ans, problems = None, [f"오류: {e.errors()[0]['msg']} 고치는 법: 마지막 줄에 '근거: 청크 #번호'를 쓸 것"]
+            ans, problems = None, [f"오류: {e.errors()[0]['msg']} 고치는 법: 마지막 줄에 '근거: C073'처럼 doc id를 쓸 것"]
         if ans:   # ② 근거 대조(코드)
             problems = check_grounding(ans, t.retrieved, chunks)
         for attempt in range(MAX_REGENERATE):
@@ -140,7 +145,7 @@ class Step3(Step2):
             return
         rec.sources = ans.sources
         note = f"\n(일부 범위만 확인: {rec.stopped})" if rec.stopped and "일부 범위" not in ans.text else ""
-        rec.answer = ans.text + note + (f"\n근거: 청크 {', '.join(f'#{s}' for s in ans.sources)}" if ans.sources else "")
+        rec.answer = ans.text + note + (f"\n근거: {', '.join(doc_id(s) for s in ans.sources)}" if ans.sources else "")
 
 
 if __name__ == "__main__":

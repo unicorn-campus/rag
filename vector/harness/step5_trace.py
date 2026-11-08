@@ -35,9 +35,9 @@ import common
 from common import RESULTS_DIR, RunRecord, UsageCallback, rag
 from step4_approval import Step4
 
-HARNESS_VERSION = "step5-prompt-v2"   # 하네스·프롬프트 버전을 점수와 함께 남김(교재 57p)
+HARNESS_VERSION = "step5-prompt-v3"   # 하네스·프롬프트 버전을 점수와 함께 남김(교재 57p)
 TRACE_DIR = RESULTS_DIR / "traces"
-DOC_ID_RE = re.compile(r'<doc id="(\d+)"')
+DOC_ID_RE = re.compile(r'<doc id="C(\d+)"')
 EVENT_NAMES = {   # 하네스 사건 → 트레이스 이벤트 이름
     "stopped": "guard.stopped", "blocked_repeat": "guard.blocked", "blocked_tool_timeout": "guard.blocked",
     "blocked_ungrounded": "guard.blocked", "verify_failed": "guard.verify_failed", "partial_answer": "guard.partial_answer",

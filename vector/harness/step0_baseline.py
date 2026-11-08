@@ -6,8 +6,9 @@ ReAct 에이전트(LangChain create_agent = LangGraph 그래프)로 감쌈. 모�
 하네스가 없다는 뜻
 - 시스템 프롬프트는 "너는 유용한 도우미야" 한 줄 (교재 13p)
 - 도구 설명은 이름 수준("검색", "보냄"), 입력은 자유 문자열
-- 반복·예산 상한, 답 검증, 전송 승인, 트레이스 없음
-- 단, 실습 PC의 비용 폭주를 막는 안전망으로 LangGraph 그래프 단계 상한(60)만 둠. 걸리면 'runaway'로 기록
+- 반복·예산 상한, 답 검증, 전송 승인, 트레이스 없음. 그래프 단계 상한도 따로 두지 않음
+  (LangGraph 기본값 10,007단계만 적용되어 사실상 무제한. 여기에 걸리면 'runaway'로 기록)
+- 토큰 집계 콜백은 평가용 측정이며 에이전트 동작에는 관여하지 않음
 
 이후 단계는 이 클래스를 상속해 장치를 하나씩 더함(step1 → step5).
 
@@ -47,7 +48,6 @@ def last_answer(state: dict | None) -> str:
 class Step0:
     stage = 0
     title = "하네스 없음"
-    SAFETY_RECURSION = 60   # 실습 안전망(하네스 장치 아님): LangGraph 그래프 단계 상한
 
     def __init__(self, llm=None) -> None:
         self.llm = llm or self.make_llm()
@@ -95,8 +95,8 @@ class Step0:
         return [usage]
 
     def config(self, thread_id: str, usage: UsageCallback) -> dict:
-        return {"recursion_limit": self.SAFETY_RECURSION, "callbacks": self.callbacks(usage),
-                "configurable": {"thread_id": thread_id}}
+        # 반복 상한은 두지 않음(하네스 없음). 콜백은 토큰을 세는 평가용 측정
+        return {"callbacks": self.callbacks(usage), "configurable": {"thread_id": thread_id}}
 
     # --- 실행 -----------------------------------------------------------------
     def invoke(self, question: str, cfg: dict, rec: RunRecord) -> dict:
@@ -120,7 +120,7 @@ class Step0:
                 state = self.invoke(question, cfg, rec)
                 break
             except GraphRecursionError:
-                rec.stopped = "runaway"   # 안전망(그래프 단계 60)에 걸림 = 스스로 멈추지 못함
+                rec.stopped = "runaway"   # LangGraph 기본 상한(10,007단계)에 걸림 = 스스로 멈추지 못함
                 break
             except Exception as e:  # noqa: BLE001
                 rec.error = f"{type(e).__name__}: {str(e)[:300]}"

@@ -123,7 +123,7 @@ def test_step2_tool_contract_returns_fixable_errors():
     assert "입력 오류" in too_long and "재호출" in too_long
     assert common.outbox_files() == []
     out = search.invoke({"query": "특허권 존속기간"})
-    assert out.startswith('<doc id="73" trust="untrusted">')
+    assert out.startswith('<doc id="C073" trust="untrusted">')
 
 
 def test_step2_tool_errors_are_counted_as_bad_calls():
@@ -136,8 +136,10 @@ def test_step2_tool_errors_are_counted_as_bad_calls():
 # 3단계: 스키마·근거 대조
 # ---------------------------------------------------------------------------
 def test_to_answer_parses_sources_line_and_schema_rejects_missing_sources():
-    a = to_answer("존속기간은 20년(제88조).\n근거: 청크 #73, #77")
+    a = to_answer("존속기간은 20년(제88조).\n근거: C073, C077")
     assert a.sources == [73, 77] and "근거" not in a.text
+    with pytest.raises(Exception):                       # 숫자만 쓴 근거(조문 번호와 혼동)는 받지 않음
+        to_answer("존속기간은 20년(제88조).\n근거: #88")
     with pytest.raises(Exception):
         to_answer("근거 없이 답함(제88조).")
     assert to_answer(NOT_FOUND).sources == []
@@ -153,15 +155,15 @@ def test_check_grounding_rules():
 
 def test_step3_passes_grounded_answer():
     rec = Step3(llm(call("search_patent_law", {"query": "특허권 존속기간"}),
-                    say("20년입니다(제88조제1항).\n근거: 청크 #73"))).run("특허권의 존속기간은?")
-    assert rec.sources == [73] and "제88조" in rec.answer
+                    say("20년입니다(제88조제1항).\n근거: C073"))).run("특허권의 존속기간은?")
+    assert rec.sources == [73] and "제88조" in rec.answer and rec.answer.endswith("근거: C073")
     assert ev.score(rec, ev.BY_ID["Q1"]) == (True, [])
 
 
 def test_step3_blocks_ungrounded_answer_after_one_regeneration():
     rec = Step3(llm(call("search_patent_law", {"query": "특허권 존속기간"}),
-                    say("10년입니다(제99조).\n근거: 청크 #73"),                     # 원문에 없는 조문
-                    say('{"text": "10년(제99조)", "sources": [73]}'))).run("특허권의 존속기간은?")   # 재생성도 실패
+                    say("10년입니다(제99조).\n근거: C073"),                         # 원문에 없는 조문
+                    say('{"text": "10년(제99조)", "sources": ["C073"]}'))).run("특허권의 존속기간은?")   # 재생성도 실패
     assert rec.answer.startswith(NOT_FOUND) and rec.sources == []
     kinds = [e["kind"] for e in rec.events]
     assert kinds.count("verify_failed") == step3_verify.MAX_REGENERATE and "blocked_ungrounded" in kinds
@@ -182,7 +184,7 @@ def test_step4_send_waits_for_human_decision(decision, sent):
         return [{"type": decision} for _ in actions]
 
     rec = Step4(llm(call("search_patent_law", {"query": "특허권 존속기간"}, 0), call("send_email", MAIL, 1),
-                    say("처리했습니다(제88조).\n근거: 청크 #73")), approver=approver).run("요약해서 메일로 보내 줘")
+                    say("처리했습니다(제88조).\n근거: C073")), approver=approver).run("요약해서 메일로 보내 줘")
     assert seen == [0]                                   # 승인 전에는 실행되지 않음
     assert rec.pending_approval and len(rec.sent) == sent == len(common.outbox_files())
 
@@ -193,7 +195,7 @@ def test_step4_send_waits_for_human_decision(decision, sent):
 def test_step5_writes_request_llm_tool_spans_and_approval_event(tmp_path):
     trace_file = tmp_path / "trace.jsonl"
     agent = Step5(llm(call("search_patent_law", {"query": "특허권 존속기간"}, 0), call("send_email", MAIL, 1),
-                      say("보내지 않았습니다(제88조).\n근거: 청크 #73")),
+                      say("보내지 않았습니다(제88조).\n근거: C073")),
                   approver=lambda acts: [{"type": "reject"} for _ in acts], trace_file=trace_file)
     rec = agent.run("요약해서 메일로 보내 줘")
     spans = [json.loads(line) for line in trace_file.read_text(encoding="utf-8").splitlines()]
