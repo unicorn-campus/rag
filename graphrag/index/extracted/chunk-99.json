@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00099",
   "raw_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 2,
+    "entity_nodes": 2,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 2
   },
   "kept_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 2,
+    "entity_nodes": 2,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 2
   },
   "pruned": [],
   "graph": {
@@ -38,17 +38,9 @@
       },
       {
         "id": "특허법.pdf::00099:1",
-        "label": "Actor",
-        "properties": {
-          "name": "법인"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00099:2",
         "label": "Right",
         "properties": {
-          "name": "특허권"
+          "name": "통상실시권"
         },
         "embedding_properties": {}
       }
@@ -56,14 +48,7 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00099:0",
-        "end_node_id": "특허법.pdf::00099:2",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00099:1",
-        "end_node_id": "특허법.pdf::00099:2",
+        "end_node_id": "특허법.pdf::00099:1",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
@@ -77,13 +62,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00099:1",
-        "end_node_id": "특허법.pdf::00099",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00099:2",
         "end_node_id": "특허법.pdf::00099",
         "type": "FROM_CHUNK",
         "properties": {},

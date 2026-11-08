@@ -4,13 +4,13 @@
   "chunk_id": "특허법.pdf::00148",
   "raw_counts": {
     "entity_nodes": 9,
-    "entity_relationships": 7,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
     "from_chunk": 9
   },
   "kept_counts": {
     "entity_nodes": 9,
-    "entity_relationships": 7,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
     "from_chunk": 9
   },
@@ -46,17 +46,17 @@
       },
       {
         "id": "특허법.pdf::00148:2",
-        "label": "Decision",
+        "label": "Actor",
         "properties": {
-          "name": "심결"
+          "name": "청구인"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00148:3",
-        "label": "Decision",
+        "label": "Actor",
         "properties": {
-          "name": "특허취소결정"
+          "name": "법정대리인"
         },
         "embedding_properties": {}
       },
@@ -70,17 +70,17 @@
       },
       {
         "id": "특허법.pdf::00148:5",
-        "label": "Period",
+        "label": "Decision",
         "properties": {
-          "name": "30일 이내"
+          "name": "특허취소결정"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00148:6",
-        "label": "Period",
+        "label": "Decision",
         "properties": {
-          "name": "다음 날부터 기산"
+          "name": "심결"
         },
         "embedding_properties": {}
       },
@@ -88,15 +88,15 @@
         "id": "특허법.pdf::00148:7",
         "label": "Period",
         "properties": {
-          "name": "3년이 지나면"
+          "name": "30일 이내"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00148:8",
-        "label": "Actor",
+        "label": "Period",
         "properties": {
-          "name": "심판의 당사자"
+          "name": "3년 이내"
         },
         "embedding_properties": {}
       }
@@ -117,15 +117,22 @@
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00148:4",
-        "end_node_id": "특허법.pdf::00148:2",
-        "type": "TARGETS",
+        "start_node_id": "특허법.pdf::00148:2",
+        "end_node_id": "특허법.pdf::00148:4",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:3",
+        "end_node_id": "특허법.pdf::00148:4",
+        "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00148:4",
-        "end_node_id": "특허법.pdf::00148:3",
+        "end_node_id": "특허법.pdf::00148:6",
         "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
@@ -133,20 +140,20 @@
       {
         "start_node_id": "특허법.pdf::00148:4",
         "end_node_id": "특허법.pdf::00148:5",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00148:4",
-        "end_node_id": "특허법.pdf::00148:6",
-        "type": "HAS_DEADLINE",
+        "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00148:4",
         "end_node_id": "특허법.pdf::00148:7",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00148:4",
+        "end_node_id": "특허법.pdf::00148:8",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}

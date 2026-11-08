@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00022",
   "raw_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 1,
+    "entity_nodes": 5,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 5
   },
   "kept_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 1,
+    "entity_nodes": 5,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 5
   },
   "pruned": [],
   "graph": {
@@ -32,27 +32,44 @@
         "id": "특허법.pdf::00022:0",
         "label": "Actor",
         "properties": {
-          "name": "정당한 권리자"
+          "name": "무권리자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00022:1",
+        "label": "Actor",
+        "properties": {
+          "name": "정당한 권리자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00022:2",
         "label": "Right",
         "properties": {
           "name": "특허를 받을 수 있는 권리"
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00022:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허를 무효로 한다는 심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00022:4",
+        "label": "Period",
+        "properties": {
+          "name": "심결이 확정된 날부터 30일이 지난 후"
+        },
+        "embedding_properties": {}
       }
     ],
     "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00022:0",
-        "end_node_id": "특허법.pdf::00022:1",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
       {
         "start_node_id": "특허법.pdf::00022:0",
         "end_node_id": "특허법.pdf::00022",
@@ -62,6 +79,27 @@
       },
       {
         "start_node_id": "특허법.pdf::00022:1",
+        "end_node_id": "특허법.pdf::00022",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00022:2",
+        "end_node_id": "특허법.pdf::00022",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00022:3",
+        "end_node_id": "특허법.pdf::00022",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00022:4",
         "end_node_id": "특허법.pdf::00022",
         "type": "FROM_CHUNK",
         "properties": {},

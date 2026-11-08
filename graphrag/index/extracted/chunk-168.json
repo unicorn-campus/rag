@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00168",
   "raw_counts": {
-    "entity_nodes": 0,
+    "entity_nodes": 2,
     "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 2
   },
   "kept_counts": {
-    "entity_nodes": 0,
+    "entity_nodes": 2,
     "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 2
   },
   "pruned": [],
   "graph": {
@@ -27,8 +27,39 @@
           "chunk_index": 168
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00168:0",
+        "label": "Actor",
+        "properties": {
+          "name": "국제특허출원의 출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00168:1",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
       }
     ],
-    "relationships": []
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00168:0",
+        "end_node_id": "특허법.pdf::00168",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00168:1",
+        "end_node_id": "특허법.pdf::00168",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
   }
 }

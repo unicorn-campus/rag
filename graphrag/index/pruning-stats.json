@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T23:17:51",
+  "generated_at": "2026-10-27T11:44:20",
   "chunks": 191,
   "before": {
-    "entity_nodes": 752,
-    "entity_relationships": 477
+    "entity_nodes": 723,
+    "entity_relationships": 459
   },
   "after": {
-    "entity_nodes": 752,
-    "entity_relationships": 477
+    "entity_nodes": 723,
+    "entity_relationships": 459
   },
   "totals": {},
   "by_reason": {},

@@ -38,17 +38,17 @@
       },
       {
         "id": "특허법.pdf::00101:1",
-        "label": "Right",
+        "label": "Actor",
         "properties": {
-          "name": "특허권"
+          "name": "전용실시권자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00101:2",
-        "label": "Actor",
+        "label": "Right",
         "properties": {
-          "name": "전용실시권자"
+          "name": "특허권"
         },
         "embedding_properties": {}
       },
@@ -64,13 +64,13 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00101:0",
-        "end_node_id": "특허법.pdf::00101:1",
+        "end_node_id": "특허법.pdf::00101:2",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00101:2",
+        "start_node_id": "특허법.pdf::00101:1",
         "end_node_id": "특허법.pdf::00101:3",
         "type": "HOLDS",
         "properties": {},

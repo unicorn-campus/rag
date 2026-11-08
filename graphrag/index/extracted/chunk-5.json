@@ -30,17 +30,17 @@
       },
       {
         "id": "특허법.pdf::00005:0",
-        "label": "Procedure",
+        "label": "Actor",
         "properties": {
-          "name": "특허에 관한 절차"
+          "name": "재외자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00005:1",
-        "label": "Period",
+        "label": "Right",
         "properties": {
-          "name": "그 다음 날"
+          "name": "특허권"
         },
         "embedding_properties": {}
       }
@@ -49,7 +49,7 @@
       {
         "start_node_id": "특허법.pdf::00005:0",
         "end_node_id": "특허법.pdf::00005:1",
-        "type": "HAS_DEADLINE",
+        "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },

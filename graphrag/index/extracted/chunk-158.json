@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00158",
   "raw_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 2,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 2
   },
   "kept_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 2,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 2
   },
   "pruned": [],
   "graph": {
@@ -38,33 +38,9 @@
       },
       {
         "id": "특허법.pdf::00158:1",
-        "label": "Actor",
-        "properties": {
-          "name": "변리사"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00158:2",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00158:3",
         "label": "Procedure",
         "properties": {
-          "name": "제192조부터 제196조 및 제198조에 따른 절차"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00158:4",
-        "label": "Procedure",
-        "properties": {
-          "name": "국제조사 및 국제예비심사"
+          "name": "제192조부터 제196조까지 및 제198조에 따른 절차"
         },
         "embedding_properties": {}
       }
@@ -72,22 +48,8 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00158:0",
-        "end_node_id": "특허법.pdf::00158:3",
+        "end_node_id": "특허법.pdf::00158:1",
         "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00158:1",
-        "end_node_id": "특허법.pdf::00158:3",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00158:4",
-        "end_node_id": "특허법.pdf::00158:2",
-        "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
@@ -100,27 +62,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00158:1",
-        "end_node_id": "특허법.pdf::00158",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00158:2",
-        "end_node_id": "특허법.pdf::00158",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00158:3",
-        "end_node_id": "특허법.pdf::00158",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00158:4",
         "end_node_id": "특허법.pdf::00158",
         "type": "FROM_CHUNK",
         "properties": {},

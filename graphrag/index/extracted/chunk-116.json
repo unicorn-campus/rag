@@ -4,13 +4,13 @@
   "chunk_id": "특허법.pdf::00116",
   "raw_counts": {
     "entity_nodes": 7,
-    "entity_relationships": 4,
+    "entity_relationships": 5,
     "chunk_nodes": 1,
     "from_chunk": 7
   },
   "kept_counts": {
     "entity_nodes": 7,
-    "entity_relationships": 4,
+    "entity_relationships": 5,
     "chunk_nodes": 1,
     "from_chunk": 7
   },
@@ -32,28 +32,20 @@
         "id": "특허법.pdf::00116:0",
         "label": "Actor",
         "properties": {
-          "name": "특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 받은 자"
+          "name": "지식재산처장"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00116:1",
-        "label": "Decision",
+        "label": "Actor",
         "properties": {
-          "name": "특허거절결정"
+          "name": "특허심판원"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00116:2",
-        "label": "Decision",
-        "properties": {
-          "name": "특허권의 존속기간의 연장등록거절결정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00116:3",
         "label": "Procedure",
         "properties": {
           "name": "특허거절결정 등에 대한 심판"
@@ -61,10 +53,18 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00116:4",
-        "label": "Period",
+        "id": "특허법.pdf::00116:3",
+        "label": "Decision",
         "properties": {
-          "name": "그 결정등본을 송달받은 날부터 3개월 이내"
+          "name": "특허거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00116:4",
+        "label": "Decision",
+        "properties": {
+          "name": "특허권의 존속기간의 연장등록거절결정"
         },
         "embedding_properties": {}
       },
@@ -72,45 +72,52 @@
         "id": "특허법.pdf::00116:5",
         "label": "Actor",
         "properties": {
-          "name": "지식재산처장"
+          "name": "특허거절결정 또는 특허권의 존속기간의 연장등록거절결정을 받은 자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00116:6",
-        "label": "Actor",
+        "label": "Period",
         "properties": {
-          "name": "특허심판원"
+          "name": "결정등본을 송달받은 날부터 3개월 이내"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00116:0",
-        "end_node_id": "특허법.pdf::00116:3",
+        "start_node_id": "특허법.pdf::00116:5",
+        "end_node_id": "특허법.pdf::00116:2",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00116:3",
-        "end_node_id": "특허법.pdf::00116:1",
+        "start_node_id": "특허법.pdf::00116:2",
+        "end_node_id": "특허법.pdf::00116:3",
         "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00116:3",
-        "end_node_id": "특허법.pdf::00116:2",
-        "type": "TARGETS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00116:3",
+        "start_node_id": "특허법.pdf::00116:2",
         "end_node_id": "특허법.pdf::00116:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00116:2",
+        "end_node_id": "특허법.pdf::00116:6",
         "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00116:2",
+        "end_node_id": "특허법.pdf::00116:1",
+        "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },

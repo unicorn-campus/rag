@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00123",
   "raw_counts": {
-    "entity_nodes": 4,
+    "entity_nodes": 6,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 6
   },
   "kept_counts": {
-    "entity_nodes": 4,
+    "entity_nodes": 6,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 6
   },
   "pruned": [],
   "graph": {
@@ -54,6 +54,22 @@
       },
       {
         "id": "특허법.pdf::00123:3",
+        "label": "Invention",
+        "properties": {
+          "name": "특허발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:4",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00123:5",
         "label": "Procedure",
         "properties": {
           "name": "권리범위 확인심판"
@@ -64,21 +80,21 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00123:0",
-        "end_node_id": "특허법.pdf::00123:3",
+        "end_node_id": "특허법.pdf::00123:5",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00123:1",
-        "end_node_id": "특허법.pdf::00123:3",
+        "end_node_id": "특허법.pdf::00123:5",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00123:2",
-        "end_node_id": "특허법.pdf::00123:3",
+        "end_node_id": "특허법.pdf::00123:5",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
@@ -106,6 +122,20 @@
       },
       {
         "start_node_id": "특허법.pdf::00123:3",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:4",
+        "end_node_id": "특허법.pdf::00123",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00123:5",
         "end_node_id": "특허법.pdf::00123",
         "type": "FROM_CHUNK",
         "properties": {},

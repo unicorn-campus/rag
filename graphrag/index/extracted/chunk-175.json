@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00175",
   "raw_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 2,
+    "entity_nodes": 4,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 4
   },
   "kept_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 2,
+    "entity_nodes": 4,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 4
   },
   "pruned": [],
   "graph": {
@@ -32,7 +32,7 @@
         "id": "특허법.pdf::00175:0",
         "label": "Actor",
         "properties": {
-          "name": "국제출원 출원인"
+          "name": "국제출원의 출원인"
         },
         "embedding_properties": {}
       },
@@ -46,25 +46,17 @@
       },
       {
         "id": "특허법.pdf::00175:2",
-        "label": "Actor",
+        "label": "Procedure",
         "properties": {
-          "name": "수리관청"
+          "name": "신청"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00175:3",
-        "label": "Actor",
+        "label": "Decision",
         "properties": {
-          "name": "국제사무국"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00175:4",
-        "label": "Procedure",
-        "properties": {
-          "name": "신청"
+          "name": "결정"
         },
         "embedding_properties": {}
       }
@@ -72,15 +64,22 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00175:0",
-        "end_node_id": "특허법.pdf::00175:4",
+        "end_node_id": "특허법.pdf::00175:2",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00175:4",
+        "start_node_id": "특허법.pdf::00175:2",
         "end_node_id": "특허법.pdf::00175:1",
         "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00175:2",
+        "end_node_id": "특허법.pdf::00175:3",
+        "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
@@ -107,13 +106,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00175:3",
-        "end_node_id": "특허법.pdf::00175",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00175:4",
         "end_node_id": "특허법.pdf::00175",
         "type": "FROM_CHUNK",
         "properties": {},

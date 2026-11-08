@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00174",
   "raw_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 3,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "kept_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 3,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "pruned": [],
   "graph": {
@@ -40,31 +40,15 @@
         "id": "특허법.pdf::00174:1",
         "label": "Actor",
         "properties": {
-          "name": "국제특허출원의 출원인이 아닌 자"
+          "name": "국제특허출원의 출원인 아닌 자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00174:2",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처장"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00174:3",
         "label": "Procedure",
         "properties": {
           "name": "출원심사의 청구"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00174:4",
-        "label": "Period",
-        "properties": {
-          "name": "국내서면제출기간"
         },
         "embedding_properties": {}
       }
@@ -72,22 +56,15 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00174:0",
-        "end_node_id": "특허법.pdf::00174:3",
+        "end_node_id": "특허법.pdf::00174:2",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00174:1",
-        "end_node_id": "특허법.pdf::00174:3",
+        "end_node_id": "특허법.pdf::00174:2",
         "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00174:3",
-        "end_node_id": "특허법.pdf::00174:4",
-        "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
@@ -107,20 +84,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00174:2",
-        "end_node_id": "특허법.pdf::00174",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00174:3",
-        "end_node_id": "특허법.pdf::00174",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00174:4",
         "end_node_id": "특허법.pdf::00174",
         "type": "FROM_CHUNK",
         "properties": {},

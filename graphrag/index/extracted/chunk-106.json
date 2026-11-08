@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00106",
   "raw_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 9,
+    "entity_nodes": 8,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 8
   },
   "kept_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 9,
+    "entity_nodes": 8,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 8
   },
   "pruned": [],
   "graph": {
@@ -46,17 +46,17 @@
       },
       {
         "id": "특허법.pdf::00106:2",
-        "label": "Exclusion",
+        "label": "Right",
         "properties": {
-          "name": "특허출원 전에 국내에서 공지되었거나 공연히 실시된 물건"
+          "name": "특허권"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00106:3",
-        "label": "Exclusion",
+        "label": "Right",
         "properties": {
-          "name": "특허출원 전에 국내 또는 국외에서 반포된 간행물에 게재되었거나 전기통신회선을 통하여 공중이 이용할 수 있는 물건"
+          "name": "전용실시권"
         },
         "embedding_properties": {}
       },
@@ -64,7 +64,7 @@
         "id": "특허법.pdf::00106:4",
         "label": "Actor",
         "properties": {
-          "name": "특허권자"
+          "name": "법원"
         },
         "embedding_properties": {}
       },
@@ -72,7 +72,7 @@
         "id": "특허법.pdf::00106:5",
         "label": "Actor",
         "properties": {
-          "name": "전용실시권자"
+          "name": "특허권자"
         },
         "embedding_properties": {}
       },
@@ -80,23 +80,15 @@
         "id": "특허법.pdf::00106:6",
         "label": "Actor",
         "properties": {
-          "name": "특허권 또는 전용실시권을 침해한 자"
+          "name": "전용실시권자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00106:7",
-        "label": "Remedy",
+        "label": "Actor",
         "properties": {
-          "name": "손해배상"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00106:8",
-        "label": "Remedy",
-        "properties": {
-          "name": "업무상 신용회복을 위한 조치"
+          "name": "특허권을 침해한 자"
         },
         "embedding_properties": {}
       }
@@ -110,58 +102,16 @@
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00106:1",
+        "start_node_id": "특허법.pdf::00106:5",
         "end_node_id": "특허법.pdf::00106:2",
-        "type": "NOT_EFFECTIVE_FOR",
+        "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00106:1",
+        "start_node_id": "특허법.pdf::00106:6",
         "end_node_id": "특허법.pdf::00106:3",
-        "type": "NOT_EFFECTIVE_FOR",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:4",
-        "end_node_id": "특허법.pdf::00106:7",
-        "type": "CAN_CLAIM",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:5",
-        "end_node_id": "특허법.pdf::00106:7",
-        "type": "CAN_CLAIM",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:4",
-        "end_node_id": "특허법.pdf::00106:8",
-        "type": "CAN_CLAIM",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:5",
-        "end_node_id": "특허법.pdf::00106:8",
-        "type": "CAN_CLAIM",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:7",
-        "end_node_id": "특허법.pdf::00106:6",
-        "type": "CLAIMED_AGAINST",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:8",
-        "end_node_id": "특허법.pdf::00106:6",
-        "type": "CLAIMED_AGAINST",
+        "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
@@ -216,13 +166,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00106:7",
-        "end_node_id": "특허법.pdf::00106",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00106:8",
         "end_node_id": "특허법.pdf::00106",
         "type": "FROM_CHUNK",
         "properties": {},

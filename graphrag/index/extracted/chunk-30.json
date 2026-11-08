@@ -46,14 +46,6 @@
       },
       {
         "id": "특허법.pdf::00030:2",
-        "label": "Procedure",
-        "properties": {
-          "name": "외국어 특허출원"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00030:3",
         "label": "Period",
         "properties": {
           "name": "제64조제1항 각 호의 구분에 따른 날부터 1년 2개월이 되는 날까지"
@@ -61,10 +53,18 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00030:4",
+        "id": "특허법.pdf::00030:3",
         "label": "Period",
         "properties": {
           "name": "그 통지를 받은 날부터 3개월이 되는 날"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00030:4",
+        "label": "Period",
+        "properties": {
+          "name": "제2항에 따른 기한 이전"
         },
         "embedding_properties": {}
       },
@@ -86,28 +86,28 @@
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00030:0",
+        "start_node_id": "특허법.pdf::00030:1",
         "end_node_id": "특허법.pdf::00030:2",
-        "type": "CAN_FILE",
+        "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00030:2",
+        "start_node_id": "특허법.pdf::00030:1",
         "end_node_id": "특허법.pdf::00030:3",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00030:2",
+        "start_node_id": "특허법.pdf::00030:1",
         "end_node_id": "특허법.pdf::00030:4",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00030:2",
+        "start_node_id": "특허법.pdf::00030:1",
         "end_node_id": "특허법.pdf::00030:5",
         "type": "HAS_DEADLINE",
         "properties": {},

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00083",
   "raw_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 5,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 0
   },
   "kept_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 5,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 0
   },
   "pruned": [],
   "graph": {
@@ -27,179 +27,8 @@
           "chunk_index": 83
         },
         "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:0",
-        "label": "Actor",
-        "properties": {
-          "name": "특허권자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:1",
-        "label": "Actor",
-        "properties": {
-          "name": "전용실시권자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:2",
-        "label": "Actor",
-        "properties": {
-          "name": "통상실시권자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:3",
-        "label": "Actor",
-        "properties": {
-          "name": "각 공유자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:4",
-        "label": "Actor",
-        "properties": {
-          "name": "다른 공유자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:5",
-        "label": "Right",
-        "properties": {
-          "name": "특허권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:6",
-        "label": "Right",
-        "properties": {
-          "name": "전용실시권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:7",
-        "label": "Right",
-        "properties": {
-          "name": "통상실시권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00083:8",
-        "label": "Invention",
-        "properties": {
-          "name": "특허발명"
-        },
-        "embedding_properties": {}
       }
     ],
-    "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00083:0",
-        "end_node_id": "특허법.pdf::00083:5",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:1",
-        "end_node_id": "특허법.pdf::00083:6",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:2",
-        "end_node_id": "특허법.pdf::00083:7",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:3",
-        "end_node_id": "특허법.pdf::00083:5",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:4",
-        "end_node_id": "특허법.pdf::00083:5",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:0",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:1",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:2",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:3",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:4",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:5",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:6",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:7",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00083:8",
-        "end_node_id": "특허법.pdf::00083",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      }
-    ]
+    "relationships": []
   }
 }

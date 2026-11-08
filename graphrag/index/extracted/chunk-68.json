@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00068",
   "raw_counts": {
-    "entity_nodes": 7,
-    "entity_relationships": 1,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 0
   },
   "kept_counts": {
-    "entity_nodes": 7,
-    "entity_relationships": 1,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 0
   },
   "pruned": [],
   "graph": {
@@ -27,121 +27,8 @@
           "chunk_index": 68
         },
         "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:0",
-        "label": "Actor",
-        "properties": {
-          "name": "납부한 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:1",
-        "label": "Procedure",
-        "properties": {
-          "name": "출원심사의 청구"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:2",
-        "label": "Decision",
-        "properties": {
-          "name": "특허취소결정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:3",
-        "label": "Decision",
-        "properties": {
-          "name": "특허를 무효로 한다는 심결"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:4",
-        "label": "Decision",
-        "properties": {
-          "name": "특허권의 존속기간의 연장등록을 무효로 한다는 심결"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:5",
-        "label": "Period",
-        "properties": {
-          "name": "1개월 이내"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00068:6",
-        "label": "Period",
-        "properties": {
-          "name": "다음 해부터"
-        },
-        "embedding_properties": {}
       }
     ],
-    "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00068:1",
-        "end_node_id": "특허법.pdf::00068:5",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:0",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:1",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:2",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:3",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:4",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:5",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00068:6",
-        "end_node_id": "특허법.pdf::00068",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      }
-    ]
+    "relationships": []
   }
 }

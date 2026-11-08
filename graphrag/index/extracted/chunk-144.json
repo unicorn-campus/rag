@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00144",
   "raw_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 3,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "kept_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 3,
+    "entity_nodes": 3,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "pruned": [],
   "graph": {
@@ -40,57 +40,20 @@
         "id": "특허법.pdf::00144:1",
         "label": "Actor",
         "properties": {
-          "name": "조정위원회"
+          "name": "당사자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00144:2",
-        "label": "Procedure",
+        "label": "Actor",
         "properties": {
-          "name": "조정위원회 회부"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00144:3",
-        "label": "Procedure",
-        "properties": {
-          "name": "조정절차"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00144:4",
-        "label": "Decision",
-        "properties": {
-          "name": "중지 결정을 취소"
+          "name": "조정위원회"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00144:0",
-        "end_node_id": "특허법.pdf::00144:2",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00144:3",
-        "end_node_id": "특허법.pdf::00144:1",
-        "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00144:3",
-        "end_node_id": "특허법.pdf::00144:4",
-        "type": "TARGETS",
-        "properties": {},
-        "embedding_properties": {}
-      },
       {
         "start_node_id": "특허법.pdf::00144:0",
         "end_node_id": "특허법.pdf::00144",
@@ -107,20 +70,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00144:2",
-        "end_node_id": "특허법.pdf::00144",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00144:3",
-        "end_node_id": "특허법.pdf::00144",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00144:4",
         "end_node_id": "특허법.pdf::00144",
         "type": "FROM_CHUNK",
         "properties": {},

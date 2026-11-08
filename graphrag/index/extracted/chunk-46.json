@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00046",
   "raw_counts": {
-    "entity_nodes": 0,
-    "entity_relationships": 0,
+    "entity_nodes": 4,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 4
   },
   "kept_counts": {
-    "entity_nodes": 0,
-    "entity_relationships": 0,
+    "entity_nodes": 4,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 4
   },
   "pruned": [],
   "graph": {
@@ -27,8 +27,83 @@
           "chunk_index": 46
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00046:0",
+        "label": "Actor",
+        "properties": {
+          "name": "우선권을 주장하려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00046:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00046:2",
+        "label": "Invention",
+        "properties": {
+          "name": "우선권 주장을 수반하는 특허출원된 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00046:3",
+        "label": "Right",
+        "properties": {
+          "name": "특허"
+        },
+        "embedding_properties": {}
       }
     ],
-    "relationships": []
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00046:0",
+        "end_node_id": "특허법.pdf::00046:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00046:2",
+        "end_node_id": "특허법.pdf::00046:3",
+        "type": "ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00046:0",
+        "end_node_id": "특허법.pdf::00046",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00046:1",
+        "end_node_id": "특허법.pdf::00046",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00046:2",
+        "end_node_id": "특허법.pdf::00046",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00046:3",
+        "end_node_id": "특허법.pdf::00046",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
   }
 }

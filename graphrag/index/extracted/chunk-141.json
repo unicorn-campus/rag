@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00141",
   "raw_counts": {
-    "entity_nodes": 13,
-    "entity_relationships": 4,
+    "entity_nodes": 3,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 13
+    "from_chunk": 3
   },
   "kept_counts": {
-    "entity_nodes": 13,
-    "entity_relationships": 4,
+    "entity_nodes": 3,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 13
+    "from_chunk": 3
   },
   "pruned": [],
   "graph": {
@@ -30,22 +30,14 @@
       },
       {
         "id": "특허법.pdf::00141:0",
-        "label": "Actor",
+        "label": "Procedure",
         "properties": {
-          "name": "심판장"
+          "name": "절차"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00141:1",
-        "label": "Procedure",
-        "properties": {
-          "name": "심판"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:2",
         "label": "Period",
         "properties": {
           "name": "법정기간"
@@ -53,111 +45,25 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00141:3",
+        "id": "특허법.pdf::00141:2",
         "label": "Period",
         "properties": {
           "name": "지정기간"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:4",
-        "label": "Period",
-        "properties": {
-          "name": "기일"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:5",
-        "label": "Procedure",
-        "properties": {
-          "name": "심판절차"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:6",
-        "label": "Actor",
-        "properties": {
-          "name": "당사자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:7",
-        "label": "Actor",
-        "properties": {
-          "name": "참가인"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:8",
-        "label": "Actor",
-        "properties": {
-          "name": "청구인"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:9",
-        "label": "Actor",
-        "properties": {
-          "name": "심판관"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:10",
-        "label": "Procedure",
-        "properties": {
-          "name": "무효심판"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:11",
-        "label": "Procedure",
-        "properties": {
-          "name": "권리범위 확인심판"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00141:12",
-        "label": "Actor",
-        "properties": {
-          "name": "상대방"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00141:1",
-        "end_node_id": "특허법.pdf::00141:0",
-        "type": "HANDLED_BY",
+        "start_node_id": "특허법.pdf::00141:0",
+        "end_node_id": "특허법.pdf::00141:1",
+        "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00141:1",
+        "start_node_id": "특허법.pdf::00141:0",
         "end_node_id": "특허법.pdf::00141:2",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:1",
-        "end_node_id": "특허법.pdf::00141:3",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:1",
-        "end_node_id": "특허법.pdf::00141:4",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
@@ -178,76 +84,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00141:2",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:3",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:4",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:5",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:6",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:7",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:8",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:9",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:10",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:11",
-        "end_node_id": "특허법.pdf::00141",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00141:12",
         "end_node_id": "특허법.pdf::00141",
         "type": "FROM_CHUNK",
         "properties": {},

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00124",
   "raw_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 1,
+    "entity_nodes": 10,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 10
   },
   "kept_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 1,
+    "entity_nodes": 10,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 10
   },
   "pruned": [],
   "graph": {
@@ -38,9 +38,73 @@
       },
       {
         "id": "특허법.pdf::00124:1",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:2",
         "label": "Procedure",
         "properties": {
           "name": "정정심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:3",
+        "label": "Actor",
+        "properties": {
+          "name": "특허심판원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:4",
+        "label": "Actor",
+        "properties": {
+          "name": "특허법원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:5",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허무효심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:6",
+        "label": "Procedure",
+        "properties": {
+          "name": "정정의 무효심판"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:7",
+        "label": "Period",
+        "properties": {
+          "name": "특허취소신청이 특허심판원에 계속 중인 때부터 그 결정이 확정될 때까지의 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:8",
+        "label": "Period",
+        "properties": {
+          "name": "특허법원에서 변론이 종결된 날까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00124:9",
+        "label": "Period",
+        "properties": {
+          "name": "특허무효심판 또는 정정의 무효심판이 특허심판원에 계속 중인 기간"
         },
         "embedding_properties": {}
       }
@@ -49,7 +113,56 @@
       {
         "start_node_id": "특허법.pdf::00124:0",
         "end_node_id": "특허법.pdf::00124:1",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:0",
+        "end_node_id": "특허법.pdf::00124:2",
         "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:2",
+        "end_node_id": "특허법.pdf::00124:7",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:2",
+        "end_node_id": "특허법.pdf::00124:8",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:2",
+        "end_node_id": "특허법.pdf::00124:9",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:5",
+        "end_node_id": "특허법.pdf::00124:4",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:5",
+        "end_node_id": "특허법.pdf::00124:3",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:6",
+        "end_node_id": "특허법.pdf::00124:4",
+        "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
@@ -62,6 +175,62 @@
       },
       {
         "start_node_id": "특허법.pdf::00124:1",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:2",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:3",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:4",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:5",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:6",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:7",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:8",
+        "end_node_id": "특허법.pdf::00124",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00124:9",
         "end_node_id": "특허법.pdf::00124",
         "type": "FROM_CHUNK",
         "properties": {},

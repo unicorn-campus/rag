@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00186",
   "raw_counts": {
-    "entity_nodes": 5,
+    "entity_nodes": 3,
     "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "kept_counts": {
-    "entity_nodes": 5,
+    "entity_nodes": 3,
     "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 3
   },
   "pruned": [],
   "graph": {
@@ -38,22 +38,6 @@
       },
       {
         "id": "특허법.pdf::00186:1",
-        "label": "Right",
-        "properties": {
-          "name": "특허권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00186:2",
-        "label": "Right",
-        "properties": {
-          "name": "전용실시권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00186:3",
         "label": "Penalty",
         "properties": {
           "name": "7년 이하의 징역"
@@ -61,7 +45,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00186:4",
+        "id": "특허법.pdf::00186:2",
         "label": "Penalty",
         "properties": {
           "name": "1억원 이하의 벌금"
@@ -72,14 +56,14 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00186:0",
-        "end_node_id": "특허법.pdf::00186:3",
+        "end_node_id": "특허법.pdf::00186:1",
         "type": "PUNISHED_BY",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00186:0",
-        "end_node_id": "특허법.pdf::00186:4",
+        "end_node_id": "특허법.pdf::00186:2",
         "type": "PUNISHED_BY",
         "properties": {},
         "embedding_properties": {}
@@ -100,20 +84,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00186:2",
-        "end_node_id": "특허법.pdf::00186",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00186:3",
-        "end_node_id": "특허법.pdf::00186",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00186:4",
         "end_node_id": "특허법.pdf::00186",
         "type": "FROM_CHUNK",
         "properties": {},

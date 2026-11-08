@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00059",
   "raw_counts": {
-    "entity_nodes": 6,
+    "entity_nodes": 7,
     "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 7
   },
   "kept_counts": {
-    "entity_nodes": 6,
+    "entity_nodes": 7,
     "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 7
   },
   "pruned": [],
   "graph": {
@@ -32,12 +32,20 @@
         "id": "특허법.pdf::00059:0",
         "label": "Actor",
         "properties": {
-          "name": "특허출원인"
+          "name": "지식재산처장"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00059:1",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00059:2",
         "label": "Procedure",
         "properties": {
           "name": "재심사의 청구"
@@ -45,7 +53,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00059:2",
+        "id": "특허법.pdf::00059:3",
         "label": "Decision",
         "properties": {
           "name": "특허결정"
@@ -53,7 +61,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00059:3",
+        "id": "특허법.pdf::00059:4",
         "label": "Decision",
         "properties": {
           "name": "특허거절결정"
@@ -61,15 +69,15 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00059:4",
+        "id": "특허법.pdf::00059:5",
         "label": "Period",
         "properties": {
-          "name": "특허출원에 관하여 특허결정의 등본을 송달받은 날부터 제79조에 따른 설정등록을 받기 전까지의 기간"
+          "name": "특허결정의 등본을 송달받은 날부터 제79조에 따른 설정등록을 받기 전까지의 기간"
         },
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00059:5",
+        "id": "특허법.pdf::00059:6",
         "label": "Period",
         "properties": {
           "name": "특허거절결정등본을 송달받은 날부터 3개월 이내"
@@ -79,37 +87,37 @@
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00059:0",
-        "end_node_id": "특허법.pdf::00059:1",
+        "start_node_id": "특허법.pdf::00059:1",
+        "end_node_id": "특허법.pdf::00059:2",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00059:1",
-        "end_node_id": "특허법.pdf::00059:2",
-        "type": "TARGETS",
+        "start_node_id": "특허법.pdf::00059:2",
+        "end_node_id": "특허법.pdf::00059:5",
+        "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00059:1",
+        "start_node_id": "특허법.pdf::00059:2",
+        "end_node_id": "특허법.pdf::00059:6",
+        "type": "HAS_DEADLINE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:2",
         "end_node_id": "특허법.pdf::00059:3",
         "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00059:1",
+        "start_node_id": "특허법.pdf::00059:2",
         "end_node_id": "특허법.pdf::00059:4",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00059:1",
-        "end_node_id": "특허법.pdf::00059:5",
-        "type": "HAS_DEADLINE",
+        "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
@@ -150,6 +158,13 @@
       },
       {
         "start_node_id": "특허법.pdf::00059:5",
+        "end_node_id": "특허법.pdf::00059",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00059:6",
         "end_node_id": "특허법.pdf::00059",
         "type": "FROM_CHUNK",
         "properties": {},

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00053",
   "raw_counts": {
-    "entity_nodes": 6,
-    "entity_relationships": 0,
+    "entity_nodes": 5,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 5
   },
   "kept_counts": {
-    "entity_nodes": 6,
-    "entity_relationships": 0,
+    "entity_nodes": 5,
+    "entity_relationships": 1,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 5
   },
   "pruned": [],
   "graph": {
@@ -62,22 +62,21 @@
       },
       {
         "id": "특허법.pdf::00053:4",
-        "label": "Decision",
+        "label": "Procedure",
         "properties": {
-          "name": "특허결정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00053:5",
-        "label": "Right",
-        "properties": {
-          "name": "특허"
+          "name": "직권 재심사"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00053:4",
+        "end_node_id": "특허법.pdf::00053:2",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
       {
         "start_node_id": "특허법.pdf::00053:0",
         "end_node_id": "특허법.pdf::00053",
@@ -108,13 +107,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00053:4",
-        "end_node_id": "특허법.pdf::00053",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00053:5",
         "end_node_id": "특허법.pdf::00053",
         "type": "FROM_CHUNK",
         "properties": {},

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00023",
   "raw_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 2,
+    "entity_nodes": 6,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 6
   },
   "kept_counts": {
-    "entity_nodes": 2,
-    "entity_relationships": 2,
+    "entity_nodes": 6,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 2
+    "from_chunk": 6
   },
   "pruned": [],
   "graph": {
@@ -43,6 +43,38 @@
           "name": "특허"
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00023:2",
+        "label": "Invention",
+        "properties": {
+          "name": "특허출원된 발명"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00023:3",
+        "label": "Invention",
+        "properties": {
+          "name": "실용신안등록출원된 고안"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00023:4",
+        "label": "Decision",
+        "properties": {
+          "name": "거절결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00023:5",
+        "label": "Decision",
+        "properties": {
+          "name": "거절한다는 취지의 심결"
+        },
+        "embedding_properties": {}
       }
     ],
     "relationships": [
@@ -61,6 +93,13 @@
         "embedding_properties": {}
       },
       {
+        "start_node_id": "특허법.pdf::00023:2",
+        "end_node_id": "특허법.pdf::00023:1",
+        "type": "ELIGIBLE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
         "start_node_id": "특허법.pdf::00023:0",
         "end_node_id": "특허법.pdf::00023",
         "type": "FROM_CHUNK",
@@ -69,6 +108,34 @@
       },
       {
         "start_node_id": "특허법.pdf::00023:1",
+        "end_node_id": "특허법.pdf::00023",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00023:2",
+        "end_node_id": "특허법.pdf::00023",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00023:3",
+        "end_node_id": "특허법.pdf::00023",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00023:4",
+        "end_node_id": "특허법.pdf::00023",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00023:5",
         "end_node_id": "특허법.pdf::00023",
         "type": "FROM_CHUNK",
         "properties": {},

@@ -38,46 +38,6 @@
       },
       {
         "id": "특허법.pdf::00063:1",
-        "label": "Actor",
-        "properties": {
-          "name": "특허권자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00063:2",
-        "label": "Actor",
-        "properties": {
-          "name": "특허권의 설정등록을 받으려는 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00063:3",
-        "label": "Actor",
-        "properties": {
-          "name": "보전명령을 받은 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00063:4",
-        "label": "Actor",
-        "properties": {
-          "name": "특허료를 보전하는 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00063:5",
-        "label": "Right",
-        "properties": {
-          "name": "특허권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00063:6",
         "label": "Procedure",
         "properties": {
           "name": "특허료의 보전"
@@ -85,7 +45,15 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00063:7",
+        "id": "특허법.pdf::00063:2",
+        "label": "Actor",
+        "properties": {
+          "name": "보전명령을 받은 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:3",
         "label": "Decision",
         "properties": {
           "name": "보전명령"
@@ -93,39 +61,71 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00063:8",
+        "id": "특허법.pdf::00063:4",
         "label": "Period",
         "properties": {
           "name": "1개월 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:5",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:6",
+        "label": "Right",
+        "properties": {
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:7",
+        "label": "Actor",
+        "properties": {
+          "name": "특허권의 설정등록을 받으려는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00063:8",
+        "label": "Actor",
+        "properties": {
+          "name": "특허료를 보전하는 자"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00063:6",
+        "start_node_id": "특허법.pdf::00063:1",
         "end_node_id": "특허법.pdf::00063:0",
         "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00063:6",
-        "end_node_id": "특허법.pdf::00063:7",
+        "start_node_id": "특허법.pdf::00063:1",
+        "end_node_id": "특허법.pdf::00063:3",
         "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00063:6",
-        "end_node_id": "특허법.pdf::00063:8",
+        "start_node_id": "특허법.pdf::00063:1",
+        "end_node_id": "특허법.pdf::00063:4",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00063:1",
-        "end_node_id": "특허법.pdf::00063:5",
+        "start_node_id": "특허법.pdf::00063:5",
+        "end_node_id": "특허법.pdf::00063:6",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}

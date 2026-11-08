@@ -4,13 +4,13 @@
   "chunk_id": "특허법.pdf::00169",
   "raw_counts": {
     "entity_nodes": 4,
-    "entity_relationships": 1,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
     "from_chunk": 4
   },
   "kept_counts": {
     "entity_nodes": 4,
-    "entity_relationships": 1,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
     "from_chunk": 4
   },
@@ -38,17 +38,17 @@
       },
       {
         "id": "특허법.pdf::00169:1",
-        "label": "Actor",
+        "label": "Procedure",
         "properties": {
-          "name": "지식재산처장"
+          "name": "보정"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00169:2",
-        "label": "Procedure",
+        "label": "Actor",
         "properties": {
-          "name": "제1항에 따른 절차"
+          "name": "지식재산처장"
         },
         "embedding_properties": {}
       },
@@ -63,7 +63,21 @@
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00169:2",
+        "start_node_id": "특허법.pdf::00169:0",
+        "end_node_id": "특허법.pdf::00169:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00169:1",
+        "end_node_id": "특허법.pdf::00169:2",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00169:1",
         "end_node_id": "특허법.pdf::00169:3",
         "type": "HAS_DEADLINE",
         "properties": {},

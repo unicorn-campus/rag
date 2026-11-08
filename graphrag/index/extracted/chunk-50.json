@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00050",
   "raw_counts": {
-    "entity_nodes": 4,
-    "entity_relationships": 2,
+    "entity_nodes": 8,
+    "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 8
   },
   "kept_counts": {
-    "entity_nodes": 4,
-    "entity_relationships": 2,
+    "entity_nodes": 8,
+    "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 8
   },
   "pruned": [],
   "graph": {
@@ -38,25 +38,57 @@
       },
       {
         "id": "특허법.pdf::00050:1",
-        "label": "Procedure",
+        "label": "Actor",
         "properties": {
-          "name": "청구"
+          "name": "전문기관"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00050:2",
+        "label": "Actor",
+        "properties": {
+          "name": "전문기관의 임직원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:3",
         "label": "Procedure",
+        "properties": {
+          "name": "전문기관의 등록을 취소·업무정지에 대한 청구"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:4",
+        "label": "Decision",
+        "properties": {
+          "name": "전문기관의 등록을 취소"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:5",
+        "label": "Decision",
         "properties": {
           "name": "업무정지"
         },
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00050:3",
+        "id": "특허법.pdf::00050:6",
         "label": "Period",
         "properties": {
           "name": "6개월 이내"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00050:7",
+        "label": "Invention",
+        "properties": {
+          "name": "특허출원 중인 발명"
         },
         "embedding_properties": {}
       }
@@ -64,14 +96,35 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00050:0",
-        "end_node_id": "특허법.pdf::00050:1",
+        "end_node_id": "특허법.pdf::00050:3",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00050:2",
-        "end_node_id": "특허법.pdf::00050:3",
+        "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050:0",
+        "type": "HANDLED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050:4",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050:5",
+        "type": "TARGETS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050:6",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
@@ -99,6 +152,34 @@
       },
       {
         "start_node_id": "특허법.pdf::00050:3",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:4",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:5",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:6",
+        "end_node_id": "특허법.pdf::00050",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00050:7",
         "end_node_id": "특허법.pdf::00050",
         "type": "FROM_CHUNK",
         "properties": {},

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00036",
   "raw_counts": {
-    "entity_nodes": 0,
+    "entity_nodes": 9,
     "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 9
   },
   "kept_counts": {
-    "entity_nodes": 0,
+    "entity_nodes": 9,
     "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 9
   },
   "pruned": [],
   "graph": {
@@ -27,8 +27,144 @@
           "chunk_index": 36
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:0",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:1",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정등본"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:2",
+        "label": "Decision",
+        "properties": {
+          "name": "특허결정"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:3",
+        "label": "Decision",
+        "properties": {
+          "name": "특허거절결정 취소심결"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:4",
+        "label": "Decision",
+        "properties": {
+          "name": "설정등록"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:5",
+        "label": "Period",
+        "properties": {
+          "name": "제47조제1항에 따라 보정을 할 수 있는 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:6",
+        "label": "Period",
+        "properties": {
+          "name": "특허거절결정등본을 송달받은 날부터 3개월 이내의 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:7",
+        "label": "Period",
+        "properties": {
+          "name": "제66조에 따른 특허결정 또는 제176조제1항에 따른 특허거절결정 취소심결의 등본을 송달받은 날부터 3개월 이내의 기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00036:8",
+        "label": "Period",
+        "properties": {
+          "name": "제79조에 따른 설정등록을 받으려는 날이 3개월보다 짧은 경우에는 그 날까지의 기간"
+        },
+        "embedding_properties": {}
       }
     ],
-    "relationships": []
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00036:0",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:1",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:2",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:3",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:4",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:5",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:6",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:7",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00036:8",
+        "end_node_id": "특허법.pdf::00036",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
   }
 }

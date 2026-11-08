@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00149",
   "raw_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 7,
+    "entity_nodes": 10,
+    "entity_relationships": 4,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 10
   },
   "kept_counts": {
-    "entity_nodes": 9,
-    "entity_relationships": 7,
+    "entity_nodes": 10,
+    "entity_relationships": 4,
     "chunk_nodes": 1,
-    "from_chunk": 9
+    "from_chunk": 10
   },
   "pruned": [],
   "graph": {
@@ -56,23 +56,23 @@
         "id": "특허법.pdf::00149:3",
         "label": "Procedure",
         "properties": {
-          "name": "재심청구 등록"
+          "name": "재심청구"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00149:4",
-        "label": "Period",
+        "label": "Invention",
         "properties": {
-          "name": "재심청구 등록 전에"
+          "name": "물건의 발명"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00149:5",
-        "label": "Exclusion",
+        "label": "Invention",
         "properties": {
-          "name": "선의로 수출 또는 수입하거나 국내에서 생산 또는 취득한 물건"
+          "name": "방법의 발명"
         },
         "embedding_properties": {}
       },
@@ -80,7 +80,7 @@
         "id": "특허법.pdf::00149:6",
         "label": "Exclusion",
         "properties": {
-          "name": "해당 발명의 선의의 실시"
+          "name": "선의로 수출 또는 수입하거나 국내에서 생산 또는 취득한 물건"
         },
         "embedding_properties": {}
       },
@@ -88,7 +88,7 @@
         "id": "특허법.pdf::00149:7",
         "label": "Exclusion",
         "properties": {
-          "name": "그 물건의 생산에만 사용하는 물건을 선의로 생산·양도·대여·수출·수입하거나 양도·대여의 청약을 하는 행위"
+          "name": "해당 발명의 선의의 실시"
         },
         "embedding_properties": {}
       },
@@ -96,40 +96,20 @@
         "id": "특허법.pdf::00149:8",
         "label": "Exclusion",
         "properties": {
-          "name": "그 방법의 실시에만 사용하는 물건을 선의로 생산·양도·대여·수출·수입하거나 양도·대여를 청약하는 행위"
+          "name": "선의로 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 양도 또는 대여의 청약을 하는 행위"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00149:9",
+        "label": "Exclusion",
+        "properties": {
+          "name": "선의로 생산ㆍ양도ㆍ대여ㆍ수출 또는 수입하거나 양도 또는 대여를 청약하는 행위"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00149:3",
-        "end_node_id": "특허법.pdf::00149:1",
-        "type": "TARGETS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00149:3",
-        "end_node_id": "특허법.pdf::00149:2",
-        "type": "TARGETS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00149:3",
-        "end_node_id": "특허법.pdf::00149:4",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00149:0",
-        "end_node_id": "특허법.pdf::00149:5",
-        "type": "NOT_EFFECTIVE_FOR",
-        "properties": {},
-        "embedding_properties": {}
-      },
       {
         "start_node_id": "특허법.pdf::00149:0",
         "end_node_id": "특허법.pdf::00149:6",
@@ -147,6 +127,13 @@
       {
         "start_node_id": "특허법.pdf::00149:0",
         "end_node_id": "특허법.pdf::00149:8",
+        "type": "NOT_EFFECTIVE_FOR",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:0",
+        "end_node_id": "특허법.pdf::00149:9",
         "type": "NOT_EFFECTIVE_FOR",
         "properties": {},
         "embedding_properties": {}
@@ -209,6 +196,13 @@
       },
       {
         "start_node_id": "특허법.pdf::00149:8",
+        "end_node_id": "특허법.pdf::00149",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00149:9",
         "end_node_id": "특허법.pdf::00149",
         "type": "FROM_CHUNK",
         "properties": {},

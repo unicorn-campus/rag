@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00073",
   "raw_counts": {
-    "entity_nodes": 3,
+    "entity_nodes": 4,
     "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 4
   },
   "kept_counts": {
-    "entity_nodes": 3,
+    "entity_nodes": 4,
     "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 4
   },
   "pruned": [],
   "graph": {
@@ -40,7 +40,7 @@
         "id": "특허법.pdf::00073:1",
         "label": "Period",
         "properties": {
-          "name": "특허권을 설정등록한 날부터 특허출원일 후 20년이 되는 날까지"
+          "name": "특허출원일 후 20년이 되는 날까지"
         },
         "embedding_properties": {}
       },
@@ -48,7 +48,15 @@
         "id": "특허법.pdf::00073:2",
         "label": "Period",
         "properties": {
-          "name": "무권리자의 특허출원일의 다음 날부터"
+          "name": "5년의 기간까지"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00073:3",
+        "label": "Invention",
+        "properties": {
+          "name": "특허발명"
         },
         "embedding_properties": {}
       }
@@ -84,6 +92,13 @@
       },
       {
         "start_node_id": "특허법.pdf::00073:2",
+        "end_node_id": "특허법.pdf::00073",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00073:3",
         "end_node_id": "특허법.pdf::00073",
         "type": "FROM_CHUNK",
         "properties": {},

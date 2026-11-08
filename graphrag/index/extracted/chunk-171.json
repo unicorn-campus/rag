@@ -48,7 +48,7 @@
         "id": "특허법.pdf::00171:2",
         "label": "Period",
         "properties": {
-          "name": "다음 각 호의 구분에 따른 날부터 1년 6개월이 지난 후"
+          "name": "우선일부터 1년 6개월이 되는 날 또는 출원심사의 청구일 중 늦은 날이 지난 후"
         },
         "embedding_properties": {}
       }

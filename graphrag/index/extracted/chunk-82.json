@@ -64,7 +64,7 @@
         "id": "특허법.pdf::00082:4",
         "label": "Exclusion",
         "properties": {
-          "name": "둘 이상의 의약이 혼합되어 제조되는 의약의 발명 또는 둘 이상의 의약을 혼합하여 의약을 제조하는 방법의 발명에 관한 특허권"
+          "name": "조제행위와 그 조제에 의한 의약"
         },
         "embedding_properties": {}
       }

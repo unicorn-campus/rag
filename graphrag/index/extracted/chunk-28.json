@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00028",
   "raw_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 2,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 0
   },
   "kept_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 2,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 0
   },
   "pruned": [],
   "graph": {
@@ -27,68 +27,8 @@
           "chunk_index": 28
         },
         "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00028:0",
-        "label": "Actor",
-        "properties": {
-          "name": "특허를 받으려는 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00028:1",
-        "label": "Procedure",
-        "properties": {
-          "name": "특허출원"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00028:2",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처장"
-        },
-        "embedding_properties": {}
       }
     ],
-    "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00028:0",
-        "end_node_id": "특허법.pdf::00028:1",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00028:1",
-        "end_node_id": "특허법.pdf::00028:2",
-        "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00028:0",
-        "end_node_id": "특허법.pdf::00028",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00028:1",
-        "end_node_id": "특허법.pdf::00028",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00028:2",
-        "end_node_id": "특허법.pdf::00028",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      }
-    ]
+    "relationships": []
   }
 }

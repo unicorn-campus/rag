@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00027",
   "raw_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 1,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 0
   },
   "kept_counts": {
-    "entity_nodes": 3,
-    "entity_relationships": 1,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 3
+    "from_chunk": 0
   },
   "pruned": [],
   "graph": {
@@ -27,61 +27,8 @@
           "chunk_index": 27
         },
         "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00027:0",
-        "label": "Actor",
-        "properties": {
-          "name": "정부"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00027:1",
-        "label": "Invention",
-        "properties": {
-          "name": "특허출원된 발명"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00027:2",
-        "label": "Right",
-        "properties": {
-          "name": "특허"
-        },
-        "embedding_properties": {}
       }
     ],
-    "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00027:1",
-        "end_node_id": "특허법.pdf::00027:2",
-        "type": "NOT_ELIGIBLE_FOR",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00027:0",
-        "end_node_id": "특허법.pdf::00027",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00027:1",
-        "end_node_id": "특허법.pdf::00027",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00027:2",
-        "end_node_id": "특허법.pdf::00027",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      }
-    ]
+    "relationships": []
   }
 }

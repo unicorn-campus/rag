@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00024",
   "raw_counts": {
-    "entity_nodes": 0,
-    "entity_relationships": 0,
+    "entity_nodes": 8,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 8
   },
   "kept_counts": {
-    "entity_nodes": 0,
-    "entity_relationships": 0,
+    "entity_nodes": 8,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 0
+    "from_chunk": 8
   },
   "pruned": [],
   "graph": {
@@ -27,8 +27,143 @@
           "chunk_index": 24
         },
         "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:0",
+        "label": "Actor",
+        "properties": {
+          "name": "발명자 또는 고안자가 아닌 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:1",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:2",
+        "label": "Procedure",
+        "properties": {
+          "name": "실용신안등록출원"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:3",
+        "label": "Actor",
+        "properties": {
+          "name": "지식재산처장"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:4",
+        "label": "Actor",
+        "properties": {
+          "name": "특허출원인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:5",
+        "label": "Period",
+        "properties": {
+          "name": "기간"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:6",
+        "label": "Right",
+        "properties": {
+          "name": "특허를 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00024:7",
+        "label": "Right",
+        "properties": {
+          "name": "실용신안등록을 받을 수 있는 권리"
+        },
+        "embedding_properties": {}
       }
     ],
-    "relationships": []
+    "relationships": [
+      {
+        "start_node_id": "특허법.pdf::00024:0",
+        "end_node_id": "특허법.pdf::00024:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:0",
+        "end_node_id": "특허법.pdf::00024:2",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:0",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:1",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:2",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:3",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:4",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:5",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:6",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00024:7",
+        "end_node_id": "특허법.pdf::00024",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      }
+    ]
   }
 }

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00113",
   "raw_counts": {
-    "entity_nodes": 12,
-    "entity_relationships": 8,
+    "entity_nodes": 5,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 12
+    "from_chunk": 5
   },
   "kept_counts": {
-    "entity_nodes": 12,
-    "entity_relationships": 8,
+    "entity_nodes": 5,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 12
+    "from_chunk": 5
   },
   "pruned": [],
   "graph": {
@@ -38,22 +38,6 @@
       },
       {
         "id": "특허법.pdf::00113:1",
-        "label": "Procedure",
-        "properties": {
-          "name": "특허취소신청"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:2",
-        "label": "Decision",
-        "properties": {
-          "name": "각하결정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:3",
         "label": "Actor",
         "properties": {
           "name": "특허권자"
@@ -61,7 +45,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00113:4",
+        "id": "특허법.pdf::00113:2",
         "label": "Right",
         "properties": {
           "name": "특허권"
@@ -69,58 +53,18 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00113:5",
-        "label": "Actor",
-        "properties": {
-          "name": "심판관"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:6",
+        "id": "특허법.pdf::00113:3",
         "label": "Procedure",
         "properties": {
-          "name": "심리"
+          "name": "특허취소신청"
         },
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00113:7",
+        "id": "특허법.pdf::00113:4",
         "label": "Decision",
         "properties": {
-          "name": "특허취소결정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:8",
-        "label": "Actor",
-        "properties": {
-          "name": "권리를 가진 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:9",
-        "label": "Actor",
-        "properties": {
-          "name": "이해관계를 가진 자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:10",
-        "label": "Procedure",
-        "properties": {
-          "name": "특허취소신청절차"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00113:11",
-        "label": "Actor",
-        "properties": {
-          "name": "공유인 특허권의 특허권자 중 1인"
+          "name": "각하결정"
         },
         "embedding_properties": {}
       }
@@ -128,57 +72,22 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00113:1",
-        "end_node_id": "특허법.pdf::00113:0",
-        "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:1",
         "end_node_id": "특허법.pdf::00113:2",
-        "type": "TARGETS",
+        "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00113:6",
+        "start_node_id": "특허법.pdf::00113:3",
         "end_node_id": "특허법.pdf::00113:0",
         "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:6",
-        "end_node_id": "특허법.pdf::00113:7",
-        "type": "TARGETS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:8",
-        "end_node_id": "특허법.pdf::00113:6",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:9",
-        "end_node_id": "특허법.pdf::00113:6",
-        "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00113:3",
         "end_node_id": "특허법.pdf::00113:4",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:8",
-        "end_node_id": "특허법.pdf::00113:4",
-        "type": "HOLDS",
+        "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
@@ -212,55 +121,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00113:4",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:5",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:6",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:7",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:8",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:9",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:10",
-        "end_node_id": "특허법.pdf::00113",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00113:11",
         "end_node_id": "특허법.pdf::00113",
         "type": "FROM_CHUNK",
         "properties": {},

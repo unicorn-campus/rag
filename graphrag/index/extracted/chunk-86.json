@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00086",
   "raw_counts": {
-    "entity_nodes": 6,
-    "entity_relationships": 3,
+    "entity_nodes": 7,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 7
   },
   "kept_counts": {
-    "entity_nodes": 6,
-    "entity_relationships": 3,
+    "entity_nodes": 7,
+    "entity_relationships": 2,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 7
   },
   "pruned": [],
   "graph": {
@@ -38,14 +38,6 @@
       },
       {
         "id": "특허법.pdf::00086:1",
-        "label": "Right",
-        "properties": {
-          "name": "특허권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00086:2",
         "label": "Actor",
         "properties": {
           "name": "통상실시권자"
@@ -53,15 +45,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00086:3",
-        "label": "Right",
-        "properties": {
-          "name": "통상실시권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00086:4",
+        "id": "특허법.pdf::00086:2",
         "label": "Actor",
         "properties": {
           "name": "전용실시권자"
@@ -69,32 +53,49 @@
         "embedding_properties": {}
       },
       {
+        "id": "특허법.pdf::00086:3",
+        "label": "Actor",
+        "properties": {
+          "name": "그 발명을 하거나 그 발명을 한 사람으로부터 알게 되어 국내에서 그 발명의 실시사업을 하거나 이를 준비하고 있는 자"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:4",
+        "label": "Right",
+        "properties": {
+          "name": "통상실시권"
+        },
+        "embedding_properties": {}
+      },
+      {
         "id": "특허법.pdf::00086:5",
         "label": "Right",
         "properties": {
-          "name": "전용실시권"
+          "name": "특허권"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00086:6",
+        "label": "Invention",
+        "properties": {
+          "name": "특허발명"
         },
         "embedding_properties": {}
       }
     ],
     "relationships": [
       {
-        "start_node_id": "특허법.pdf::00086:0",
-        "end_node_id": "특허법.pdf::00086:1",
+        "start_node_id": "특허법.pdf::00086:1",
+        "end_node_id": "특허법.pdf::00086:4",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00086:2",
-        "end_node_id": "특허법.pdf::00086:3",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00086:4",
-        "end_node_id": "특허법.pdf::00086:5",
+        "start_node_id": "특허법.pdf::00086:3",
+        "end_node_id": "특허법.pdf::00086:4",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
@@ -136,6 +137,13 @@
       },
       {
         "start_node_id": "특허법.pdf::00086:5",
+        "end_node_id": "특허법.pdf::00086",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00086:6",
         "end_node_id": "특허법.pdf::00086",
         "type": "FROM_CHUNK",
         "properties": {},

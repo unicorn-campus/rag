@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00189",
   "raw_counts": {
-    "entity_nodes": 10,
-    "entity_relationships": 7,
+    "entity_nodes": 12,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
-    "from_chunk": 10
+    "from_chunk": 12
   },
   "kept_counts": {
-    "entity_nodes": 10,
-    "entity_relationships": 7,
+    "entity_nodes": 12,
+    "entity_relationships": 8,
     "chunk_nodes": 1,
-    "from_chunk": 10
+    "from_chunk": 12
   },
   "pruned": [],
   "graph": {
@@ -54,30 +54,14 @@
       },
       {
         "id": "특허법.pdf::00189:3",
-        "label": "Penalty",
+        "label": "Actor",
         "properties": {
-          "name": "3억원 이하의 벌금"
+          "name": "법인의 대표자"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00189:4",
-        "label": "Penalty",
-        "properties": {
-          "name": "6천만원 이하의 벌금"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00189:5",
-        "label": "Penalty",
-        "properties": {
-          "name": "1억원 이하의 벌금"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00189:6",
         "label": "Actor",
         "properties": {
           "name": "법인"
@@ -85,7 +69,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00189:7",
+        "id": "특허법.pdf::00189:5",
         "label": "Actor",
         "properties": {
           "name": "개인"
@@ -93,18 +77,50 @@
         "embedding_properties": {}
       },
       {
+        "id": "특허법.pdf::00189:6",
+        "label": "Actor",
+        "properties": {
+          "name": "대리인"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00189:7",
+        "label": "Actor",
+        "properties": {
+          "name": "사용인"
+        },
+        "embedding_properties": {}
+      },
+      {
         "id": "특허법.pdf::00189:8",
         "label": "Actor",
         "properties": {
-          "name": "피해자"
+          "name": "그 밖의 종업원"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00189:9",
-        "label": "Remedy",
+        "label": "Penalty",
         "properties": {
-          "name": "배상 청구"
+          "name": "3억원 이하의 벌금"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00189:10",
+        "label": "Penalty",
+        "properties": {
+          "name": "6천만원 이하의 벌금"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00189:11",
+        "label": "Penalty",
+        "properties": {
+          "name": "1억원 이하의 벌금"
         },
         "embedding_properties": {}
       }
@@ -125,37 +141,44 @@
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00189:6",
-        "end_node_id": "특허법.pdf::00189:3",
-        "type": "PUNISHED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00189:7",
-        "end_node_id": "특허법.pdf::00189:4",
-        "type": "PUNISHED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00189:0",
-        "end_node_id": "특허법.pdf::00189:5",
-        "type": "PUNISHED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00189:8",
+        "start_node_id": "특허법.pdf::00189:4",
         "end_node_id": "특허법.pdf::00189:9",
-        "type": "CAN_CLAIM",
+        "type": "PUNISHED_BY",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00189:9",
-        "end_node_id": "특허법.pdf::00189:0",
-        "type": "CLAIMED_AGAINST",
+        "start_node_id": "특허법.pdf::00189:4",
+        "end_node_id": "특허법.pdf::00189:10",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:4",
+        "end_node_id": "특허법.pdf::00189:11",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:5",
+        "end_node_id": "특허법.pdf::00189:9",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:5",
+        "end_node_id": "특허법.pdf::00189:10",
+        "type": "PUNISHED_BY",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:5",
+        "end_node_id": "특허법.pdf::00189:11",
+        "type": "PUNISHED_BY",
         "properties": {},
         "embedding_properties": {}
       },
@@ -224,6 +247,20 @@
       },
       {
         "start_node_id": "특허법.pdf::00189:9",
+        "end_node_id": "특허법.pdf::00189",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:10",
+        "end_node_id": "특허법.pdf::00189",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00189:11",
         "end_node_id": "특허법.pdf::00189",
         "type": "FROM_CHUNK",
         "properties": {},

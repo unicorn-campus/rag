@@ -46,9 +46,9 @@
       },
       {
         "id": "특허법.pdf::00103:2",
-        "label": "Right",
+        "label": "Actor",
         "properties": {
-          "name": "특허권"
+          "name": "그 권리를 침해한 자"
         },
         "embedding_properties": {}
       },
@@ -56,23 +56,23 @@
         "id": "특허법.pdf::00103:3",
         "label": "Right",
         "properties": {
-          "name": "전용실시권"
+          "name": "특허권"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00103:4",
-        "label": "Remedy",
+        "label": "Right",
         "properties": {
-          "name": "손해배상청구"
+          "name": "전용실시권"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00103:5",
-        "label": "Actor",
+        "label": "Remedy",
         "properties": {
-          "name": "침해한 자"
+          "name": "손해배상청구권"
         },
         "embedding_properties": {}
       }
@@ -80,35 +80,35 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00103:0",
-        "end_node_id": "특허법.pdf::00103:2",
-        "type": "HOLDS",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00103:1",
         "end_node_id": "특허법.pdf::00103:3",
         "type": "HOLDS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00103:0",
+        "start_node_id": "특허법.pdf::00103:1",
         "end_node_id": "특허법.pdf::00103:4",
+        "type": "HOLDS",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00103:0",
+        "end_node_id": "특허법.pdf::00103:5",
         "type": "CAN_CLAIM",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00103:1",
-        "end_node_id": "특허법.pdf::00103:4",
+        "end_node_id": "특허법.pdf::00103:5",
         "type": "CAN_CLAIM",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00103:4",
-        "end_node_id": "특허법.pdf::00103:5",
+        "start_node_id": "특허법.pdf::00103:5",
+        "end_node_id": "특허법.pdf::00103:2",
         "type": "CLAIMED_AGAINST",
         "properties": {},
         "embedding_properties": {}

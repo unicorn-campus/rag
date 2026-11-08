@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00190",
   "raw_counts": {
-    "entity_nodes": 6,
+    "entity_nodes": 4,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 4
   },
   "kept_counts": {
-    "entity_nodes": 6,
+    "entity_nodes": 4,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 6
+    "from_chunk": 4
   },
   "pruned": [],
   "graph": {
@@ -40,7 +40,7 @@
         "id": "특허법.pdf::00190:1",
         "label": "Actor",
         "properties": {
-          "name": "특허심판원으로부터 증거조사 또는 증거보전에 관하여 서류나 그 밖의 물건 제출 또는 제시의 명령을 받은 자로서 정당한 이유 없이 그 명령에 따르지 아니한 자"
+          "name": "특허심판원으로부터 증거조사 또는 증거보전에 관하여 서류나 그 밖의 물건 제출 또는 제시의 명령을 받은 자"
         },
         "embedding_properties": {}
       },
@@ -48,7 +48,7 @@
         "id": "특허법.pdf::00190:2",
         "label": "Actor",
         "properties": {
-          "name": "특허심판원으로부터 증인ㆍ감정인 또는 통역인으로 소환된 자로서 정당한 이유 없이 소환에 따르지 아니하거나 선서ㆍ진술ㆍ증언ㆍ감정 또는 통역을 거부한 자"
+          "name": "특허심판원으로부터 증인ㆍ감정인 또는 통역인으로 소환된 자"
         },
         "embedding_properties": {}
       },
@@ -57,22 +57,6 @@
         "label": "Penalty",
         "properties": {
           "name": "50만원 이하의 과태료"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00190:4",
-        "label": "Actor",
-        "properties": {
-          "name": "피해자"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00190:5",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처장"
         },
         "embedding_properties": {}
       }
@@ -122,20 +106,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00190:3",
-        "end_node_id": "특허법.pdf::00190",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00190:4",
-        "end_node_id": "특허법.pdf::00190",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00190:5",
         "end_node_id": "특허법.pdf::00190",
         "type": "FROM_CHUNK",
         "properties": {},

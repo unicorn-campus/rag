@@ -38,17 +38,17 @@
       },
       {
         "id": "특허법.pdf::00096:1",
-        "label": "Procedure",
+        "label": "Actor",
         "properties": {
-          "name": "변경청구"
+          "name": "지식재산처장"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00096:2",
-        "label": "Actor",
+        "label": "Procedure",
         "properties": {
-          "name": "지식재산처장"
+          "name": "변경청구"
         },
         "embedding_properties": {}
       }
@@ -56,14 +56,14 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00096:0",
-        "end_node_id": "특허법.pdf::00096:1",
+        "end_node_id": "특허법.pdf::00096:2",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00096:1",
-        "end_node_id": "특허법.pdf::00096:2",
+        "start_node_id": "특허법.pdf::00096:2",
+        "end_node_id": "특허법.pdf::00096:1",
         "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}

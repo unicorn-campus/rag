@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00079",
   "raw_counts": {
-    "entity_nodes": 7,
+    "entity_nodes": 6,
     "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 6
   },
   "kept_counts": {
-    "entity_nodes": 7,
+    "entity_nodes": 6,
     "entity_relationships": 5,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 6
   },
   "pruned": [],
   "graph": {
@@ -54,22 +54,14 @@
       },
       {
         "id": "특허법.pdf::00079:3",
-        "label": "Actor",
+        "label": "Procedure",
         "properties": {
-          "name": "심사관"
+          "name": "연장등록출원"
         },
         "embedding_properties": {}
       },
       {
         "id": "특허법.pdf::00079:4",
-        "label": "Procedure",
-        "properties": {
-          "name": "특허권의 존속기간의 연장등록출원"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00079:5",
         "label": "Decision",
         "properties": {
           "name": "연장등록 여부결정"
@@ -77,7 +69,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00079:6",
+        "id": "특허법.pdf::00079:5",
         "label": "Period",
         "properties": {
           "name": "특허권의 설정등록일부터 3개월 이내"
@@ -88,35 +80,35 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00079:0",
-        "end_node_id": "특허법.pdf::00079:4",
+        "end_node_id": "특허법.pdf::00079:3",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
         "start_node_id": "특허법.pdf::00079:2",
-        "end_node_id": "특허법.pdf::00079:4",
+        "end_node_id": "특허법.pdf::00079:3",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00079:4",
+        "start_node_id": "특허법.pdf::00079:3",
         "end_node_id": "특허법.pdf::00079:1",
         "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00079:4",
-        "end_node_id": "특허법.pdf::00079:5",
+        "start_node_id": "특허법.pdf::00079:3",
+        "end_node_id": "특허법.pdf::00079:4",
         "type": "TARGETS",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00079:4",
-        "end_node_id": "특허법.pdf::00079:6",
+        "start_node_id": "특허법.pdf::00079:3",
+        "end_node_id": "특허법.pdf::00079:5",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
@@ -158,13 +150,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00079:5",
-        "end_node_id": "특허법.pdf::00079",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00079:6",
         "end_node_id": "특허법.pdf::00079",
         "type": "FROM_CHUNK",
         "properties": {},

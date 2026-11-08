@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00157",
   "raw_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 4,
+    "entity_nodes": 4,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 4
   },
   "kept_counts": {
-    "entity_nodes": 5,
-    "entity_relationships": 4,
+    "entity_nodes": 4,
+    "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 5
+    "from_chunk": 4
   },
   "pruned": [],
   "graph": {
@@ -40,20 +40,12 @@
         "id": "특허법.pdf::00157:1",
         "label": "Procedure",
         "properties": {
-          "name": "보정"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00157:2",
-        "label": "Decision",
-        "properties": {
           "name": "보정명령"
         },
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00157:3",
+        "id": "특허법.pdf::00157:2",
         "label": "Period",
         "properties": {
           "name": "지정된 기간"
@@ -61,7 +53,7 @@
         "embedding_properties": {}
       },
       {
-        "id": "특허법.pdf::00157:4",
+        "id": "특허법.pdf::00157:3",
         "label": "Period",
         "properties": {
           "name": "총리령으로 정하는 기간"
@@ -71,9 +63,16 @@
     ],
     "relationships": [
       {
+        "start_node_id": "특허법.pdf::00157:0",
+        "end_node_id": "특허법.pdf::00157:1",
+        "type": "CAN_FILE",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
         "start_node_id": "특허법.pdf::00157:1",
         "end_node_id": "특허법.pdf::00157:2",
-        "type": "TARGETS",
+        "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
       },
@@ -81,20 +80,6 @@
         "start_node_id": "특허법.pdf::00157:1",
         "end_node_id": "특허법.pdf::00157:3",
         "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00157:1",
-        "end_node_id": "특허법.pdf::00157:4",
-        "type": "HAS_DEADLINE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00157:1",
-        "end_node_id": "특허법.pdf::00157:0",
-        "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
@@ -121,13 +106,6 @@
       },
       {
         "start_node_id": "특허법.pdf::00157:3",
-        "end_node_id": "특허법.pdf::00157",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00157:4",
         "end_node_id": "특허법.pdf::00157",
         "type": "FROM_CHUNK",
         "properties": {},

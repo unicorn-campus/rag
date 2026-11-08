@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00008",
   "raw_counts": {
-    "entity_nodes": 7,
-    "entity_relationships": 4,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 0
   },
   "kept_counts": {
-    "entity_nodes": 7,
-    "entity_relationships": 4,
+    "entity_nodes": 0,
+    "entity_relationships": 0,
     "chunk_nodes": 1,
-    "from_chunk": 7
+    "from_chunk": 0
   },
   "pruned": [],
   "graph": {
@@ -27,142 +27,8 @@
           "chunk_index": 8
         },
         "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:0",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처장"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:1",
-        "label": "Actor",
-        "properties": {
-          "name": "심판장"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:2",
-        "label": "Actor",
-        "properties": {
-          "name": "지식재산처"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:3",
-        "label": "Actor",
-        "properties": {
-          "name": "특허심판원"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:4",
-        "label": "Procedure",
-        "properties": {
-          "name": "특허에 관한 절차"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:5",
-        "label": "Right",
-        "properties": {
-          "name": "특허권"
-        },
-        "embedding_properties": {}
-      },
-      {
-        "id": "특허법.pdf::00008:6",
-        "label": "Right",
-        "properties": {
-          "name": "특허에 관한 권리"
-        },
-        "embedding_properties": {}
       }
     ],
-    "relationships": [
-      {
-        "start_node_id": "특허법.pdf::00008:0",
-        "end_node_id": "특허법.pdf::00008:4",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:1",
-        "end_node_id": "특허법.pdf::00008:4",
-        "type": "CAN_FILE",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:4",
-        "end_node_id": "특허법.pdf::00008:2",
-        "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:4",
-        "end_node_id": "특허법.pdf::00008:3",
-        "type": "HANDLED_BY",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:0",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:1",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:2",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:3",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:4",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:5",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      },
-      {
-        "start_node_id": "특허법.pdf::00008:6",
-        "end_node_id": "특허법.pdf::00008",
-        "type": "FROM_CHUNK",
-        "properties": {},
-        "embedding_properties": {}
-      }
-    ]
+    "relationships": []
   }
 }

@@ -3,16 +3,16 @@
   "source": "특허법.pdf",
   "chunk_id": "특허법.pdf::00109",
   "raw_counts": {
-    "entity_nodes": 4,
+    "entity_nodes": 5,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 5
   },
   "kept_counts": {
-    "entity_nodes": 4,
+    "entity_nodes": 5,
     "entity_relationships": 3,
     "chunk_nodes": 1,
-    "from_chunk": 4
+    "from_chunk": 5
   },
   "pruned": [],
   "graph": {
@@ -38,9 +38,9 @@
       },
       {
         "id": "특허법.pdf::00109:1",
-        "label": "Procedure",
+        "label": "Right",
         "properties": {
-          "name": "특허취소신청"
+          "name": "특허권"
         },
         "embedding_properties": {}
       },
@@ -54,6 +54,14 @@
       },
       {
         "id": "특허법.pdf::00109:3",
+        "label": "Procedure",
+        "properties": {
+          "name": "특허취소신청"
+        },
+        "embedding_properties": {}
+      },
+      {
+        "id": "특허법.pdf::00109:4",
         "label": "Period",
         "properties": {
           "name": "특허권의 설정등록일부터 등록공고일 후 6개월이 되는 날까지"
@@ -64,21 +72,21 @@
     "relationships": [
       {
         "start_node_id": "특허법.pdf::00109:0",
-        "end_node_id": "특허법.pdf::00109:1",
+        "end_node_id": "특허법.pdf::00109:3",
         "type": "CAN_FILE",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00109:1",
+        "start_node_id": "특허법.pdf::00109:3",
         "end_node_id": "특허법.pdf::00109:2",
         "type": "HANDLED_BY",
         "properties": {},
         "embedding_properties": {}
       },
       {
-        "start_node_id": "특허법.pdf::00109:1",
-        "end_node_id": "특허법.pdf::00109:3",
+        "start_node_id": "특허법.pdf::00109:3",
+        "end_node_id": "특허법.pdf::00109:4",
         "type": "HAS_DEADLINE",
         "properties": {},
         "embedding_properties": {}
@@ -106,6 +114,13 @@
       },
       {
         "start_node_id": "특허법.pdf::00109:3",
+        "end_node_id": "특허법.pdf::00109",
+        "type": "FROM_CHUNK",
+        "properties": {},
+        "embedding_properties": {}
+      },
+      {
+        "start_node_id": "특허법.pdf::00109:4",
         "end_node_id": "특허법.pdf::00109",
         "type": "FROM_CHUNK",
         "properties": {},
